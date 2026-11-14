@@ -113,14 +113,14 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.703",
+    tag: "v0.6.704",
     publishedAt: "",
-    setupName: "SLauncher-0.6.703-win-setup.exe",
-    setupUrl: "./SLauncher-0.6.703-win-setup.exe",
+    setupName: "SLauncher-0.6.704-win-setup.exe",
+    setupUrl: "./SLauncher-0.6.704-win-setup.exe",
     setupBytes: 0,
     setupSha256: "",
-    zipName: "SLauncher_v0.6.703.zip",
-    zipUrl: "./SLauncher_v0.6.703.zip",
+    zipName: "SLauncher_v0.6.704.zip",
+    zipUrl: "./SLauncher_v0.6.704.zip",
     zipBytes: 0,
     repoSlug: ""
   };
