@@ -11,6 +11,8 @@
 
   var I18N = {
     ko: {
+      navFeatures: "주요 기능",
+      navChangelog: "패치 내역",
       navDownload: "다운로드",
       heroSubtitle: "스타크래프트: 리마스터 올인원 통합 런처",
       heroDesc: "실시간 방 탐색·원클릭 따라가기부터 맵 위변조 감지, 리플레이 크래시 방어, 인게임 프렌즈 브리지, 커스텀 GRP 스킨까지 하나의 창에서 완결합니다.",
@@ -38,6 +40,28 @@
       panelFriendsDesc: "스타크래프트 자체 채팅·로비 UI 크기와 디자인을 100% 보존하면서, 실시간 친구 접속 위치 확인, 귓속말 보조, 로비 참가자 메모 및 자동 강퇴 관리 기능을 자연스럽게 통합합니다.",
       panelGrpTitle: "커스텀 GRP 스킨 프리뷰 & 타 런처 완벽 병행",
       panelGrpDesc: "SD/HD 유닛 및 지형 GRP 스킨을 미리보기로 확인하고 즉시 적용할 수 있으며, K런처 오프라인 모드·H런처와의 동시 병행 및 #h 전용방 호환 입장까지 지원합니다.",
+      patchTitle: "패치 내역",
+      patchSub: "사용자 피드백을 바탕으로 안정성, 보안 가드, 인게임 편의 기능을 지속적으로 개선하고 있습니다.",
+      patchBadgeLatest: "최신 업데이트",
+      patchBadgeCore: "핵심 기반 업데이트",
+      tagHotfix: "핫픽스",
+      tagNew: "신규",
+      tagImprove: "개선",
+      tagFix: "수정",
+      tagSecurity: "보안",
+      tagCompat: "호환",
+      p710Summary: "스타크래프트 연동 크래시 핫픽스 및 오버레이·브리핑 전환 안정성 강화",
+      p710Item1: "스타크래프트 실행 및 대기 화면 감지 시 순환 호출(0xc00000fd)로 런처가 종료되어 적용되지 않던 스택 오버플로우 버그를 즉시 수정하고, 오버레이 렌더 스냅샷을 힙 메모리로 분리해 안정성을 높였습니다.",
+      p710Item2: "대기실 종료 후 브리핑·로딩 화면 전환 유예 타이머를 3분으로 확장하여, 긴 UMS 브리핑 화면에서도 방 제목·맵 이름·배틀태그 정보가 끊김 없이 유지되도록 보강했습니다.",
+      p709Summary: "인게임 플레이어 모니터(키패드 0) 전면 개편 및 레디 상태·배틀태그 표시 추가",
+      p709Item1: "키패드 0 플레이어 모니터가 인게임 진입 시에만 표시되도록 고정하고, 상단 방 제목·맵 이름 및 플레이어별 전적(승-패-무·승률%)·레디 상태([방장]/[READY]/[대기])·배틀태그를 누락 없이 표시합니다.",
+      p709Item2: "게임 시작 전 PLAYER READY 오버레이와 런처 내 플레이어 감지 UI에 각 참가자의 방장/READY/대기 상태 배지 및 배틀태그(Name#1234)를 함께 표기합니다.",
+      p708Summary: "인게임 빠른 귓속말 답장(/r) 정상화 및 대규모 방 입장 알림 수정",
+      p708Item1: "인게임 채팅에서 /r 명령어로 최근 귓속말 상대에게 답장이 전송되지 않던 문제를 수정하고, 답장 대상이 없을 때 + 키 입력 시 <???> 문구가 노출되던 현상을 해결했습니다.",
+      p708Item2: "101명부터 501명까지 대규모 참가·관전 세션에서 인게임 참가 알림 메시지가 정상 출력되도록 수정했습니다.",
+      p707Summary: "맵 위변조 정밀 감지, 순정 UI 프렌즈 브리지 및 타 런처 완벽 병행 지원",
+      p707Item1: "원본 맵 지문과 비교해 Comment 삭제·비움 및 트리거 변조를 즉시 탐지하는 무단수정 감지 가드와 리플레이 크래시·비정상 패킷 방어 로직을 고도화했습니다.",
+      p707Item2: "스타크래프트 순정 UI 크기를 100% 유지하는 프렌즈 브리지·원클릭 따라가기, K런처 오프라인 모드 및 H런처(#h 방) 동시 호환, 내장 런타임 원파일 설치기를 통합했습니다.",
       dlTitle: "지금 바로 시작하기",
       dlSub: "최신 설치 파일을 받아 실행하세요. 원하는 설치 폴더와 바로가기 옵션을 직접 지정해 설치할 수 있으며, 이후 업데이트는 런처 안에서 바로 진행됩니다.",
       dlPortableLink: "무설치 포터블 (.zip)",
@@ -58,6 +82,8 @@
       noShaYet: "표시할 SHA-256 해시 정보가 아직 없습니다."
     },
     en: {
+      navFeatures: "Features",
+      navChangelog: "Patch Notes",
       navDownload: "Download",
       heroSubtitle: "All-in-One Launcher for StarCraft: Remastered",
       heroDesc: "Live room search, one-click player follow, map tamper & replay-crash protection, in-game Friends Bridge, and custom GRP skins — all in one streamlined launcher.",
@@ -85,6 +111,28 @@
       panelFriendsDesc: "Preserves 100% of StarCraft: Remastered's native chat dimensions while adding live friend location status, whisper helpers, player notes, and host auto-kick tools.",
       panelGrpTitle: "Custom SD/HD GRP Previews & Multi-Launcher Coexistence",
       panelGrpDesc: "Preview and apply custom unit/tile GRP skins effortlessly, and run smoothly alongside KLauncher offline mode and HLauncher (#h rooms).",
+      patchTitle: "Patch Notes",
+      patchSub: "Continuously refined for stability, anti-tamper protection, and seamless in-game convenience based on player feedback.",
+      patchBadgeLatest: "Latest Release",
+      patchBadgeCore: "Core Milestone",
+      tagHotfix: "Hotfix",
+      tagNew: "New",
+      tagImprove: "Improved",
+      tagFix: "Fixed",
+      tagSecurity: "Security",
+      tagCompat: "Compat",
+      p710Summary: "StarCraft Attachment Crash Hotfix & Pre-Game Transition Hardening",
+      p710Item1: "Resolved a mutual recursion stack overflow (0xc00000fd) when attaching to StarCraft pre-game transitions, and moved overlay render snapshots onto the heap for rock-solid stability.",
+      p710Item2: "Extended the lobby-to-briefing transition grace window to 3 minutes so room title, map name, and BattleTag context persist across long UMS briefings.",
+      p709Summary: "In-Game Player Monitor (Numpad 0) Overhaul with Ready Status & BattleTags",
+      p709Item1: "Restricted the Numpad 0 Player Monitor strictly to active in-game matches and unified room title, map name, W-L-D win rate records, [Host]/[READY]/[Waiting] badges, and BattleTags.",
+      p709Item2: "Added live Host / READY / Waiting role badges and BattleTag (Name#1234) display to both the pre-game PLAYER READY overlay and the launcher's Player Detection panel.",
+      p708Summary: "In-Game Quick Whisper Reply (/r) Fix & Large-Lobby Join Notifications",
+      p708Item1: "Restored /r quick whisper replies inside StarCraft chat and prevented literal <???> placeholders when pressing + without an active whisper target.",
+      p708Item2: "Fixed missing in-game join announcements for participant/observer slots 101 through 501 in large rooms.",
+      p707Summary: "Map Tamper Fingerprinting, Native-UI Friends Bridge & Multi-Launcher Coexistence",
+      p707Item1: "Enhanced canonical map-fingerprint checks to catch cleared/deleted Comments and reordered triggers, alongside replay-crash and malformed-packet protection.",
+      p707Item2: "Integrated native-proportioned Friends Bridge & one-click Follow, KLauncher offline / HLauncher (#h) coexistence, and the all-in-one embedded-runtime installer.",
       dlTitle: "Get started now",
       dlSub: "Download and run the latest installer. Choose your preferred install folder and shortcut options directly, and install future updates right inside SLauncher.",
       dlPortableLink: "Portable archive (.zip)",
@@ -122,6 +170,7 @@
     zipName: "SLauncher_v0.6.710.zip",
     zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.710/SLauncher_v0.6.710.zip",
     zipBytes: 84849981,
+    latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
 
@@ -228,6 +277,54 @@
       copyBtn.style.display = releaseState.setupSha256 ? "" : "none";
     }
 
+    // Automatically render any newer GitHub release notes above static cards if tag advances
+    var dynSlot = document.getElementById("patch-dynamic-slot");
+    if (dynSlot) {
+      var hasStatic = !document.querySelector('[data-patch-ver="' + releaseState.tag + '"]');
+      if (!hasStatic && releaseState.tag && releaseState.latestBody) {
+        var staticLatest = document.querySelector(".patch-card-latest");
+        if (staticLatest) {
+          staticLatest.classList.remove("patch-card-latest");
+          var oldBadge = staticLatest.querySelector(".badge-latest");
+          if (oldBadge) oldBadge.style.display = "none";
+        }
+        var cleanBody = String(releaseState.latestBody)
+          .replace(/^#{1,4}\s+/gm, "")
+          .replace(/\*\*(.*?)\*\*/g, "$1")
+          .replace(/`([^`]+)`/g, "$1")
+          .trim();
+        var card = document.createElement("article");
+        card.className = "patch-card patch-card-latest";
+        card.style.marginBottom = "16px";
+        var head = document.createElement("div");
+        head.className = "patch-head";
+        var vg = document.createElement("div");
+        vg.className = "patch-ver-group";
+        var verSpan = document.createElement("span");
+        verSpan.className = "patch-ver";
+        verSpan.textContent = releaseState.tag;
+        var bdg = document.createElement("span");
+        bdg.className = "patch-badge badge-latest";
+        bdg.textContent = dict.patchBadgeLatest || "Latest";
+        vg.appendChild(verSpan);
+        vg.appendChild(bdg);
+        var dtEl = document.createElement("time");
+        dtEl.className = "patch-date";
+        dtEl.textContent = formatDate(releaseState.publishedAt, currentLang);
+        head.appendChild(vg);
+        head.appendChild(dtEl);
+        var bodyP = document.createElement("div");
+        bodyP.className = "patch-dynamic-body";
+        bodyP.textContent = cleanBody;
+        card.appendChild(head);
+        card.appendChild(bodyP);
+        dynSlot.innerHTML = "";
+        dynSlot.appendChild(card);
+      } else {
+        dynSlot.innerHTML = "";
+      }
+    }
+
     if (releaseState.repoSlug) {
       var repoUrl = "https://github.com/" + releaseState.repoSlug;
       var navGh = document.getElementById("nav-github-link");
@@ -317,6 +414,7 @@
             if (!rel || !rel.tag_name) return;
             releaseState.tag = String(rel.tag_name).indexOf("v") === 0 ? rel.tag_name : ("v" + rel.tag_name);
             if (rel.published_at) releaseState.publishedAt = rel.published_at;
+            if (rel.body) releaseState.latestBody = String(rel.body);
             var setupAsset = pickSetupAsset(rel.assets || []);
             if (setupAsset) {
               releaseState.setupName = setupAsset.name;
