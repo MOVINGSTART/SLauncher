@@ -47,7 +47,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-pill">
-          <span id="hero-version">v0.6.710</span>
+          <span id="hero-version">v0.6.711</span>
           <span class="dot">·</span>
           <span>StarCraft: Remastered</span>
         </div>
@@ -175,12 +175,33 @@
         <div id="patch-dynamic-slot"></div>
 
         <div class="patch-timeline">
-          <!-- v0.6.710 (Latest) -->
-          <article class="patch-card patch-card-latest" data-patch-ver="v0.6.710">
+          <!-- v0.6.711 (Latest) -->
+          <article class="patch-card patch-card-latest" data-patch-ver="v0.6.711">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="patch-ver">v0.6.711</span>
+                <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+              </div>
+              <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
+            </div>
+            <p class="patch-summary" data-i18n="p711Summary">상단 메인 오버레이·디지털 시계 HUD 즉시 표시 복구 및 포커스 전환 개선</p>
+            <ul class="patch-list">
+              <li>
+                <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                <span data-i18n="p711Item1">스타크래프트 실행 직후 및 초기 설정 동기화 시 상단 메인 오버레이와 우측 상단 디지털 시계가 비활성 상태로 남아 화면에 표시되지 않던 문제를 해결했습니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                <span data-i18n="p711Item2">런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- v0.6.710 -->
+          <article class="patch-card" data-patch-ver="v0.6.710">
             <div class="patch-head">
               <div class="patch-ver-group">
                 <span class="patch-ver">v0.6.710</span>
-                <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
               </div>
               <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
             </div>
@@ -411,26 +432,26 @@
                   <span class="arch-pill">Windows 10 / 11 (64-bit · 32-bit)</span>
                 </div>
                 <div id="release-meta" class="release-meta">
-                  최신 v0.6.710 · SLauncher-0.6.710-win-setup.exe
+                  최신 v0.6.711 · SLauncher-0.6.711-win-setup.exe
                 </div>
               </div>
             </div>
           </div>
 
           <div class="dl-card-right">
-            <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.710/SLauncher-0.6.710-win-setup.exe" class="btn btn-primary btn-dl">
+            <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher-0.6.711-win-setup.exe" class="btn btn-primary btn-dl">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
-              <span id="btn-download-label">v0.6.710 다운로드</span>
+              <span id="btn-download-label">v0.6.711 다운로드</span>
             </a>
 
             <div class="dl-sublinks">
-              <a id="btn-download-zip" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.710/SLauncher_v0.6.710.zip" class="sublink" data-i18n="dlPortableLink">무설치 포터블 (.zip)</a>
+              <a id="btn-download-zip" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher_v0.6.711.zip" class="sublink" data-i18n="dlPortableLink">무설치 포터블 (.zip)</a>
               <span class="sep">·</span>
-              <button type="button" id="btn-copy-sha" class="sublink-btn" data-sha="a642693171979c978004920c461125eaf29553a9fb2ef21f656827b70c1be1f4" data-i18n="dlCopySha">SHA-256 복사</button>
+              <button type="button" id="btn-copy-sha" class="sublink-btn" data-sha="6745d492c0bd1082e3cf7c76c4770616ae301f499db04d63dd4d2813fc736df3" data-i18n="dlCopySha">SHA-256 복사</button>
               <span id="releases-sep" class="sep">·</span>
               <a id="link-releases" href="https://github.com/MOVINGSTART/SLauncher/releases" target="_blank" rel="noopener" class="sublink" data-i18n="dlChangelogLink">이전 버전 및 변경사항 보기</a>
             </div>
