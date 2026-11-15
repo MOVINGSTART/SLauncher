@@ -23,8 +23,10 @@
       </a>
 
       <div class="header-actions">
+        <a href="#top" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navHome">홈</a>
         <a href="#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
         <a href="./changelog.html" class="nav-text-link nav-changelog-pill" data-i18n="navChangelog">패치 내역</a>
+        <a href="./grp-guide.html" class="nav-text-link nav-grp-pill" data-i18n="navGrpGuide">GRP 적용법</a>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button type="button" class="lang-btn active" data-lang="ko">KO</button>
@@ -47,7 +49,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-pill">
-          <span id="hero-version">v0.6.711</span>
+          <span id="hero-version">v0.6.712</span>
           <span class="dot">·</span>
           <span>StarCraft: Remastered</span>
         </div>
@@ -159,6 +161,12 @@
             <p data-i18n="panelGrpDesc">
               SD/HD 유닛 및 지형 GRP 스킨을 미리보기로 확인하고 즉시 적용할 수 있으며, K런처 오프라인 모드·H런처와의 동시 병행 및 #h 전용방 호환 입장까지 지원합니다.
             </p>
+            <div class="tab-panel-actions">
+              <a href="./grp-guide.html" class="btn btn-ghost btn-sm grp-panel-cta">
+                <span data-i18n="panelGrpGuideBtn">GRP 적용법 가이드 보기</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </article>
         </div>
       </div>
@@ -170,9 +178,9 @@
         <div class="patch-callout-bar">
           <div class="patch-callout-left">
             <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
-            <span id="callout-version" class="patch-callout-ver">v0.6.711</span>
+            <span id="callout-version" class="patch-callout-ver">v0.6.712</span>
             <span class="patch-callout-sep" aria-hidden="true">·</span>
-            <span class="patch-callout-text" data-i18n="p711Summary">상단 메인 오버레이·디지털 시계 HUD 즉시 표시 복구 및 포커스 전환 개선</span>
+            <span class="patch-callout-text" data-i18n="p712Summary">런처·스타 실행 초기 친구 삭제 오감지 완벽 차단 및 공식 GRP 적용법 가이드 오픈</span>
           </div>
           <a href="./changelog.html" class="btn btn-ghost btn-sm patch-callout-btn">
             <span data-i18n="viewAllPatchesBtn">전체 패치 내역 보기</span>
@@ -207,26 +215,26 @@
                   <span class="arch-pill">Windows 10 / 11 (64-bit · 32-bit)</span>
                 </div>
                 <div id="release-meta" class="release-meta">
-                  최신 v0.6.711 · SLauncher-0.6.711-win-setup.exe
+                  최신 v0.6.712 · SLauncher-0.6.712-win-setup.exe
                 </div>
               </div>
             </div>
           </div>
 
           <div class="dl-card-right">
-            <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher-0.6.711-win-setup.exe" class="btn btn-primary btn-dl">
+            <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher-0.6.712-win-setup.exe" class="btn btn-primary btn-dl">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
-              <span id="btn-download-label">v0.6.711 다운로드</span>
+              <span id="btn-download-label">v0.6.712 다운로드</span>
             </a>
 
             <div class="dl-sublinks">
-              <a id="btn-download-zip" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher_v0.6.711.zip" class="sublink" data-i18n="dlPortableLink">무설치 포터블 (.zip)</a>
+              <a id="btn-download-zip" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher_v0.6.712.zip" class="sublink" data-i18n="dlPortableLink">무설치 포터블 (.zip)</a>
               <span class="sep">·</span>
-              <button type="button" id="btn-copy-sha" class="sublink-btn" data-sha="6745d492c0bd1082e3cf7c76c4770616ae301f499db04d63dd4d2813fc736df3" data-i18n="dlCopySha">SHA-256 복사</button>
+              <button type="button" id="btn-copy-sha" class="sublink-btn" data-sha="436399c9f878d70c4aafc4df3d611224075f839a1678e50928a13b59d36d74ea" data-i18n="dlCopySha">SHA-256 복사</button>
               <span id="releases-sep" class="sep">·</span>
               <a id="link-releases" href="./changelog.html" class="sublink" data-i18n="dlChangelogLink">패치 내역 및 변경사항 보기</a>
             </div>
@@ -291,6 +299,14 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-actions">
+        <a href="./changelog.html" class="outline-pill">
+          <span data-i18n="navChangelog">패치 내역</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="./grp-guide.html" class="outline-pill">
+          <span data-i18n="navGrpGuide">GRP 적용법</span>
+          <span aria-hidden="true">→</span>
+        </a>
         <a id="footer-issues-link" href="#download" class="outline-pill">
           <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
           <span aria-hidden="true">→</span>
@@ -303,6 +319,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.711"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
