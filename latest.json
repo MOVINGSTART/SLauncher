@@ -1,26 +1,30 @@
 {
-    "version":  "0.6.705",
-    "tag_name":  "v0.6.705",
-    "pub_date":  "2026-11-15T06:54:50Z",
-    "notes":  "SLauncher v0.6.705 Official Release",
-    "setup_file":  "SLauncher-0.6.705-win-setup.exe",
-    "setup_size":  85366342,
-    "setup_sha256":  "8ceb7dbde1c1592191b4aa8128f0b5cd9792f617d935149b323950d2653a3deb",
-    "setup_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher-0.6.705-win-setup.exe",
-    "portable_file":  "SLauncher_v0.6.705.zip",
-    "portable_size":  84786630,
-    "portable_sha256":  "92fc11727d24ec3520a3cf8adc20b01268add2aeaa94a0007830ca3c450fcad8",
-    "portable_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher_v0.6.705.zip",
+    "version":  "0.6.706",
+    "minimumVersion":  "0.6.706",
+    "force":  true,
+    "tag_name":  "v0.6.706",
+    "pub_date":  "2026-11-15T08:57:35Z",
+    "notes":  "SLauncher v0.6.706 Official Release",
+    "downloadUrl":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher_v0.6.706.zip",
+    "sha256":  "ea7f1259dc8560f44b950a5deeebf126fcc8aaa6f5a565c724c330334984138d",
+    "setup_file":  "SLauncher-0.6.706-win-setup.exe",
+    "setup_size":  85369622,
+    "setup_sha256":  "d06e85f47648adfca45df3185d26ba5299028dc1d533c04c0a0cf93524bdc4b8",
+    "setup_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher-0.6.706-win-setup.exe",
+    "portable_file":  "SLauncher_v0.6.706.zip",
+    "portable_size":  84789910,
+    "portable_sha256":  "ea7f1259dc8560f44b950a5deeebf126fcc8aaa6f5a565c724c330334984138d",
+    "portable_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher_v0.6.706.zip",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher_v0.6.705.zip",
-                                             "sha256":  "92fc11727d24ec3520a3cf8adc20b01268add2aeaa94a0007830ca3c450fcad8",
-                                             "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher-0.6.705-win-setup.exe"
+                                             "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher_v0.6.706.zip",
+                                             "sha256":  "ea7f1259dc8560f44b950a5deeebf126fcc8aaa6f5a565c724c330334984138d",
+                                             "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher-0.6.706-win-setup.exe"
                                          },
                       "windows-x86":  {
-                                          "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher_v0.6.705.zip",
-                                          "sha256":  "92fc11727d24ec3520a3cf8adc20b01268add2aeaa94a0007830ca3c450fcad8",
-                                          "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher-0.6.705-win-setup.exe"
+                                          "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher_v0.6.706.zip",
+                                          "sha256":  "ea7f1259dc8560f44b950a5deeebf126fcc8aaa6f5a565c724c330334984138d",
+                                          "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.706/SLauncher-0.6.706-win-setup.exe"
                                       }
                   }
 }
