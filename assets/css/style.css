@@ -109,6 +109,21 @@ body {
   gap: 12px;
 }
 
+.nav-text-link {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.nav-text-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .lang-switch {
   display: inline-flex;
   align-items: center;
@@ -538,6 +553,154 @@ body {
   font-size: 0.95rem;
 }
 
+/* Patch Notes / Changelog Timeline */
+.patch-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patch-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 26px;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.patch-card:hover {
+  background: var(--card-hover);
+  border-color: rgba(148, 163, 184, 0.24);
+}
+
+.patch-card-latest {
+  background: linear-gradient(180deg, rgba(19, 28, 48, 0.94) 0%, rgba(14, 20, 34, 0.94) 100%);
+  border-color: var(--border-strong);
+  box-shadow: 0 16px 40px -16px rgba(37, 99, 235, 0.32);
+}
+
+.patch-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.patch-ver-group {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.patch-ver {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #f8fafc;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: -0.01em;
+}
+
+.patch-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.badge-latest {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+}
+
+.badge-archive {
+  color: #cbd5e1;
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.patch-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.patch-summary {
+  margin: 0 0 14px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.patch-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.patch-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.58;
+}
+
+.patch-tag {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 2px 8px;
+  margin-top: 2px;
+  border-radius: 6px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.tag-new {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.tag-imp {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.tag-fix {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.32);
+}
+
+.tag-sec {
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.32);
+}
+
+.patch-dynamic-body {
+  margin: 8px 0 0;
+  white-space: pre-line;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
 /* Download Card */
 .download-card {
   display: flex;
@@ -798,8 +961,18 @@ body {
 }
 
 @media (max-width: 760px) {
+  .nav-text-link {
+    display: none;
+  }
   .preview-grid {
     grid-template-columns: 1fr;
+  }
+  .patch-card {
+    padding: 18px 18px;
+  }
+  .patch-list li {
+    flex-direction: column;
+    gap: 5px;
   }
   .download-card {
     flex-direction: column;
