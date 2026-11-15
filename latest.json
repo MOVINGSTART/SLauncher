@@ -1,30 +1,30 @@
 {
-    "version":  "0.6.708",
-    "minimumVersion":  "0.6.708",
-    "force":  true,
-    "tag_name":  "v0.6.708",
-    "pub_date":  "2026-11-15T12:28:25Z",
-    "notes":  "SLauncher v0.6.708 Official Release",
-    "downloadUrl":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher_v0.6.708.zip",
-    "sha256":  "99118f72d2021c5d8e193d5452d0b3af78dc30b053e39bb43d20be18c259a11b",
-    "setup_file":  "SLauncher-0.6.708-win-setup.exe",
-    "setup_size":  85415667,
-    "setup_sha256":  "c62938b2b943dd4b873e8059d66523469d73bc1502ccf36c268ecc28d2a7214e",
-    "setup_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher-0.6.708-win-setup.exe",
-    "portable_file":  "SLauncher_v0.6.708.zip",
-    "portable_size":  84835955,
-    "portable_sha256":  "99118f72d2021c5d8e193d5452d0b3af78dc30b053e39bb43d20be18c259a11b",
-    "portable_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher_v0.6.708.zip",
-    "platforms":  {
-                      "windows-x86_64":  {
-                                             "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher_v0.6.708.zip",
-                                             "sha256":  "99118f72d2021c5d8e193d5452d0b3af78dc30b053e39bb43d20be18c259a11b",
-                                             "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher-0.6.708-win-setup.exe"
-                                         },
-                      "windows-x86":  {
-                                           "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher_v0.6.708.zip",
-                                           "sha256":  "99118f72d2021c5d8e193d5452d0b3af78dc30b053e39bb43d20be18c259a11b",
-                                           "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher-0.6.708-win-setup.exe"
-                                       }
-                  }
+    "version": "0.6.709",
+    "minimumVersion": "0.6.709",
+    "force": true,
+    "tag_name": "v0.6.709",
+    "pub_date": "2026-11-15T14:30:13Z",
+    "notes": "SLauncher v0.6.709 Official Release",
+    "downloadUrl": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher_v0.6.709.zip",
+    "sha256": "262a8bff6cbe191331e55fc3313a79b082135ffb7c1ac69c4639cba6c2adae7f",
+    "setup_file": "SLauncher-0.6.709-win-setup.exe",
+    "setup_size": 85428645,
+    "setup_sha256": "0ae678811aa4c3f4fd1db6b041b5d55e0a6944349dcfce48b9cdbf9cc050ccc5",
+    "setup_url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher-0.6.709-win-setup.exe",
+    "portable_file": "SLauncher_v0.6.709.zip",
+    "portable_size": 84848933,
+    "portable_sha256": "262a8bff6cbe191331e55fc3313a79b082135ffb7c1ac69c4639cba6c2adae7f",
+    "portable_url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher_v0.6.709.zip",
+    "platforms": {
+        "windows-x86_64": {
+            "url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher_v0.6.709.zip",
+            "sha256": "262a8bff6cbe191331e55fc3313a79b082135ffb7c1ac69c4639cba6c2adae7f",
+            "installer": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher-0.6.709-win-setup.exe"
+        },
+        "windows-x86": {
+            "url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher_v0.6.709.zip",
+            "sha256": "262a8bff6cbe191331e55fc3313a79b082135ffb7c1ac69c4639cba6c2adae7f",
+            "installer": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.709/SLauncher-0.6.709-win-setup.exe"
+        }
+    }
 }
