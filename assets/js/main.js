@@ -113,15 +113,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.707",
-    publishedAt: "2026-11-15T08:57:35Z",
-    setupName: "SLauncher-0.6.707-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.707/SLauncher-0.6.707-win-setup.exe",
-    setupBytes: 85369622,
-    setupSha256: "d06e85f47648adfca45df3185d26ba5299028dc1d533c04c0a0cf93524bdc4b8",
-    zipName: "SLauncher_v0.6.707.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.707/SLauncher_v0.6.707.zip",
-    zipBytes: 84789910,
+    tag: "v0.6.708",
+    publishedAt: "2026-11-15T12:28:25Z",
+    setupName: "SLauncher-0.6.708-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher-0.6.708-win-setup.exe",
+    setupBytes: 85415667,
+    setupSha256: "c62938b2b943dd4b873e8059d66523469d73bc1502ccf36c268ecc28d2a7214e",
+    zipName: "SLauncher_v0.6.708.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.708/SLauncher_v0.6.708.zip",
+    zipBytes: 84835955,
     repoSlug: "MOVINGSTART/SLauncher"
   };
 
