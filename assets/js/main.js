@@ -11,9 +11,27 @@
 
   var I18N = {
     ko: {
+      navHome: "홈",
       navFeatures: "주요 기능",
       navChangelog: "패치 내역",
       navDownload: "다운로드",
+      viewAllPatchesBtn: "전체 패치 내역 보기",
+      clBackHome: "메인 페이지로 돌아가기",
+      clPillLabel: "Release History",
+      clStatLatest: "현재 최신 버전",
+      clStatTotal: "누적 릴리스 기록",
+      clSearchPlaceholder: "버전 또는 키워드 검색 (예: v0.6.711, 오버레이, 귓속말, EUD...)",
+      clFilterAll: "전체",
+      clFilterNew: "신규",
+      clFilterImprove: "개선",
+      clFilterFix: "수정 · 핫픽스",
+      clFilterSecurity: "보안 · 호환",
+      clFilterEud: "EUD",
+      clSidebarTitle: "버전 바로가기",
+      clEmptyResult: "검색 조건과 일치하는 패치 내역이 없습니다.",
+      clResetFilter: "필터 초기화",
+      clCountFmt: "{shown} / {total}개 버전 표시 중",
+      clCountAllFmt: "총 {total}개 버전 기록",
       heroSubtitle: "스타크래프트: 리마스터 올인원 통합 런처",
       heroDesc: "실시간 방 탐색·원클릭 따라가기부터 맵 위변조 감지, 리플레이 크래시 방어, 인게임 프렌즈 브리지, 커스텀 GRP 스킨까지 하나의 창에서 완결합니다.",
       heroDownloadBtn: "Windows용 다운로드",
@@ -77,7 +95,7 @@
       p704Item1: "외부 PC 환경에서 발생하던 런타임 경로 의존성·바탕화면 바로가기 누락·초기 구동 실패 문제를 전면 해결하여 어떤 Windows 10/11 PC에서도 즉시 실행되도록 개선했습니다.",
       p704Item2: "설치 폴더 직접 지정·바로가기 생성·Windows '앱 및 기능' 제거(Uninstall.exe)를 지원하는 전용 설치 프로그램을 도입하고, 배틀넷 앱 스타일의 자동 로그인 체크 방식을 적용했습니다.",
       p703Summary: "맵 무단수정 정밀 감지 토스트, 핵·리플레이 크래시 방어 및 K런처·H런처 병행 지원",
-      p703Item1: "원본 맵 지문과 비교해 Comment(\"\") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
+      p703Item1: "원본 맵 지문과 비교해 Comment("") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
       p703Item2: "시야 확장 기반 맵핵 정밀 탐지, 비정상 패킷 차단, 오염된 리플레이 시청 후 방 생성 시 '응답 없음'에 빠지던 스트림 포인터 크래시 방어를 통합했습니다.",
       p703Item3: "K런처 오프라인 단독 모드 및 H런처와 충돌 없이 동시 실행을 지원하고, 방 제목에 #h가 포함된 방도 S런처에서 바로 입장할 수 있도록 호환성을 확보했습니다.",
       p703Item4: "Tab 키 전환 및 따라가기 UI 표시 시 스타 순정 UI 비율을 100% 보존(확대·잘림 방지)하고, 배틀넷 채널 입장 시 발생하던 프레임 지연(렉)을 최적화했습니다.",
@@ -90,7 +108,7 @@
       dlSub: "최신 설치 파일을 받아 실행하세요. 원하는 설치 폴더와 바로가기 옵션을 직접 지정해 설치할 수 있으며, 이후 업데이트는 런처 안에서 바로 진행됩니다.",
       dlPortableLink: "무설치 포터블 (.zip)",
       dlCopySha: "SHA-256 복사",
-      dlChangelogLink: "이전 버전 및 변경사항 보기",
+      dlChangelogLink: "패치 내역 및 변경사항 보기",
       badgeRequired: "필수",
       badgeIncluded: "기본 내장",
       badgeAuto: "자동 구성",
@@ -106,9 +124,27 @@
       noShaYet: "표시할 SHA-256 해시 정보가 아직 없습니다."
     },
     en: {
+      navHome: "Home",
       navFeatures: "Features",
       navChangelog: "Patch Notes",
       navDownload: "Download",
+      viewAllPatchesBtn: "View full patch notes",
+      clBackHome: "Back to main page",
+      clPillLabel: "Release History",
+      clStatLatest: "Latest Version",
+      clStatTotal: "Documented Releases",
+      clSearchPlaceholder: "Search version or keyword (e.g. v0.6.711, overlay, whisper, EUD...)",
+      clFilterAll: "All",
+      clFilterNew: "New",
+      clFilterImprove: "Improved",
+      clFilterFix: "Fixed · Hotfix",
+      clFilterSecurity: "Security · Compat",
+      clFilterEud: "EUD",
+      clSidebarTitle: "Jump to Version",
+      clEmptyResult: "No patch notes match your current search or filter.",
+      clResetFilter: "Reset filters",
+      clCountFmt: "Showing {shown} of {total} releases",
+      clCountAllFmt: "{total} releases documented",
       heroSubtitle: "All-in-One Launcher for StarCraft: Remastered",
       heroDesc: "Live room search, one-click player follow, map tamper & replay-crash protection, in-game Friends Bridge, and custom GRP skins — all in one streamlined launcher.",
       heroDownloadBtn: "Download for Windows",
@@ -172,7 +208,7 @@
       p704Item1: "Eliminated local path dependencies, missing desktop shortcuts, and startup issues on clean external Windows 10/11 PCs.",
       p704Item2: "Shipped the custom single-file setup installer (custom directory, shortcuts, Uninstall.exe in Apps & Features) and switched to Battle.net login with an optional auto-login checkbox.",
       p703Summary: "Map Tamper Toast Alerts, Anti-Hack / Replay Crash Guards & Multi-Launcher Coexistence",
-      p703Item1: "Detects cleared/deleted Comment(\"\") actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
+      p703Item1: "Detects cleared/deleted Comment("") actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
       p703Item2: "Integrated vision-expansion maphack detection, malformed-packet filtering, and stream-pointer protection preventing freezes after viewing corrupted replays.",
       p703Item3: "Added conflict-free coexistence with KLauncher offline standalone mode and HLauncher, including direct entry into #h rooms from SLauncher.",
       p703Item4: "Preserved 100% native StarCraft UI dimensions on Tab / Follow controls and eliminated Battle.net channel-entry frame stutter.",
@@ -185,7 +221,7 @@
       dlSub: "Download and run the latest installer. Choose your preferred install folder and shortcut options directly, and install future updates right inside SLauncher.",
       dlPortableLink: "Portable archive (.zip)",
       dlCopySha: "Copy SHA-256",
-      dlChangelogLink: "Previous versions and changelog",
+      dlChangelogLink: "Patch notes & version history",
       badgeRequired: "Required",
       badgeIncluded: "Bundled",
       badgeAuto: "Auto Setup",
@@ -262,15 +298,15 @@
       var a = assets[i];
       if (!a || !a.name || !a.browser_download_url) continue;
       var name = String(a.name);
-      if (/\\.json$|\\.sha256$|\\.sig$|\\.blockmap$|\\.yml$/i.test(name)) continue;
+      if (/\.json$|\.sha256$|\.sig$|\.blockmap$|\.yml$/i.test(name)) continue;
       var score = 0;
-      if (/\\b(setup|installer)\\b/i.test(name)) score += 100;
-      if (/\\.exe$/i.test(name)) score += 45;
-      if (/\\.msi$/i.test(name)) score += 35;
-      if (/\\b(win|windows)\\b/i.test(name)) score += 30;
-      if (/\\b(x64|x86_64|amd64|x86)\\b/i.test(name)) score += 10;
-      if (/\\b(portable)\\b/i.test(name)) score -= 25;
-      if (/\\.zip$/i.test(name)) score -= 15;
+      if (/\b(setup|installer)\b/i.test(name)) score += 100;
+      if (/\.exe$/i.test(name)) score += 45;
+      if (/\.msi$/i.test(name)) score += 35;
+      if (/\b(win|windows)\b/i.test(name)) score += 30;
+      if (/\b(x64|x86_64|amd64|x86)\b/i.test(name)) score += 10;
+      if (/\b(portable)\b/i.test(name)) score -= 25;
+      if (/\.zip$/i.test(name)) score -= 15;
       if (score > bestScore) {
         bestScore = score;
         best = a;
@@ -283,19 +319,22 @@
     if (!Array.isArray(assets)) return null;
     for (var i = 0; i < assets.length; i++) {
       var a = assets[i];
-      if (a && a.name && /\\.zip$/i.test(a.name) && !/Native-/i.test(a.name)) return a;
+      if (a && a.name && /\.zip$/i.test(a.name) && !/Native-/i.test(a.name)) return a;
     }
     for (var j = 0; j < assets.length; j++) {
       var b = assets[j];
-      if (b && b.name && /\\.zip$/i.test(b.name)) return b;
+      if (b && b.name && /\.zip$/i.test(b.name)) return b;
     }
     return null;
   }
-
   function renderReleaseUI() {
     var dict = I18N[currentLang] || I18N.ko;
     var heroVer = document.getElementById("hero-version");
     if (heroVer) heroVer.textContent = releaseState.tag;
+    var calloutVer = document.getElementById("callout-version");
+    if (calloutVer) calloutVer.textContent = releaseState.tag;
+    var clLatestVer = document.getElementById("cl-latest-ver");
+    if (clLatestVer) clLatestVer.textContent = releaseState.tag;
 
     var btnSetup = document.getElementById("btn-download-setup");
     var btnLabel = document.getElementById("btn-download-label");
@@ -337,9 +376,9 @@
           if (oldBadge) oldBadge.style.display = "none";
         }
         var cleanBody = String(releaseState.latestBody)
-          .replace(/^#{1,4}\\s+/gm, "")
-          .replace(/\\*\\*(.*?)\\*\\*/g, "$1")
-          .replace(/`([^`]+)`/g, "$1")
+          .replace(/^#{1,4}\s+/gm, "")
+          .replace(/\*\*(.*?)\*\*/g, "$1")
+          .replace(/\`([^\`]+)\`/g, "$1")
           .trim();
         var card = document.createElement("article");
         card.className = "patch-card patch-card-latest";
@@ -381,7 +420,7 @@
       var issLink = document.getElementById("footer-issues-link");
       if (navGh) navGh.href = repoUrl;
       if (relLink) {
-        relLink.href = repoUrl + "/releases";
+        relLink.href = "./changelog.html";
         relLink.classList.remove("hidden");
       }
       if (relSep) relSep.classList.remove("hidden");
@@ -389,6 +428,66 @@
         issLink.href = repoUrl + "/issues";
         issLink.target = "_blank";
         issLink.rel = "noopener";
+      }
+    }
+  }
+
+  var activeCategory = "all";
+
+  function updateChangelogFilter() {
+    var app = document.getElementById("changelog-app");
+    if (!app) return;
+
+    var dict = I18N[currentLang] || I18N.ko;
+    var searchInput = document.getElementById("cl-search-input");
+    var clearBtn = document.getElementById("cl-search-clear");
+    var statusEl = document.getElementById("cl-result-status");
+    var emptyEl = document.getElementById("cl-empty-state");
+    var totalCountEl = document.getElementById("cl-total-count");
+
+    var query = searchInput ? String(searchInput.value || "").trim().toLowerCase() : "";
+    if (clearBtn) clearBtn.classList.toggle("hidden", !query);
+
+    var cards = app.querySelectorAll(".patch-timeline .patch-card");
+    var total = cards.length;
+    if (totalCountEl) totalCountEl.textContent = String(total);
+
+    var shown = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var card = cards[i];
+      var ver = String(card.getAttribute("data-patch-ver") || "");
+      var items = card.querySelectorAll(".patch-list li");
+      var cardText = String(card.textContent || "").toLowerCase();
+      var matchesQuery = !query || cardText.indexOf(query) !== -1 || ver.toLowerCase().indexOf(query) !== -1;
+
+      var visibleItems = 0;
+      for (var k = 0; k < items.length; k++) {
+        var li = items[k];
+        var cat = li.getAttribute("data-cat") || "";
+        var catOk = activeCategory === "all" || cat === activeCategory;
+        var itemText = String(li.textContent || "").toLowerCase();
+        var itemQueryOk = !query || matchesQuery || itemText.indexOf(query) !== -1;
+        var showLi = catOk && itemQueryOk;
+        li.style.display = showLi ? "" : "none";
+        if (showLi) visibleItems++;
+      }
+
+      var showCard = matchesQuery && (activeCategory === "all" || visibleItems > 0);
+      card.style.display = showCard ? "" : "none";
+      if (showCard) shown++;
+
+      var navLink = document.querySelector('.cl-ver-link[data-target-ver="' + ver + '"]');
+      if (navLink) navLink.classList.toggle("filtered-out", !showCard);
+    }
+
+    if (emptyEl) emptyEl.classList.toggle("hidden", shown > 0);
+    if (statusEl) {
+      if (!query && activeCategory === "all") {
+        statusEl.textContent = (dict.clCountAllFmt || "{total}").replace("{total}", String(total));
+      } else {
+        statusEl.textContent = (dict.clCountFmt || "{shown}/{total}")
+          .replace("{shown}", String(shown))
+          .replace("{total}", String(total));
       }
     }
   }
@@ -405,12 +504,19 @@
       if (dict[key]) nodes[i].textContent = dict[key];
     }
 
+    var phNodes = document.querySelectorAll("[data-i18n-placeholder]");
+    for (var p = 0; p < phNodes.length; p++) {
+      var pKey = phNodes[p].getAttribute("data-i18n-placeholder");
+      if (dict[pKey]) phNodes[p].setAttribute("placeholder", dict[pKey]);
+    }
+
     var langBtns = document.querySelectorAll(".lang-btn");
     for (var j = 0; j < langBtns.length; j++) {
       langBtns[j].classList.toggle("active", langBtns[j].getAttribute("data-lang") === currentLang);
     }
 
     renderReleaseUI();
+    updateChangelogFilter();
   }
 
   function showToast(msg) {
@@ -524,6 +630,78 @@
         });
       }
     });
+  }
+
+  // Bind dedicated changelog search, category filter, and version scroll-spy
+  var clApp = document.getElementById("changelog-app");
+  if (clApp) {
+    var searchInput = document.getElementById("cl-search-input");
+    var clearBtn = document.getElementById("cl-search-clear");
+    var resetBtn = document.getElementById("cl-reset-btn");
+    var chips = clApp.querySelectorAll(".cl-chip");
+    var verLinks = clApp.querySelectorAll(".cl-ver-link");
+
+    var setCategory = function (cat) {
+      activeCategory = cat || "all";
+      for (var c = 0; c < chips.length; c++) {
+        chips[c].classList.toggle("active", chips[c].getAttribute("data-filter") === activeCategory);
+      }
+      updateChangelogFilter();
+    };
+
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        updateChangelogFilter();
+      });
+    }
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
+        if (searchInput) {
+          searchInput.value = "";
+          searchInput.focus();
+        }
+        updateChangelogFilter();
+      });
+    }
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        if (searchInput) searchInput.value = "";
+        setCategory("all");
+      });
+    }
+    for (var ch = 0; ch < chips.length; ch++) {
+      chips[ch].addEventListener("click", function (e) {
+        setCategory(e.currentTarget.getAttribute("data-filter"));
+      });
+    }
+    for (var vl = 0; vl < verLinks.length; vl++) {
+      verLinks[vl].addEventListener("click", function (e) {
+        var clickedVer = e.currentTarget.getAttribute("data-target-ver");
+        for (var m = 0; m < verLinks.length; m++) {
+          verLinks[m].classList.toggle("active", verLinks[m].getAttribute("data-target-ver") === clickedVer);
+        }
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        for (var en = 0; en < entries.length; en++) {
+          if (entries[en].isIntersecting) {
+            var v = entries[en].target.getAttribute("data-patch-ver");
+            if (!v) continue;
+            for (var n = 0; n < verLinks.length; n++) {
+              verLinks[n].classList.toggle("active", verLinks[n].getAttribute("data-target-ver") === v);
+            }
+            break;
+          }
+        }
+      }, { rootMargin: "-95px 0px -65% 0px", threshold: 0 });
+
+      var observedCards = clApp.querySelectorAll(".patch-timeline .patch-card");
+      for (var oc = 0; oc < observedCards.length; oc++) {
+        observer.observe(observedCards[oc]);
+      }
+    }
   }
 
   applyLanguage(currentLang);
