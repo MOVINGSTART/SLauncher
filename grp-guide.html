@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GRP 적용법 — SLauncher</title>
+  <meta name="description" content="SLauncher 커스텀 GRP 스킨 적용법 — 999 Image ID 검색, PNG/GIF 자동 변환, 스킨 팩 폴더 동기화, HD/SD 실시간 미리보기 및 순정 복구 가이드" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SLauncher GRP 적용법 가이드" />
+  <meta property="og:description" content="유즈맵 이름과 무관하게 항시 적용되는 SLauncher HD/SD 커스텀 GRP 스킨 완벽 가이드" />
+  <meta property="og:image" content="./assets/img/logo.png" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body id="top" class="grp-guide-page">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand">
+        <img src="./assets/img/logo.png" alt="SLauncher" class="brand-logo" width="32" height="32" />
+        <span class="brand-name">SLauncher</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="./index.html" class="nav-text-link" data-i18n="navHome">홈</a>
+        <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
+        <a href="./changelog.html" class="nav-text-link" data-i18n="navChangelog">패치 내역</a>
+        <a href="./grp-guide.html" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navGrpGuide">GRP 적용법</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="ko">KO</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <a id="nav-github-link" href="https://github.com/MOVINGSTART/SLauncher" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub Repository" title="GitHub Repository">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.1 3.3 9.42 7.88 10.95.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.66 18.35.5 12 .5Z"/>
+          </svg>
+        </a>
+
+        <a href="./index.html#download" class="btn btn-sm btn-light" data-i18n="navDownload">다운로드</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="grp-guide-app">
+    <!-- Hero -->
+    <section class="cl-hero">
+      <div class="container">
+        <div class="cl-breadcrumb">
+          <a href="./index.html" class="cl-back-link">
+            <span aria-hidden="true">←</span>
+            <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
+          </a>
+        </div>
+
+        <div class="cl-hero-row">
+          <div>
+            <div class="hero-pill cl-pill">
+              <span data-i18n="grpPillLabel">Custom Skin &amp; Resource Guide</span>
+              <span class="dot">·</span>
+              <span id="hero-version">v0.6.712</span>
+            </div>
+            <h1 class="cl-title" data-i18n="grpGuideTitle">GRP 적용법</h1>
+            <p class="cl-subtitle" data-i18n="grpGuideSub">
+              일반 그림 파일(PNG·GIF)부터 리마스터 전용 .anim 스킨, 지형 타일, Iscript·콘솔 UI까지 S런처 안에서 몇 번의 클릭으로 안전하게 적용하고 미리보는 방법입니다.
+            </p>
+          </div>
+
+          <div class="cl-stat-cards grp-stat-cards">
+            <div class="cl-stat-box">
+              <span class="cl-stat-label" data-i18n="grpStatGlobalLabel">적용 방식</span>
+              <strong class="cl-stat-val accent" data-i18n="grpStatGlobalVal">전역 항시</strong>
+            </div>
+            <div class="cl-stat-box">
+              <span class="cl-stat-label" data-i18n="grpStatCatalogLabel">Image 카탈로그</span>
+              <strong class="cl-stat-val">999 ID</strong>
+            </div>
+            <div class="cl-stat-box">
+              <span class="cl-stat-label" data-i18n="grpStatQualityLabel">지원 화질</span>
+              <strong class="cl-stat-val">HD + SD</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Step Quick Summary Banner -->
+        <div class="grp-quick-strip" aria-label="3단계 빠른 요약">
+          <div class="grp-quick-item">
+            <span class="grp-quick-num">1</span>
+            <div>
+              <strong data-i18n="grpQuick1Title">대상 선택 · 파일 추가</strong>
+              <span data-i18n="grpQuick1Desc">『맵 리소스 적용』 탭에서 유닛 이름을 검색해 이미지/ANIM 파일을 등록하거나 분류 폴더에 넣습니다.</span>
+            </div>
+          </div>
+          <div class="grp-quick-item">
+            <span class="grp-quick-num">2</span>
+            <div>
+              <strong data-i18n="grpQuick2Title">RuntimeMod 동기화 · 미리보기</strong>
+              <span data-i18n="grpQuick2Desc">『RuntimeMod 즉시 동기화』를 누르고 『GRP 미리보기』에서 HD/SD 실제 적용 화면을 확인합니다.</span>
+            </div>
+          </div>
+          <div class="grp-quick-item">
+            <span class="grp-quick-num">3</span>
+            <div>
+              <strong data-i18n="grpQuick3Title">스타 실행 · 인게임 자동 적용</strong>
+              <span data-i18n="grpQuick3Desc">유즈맵 이름과 무관하게 모든 방에서 자동 적용되며, 토글 OFF 하나로 언제든 순정 복구됩니다.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2-Column Guide Body -->
+    <section class="cl-body-section">
+      <div class="container cl-layout">
+        <!-- Sticky Left Guide TOC -->
+        <aside class="cl-sidebar" aria-label="GRP 가이드 목차">
+          <div class="cl-sidebar-box">
+            <div class="cl-sidebar-title" data-i18n="grpTocTitle">가이드 목차</div>
+            <nav id="grp-guide-nav" class="cl-version-nav grp-toc-nav">
+              <a href="#step-overview" class="cl-ver-link active" data-guide-sec="step-overview">
+                <span data-i18n="grpNav1">01. 작동 원리 · 지원 형식</span>
+              </a>
+              <a href="#step-builder" class="cl-ver-link" data-guide-sec="step-builder">
+                <span data-i18n="grpNav2">02. 999 Image ID 적용</span>
+              </a>
+              <a href="#step-folders" class="cl-ver-link" data-guide-sec="step-folders">
+                <span data-i18n="grpNav3">03. 스킨 팩 폴더 적용</span>
+              </a>
+              <a href="#step-preview" class="cl-ver-link" data-guide-sec="step-preview">
+                <span data-i18n="grpNav4">04. HD/SD 미리보기 · 삭제</span>
+              </a>
+              <a href="#step-ingame" class="cl-ver-link" data-guide-sec="step-ingame">
+                <span data-i18n="grpNav5">05. 인게임 확인 · 순정 복구</span>
+              </a>
+              <a href="#step-advanced" class="cl-ver-link" data-guide-sec="step-advanced">
+                <span data-i18n="grpNav6">06. 맵 내장 · 타일 · 보안</span>
+              </a>
+              <a href="#step-faq" class="cl-ver-link" data-guide-sec="step-faq">
+                <span data-i18n="grpNav7">07. 문제 해결 (FAQ)</span>
+              </a>
+            </nav>
+
+            <div class="cl-sidebar-cta">
+              <a href="./index.html#download" class="btn btn-primary btn-sm cl-dl-btn">
+                <span data-i18n="heroDownloadBtn">Windows용 다운로드</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Guide Sections -->
+        <div class="grp-guide-content">
+          <!-- Section 01 -->
+          <article id="step-overview" class="patch-card grp-guide-card patch-card-latest" data-guide-card="step-overview">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 01</span>
+                <h2 class="grp-card-title" data-i18n="grpS1Title">기본 원리 및 지원 파일 형식</h2>
+              </div>
+              <span class="patch-badge badge-latest" data-i18n="grpS1Badge">원본 맵 무수정</span>
+            </div>
+            <p class="grp-card-lead" data-i18n="grpS1Lead">
+              S런처의 GRP 그래픽 기능은 개별 유즈맵(.scx / .scm) 파일을 건드리지 않고 전역 UserAssets 및 RuntimeMod 경로를 통해 동작하므로, 공방·밀리·유즈맵 파일명이 무엇이든 항상 동일하게 적용됩니다.
+            </p>
+            <div class="grp-format-grid">
+              <div class="grp-format-box">
+                <strong data-i18n="grpFmt1Title">일반 그림 파일 (자동 변환)</strong>
+                <code>.png · .jpg · .gif · .bmp · .webp</code>
+                <p data-i18n="grpFmt1Desc">따로 변환 툴을 쓸 필요 없이 999 Image ID 빌더에서 선택하면 HD/SD .anim 스프라이트로 즉시 자동 변환됩니다.</p>
+              </div>
+              <div class="grp-format-box">
+                <strong data-i18n="grpFmt2Title">스타 리마스터 스킨 파일</strong>
+                <code>main_000.anim ~ main_998.anim</code>
+                <p data-i18n="grpFmt2Desc">커뮤니티에서 배포되는 HD/SD 유닛·건물·투사체·기타 .anim 스킨 및 지형 타일 자산을 그대로 등록할 수 있습니다.</p>
+              </div>
+              <div class="grp-format-box">
+                <strong data-i18n="grpFmt3Title">스크립트 · 콘솔 UI 확장</strong>
+                <code>iscript.bin · ConsoleUI (rez/game)</code>
+                <p data-i18n="grpFmt3Desc">검증된 단일 iscript.bin 애니메이션 스크립트와 허용된 콘솔 UI 스킨도 동일한 RuntimeMod 경로로 안전하게 동기화됩니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 02 -->
+          <article id="step-builder" class="patch-card grp-guide-card" data-guide-card="step-builder">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 02</span>
+                <h2 class="grp-card-title" data-i18n="grpS2Title">999 Image ID로 개별 스킨 바로 적용하기 (권장)</h2>
+              </div>
+              <span class="patch-badge badge-archive" data-i18n="grpS2Badge">가장 쉬운 방법</span>
+            </div>
+            <p class="grp-card-lead" data-i18n="grpS2Lead">
+              파일 이름 규칙(`main_XXX.anim`)을 외울 필요 없이, S런처 내장 EUD Editor 기준 999개 Image 카탈로그에서 한글·영문 이름으로 검색해 바로 입힐 수 있습니다.
+            </p>
+            <ol class="grp-step-list">
+              <li>
+                <span class="grp-li-num">1</span>
+                <div>
+                  <strong data-i18n="grpS2Step1Title">『맵 리소스 적용』 메뉴 열기 &amp; 스위치 확인</strong>
+                  <p data-i18n="grpS2Step1Desc">S런처 좌측 사이드바에서 『맵 리소스 적용』 탭을 클릭하고, 상단 『1. GRP 항시 적용』 카드의 『GRP 그래픽 활성화』 스위치가 ON 상태인지 확인합니다.</p>
+                </div>
+              </li>
+              <li>
+                <span class="grp-li-num">2</span>
+                <div>
+                  <strong data-i18n="grpS2Step2Title">원하는 유닛·건물·이펙트 검색 (0 ~ 998)</strong>
+                  <p data-i18n="grpS2Step2Desc">『2. 999 Image ID』 영역에서 분류(전체 / 유닛 203 / 건물 182 / 투사체·효과 287 / 기타 327)를 고르거나 검색창에 『마린』, 『히드라』, 『게이트웨이』, 『239』처럼 이름 또는 번호를 입력해 대상을 선택합니다.</p>
+                </div>
+              </li>
+              <li>
+                <span class="grp-li-num">3</span>
+                <div>
+                  <strong data-i18n="grpS2Step3Title">파일 종류에 맞는 적용 버튼 클릭</strong>
+                  <p data-i18n="grpS2Step3Desc">우측 『커스텀 이미지 적용』 영역에서 준비한 파일 형식에 맞는 버튼을 누릅니다. 일반 그림(PNG/GIF 등)은 『이미지 → 유닛 / 건물 / 투사체 / 기타』를, 이미 만들어진 .anim 파일은 『ANIM → 유닛 / 건물 / 투사체 / 기타』를 선택하면 HD와 SD 자산이 함께 동기화됩니다.</p>
+                </div>
+              </li>
+              <li>
+                <span class="grp-li-num">4</span>
+                <div>
+                  <strong data-i18n="grpS2Step4Title">『RuntimeMod 즉시 동기화』 확인</strong>
+                  <p data-i18n="grpS2Step4Desc">자산 추가 시 자동으로 반영되며, 상단 『RuntimeMod 즉시 동기화』 버튼을 한 번 눌러주면 『맵 GRP 프로필』 상태창에서 적용된 ANIM 개수와 대상 Image 수를 즉시 확인할 수 있습니다.</p>
+                </div>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Section 03 -->
+          <article id="step-folders" class="patch-card grp-guide-card" data-guide-card="step-folders">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 03</span>
+                <h2 class="grp-card-title" data-i18n="grpS3Title">분류 폴더에 스킨 팩 한꺼번에 넣기</h2>
+              </div>
+              <span class="patch-badge badge-archive" data-i18n="grpS3Badge">대량 스킨 팩</span>
+            </div>
+            <p class="grp-card-lead" data-i18n="grpS3Lead">
+              여러 개의 `.anim` 파일로 구성된 통합 스킨 팩을 보유하고 있다면, S런처의 분류별 전용 폴더에 복사해 한 번에 동기화할 수 있습니다.
+            </p>
+            <ul class="patch-list grp-bullet-list">
+              <li>
+                <span class="patch-tag tag-imp" data-i18n="grpTagFolder">폴더</span>
+                <span data-i18n="grpS3Item1">상단 버튼 줄의 『Unit 폴더』, 『Building 폴더』, 『Projectile 폴더』, 『Other 폴더』, 『Tile 폴더』, 『SD 폴더』 버튼을 누르면 해당 UserAssets 폴더가 탐색기에서 바로 열립니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-sec" data-i18n="grpTagRule">중요</span>
+                <span data-i18n="grpS3Item2">카테고리 격리 규칙: 각 `.anim` 파일의 Image ID는 반드시 해당 카탈로그 분류 폴더에 넣어야 합니다. (예: 건물 ID 파일을 Unit 폴더에 넣으면 정합성 검사가 안내하며 적용을 멈춥니다.)</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-new" data-i18n="grpTagSync">적용</span>
+                <span data-i18n="grpS3Item3">파일 복사를 마친 뒤 S런처에서 『RuntimeMod 즉시 동기화』 또는 하단 『전체 리소스 다시 적용』 버튼을 누르면 모든 파일의 무결성 검사 후 일괄 적용됩니다.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 04 -->
+          <article id="step-preview" class="patch-card grp-guide-card" data-guide-card="step-preview">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 04</span>
+                <h2 class="grp-card-title" data-i18n="grpS4Title">GRP 미리보기에서 HD / SD 확인 및 개별 삭제</h2>
+              </div>
+            </div>
+            <p class="grp-card-lead" data-i18n="grpS4Lead">
+              게임을 켜기 전에도 S런처 안에서 UserAssets에 실제 저장된 HD·SD·타일 프레임을 즉시 렌더링해 눈으로 확인하고 관리할 수 있습니다.
+            </p>
+            <ul class="patch-list grp-bullet-list">
+              <li>
+                <span class="patch-tag tag-imp" data-i18n="grpTagPreview">확인</span>
+                <span data-i18n="grpS4Item1">좌측 사이드바의 『GRP 미리보기』 탭(또는 999 Image ID 카드 하단의 『HD 미리보기』 / 『SD 미리보기』 버튼)을 누르면 실제 적용된 첫 프레임 이미지가 표시됩니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-new" data-i18n="grpTagControl">조작</span>
+                <span data-i18n="grpS4Item2">우측 상단 『HD / SD』 버튼으로 화질을 즉시 전환할 수 있고, 미리보기 스테이지에서 드래그·방향키·마우스 우클릭으로 스프라이트 이동 느낌까지 바로 테스트할 수 있습니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-fix" data-i18n="grpTagDelete">삭제</span>
+                <span data-i18n="grpS4Item3">우측 『적용된 자산 목록』에서 원하는 항목을 클릭해 전환해 보다가 마음에 들지 않는 스킨이 있다면 상단 『선택 삭제』 버튼으로 해당 스킨만 깔끔하게 지울 수 있습니다.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 05 -->
+          <article id="step-ingame" class="patch-card grp-guide-card" data-guide-card="step-ingame">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 05</span>
+                <h2 class="grp-card-title" data-i18n="grpS5Title">스타크래프트 인게임 확인 &amp; 1초 순정 복구</h2>
+              </div>
+            </div>
+            <ul class="patch-list grp-bullet-list">
+              <li>
+                <span class="patch-tag tag-new" data-i18n="grpTagPlay">실행</span>
+                <span data-i18n="grpS5Item1">S런처가 실행된 상태에서 Battle.net 앱의 『플레이(Play)』 또는 S런처 실행 버튼으로 StarCraft: Remastered에 접속하면 자동으로 프로세스를 감지해 GRP 자산을 연결합니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-imp" data-i18n="grpTagF5">화질</span>
+                <span data-i18n="grpS5Item2">인게임 진입 후 『F5』 키로 HD 리마스터 그래픽과 SD 클래식 그래픽을 전환해도 양쪽 화질 모두 끊김 없이 동기화되며, S런처 상태 카드에 『실제 적용: 성공』 여부가 표시됩니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-fix" data-i18n="grpTagReset">복구</span>
+                <span data-i18n="grpS5Item3">순정 그래픽으로 돌아가고 싶을 때: 넣어둔 스킨 파일을 일일이 삭제할 필요 없이 『GRP 그래픽 활성화』 토글만 OFF로 끄면 즉시 순정 상태로 돌아갑니다.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 06 -->
+          <article id="step-advanced" class="patch-card grp-guide-card" data-guide-card="step-advanced">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">STEP 06</span>
+                <h2 class="grp-card-title" data-i18n="grpS6Title">맵 제작자 내장 · 타일 편집 · 보안 검사</h2>
+              </div>
+            </div>
+            <ul class="patch-list grp-bullet-list">
+              <li>
+                <span class="patch-tag tag-eud" data-i18n="grpTagEmbed">내장</span>
+                <span data-i18n="grpS6Item1">맵 파일에 직접 GRP 내장(선택사항): 특정 `.scx / .scm` 맵 자체에 GRP를 심어 배포하려는 제작자는 『SCX 선택』 후 『맵에 GRP 내장』 및 『실제 맵 트리거 테스트』 기능을 활용할 수 있습니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-imp" data-i18n="grpTagTile">지형</span>
+                <span data-i18n="grpS6Item2">배틀넷 호환 타일 편집: 좌측 『타일 편집』 탭에서 `.scx / .scm`의 실제 MTXM 지형을 브러시(1×1 ~ 14×14)로 직접 수정·저장할 수 있으며, 첫 저장 전 원본 백업이 자동 생성됩니다.</span>
+              </li>
+              <li>
+                <span class="patch-tag tag-sec" data-i18n="grpTagSec">보안</span>
+                <span data-i18n="grpS6Item3">위장 파일 자동 차단: 모든 스킨·Iscript(`iscript.bin` 단독 허용)·콘솔 UI 폴더는 적용 전 시그니처를 전수 검사하며, 실행파일(MZ/PE·ELF)이나 압축파일(ZIP·7z·RAR)이 하나라도 섞여 있으면 전체 적용을 즉시 차단해 PC를 보호합니다.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Section 07: FAQ -->
+          <article id="step-faq" class="patch-card grp-guide-card" data-guide-card="step-faq">
+            <div class="patch-head">
+              <div class="patch-ver-group">
+                <span class="grp-step-pill">FAQ</span>
+                <h2 class="grp-card-title" data-i18n="grpS7Title">자주 묻는 질문 · 문제 해결</h2>
+              </div>
+            </div>
+            <div class="grp-faq-list">
+              <div class="grp-faq-item">
+                <strong data-i18n="grpFaq1Q">Q. 스킨을 넣었는데 인게임에서 기본 유닛으로 그대로 나와요.</strong>
+                <p data-i18n="grpFaq1A">① 『GRP 그래픽 활성화』 토글이 ON인지 확인 후 『RuntimeMod 즉시 동기화』를 눌러주세요. ② 스타크래프트를 먼저 켜둔 상태에서 나중에 설정했다면 게임을 한 번 재실행하거나 인게임 F5 화질 전환을 확인하세요. ③ 입장한 방이 무단수정 의심(사기맵 해시 불일치)으로 감지된 경우 안전을 위해 해당 방에서는 GRP 연결이 자동 보류됩니다.</p>
+              </div>
+              <div class="grp-faq-item">
+                <strong data-i18n="grpFaq2Q">Q. 다른 사람 화면에도 내 커스텀 GRP 스킨이 보이나요? 방 갈림(디싱크)은 없나요?</strong>
+                <p data-i18n="grpFaq2A">GRP 그래픽 동기화는 내 화면의 렌더링 텍스처만 안전하게 교체하므로 게임 판정·유닛 데이터에 영향을 주지 않아 일반 배틀넷 유저와 함께 플레이해도 방 갈림(디싱크)이 발생하지 않습니다. (단, 맵 제작자가 『맵에 GRP 내장』으로 배포한 맵은 맵 자체 리소스를 따릅니다.)</p>
+              </div>
+              <div class="grp-faq-item">
+                <strong data-i18n="grpFaq3Q">Q. 현재 적용 중인 스킨을 파일로 다시 꺼내서 백업할 수 있나요?</strong>
+                <p data-i18n="grpFaq3A">가능합니다. 『2. 999 Image ID』 우측 카드의 『현재 적용 자산 추출』 영역에서 『추출 → 유닛/건물/투사체/기타』 또는 『타일 추출』을 누른 뒤 『추출 폴더 열기』를 클릭하면 자동 정리된 파일명으로 백업할 수 있습니다.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-actions">
+        <a href="./index.html" class="outline-pill">
+          <span aria-hidden="true">←</span>
+          <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
+        </a>
+        <a href="./changelog.html" class="outline-pill">
+          <span data-i18n="navChangelog">패치 내역</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a id="footer-issues-link" href="https://github.com/MOVINGSTART/SLauncher/issues" target="_blank" rel="noopener" class="outline-pill">
+          <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <p class="footer-note" data-i18n="footerDisclaimer">
+        SLauncher는 StarCraft: Remastered 사용자 편의를 위한 서드파티 런처이며, Blizzard Entertainment와 제휴 관계가 아닙니다.
+      </p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
