@@ -52,6 +52,9 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p711Summary: "상단 메인 오버레이·디지털 시계 HUD 즉시 표시 복구 및 포커스 전환 개선",
+      p711Item1: "스타크래프트 실행 직후 및 초기 설정 동기화 시 상단 메인 오버레이와 우측 상단 디지털 시계가 비활성 상태로 남아 화면에 표시되지 않던 문제를 해결했습니다.",
+      p711Item2: "런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.",
       p710Summary: "스타크래프트 연동 크래시 핫픽스 및 오버레이·브리핑 전환 안정성 강화",
       p710Item1: "스타크래프트 실행 및 대기 화면 감지 시 순환 호출(0xc00000fd)로 런처가 종료되어 적용되지 않던 스택 오버플로우 버그를 즉시 수정했습니다.",
       p710Item2: "PLAYER READY 및 키패드 0 모니터 오버레이의 스냅샷 데이터를 힙 메모리로 분리하고, 브리핑·로딩 화면 전환 유예 타이머를 3분으로 확장해 방 제목·맵 이름·배틀태그 컨텍스트를 안정적으로 유지합니다.",
@@ -144,6 +147,9 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p711Summary: "Top Main Overlay & Digital Clock HUD Visibility Fix and Focus Handoff",
+      p711Item1: "Fixed a startup synchronization issue where the top-left main HUD and top-right digital clock overlay remained disabled right after launching StarCraft.",
+      p711Item2: "Improved foreground focus handoff and overlay persistence when SLauncher minimizes to the background or runs alongside the compact helper (Ctrl+H).",
       p710Summary: "StarCraft Attachment Crash Hotfix & Pre-Game Transition Hardening",
       p710Item1: "Resolved a mutual recursion stack overflow (0xc00000fd) when attaching to StarCraft pre-game transitions.",
       p710Item2: "Moved PLAYER READY & Numpad 0 monitor snapshots onto the heap and extended the lobby-to-briefing transition window to 3 minutes so room title, map name, and BattleTag context stay intact.",
@@ -203,15 +209,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.710",
-    publishedAt: "2026-11-16T14:30:13Z",
-    setupName: "SLauncher-0.6.710-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.710/SLauncher-0.6.710-win-setup.exe",
-    setupBytes: 85429693,
-    setupSha256: "a642693171979c978004920c461125eaf29553a9fb2ef21f656827b70c1be1f4",
-    zipName: "SLauncher_v0.6.710.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.710/SLauncher_v0.6.710.zip",
-    zipBytes: 84849981,
+    tag: "v0.6.711",
+    publishedAt: "2026-11-15T16:35:58Z",
+    setupName: "SLauncher-0.6.711-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher-0.6.711-win-setup.exe",
+    setupBytes: 85430800,
+    setupSha256: "6745d492c0bd1082e3cf7c76c4770616ae301f499db04d63dd4d2813fc736df3",
+    zipName: "SLauncher_v0.6.711.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher_v0.6.711.zip",
+    zipBytes: 84851088,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -256,15 +262,15 @@
       var a = assets[i];
       if (!a || !a.name || !a.browser_download_url) continue;
       var name = String(a.name);
-      if (/\.json$|\.sha256$|\.sig$|\.blockmap$|\.yml$/i.test(name)) continue;
+      if (/\\.json$|\\.sha256$|\\.sig$|\\.blockmap$|\\.yml$/i.test(name)) continue;
       var score = 0;
-      if (/\b(setup|installer)\b/i.test(name)) score += 100;
-      if (/\.exe$/i.test(name)) score += 45;
-      if (/\.msi$/i.test(name)) score += 35;
-      if (/\b(win|windows)\b/i.test(name)) score += 30;
-      if (/\b(x64|x86_64|amd64|x86)\b/i.test(name)) score += 10;
-      if (/\b(portable)\b/i.test(name)) score -= 25;
-      if (/\.zip$/i.test(name)) score -= 15;
+      if (/\\b(setup|installer)\\b/i.test(name)) score += 100;
+      if (/\\.exe$/i.test(name)) score += 45;
+      if (/\\.msi$/i.test(name)) score += 35;
+      if (/\\b(win|windows)\\b/i.test(name)) score += 30;
+      if (/\\b(x64|x86_64|amd64|x86)\\b/i.test(name)) score += 10;
+      if (/\\b(portable)\\b/i.test(name)) score -= 25;
+      if (/\\.zip$/i.test(name)) score -= 15;
       if (score > bestScore) {
         bestScore = score;
         best = a;
@@ -277,11 +283,11 @@
     if (!Array.isArray(assets)) return null;
     for (var i = 0; i < assets.length; i++) {
       var a = assets[i];
-      if (a && a.name && /\.zip$/i.test(a.name) && !/Native-/i.test(a.name)) return a;
+      if (a && a.name && /\\.zip$/i.test(a.name) && !/Native-/i.test(a.name)) return a;
     }
     for (var j = 0; j < assets.length; j++) {
       var b = assets[j];
-      if (b && b.name && /\.zip$/i.test(b.name)) return b;
+      if (b && b.name && /\\.zip$/i.test(b.name)) return b;
     }
     return null;
   }
@@ -298,6 +304,7 @@
 
     var btnZip = document.getElementById("btn-download-zip");
     if (btnZip && releaseState.zipUrl) {
+      btnZip.href = releaseState.zipUrl;
       btnZip.classList.remove("hidden");
     }
 
@@ -330,8 +337,8 @@
           if (oldBadge) oldBadge.style.display = "none";
         }
         var cleanBody = String(releaseState.latestBody)
-          .replace(/^#{1,4}\s+/gm, "")
-          .replace(/\*\*(.*?)\*\*/g, "$1")
+          .replace(/^#{1,4}\\s+/gm, "")
+          .replace(/\\*\\*(.*?)\\*\\*/g, "$1")
           .replace(/`([^`]+)`/g, "$1")
           .trim();
         var card = document.createElement("article");
