@@ -7,7 +7,7 @@
    * 커스텀 도메인을 쓰거나 특정 저장소를 고정하려면 아래 GITHUB_REPO에 "아이디/저장소명"을 입력하세요.
    * 예: var GITHUB_REPO = "myaccount/SLauncher";
    */
-  var GITHUB_REPO = "";
+  var GITHUB_REPO = "MOVINGSTART/SLauncher";
 
   var I18N = {
     ko: {
@@ -113,16 +113,16 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.704",
-    publishedAt: "",
-    setupName: "SLauncher-0.6.704-win-setup.exe",
-    setupUrl: "./SLauncher-0.6.704-win-setup.exe",
-    setupBytes: 0,
-    setupSha256: "",
-    zipName: "SLauncher_v0.6.704.zip",
-    zipUrl: "./SLauncher_v0.6.704.zip",
-    zipBytes: 0,
-    repoSlug: ""
+    tag: "v0.6.705",
+    publishedAt: "2026-11-15T06:54:50Z",
+    setupName: "SLauncher-0.6.705-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher-0.6.705-win-setup.exe",
+    setupBytes: 85366342,
+    setupSha256: "8ceb7dbde1c1592191b4aa8128f0b5cd9792f617d935149b323950d2653a3deb",
+    zipName: "SLauncher_v0.6.705.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.705/SLauncher_v0.6.705.zip",
+    zipBytes: 84786630,
+    repoSlug: "MOVINGSTART/SLauncher"
   };
 
   function detectGitHubRepo() {
