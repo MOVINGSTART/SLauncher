@@ -50,7 +50,7 @@
       <div class="container">
         <div class="cl-breadcrumb">
           <a href="./index.html" class="cl-back-link">
-            <span aria-hidden="true">←</span>
+            <span aria-hidden="true">&larr;</span>
             <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
           </a>
         </div>
@@ -59,8 +59,8 @@
           <div>
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
-              <span class="dot">·</span>
-              <span id="hero-version">v0.6.713</span>
+              <span class="dot">&middot;</span>
+              <span id="hero-version">v0.6.714</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -71,11 +71,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.713</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.714</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">12</strong>
+              <strong id="cl-total-count" class="cl-stat-val">13</strong>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
               data-i18n-placeholder="clSearchPlaceholder"
               autocomplete="off"
             />
-            <button type="button" id="cl-search-clear" class="cl-search-clear hidden" aria-label="검색어 지우기">×</button>
+            <button type="button" id="cl-search-clear" class="cl-search-clear hidden" aria-label="검색어 지우기">&times;</button>
           </div>
 
           <div class="cl-filter-row">
@@ -103,8 +103,8 @@
               <button type="button" class="cl-chip active" data-filter="all" data-i18n="clFilterAll">전체</button>
               <button type="button" class="cl-chip" data-filter="new" data-i18n="clFilterNew">신규</button>
               <button type="button" class="cl-chip" data-filter="improve" data-i18n="clFilterImprove">개선</button>
-              <button type="button" class="cl-chip" data-filter="fix" data-i18n="clFilterFix">수정 · 핫픽스</button>
-              <button type="button" class="cl-chip" data-filter="security" data-i18n="clFilterSecurity">보안 · 호환</button>
+              <button type="button" class="cl-chip" data-filter="fix" data-i18n="clFilterFix">수정 &middot; 핫픽스</button>
+              <button type="button" class="cl-chip" data-filter="security" data-i18n="clFilterSecurity">보안 &middot; 호환</button>
               <button type="button" class="cl-chip" data-filter="eud" data-i18n="clFilterEud">EUD</button>
             </div>
             <div id="cl-result-status" class="cl-result-status"></div>
@@ -121,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-713" class="cl-ver-link active" data-target-ver="v0.6.713">
-                <span class="cl-ver-name">v0.6.713</span>
+              <a href="#ver-v0-6-714" class="cl-ver-link active" data-target-ver="v0.6.714">
+                <span class="cl-ver-name">v0.6.714</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-713" class="cl-ver-link" data-target-ver="v0.6.713">
+                <span class="cl-ver-name">v0.6.713</span>
+                <span class="cl-ver-mini-date">11.16</span>
               </a>
               <a href="#ver-v0-6-712" class="cl-ver-link" data-target-ver="v0.6.712">
                 <span class="cl-ver-name">v0.6.712</span>
@@ -172,13 +176,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher-0.6.713-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.714/SLauncher-0.6.714-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.713 다운로드</span>
+                <span id="btn-download-label">v0.6.714 다운로드</span>
               </a>
             </div>
           </div>
@@ -194,12 +198,41 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.713 (Latest) -->
-            <article id="ver-v0-6-713" class="patch-card patch-card-latest" data-patch-ver="v0.6.713">
+            <!-- v0.6.714 (Latest) -->
+            <article id="ver-v0-6-714" class="patch-card patch-card-latest" data-patch-ver="v0.6.714">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.714</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
+              </div>
+              <p class="patch-summary" data-i18n="p714Summary">멀티·로더 게임 시작 및 연결 끊김(디싱크) 완벽 해결, 공유 릴레이·프로그램 채팅 악용 차단 및 윈도우 키 오버레이 유지 패치</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p714Item1">비(非)EUD 일반 밀리·유즈맵에서 CUnit 3,400 풀의 초기 자유 리스트 순서를 순정(1번 인덱스 역순)과 100% 동일하게 유지하도록 수정하여, 로더·순정 유저와 멀티 플레이 시 시작 직후 발생하던 락스텝 연결 끊김(디싱크)을 완벽 해결했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p714Item2">다인방 호스트 중계 스트림(resendFlag=0x04), 피어 지연 측정 응답(cmd=0x0C/0x0B), Battle.net 공유 SNP 릴레이 경로 전환 시 발생하던 패킷 가드 오차단·공유 릴레이 격리를 전면 제거하여 모든 공방·로더 방에서 끊김 없이 게임이 시작되도록 정상화했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p714Item3">배틀태그 은닉(0x3A 해시 변조) 또는 강퇴(0x4E) 이후 공유 SNP 릴레이·외부 프로그램으로 주입되는 원시 UDP 채팅(0x00·0x4C·0x4D·0x5C) 및 강제 종료 패킷(0x39, 필드 순서 변조 포함)만 정밀 식별해 무고한 릴레이 참가자 피해 없이 차단합니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p714Item4">StarDesk·oCam·SOOP·NVIDIA 오버레이 등 제3자 상시 최상단(WS_EX_TOPMOST)·UI-Access 유틸리티 창이 떠 있는 환경에서도 윈도우 키(시작 메뉴·검색·작업 표시줄) 입력 시 상단 오버레이·디지털 시계·키패드 0 정보 차트가 절대 사라지지 않도록 윈도우 Z-Band 및 가시 영역 판정을 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.713 -->
+            <article id="ver-v0-6-713" class="patch-card" data-patch-ver="v0.6.713">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.713</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
               </div>
@@ -482,16 +515,16 @@
     <div class="container footer-inner">
       <div class="footer-actions">
         <a href="./index.html" class="outline-pill">
-          <span aria-hidden="true">←</span>
+          <span aria-hidden="true">&larr;</span>
           <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
         </a>
         <a href="./grp-guide.html" class="outline-pill">
           <span data-i18n="navGrpGuide">GRP 적용법</span>
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true">&rarr;</span>
         </a>
         <a id="footer-issues-link" href="https://github.com/MOVINGSTART/SLauncher/issues" target="_blank" rel="noopener" class="outline-pill">
           <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
       <p class="footer-note" data-i18n="footerDisclaimer">
