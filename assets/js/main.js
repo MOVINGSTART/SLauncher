@@ -3,7 +3,7 @@
 
   /**
    * [설정 안내]
-   * GitHub Pages ('https://<아이디>.github.io/<저장소>')에 올리면 저장소를 자동으로 감지합니다.
+   * GitHub Pages (\x60https://<아이디>.github.io/<저장소>\x60)에 올리면 저장소를 자동으로 감지합니다.
    * 커스텀 도메인을 쓰거나 특정 저장소를 고정하려면 아래 GITHUB_REPO에 "아이디/저장소명"을 입력하세요.
    * 예: var GITHUB_REPO = "myaccount/SLauncher";
    */
@@ -72,6 +72,11 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p714Summary: "멀티·로더 게임 시작 및 연결 끊김(디싱크) 완벽 해결, 공유 릴레이·프로그램 채팅 악용 차단 및 윈도우 키 오버레이 유지 패치",
+      p714Item1: "비(非)EUD 일반 밀리·유즈맵에서 CUnit 3,400 풀의 초기 자유 리스트 순서를 순정(1번 인덱스 역순)과 100% 동일하게 유지하도록 수정하여, 로더·순정 유저와 멀티 플레이 시 시작 직후 발생하던 락스텝 연결 끊김(디싱크)을 완벽 해결했습니다.",
+      p714Item2: "다인방 호스트 중계 스트림(resendFlag=0x04), 피어 지연 측정 응답(cmd=0x0C/0x0B), Battle.net 공유 SNP 릴레이 경로 전환 시 발생하던 패킷 가드 오차단·공유 릴레이 격리를 전면 제거하여 모든 공방·로더 방에서 끊김 없이 게임이 시작되도록 정상화했습니다.",
+      p714Item3: "배틀태그 은닉(0x3A 해시 변조) 또는 강퇴(0x4E) 이후 공유 SNP 릴레이·외부 프로그램으로 주입되는 원시 UDP 채팅(0x00·0x4C·0x4D·0x5C) 및 강제 종료 패킷(0x39, 필드 순서 변조 포함)만 정밀 식별해 무고한 릴레이 참가자 피해 없이 차단합니다.",
+      p714Item4: "StarDesk·oCam·SOOP·NVIDIA 오버레이 등 제3자 상시 최상단(WS_EX_TOPMOST)·UI-Access 유틸리티 창이 떠 있는 환경에서도 윈도우 키(시작 메뉴·검색·작업 표시줄) 입력 시 상단 오버레이·디지털 시계·키패드 0 정보 차트가 절대 사라지지 않도록 윈도우 Z-Band 및 가시 영역 판정을 개선했습니다.",
       p713Summary: "강퇴 후 스타 강제 종료·채팅 박탈·단독 드랍 방어 보안 패치, HD/SD 커스텀 GRP 복구 및 키패드 0·오버레이 개선",
       p713Item1: "스타크래프트: 리마스터(1.23.10) HD·SD AnimSprite 컨테이너에 커스텀 .anim 스킨 텍스처와 프레임 좌표를 직접 바인딩하여 인게임에서 커스텀 GRP 스킨이 적용되지 않던 문제를 해결했습니다.",
       p713Item2: "인게임 키패드 0 플레이어 모니터의 상단 헤더를 한 줄(『방: 제목 · 맵이름』)로 압축하고 불필요한 중복 배틀태그·종족·EPM 표기를 정리했으며, 맵 슬롯 데이터로 인해 허위 관전자(OBS) 줄이 표시되던 현상을 제거했습니다.",
@@ -105,7 +110,7 @@
       p704Item1: "외부 PC 환경에서 발생하던 런타임 경로 의존성·바탕화면 바로가기 누락·초기 구동 실패 문제를 전면 해결하여 어떤 Windows 10/11 PC에서도 즉시 실행되도록 개선했습니다.",
       p704Item2: "설치 폴더 직접 지정·바로가기 생성·Windows '앱 및 기능' 제거(Uninstall.exe)를 지원하는 전용 설치 프로그램을 도입하고, 배틀넷 앱 스타일의 자동 로그인 체크 방식을 적용했습니다.",
       p703Summary: "맵 무단수정 정밀 감지 토스트, 핵·리플레이 크래시 방어 및 K런처·H런처 병행 지원",
-      p703Item1: "원본 맵 지문과 비교해 Comment(\"\") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
+      p703Item1: "원본 맵 지문과 비교해 Comment("") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
       p703Item2: "시야 확장 기반 맵핵 정밀 탐지, 비정상 패킷 차단, 오염된 리플레이 시청 후 방 생성 시 '응답 없음'에 빠지던 스트림 포인터 크래시 방어를 통합했습니다.",
       p703Item3: "K런처 오프라인 단독 모드 및 H런처와 충돌 없이 동시 실행을 지원하고, 방 제목에 #h가 포함된 방도 S런처에서 바로 입장할 수 있도록 호환성을 확보했습니다.",
       p703Item4: "Tab 키 전환 및 따라가기 UI 표시 시 스타 순정 UI 비율을 100% 보존(확대·잘림 방지)하고, 배틀넷 채널 입장 시 발생하던 프레임 지연(렉)을 최적화했습니다.",
@@ -274,6 +279,11 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p714Summary: "Multiplayer/Loader Match-Start & Lockstep Desync Fix, Shared-Relay / Programmatic Chat Exploit Guard & WinKey Overlay Persistence",
+      p714Item1: "Preserved exact stock CUnit free-list ordering on non-EUD melee and UMS maps even with the 3,400-unit pool allocated, completely eliminating early-frame lockstep disconnects against vanilla and Loader peers.",
+      p714Item2: "Eliminated false packet drops and shared-relay blackholing across host-forwarded multi-peer streams (resendFlag=0x04), peer latency ping/pong frames (cmd=0x0B/0x0C), and Direct-P2P ↔ Battle.net SNP relay transitions so every match starts and plays smoothly.",
+      p714Item3: "Added per-slot hidden-BattleTag (0x3A) and post-kick (0x4E) tracking plus full protobuf SNP envelope parsing to block programmatic raw UDP chat injection (0x00/0x4C/0x4D/0x5C) and reordered-field 0x39 crash packets without affecting innocent players on shared relays.",
+      p714Item4: "Upgraded Z-band (ZBID_UIACCESS / Immersive Shell) and passive-utility window snapshotting (StarDesk, oCam, SOOP, NVIDIA Overlay, etc.) so the top HUD, clock, and Numpad 0 monitor stay visible when pressing the Windows key while still hiding on Alt+Tab or Win+D.",
       p713Summary: "Post-Kick Remote Termination, Chat-Lock & Solo-Drop Security Defense, HD/SD GRP Fix & Overlay Persistence",
       p713Item1: "Bound custom .anim diffuse/teamcolor textures and frame coordinates directly into StarCraft: Remastered (1.23.10) HD and SD AnimSprite containers so custom GRP unit skins render reliably in-game.",
       p713Item2: "Condensed the in-game Numpad 0 Player Monitor header into a single compact line ('Room · Map'), trimmed redundant BattleTag/race/EPM padding, and eliminated phantom spectator (OBS) rows caused by raw map slot bytes.",
@@ -307,7 +317,7 @@
       p704Item1: "Eliminated local path dependencies, missing desktop shortcuts, and startup issues on clean external Windows 10/11 PCs.",
       p704Item2: "Shipped the custom single-file setup installer (custom directory, shortcuts, Uninstall.exe in Apps & Features) and switched to Battle.net login with an optional auto-login checkbox.",
       p703Summary: "Map Tamper Toast Alerts, Anti-Hack / Replay Crash Guards & Multi-Launcher Coexistence",
-      p703Item1: "Detects cleared/deleted Comment(\"\") actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
+      p703Item1: "Detects cleared/deleted Comment("") actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
       p703Item2: "Integrated vision-expansion maphack detection, malformed-packet filtering, and stream-pointer protection preventing freezes after viewing corrupted replays.",
       p703Item3: "Added conflict-free coexistence with KLauncher offline standalone mode and HLauncher, including direct entry into #h rooms from SLauncher.",
       p703Item4: "Preserved 100% native StarCraft UI dimensions on Tab / Follow controls and eliminated Battle.net channel-entry frame stutter.",
@@ -423,15 +433,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.713",
-    publishedAt: "2026-11-16T06:16:00Z",
-    setupName: "SLauncher-0.6.713-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher-0.6.713-win-setup.exe",
-    setupBytes: 83742325,
-    setupSha256: "90b91a63ea253b875676936fcf16e6fb1323027a6613f22dc0d6a40267df860f",
-    zipName: "SLauncher_v0.6.713.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher_v0.6.713.zip",
-    zipBytes: 83162613,
+    tag: "v0.6.714",
+    publishedAt: "2026-11-16T14:54:34Z",
+    setupName: "SLauncher-0.6.714-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.714/SLauncher-0.6.714-win-setup.exe",
+    setupBytes: 83743580,
+    setupSha256: "87b1604a96ab95842eaed85239eedd2d3499979b56d3f2921a47b9dc5aa4bb62",
+    zipName: "SLauncher_v0.6.714.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.714/SLauncher_v0.6.714.zip",
+    zipBytes: 83163868,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
