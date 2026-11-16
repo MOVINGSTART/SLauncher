@@ -3,7 +3,7 @@
 
   /**
    * [설정 안내]
-   * GitHub Pages (`https://<아이디>.github.io/<저장소>`)에 올리면 저장소를 자동으로 감지합니다.
+   * GitHub Pages ('https://<아이디>.github.io/<저장소>')에 올리면 저장소를 자동으로 감지합니다.
    * 커스텀 도메인을 쓰거나 특정 저장소를 고정하려면 아래 GITHUB_REPO에 "아이디/저장소명"을 입력하세요.
    * 예: var GITHUB_REPO = "myaccount/SLauncher";
    */
@@ -14,8 +14,10 @@
       navHome: "홈",
       navFeatures: "주요 기능",
       navChangelog: "패치 내역",
+      navGrpGuide: "GRP 적용법",
       navDownload: "다운로드",
       viewAllPatchesBtn: "전체 패치 내역 보기",
+      panelGrpGuideBtn: "GRP 적용법 가이드 보기",
       clBackHome: "메인 페이지로 돌아가기",
       clPillLabel: "Release History",
       clStatLatest: "현재 최신 버전",
@@ -70,6 +72,9 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p712Summary: "런처·스타 실행 초기 친구 삭제 오감지 완벽 차단 및 공식 GRP 적용법 가이드 오픈",
+      p712Item1: "S런처 및 스타크래프트 실행 직후 Battle.net 친구 목록 모델이 메모리에 완전히 로드되기 전 빈 목록이나 대량 변동이 일시 관측될 때 친구 삭제(친삭) 알림이 오감지되던 문제를 원천 차단했습니다.",
+      p712Item2: "프렌즈 데몬 재연결 시 이전 세션의 메모리 알림 시퀀스를 자동 동기화하여 중복 토스트가 재출력되지 않도록 보강하고, 공식 홈페이지 상단에 『GRP 적용법』 전용 가이드를 추가했습니다.",
       p711Summary: "상단 메인 오버레이·디지털 시계 HUD 즉시 표시 복구 및 포커스 전환 개선",
       p711Item1: "스타크래프트 실행 직후 및 초기 설정 동기화 시 상단 메인 오버레이와 우측 상단 디지털 시계가 비활성 상태로 남아 화면에 표시되지 않던 문제를 해결했습니다.",
       p711Item2: "런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.",
@@ -121,14 +126,95 @@
       latestPrefix: "최신",
       downloadBtnFmt: "{tag} 다운로드",
       copiedSha: "설치 파일 SHA-256 해시가 클립보드에 복사되었습니다.",
-      noShaYet: "표시할 SHA-256 해시 정보가 아직 없습니다."
+      noShaYet: "표시할 SHA-256 해시 정보가 아직 없습니다.",
+      grpPillLabel: "Custom Skin & Resource Guide",
+      grpGuideTitle: "GRP 적용법",
+      grpGuideSub: "일반 그림 파일(PNG·GIF)부터 리마스터 전용 .anim 스킨, 지형 타일, Iscript·콘솔 UI까지 S런처 안에서 몇 번의 클릭으로 안전하게 적용하고 미리보는 방법입니다.",
+      grpStatGlobalLabel: "적용 방식",
+      grpStatGlobalVal: "전역 항시",
+      grpStatCatalogLabel: "Image 카탈로그",
+      grpStatQualityLabel: "지원 화질",
+      grpQuick1Title: "대상 선택 · 파일 추가",
+      grpQuick1Desc: "『맵 리소스 적용』 탭에서 유닛 이름을 검색해 이미지/ANIM 파일을 등록하거나 분류 폴더에 넣습니다.",
+      grpQuick2Title: "RuntimeMod 동기화 · 미리보기",
+      grpQuick2Desc: "『RuntimeMod 즉시 동기화』를 누르고 『GRP 미리보기』에서 HD/SD 실제 적용 화면을 확인합니다.",
+      grpQuick3Title: "스타 실행 · 인게임 자동 적용",
+      grpQuick3Desc: "유즈맵 이름과 무관하게 모든 방에서 자동 적용되며, 토글 OFF 하나로 언제든 순정 복구됩니다.",
+      grpTocTitle: "가이드 목차",
+      grpNav1: "01. 작동 원리 · 지원 형식",
+      grpNav2: "02. 999 Image ID 적용",
+      grpNav3: "03. 스킨 팩 폴더 적용",
+      grpNav4: "04. HD/SD 미리보기 · 삭제",
+      grpNav5: "05. 인게임 확인 · 순정 복구",
+      grpNav6: "06. 맵 내장 · 타일 · 보안",
+      grpNav7: "07. 문제 해결 (FAQ)",
+      grpS1Title: "기본 원리 및 지원 파일 형식",
+      grpS1Badge: "원본 맵 무수정",
+      grpS1Lead: "S런처의 GRP 그래픽 기능은 개별 유즈맵(.scx / .scm) 파일을 건드리지 않고 전역 UserAssets 및 RuntimeMod 경로를 통해 동작하므로, 공방·밀리·유즈맵 파일명이 무엇이든 항상 동일하게 적용됩니다.",
+      grpFmt1Title: "일반 그림 파일 (자동 변환)",
+      grpFmt1Desc: "따로 변환 툴을 쓸 필요 없이 999 Image ID 빌더에서 선택하면 HD/SD .anim 스프라이트로 즉시 자동 변환됩니다.",
+      grpFmt2Title: "스타 리마스터 스킨 파일",
+      grpFmt2Desc: "커뮤니티에서 배포되는 HD/SD 유닛·건물·투사체·기타 .anim 스킨 및 지형 타일 자산을 그대로 등록할 수 있습니다.",
+      grpFmt3Title: "스크립트 · 콘솔 UI 확장",
+      grpFmt3Desc: "검증된 단일 iscript.bin 애니메이션 스크립트와 허용된 콘솔 UI 스킨도 동일한 RuntimeMod 경로로 안전하게 동기화됩니다.",
+      grpS2Title: "999 Image ID로 개별 스킨 바로 적용하기 (권장)",
+      grpS2Badge: "가장 쉬운 방법",
+      grpS2Lead: "파일 이름 규칙(main_XXX.anim)을 외울 필요 없이, S런처 내장 EUD Editor 기준 999개 Image 카탈로그에서 한글·영문 이름으로 검색해 바로 입힐 수 있습니다.",
+      grpS2Step1Title: "『맵 리소스 적용』 메뉴 열기 & 스위치 확인",
+      grpS2Step1Desc: "S런처 좌측 사이드바에서 『맵 리소스 적용』 탭을 클릭하고, 상단 『1. GRP 항시 적용』 카드의 『GRP 그래픽 활성화』 스위치가 ON 상태인지 확인합니다.",
+      grpS2Step2Title: "원하는 유닛·건물·이펙트 검색 (0 ~ 998)",
+      grpS2Step2Desc: "『2. 999 Image ID』 영역에서 분류(전체 / 유닛 203 / 건물 182 / 투사체·효과 287 / 기타 327)를 고르거나 검색창에 『마린』, 『히드라』, 『게이트웨이』, 『239』처럼 이름 또는 번호를 입력해 대상을 선택합니다.",
+      grpS2Step3Title: "파일 종류에 맞는 적용 버튼 클릭",
+      grpS2Step3Desc: "우측 『커스텀 이미지 적용』 영역에서 준비한 파일 형식에 맞는 버튼을 누릅니다. 일반 그림(PNG/GIF 등)은 『이미지 → 유닛 / 건물 / 투사체 / 기타』를, 이미 만들어진 .anim 파일은 『ANIM → 유닛 / 건물 / 투사체 / 기타』를 선택하면 HD와 SD 자산이 함께 동기화됩니다.",
+      grpS2Step4Title: "『RuntimeMod 즉시 동기화』 확인",
+      grpS2Step4Desc: "자산 추가 시 자동으로 반영되며, 상단 『RuntimeMod 즉시 동기화』 버튼을 한 번 눌러주면 『맵 GRP 프로필』 상태창에서 적용된 ANIM 개수와 대상 Image 수를 즉시 확인할 수 있습니다.",
+      grpS3Title: "분류 폴더에 스킨 팩 한꺼번에 넣기",
+      grpS3Badge: "대량 스킨 팩",
+      grpS3Lead: "여러 개의 .anim 파일로 구성된 통합 스킨 팩을 보유하고 있다면, S런처의 분류별 전용 폴더에 복사해 한 번에 동기화할 수 있습니다.",
+      grpTagFolder: "폴더",
+      grpS3Item1: "상단 버튼 줄의 『Unit 폴더』, 『Building 폴더』, 『Projectile 폴더』, 『Other 폴더』, 『Tile 폴더』, 『SD 폴더』 버튼을 누르면 해당 UserAssets 폴더가 탐색기에서 바로 열립니다.",
+      grpTagRule: "중요",
+      grpS3Item2: "카테고리 격리 규칙: 각 .anim 파일의 Image ID는 반드시 해당 카탈로그 분류 폴더에 넣어야 합니다. (예: 건물 ID 파일을 Unit 폴더에 넣으면 정합성 검사가 안내하며 적용을 멈춥니다.)",
+      grpTagSync: "적용",
+      grpS3Item3: "파일 복사를 마친 뒤 S런처에서 『RuntimeMod 즉시 동기화』 또는 하단 『전체 리소스 다시 적용』 버튼을 누르면 모든 파일의 무결성 검사 후 일괄 적용됩니다.",
+      grpS4Title: "GRP 미리보기에서 HD / SD 확인 및 개별 삭제",
+      grpS4Lead: "게임을 켜기 전에도 S런처 안에서 UserAssets에 실제 저장된 HD·SD·타일 프레임을 즉시 렌더링해 눈으로 확인하고 관리할 수 있습니다.",
+      grpTagPreview: "확인",
+      grpS4Item1: "좌측 사이드바의 『GRP 미리보기』 탭(또는 999 Image ID 카드 하단의 『HD 미리보기』 / 『SD 미리보기』 버튼)을 누르면 실제 적용된 첫 프레임 이미지가 표시됩니다.",
+      grpTagControl: "조작",
+      grpS4Item2: "우측 상단 『HD / SD』 버튼으로 화질을 즉시 전환할 수 있고, 미리보기 스테이지에서 드래그·방향키·마우스 우클릭으로 스프라이트 이동 느낌까지 바로 테스트할 수 있습니다.",
+      grpTagDelete: "삭제",
+      grpS4Item3: "우측 『적용된 자산 목록』에서 원하는 항목을 클릭해 전환해 보다가 마음에 들지 않는 스킨이 있다면 상단 『선택 삭제』 버튼으로 해당 스킨만 깔끔하게 지울 수 있습니다.",
+      grpS5Title: "스타크래프트 인게임 확인 & 1초 순정 복구",
+      grpTagPlay: "실행",
+      grpS5Item1: "S런처가 실행된 상태에서 Battle.net 앱의 『플레이(Play)』 또는 S런처 실행 버튼으로 StarCraft: Remastered에 접속하면 자동으로 프로세스를 감지해 GRP 자산을 연결합니다.",
+      grpTagF5: "화질",
+      grpS5Item2: "인게임 진입 후 『F5』 키로 HD 리마스터 그래픽과 SD 클래식 그래픽을 전환해도 양쪽 화질 모두 끊김 없이 동기화되며, S런처 상태 카드에 『실제 적용: 성공』 여부가 표시됩니다.",
+      grpTagReset: "복구",
+      grpS5Item3: "순정 그래픽으로 돌아가고 싶을 때: 넣어둔 스킨 파일을 일일이 삭제할 필요 없이 『GRP 그래픽 활성화』 토글만 OFF로 끄면 즉시 순정 상태로 돌아갑니다.",
+      grpS6Title: "맵 제작자 내장 · 타일 편집 · 보안 검사",
+      grpTagEmbed: "내장",
+      grpS6Item1: "맵 파일에 직접 GRP 내장(선택사항): 특정 .scx / .scm 맵 자체에 GRP를 심어 배포하려는 제작자는 『SCX 선택』 후 『맵에 GRP 내장』 및 『실제 맵 트리거 테스트』 기능을 활용할 수 있습니다.",
+      grpTagTile: "지형",
+      grpS6Item2: "배틀넷 호환 타일 편집: 좌측 『타일 편집』 탭에서 .scx / .scm의 실제 MTXM 지형을 브러시(1×1 ~ 14×14)로 직접 수정·저장할 수 있으며, 첫 저장 전 원본 백업이 자동 생성됩니다.",
+      grpTagSec: "보안",
+      grpS6Item3: "위장 파일 자동 차단: 모든 스킨·Iscript(iscript.bin 단독 허용)·콘솔 UI 폴더는 적용 전 시그니처를 전수 검사하며, 실행파일(MZ/PE·ELF)이나 압축파일(ZIP·7z·RAR)이 하나라도 섞여 있으면 전체 적용을 즉시 차단해 PC를 보호합니다.",
+      grpS7Title: "자주 묻는 질문 · 문제 해결",
+      grpFaq1Q: "Q. 스킨을 넣었는데 인게임에서 기본 유닛으로 그대로 나와요.",
+      grpFaq1A: "① 『GRP 그래픽 활성화』 토글이 ON인지 확인 후 『RuntimeMod 즉시 동기화』를 눌러주세요. ② 스타크래프트를 먼저 켜둔 상태에서 나중에 설정했다면 게임을 한 번 재실행하거나 인게임 F5 화질 전환을 확인하세요. ③ 입장한 방이 무단수정 의심(사기맵 해시 불일치)으로 감지된 경우 안전을 위해 해당 방에서는 GRP 연결이 자동 보류됩니다.",
+      grpFaq2Q: "Q. 다른 사람 화면에도 내 커스텀 GRP 스킨이 보이나요? 방 갈림(디싱크)은 없나요?",
+      grpFaq2A: "GRP 그래픽 동기화는 내 화면의 렌더링 텍스처만 안전하게 교체하므로 게임 판정·유닛 데이터에 영향을 주지 않아 일반 배틀넷 유저와 함께 플레이해도 방 갈림(디싱크)이 발생하지 않습니다. (단, 맵 제작자가 『맵에 GRP 내장』으로 배포한 맵은 맵 자체 리소스를 따릅니다.)",
+      grpFaq3Q: "Q. 현재 적용 중인 스킨을 파일로 다시 꺼내서 백업할 수 있나요?",
+      grpFaq3A: "가능합니다. 『2. 999 Image ID』 우측 카드의 『현재 적용 자산 추출』 영역에서 『추출 → 유닛/건물/투사체/기타』 또는 『타일 추출』을 누른 뒤 『추출 폴더 열기』를 클릭하면 자동 정리된 파일명으로 백업할 수 있습니다."
     },
     en: {
       navHome: "Home",
       navFeatures: "Features",
       navChangelog: "Patch Notes",
+      navGrpGuide: "GRP Guide",
       navDownload: "Download",
       viewAllPatchesBtn: "View full patch notes",
+      panelGrpGuideBtn: "Read GRP Skin Guide",
       clBackHome: "Back to main page",
       clPillLabel: "Release History",
       clStatLatest: "Latest Version",
@@ -183,6 +269,9 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p712Summary: "False-Positive Friend Removal Alert Elimination & Official GRP Skin Guide",
+      p712Item1: "Eliminated false-positive friend-removal alerts triggered during SLauncher or StarCraft startup before Battle.net's in-memory FriendsModel finishes hydrating.",
+      p712Item2: "Added automatic notice-sequence priming when reattaching to an existing Friends Daemon to prevent duplicate alerts, and launched the dedicated GRP Skin Guide in the top navigation bar.",
       p711Summary: "Top Main Overlay & Digital Clock HUD Visibility Fix and Focus Handoff",
       p711Item1: "Fixed a startup synchronization issue where the top-left main HUD and top-right digital clock overlay remained disabled right after launching StarCraft.",
       p711Item2: "Improved foreground focus handoff and overlay persistence when SLauncher minimizes to the background or runs alongside the compact helper (Ctrl+H).",
@@ -234,7 +323,86 @@
       latestPrefix: "Latest",
       downloadBtnFmt: "Download {tag}",
       copiedSha: "Installer SHA-256 copied to clipboard.",
-      noShaYet: "SHA-256 hash is not available yet."
+      noShaYet: "SHA-256 hash is not available yet.",
+      grpPillLabel: "Custom Skin & Resource Guide",
+      grpGuideTitle: "GRP Skin Guide",
+      grpGuideSub: "Step-by-step instructions to convert standard images (PNG/GIF), apply Remastered .anim skins, preview HD/SD sprites, edit terrain tiles, and restore vanilla graphics in one click.",
+      grpStatGlobalLabel: "Scope",
+      grpStatGlobalVal: "Global Always-On",
+      grpStatCatalogLabel: "Image Catalog",
+      grpStatQualityLabel: "Graphics Modes",
+      grpQuick1Title: "Pick Target · Add Files",
+      grpQuick1Desc: "Search any unit/building in 'Map Resource Apply' to import PNG/GIF/.anim files, or drop skin packs into category folders.",
+      grpQuick2Title: "Sync RuntimeMod · Preview",
+      grpQuick2Desc: "Click 'Sync RuntimeMod Now' and check both HD and SD sprites directly inside 'GRP Preview'.",
+      grpQuick3Title: "Launch StarCraft · Auto-Apply",
+      grpQuick3Desc: "Works globally across every lobby regardless of map filename, and restores vanilla graphics instantly when toggled OFF.",
+      grpTocTitle: "Guide Contents",
+      grpNav1: "01. How It Works · Formats",
+      grpNav2: "02. 999 Image ID Builder",
+      grpNav3: "03. Bulk Skin Pack Folders",
+      grpNav4: "04. HD/SD Preview · Delete",
+      grpNav5: "05. In-Game & Instant Reset",
+      grpNav6: "06. Map Embed · Tiles · Safety",
+      grpNav7: "07. Troubleshooting (FAQ)",
+      grpS1Title: "How Global GRP Works & Supported File Formats",
+      grpS1Badge: "Zero Map Edits",
+      grpS1Lead: "SLauncher's GRP engine syncs through global UserAssets and RuntimeMod directories without modifying .scx / .scm files, so your custom skins stay active across public lobbies, melee, and UMS maps alike.",
+      grpFmt1Title: "Standard Images (Auto-Convert)",
+      grpFmt1Desc: "Select any image in the 999 Image ID builder to automatically convert and sync both HD and SD .anim sprites without external tools.",
+      grpFmt2Title: "SC:R Native Skin Files",
+      grpFmt2Desc: "Import community-made HD/SD unit, building, projectile, miscellaneous .anim skins, and custom terrain tile assets directly.",
+      grpFmt3Title: "Iscript & Console UI",
+      grpFmt3Desc: "Validated standalone iscript.bin animation scripts and approved ConsoleUI skins sync safely through the same RuntimeMod pipeline.",
+      grpS2Title: "Apply Individual Skins via 999 Image ID (Recommended)",
+      grpS2Badge: "Easiest Method",
+      grpS2Lead: "No need to memorize main_XXX.anim numbers — search SLauncher's built-in 999-entry EUD Editor Image catalog by unit name or ID.",
+      grpS2Step1Title: "Open 'Map Resource Apply' & Enable the Switch",
+      grpS2Step1Desc: "Click 'Map Resource Apply' in SLauncher's left sidebar and confirm that 'Enable GRP Graphics' in Card 1 is toggled ON.",
+      grpS2Step2Title: "Search Your Target Unit, Building, or Effect (0–998)",
+      grpS2Step2Desc: "Filter by category (All / Units 203 / Buildings 182 / Projectiles 287 / Other 327) or type a name or ID such as 'Marine', 'Hydralisk', 'Gateway', or '239'.",
+      grpS2Step3Title: "Click the Matching Import Button",
+      grpS2Step3Desc: "Under 'Apply Custom Image', choose 'Image → Unit / Building / Projectile / Other' for PNG/GIF files, or 'ANIM → Unit / Building / Projectile / Other' for prebuilt .anim files.",
+      grpS2Step4Title: "Click 'Sync RuntimeMod Now'",
+      grpS2Step4Desc: "Assets sync automatically on import; clicking 'Sync RuntimeMod Now' refreshes the GRP Profile status card with your active ANIM and target Image counts.",
+      grpS3Title: "Bulk-Install Skin Packs via Category Folders",
+      grpS3Badge: "Skin Packs",
+      grpS3Lead: "If you have a multi-file .anim skin pack, copy the files into SLauncher's dedicated category folders and sync them all at once.",
+      grpTagFolder: "Folders",
+      grpS3Item1: "Use the 'Unit Folder', 'Building Folder', 'Projectile Folder', 'Other Folder', 'Tile Folder', and 'SD Folder' buttons to open each UserAssets directory in File Explorer.",
+      grpTagRule: "Rule",
+      grpS3Item2: "Category isolation: each main_XXX.anim file must reside in its matching catalog folder (e.g., placing a building ID inside the Unit folder will be flagged and halted by validation).",
+      grpTagSync: "Sync",
+      grpS3Item3: "After copying your files, click 'Sync RuntimeMod Now' or 'Re-apply All Resources' to validate signatures and apply the entire pack.",
+      grpS4Title: "Inspect HD / SD Frames & Remove Skins in GRP Preview",
+      grpS4Lead: "Render actual UserAssets HD, SD, and tile frames inside SLauncher before even launching StarCraft.",
+      grpTagPreview: "Preview",
+      grpS4Item1: "Open 'GRP Preview' from the left sidebar (or click 'HD Preview' / 'SD Preview' under the 999 Image ID card) to view the active sprite.",
+      grpTagControl: "Controls",
+      grpS4Item2: "Toggle 'HD / SD' in the top-right corner and drag, use arrow keys, or right-click on the preview stage to test sprite movement.",
+      grpTagDelete: "Remove",
+      grpS4Item3: "Select any item in the 'Applied Assets' list on the right and click 'Delete Selected' to cleanly remove just that skin.",
+      grpS5Title: "Verify In-Game & Restore Vanilla Graphics in 1 Second",
+      grpTagPlay: "Launch",
+      grpS5Item1: "With SLauncher running, launch StarCraft: Remastered via Battle.net Play or SLauncher — GRP assets attach automatically.",
+      grpTagF5: "HD / SD",
+      grpS5Item2: "Press F5 in-game to switch seamlessly between HD Remastered and SD Classic graphics while both modes stay synchronized.",
+      grpTagReset: "Reset",
+      grpS5Item3: "Want vanilla graphics back? Simply toggle 'Enable GRP Graphics' OFF — no need to delete your saved skin files.",
+      grpS6Title: "Map Embedding, Terrain Tile Editor & Malware Blocking",
+      grpTagEmbed: "Embed",
+      grpS6Item1: "Optional map embedding: mapmakers distributing custom GRP inside a specific .scx / .scm can select the map and use 'Embed GRP into Map'.",
+      grpTagTile: "Terrain",
+      grpS6Item2: "Battle.net-compatible Tile Editor: paint MTXM terrain tiles (1×1 to 14×14 brush) directly on .scx / .scm maps with automatic first-save backups.",
+      grpTagSec: "Security",
+      grpS6Item3: "Disguised-binary protection: every skin, iscript.bin, and ConsoleUI folder undergoes magic-byte inspection; any executable (MZ/PE, ELF) or archive (ZIP, 7z, RAR) immediately blocks sync.",
+      grpS7Title: "Frequently Asked Questions & Troubleshooting",
+      grpFaq1Q: "Q. I added a skin, why does the default unit still appear in-game?",
+      grpFaq1A: "1) Verify 'Enable GRP Graphics' is ON and click 'Sync RuntimeMod Now'. 2) If StarCraft was already open beforehand, restart the game or toggle F5 once. 3) In lobbies flagged for suspected map tampering, GRP attachment is paused automatically for safety.",
+      grpFaq2Q: "Q. Can other players see my custom GRP skins, or can it cause desyncs?",
+      grpFaq2A: "Global GRP replaces local visual textures only without altering gameplay simulation or unit tables, so it never causes desyncs when playing with standard Battle.net players.",
+      grpFaq3Q: "Q. Can I export and back up my currently applied skins?",
+      grpFaq3A: "Yes — in the 'Export Applied Assets' box of the 999 Image ID card, click 'Export → Unit/Building/Projectile/Other' or 'Export Tiles', then 'Open Export Folder'."
     }
   };
 
@@ -245,15 +413,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.711",
-    publishedAt: "2026-11-15T16:35:58Z",
-    setupName: "SLauncher-0.6.711-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher-0.6.711-win-setup.exe",
-    setupBytes: 85430800,
-    setupSha256: "6745d492c0bd1082e3cf7c76c4770616ae301f499db04d63dd4d2813fc736df3",
-    zipName: "SLauncher_v0.6.711.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher_v0.6.711.zip",
-    zipBytes: 84851088,
+    tag: "v0.6.712",
+    publishedAt: "2026-11-15T23:51:08Z",
+    setupName: "SLauncher-0.6.712-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher-0.6.712-win-setup.exe",
+    setupBytes: 85432026,
+    setupSha256: "436399c9f878d70c4aafc4df3d611224075f839a1678e50928a13b59d36d74ea",
+    zipName: "SLauncher_v0.6.712.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher_v0.6.712.zip",
+    zipBytes: 84852314,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -327,6 +495,7 @@
     }
     return null;
   }
+
   function renderReleaseUI() {
     var dict = I18N[currentLang] || I18N.ko;
     var heroVer = document.getElementById("hero-version");
@@ -378,7 +547,7 @@
         var cleanBody = String(releaseState.latestBody)
           .replace(/^#{1,4}\s+/gm, "")
           .replace(/\*\*(.*?)\*\*/g, "$1")
-          .replace(/\`([^\`]+)\`/g, "$1")
+          .replace(/\x60([^\x60]+)\x60/g, "$1")
           .trim();
         var card = document.createElement("article");
         card.className = "patch-card patch-card-latest";
@@ -700,6 +869,39 @@
       var observedCards = clApp.querySelectorAll(".patch-timeline .patch-card");
       for (var oc = 0; oc < observedCards.length; oc++) {
         observer.observe(observedCards[oc]);
+      }
+    }
+  }
+
+  // Bind dedicated GRP guide TOC scroll-spy
+  var grpApp = document.getElementById("grp-guide-app");
+  if (grpApp) {
+    var guideLinks = grpApp.querySelectorAll("[data-guide-sec]");
+    for (var gl = 0; gl < guideLinks.length; gl++) {
+      guideLinks[gl].addEventListener("click", function (e) {
+        var sec = e.currentTarget.getAttribute("data-guide-sec");
+        for (var gm = 0; gm < guideLinks.length; gm++) {
+          guideLinks[gm].classList.toggle("active", guideLinks[gm].getAttribute("data-guide-sec") === sec);
+        }
+      });
+    }
+    if ("IntersectionObserver" in window) {
+      var guideObserver = new IntersectionObserver(function (entries) {
+        for (var ge = 0; ge < entries.length; ge++) {
+          if (entries[ge].isIntersecting) {
+            var gSec = entries[ge].target.getAttribute("data-guide-card");
+            if (!gSec) continue;
+            for (var gn = 0; gn < guideLinks.length; gn++) {
+              guideLinks[gn].classList.toggle("active", guideLinks[gn].getAttribute("data-guide-sec") === gSec);
+            }
+            break;
+          }
+        }
+      }, { rootMargin: "-95px 0px -65% 0px", threshold: 0 });
+
+      var guideCards = grpApp.querySelectorAll("[data-guide-card]");
+      for (var gc = 0; gc < guideCards.length; gc++) {
+        guideObserver.observe(guideCards[gc]);
       }
     }
   }
