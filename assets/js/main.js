@@ -72,10 +72,11 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
-      p713Summary: "리마스터 HD/SD 커스텀 GRP 실시간 적용 복구, 키패드 0 모니터 간소화 및 윈도우 키 오버레이 유지 패치",
+      p713Summary: "강퇴 후 스타 강제 종료·채팅 박탈·단독 드랍 방어 보안 패치, HD/SD 커스텀 GRP 복구 및 키패드 0·오버레이 개선",
       p713Item1: "스타크래프트: 리마스터(1.23.10) HD·SD AnimSprite 컨테이너에 커스텀 .anim 스킨 텍스처와 프레임 좌표를 직접 바인딩하여 인게임에서 커스텀 GRP 스킨이 적용되지 않던 문제를 해결했습니다.",
       p713Item2: "인게임 키패드 0 플레이어 모니터의 상단 헤더를 한 줄(『방: 제목 · 맵이름』)로 압축하고 불필요한 중복 배틀태그·종족·EPM 표기를 정리했으며, 맵 슬롯 데이터로 인해 허위 관전자(OBS) 줄이 표시되던 현상을 제거했습니다.",
       p713Item3: "플레이 중 윈도우 키(시작 메뉴·검색·작업 표시줄)를 눌렀을 때 상단 메인 오버레이·디지털 시계·플레이어 모니터가 화면에서 사라지지 않고 그대로 유지되도록 개선했습니다.",
+      p713Item4: "방 강퇴 이후에도 외부 UDP 패킷으로 방 안 유저의 스타를 강제 종료(0x39·0xCC 트랩)하거나 인게임 채팅 권한을 박탈(위조 플레이어 정보 cmd=6·수신 모드 변조)하고 혼자만 드랍·디스 상태로 분리(위조 드랍 통지 cmd=0x0C/9/0x0B)하던 악성 패킷 및 배틀태그 은닉·외부 프로그램 채팅 주입을 다중 계층(강퇴 엔드포인트 격리·프로토콜 검증·VEH 복구)으로 완벽 차단했습니다.",
       p712Summary: "런처·스타 실행 초기 친구 삭제 오감지 완벽 차단 및 공식 GRP 적용법 가이드 오픈",
       p712Item1: "S런처 및 스타크래프트 실행 직후 Battle.net 친구 목록 모델이 메모리에 완전히 로드되기 전 빈 목록이나 대량 변동이 일시 관측될 때 친구 삭제(친삭) 알림이 오감지되던 문제를 원천 차단했습니다.",
       p712Item2: "프렌즈 데몬 재연결 시 이전 세션의 메모리 알림 시퀀스를 자동 동기화하여 중복 토스트가 재출력되지 않도록 보강하고, 공식 홈페이지 상단에 『GRP 적용법』 전용 가이드를 추가했습니다.",
@@ -104,7 +105,7 @@
       p704Item1: "외부 PC 환경에서 발생하던 런타임 경로 의존성·바탕화면 바로가기 누락·초기 구동 실패 문제를 전면 해결하여 어떤 Windows 10/11 PC에서도 즉시 실행되도록 개선했습니다.",
       p704Item2: "설치 폴더 직접 지정·바로가기 생성·Windows '앱 및 기능' 제거(Uninstall.exe)를 지원하는 전용 설치 프로그램을 도입하고, 배틀넷 앱 스타일의 자동 로그인 체크 방식을 적용했습니다.",
       p703Summary: "맵 무단수정 정밀 감지 토스트, 핵·리플레이 크래시 방어 및 K런처·H런처 병행 지원",
-      p703Item1: "원본 맵 지문과 비교해 Comment('') 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
+      p703Item1: "원본 맵 지문과 비교해 Comment(\"\") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.",
       p703Item2: "시야 확장 기반 맵핵 정밀 탐지, 비정상 패킷 차단, 오염된 리플레이 시청 후 방 생성 시 '응답 없음'에 빠지던 스트림 포인터 크래시 방어를 통합했습니다.",
       p703Item3: "K런처 오프라인 단독 모드 및 H런처와 충돌 없이 동시 실행을 지원하고, 방 제목에 #h가 포함된 방도 S런처에서 바로 입장할 수 있도록 호환성을 확보했습니다.",
       p703Item4: "Tab 키 전환 및 따라가기 UI 표시 시 스타 순정 UI 비율을 100% 보존(확대·잘림 방지)하고, 배틀넷 채널 입장 시 발생하던 프레임 지연(렉)을 최적화했습니다.",
@@ -273,10 +274,11 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
-      p713Summary: "SC:R HD/SD Custom GRP Live Binding Fix, Compact Numpad 0 Monitor & Windows-Key Overlay Persistence",
+      p713Summary: "Post-Kick Remote Termination, Chat-Lock & Solo-Drop Security Defense, HD/SD GRP Fix & Overlay Persistence",
       p713Item1: "Bound custom .anim diffuse/teamcolor textures and frame coordinates directly into StarCraft: Remastered (1.23.10) HD and SD AnimSprite containers so custom GRP unit skins render reliably in-game.",
       p713Item2: "Condensed the in-game Numpad 0 Player Monitor header into a single compact line ('Room · Map'), trimmed redundant BattleTag/race/EPM padding, and eliminated phantom spectator (OBS) rows caused by raw map slot bytes.",
       p713Item3: "Kept the top main HUD, digital clock, and Numpad 0 player monitor visible when pressing the Windows key (Start Menu / Search / Taskbar flyouts) while StarCraft remains active on screen.",
+      p713Item4: "Added multi-layer defenses (post-kick endpoint quarantine, Storm control/opcode filtering, and first-chance VEH recovery) blocking post-kick StarCraft termination (0x39/0xCC trap), mid-game chat-permission stripping (forged SYS cmd=6 / chat-mode mutation), targeted solo-drop room splits (forged SYS cmd=0x0C/9/0x0B), stripped-BattleTag spoofing, and unauthorized external UDP chat injection.",
       p712Summary: "False-Positive Friend Removal Alert Elimination & Official GRP Skin Guide",
       p712Item1: "Eliminated false-positive friend-removal alerts triggered during SLauncher or StarCraft startup before Battle.net's in-memory FriendsModel finishes hydrating.",
       p712Item2: "Added automatic notice-sequence priming when reattaching to an existing Friends Daemon to prevent duplicate alerts, and launched the dedicated GRP Skin Guide in the top navigation bar.",
@@ -305,7 +307,7 @@
       p704Item1: "Eliminated local path dependencies, missing desktop shortcuts, and startup issues on clean external Windows 10/11 PCs.",
       p704Item2: "Shipped the custom single-file setup installer (custom directory, shortcuts, Uninstall.exe in Apps & Features) and switched to Battle.net login with an optional auto-login checkbox.",
       p703Summary: "Map Tamper Toast Alerts, Anti-Hack / Replay Crash Guards & Multi-Launcher Coexistence",
-      p703Item1: "Detects cleared/deleted Comment('') actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
+      p703Item1: "Detects cleared/deleted Comment(\"\") actions, reordered triggers, and unauthorized 1x speed edits against canonical maps with a clean one-time in-game toast alert.",
       p703Item2: "Integrated vision-expansion maphack detection, malformed-packet filtering, and stream-pointer protection preventing freezes after viewing corrupted replays.",
       p703Item3: "Added conflict-free coexistence with KLauncher offline standalone mode and HLauncher, including direct entry into #h rooms from SLauncher.",
       p703Item4: "Preserved 100% native StarCraft UI dimensions on Tab / Follow controls and eliminated Battle.net channel-entry frame stutter.",
@@ -422,14 +424,14 @@
 
   var releaseState = {
     tag: "v0.6.713",
-    publishedAt: "2026-11-16T03:09:30Z",
+    publishedAt: "2026-11-16T06:16:00Z",
     setupName: "SLauncher-0.6.713-win-setup.exe",
     setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher-0.6.713-win-setup.exe",
-    setupBytes: 85439613,
-    setupSha256: "9ad1ceb9e0ffc602308c2101c8a0138a6d93b04683e4bd6975f19d6148150306",
+    setupBytes: 83742325,
+    setupSha256: "90b91a63ea253b875676936fcf16e6fb1323027a6613f22dc0d6a40267df860f",
     zipName: "SLauncher_v0.6.713.zip",
     zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher_v0.6.713.zip",
-    zipBytes: 84859901,
+    zipBytes: 83162613,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -474,7 +476,7 @@
       var a = assets[i];
       if (!a || !a.name || !a.browser_download_url) continue;
       var name = String(a.name);
-      if (/.json$|.sha256$|.sig$|.blockmap$|.yml$/i.test(name)) continue;
+      if (/\.json$|\.sha256$|\.sig$|\.blockmap$|\.yml$/i.test(name)) continue;
       var score = 0;
       if (/\b(setup|installer)\b/i.test(name)) score += 100;
       if (/\.exe$/i.test(name)) score += 45;
