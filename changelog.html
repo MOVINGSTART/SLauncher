@@ -203,8 +203,12 @@
                 </div>
                 <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
               </div>
-              <p class="patch-summary" data-i18n="p713Summary">리마스터 HD/SD 커스텀 GRP 실시간 적용 복구, 키패드 0 모니터 간소화 및 윈도우 키 오버레이 유지 패치</p>
+              <p class="patch-summary" data-i18n="p713Summary">강퇴 후 스타 강제 종료·채팅 박탈·단독 드랍 방어 보안 패치, HD/SD 커스텀 GRP 복구 및 키패드 0·오버레이 개선</p>
               <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p713Item4">방 강퇴 이후에도 외부 UDP 패킷으로 방 안 유저의 스타를 강제 종료(0x39·0xCC 트랩)하거나 인게임 채팅 권한을 박탈(위조 플레이어 정보 cmd=6·수신 모드 변조)하고 혼자만 드랍·디스 상태로 분리(위조 드랍 통지 cmd=0x0C/9/0x0B)하던 악성 패킷 및 배틀태그 은닉·외부 프로그램 채팅 주입을 다중 계층(강퇴 엔드포인트 격리·프로토콜 검증·VEH 복구)으로 완벽 차단했습니다.</span>
+                </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
                   <span data-i18n="p713Item1">스타크래프트: 리마스터(1.23.10) HD·SD AnimSprite 컨테이너에 커스텀 .anim 스킨 텍스처와 프레임 좌표를 직접 바인딩하여 인게임에서 커스텀 GRP 스킨이 적용되지 않던 문제를 해결했습니다.</span>
