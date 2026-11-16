@@ -72,6 +72,10 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p713Summary: "리마스터 HD/SD 커스텀 GRP 실시간 적용 복구, 키패드 0 모니터 간소화 및 윈도우 키 오버레이 유지 패치",
+      p713Item1: "스타크래프트: 리마스터(1.23.10) HD·SD AnimSprite 컨테이너에 커스텀 .anim 스킨 텍스처와 프레임 좌표를 직접 바인딩하여 인게임에서 커스텀 GRP 스킨이 적용되지 않던 문제를 해결했습니다.",
+      p713Item2: "인게임 키패드 0 플레이어 모니터의 상단 헤더를 한 줄(『방: 제목 · 맵이름』)로 압축하고 불필요한 중복 배틀태그·종족·EPM 표기를 정리했으며, 맵 슬롯 데이터로 인해 허위 관전자(OBS) 줄이 표시되던 현상을 제거했습니다.",
+      p713Item3: "플레이 중 윈도우 키(시작 메뉴·검색·작업 표시줄)를 눌렀을 때 상단 메인 오버레이·디지털 시계·플레이어 모니터가 화면에서 사라지지 않고 그대로 유지되도록 개선했습니다.",
       p712Summary: "런처·스타 실행 초기 친구 삭제 오감지 완벽 차단 및 공식 GRP 적용법 가이드 오픈",
       p712Item1: "S런처 및 스타크래프트 실행 직후 Battle.net 친구 목록 모델이 메모리에 완전히 로드되기 전 빈 목록이나 대량 변동이 일시 관측될 때 친구 삭제(친삭) 알림이 오감지되던 문제를 원천 차단했습니다.",
       p712Item2: "프렌즈 데몬 재연결 시 이전 세션의 메모리 알림 시퀀스를 자동 동기화하여 중복 토스트가 재출력되지 않도록 보강하고, 공식 홈페이지 상단에 『GRP 적용법』 전용 가이드를 추가했습니다.",
@@ -269,6 +273,10 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p713Summary: "SC:R HD/SD Custom GRP Live Binding Fix, Compact Numpad 0 Monitor & Windows-Key Overlay Persistence",
+      p713Item1: "Bound custom .anim diffuse/teamcolor textures and frame coordinates directly into StarCraft: Remastered (1.23.10) HD and SD AnimSprite containers so custom GRP unit skins render reliably in-game.",
+      p713Item2: "Condensed the in-game Numpad 0 Player Monitor header into a single compact line ('Room · Map'), trimmed redundant BattleTag/race/EPM padding, and eliminated phantom spectator (OBS) rows caused by raw map slot bytes.",
+      p713Item3: "Kept the top main HUD, digital clock, and Numpad 0 player monitor visible when pressing the Windows key (Start Menu / Search / Taskbar flyouts) while StarCraft remains active on screen.",
       p712Summary: "False-Positive Friend Removal Alert Elimination & Official GRP Skin Guide",
       p712Item1: "Eliminated false-positive friend-removal alerts triggered during SLauncher or StarCraft startup before Battle.net's in-memory FriendsModel finishes hydrating.",
       p712Item2: "Added automatic notice-sequence priming when reattaching to an existing Friends Daemon to prevent duplicate alerts, and launched the dedicated GRP Skin Guide in the top navigation bar.",
@@ -413,15 +421,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.712",
-    publishedAt: "2026-11-15T23:51:08Z",
-    setupName: "SLauncher-0.6.712-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher-0.6.712-win-setup.exe",
-    setupBytes: 85432026,
-    setupSha256: "436399c9f878d70c4aafc4df3d611224075f839a1678e50928a13b59d36d74ea",
-    zipName: "SLauncher_v0.6.712.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher_v0.6.712.zip",
-    zipBytes: 84852314,
+    tag: "v0.6.713",
+    publishedAt: "2026-11-16T03:09:30Z",
+    setupName: "SLauncher-0.6.713-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher-0.6.713-win-setup.exe",
+    setupBytes: 85439613,
+    setupSha256: "9ad1ceb9e0ffc602308c2101c8a0138a6d93b04683e4bd6975f19d6148150306",
+    zipName: "SLauncher_v0.6.713.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher_v0.6.713.zip",
+    zipBytes: 84859901,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -466,7 +474,7 @@
       var a = assets[i];
       if (!a || !a.name || !a.browser_download_url) continue;
       var name = String(a.name);
-      if (/\.json$|\.sha256$|\.sig$|\.blockmap$|\.yml$/i.test(name)) continue;
+      if (/.json$|.sha256$|.sig$|.blockmap$|.yml$/i.test(name)) continue;
       var score = 0;
       if (/\b(setup|installer)\b/i.test(name)) score += 100;
       if (/\.exe$/i.test(name)) score += 45;
