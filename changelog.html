@@ -60,7 +60,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.712</span>
+              <span id="hero-version">v0.6.713</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -71,11 +71,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.712</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.713</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">11</strong>
+              <strong id="cl-total-count" class="cl-stat-val">12</strong>
             </div>
           </div>
         </div>
@@ -121,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-712" class="cl-ver-link active" data-target-ver="v0.6.712">
-                <span class="cl-ver-name">v0.6.712</span>
+              <a href="#ver-v0-6-713" class="cl-ver-link active" data-target-ver="v0.6.713">
+                <span class="cl-ver-name">v0.6.713</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-712" class="cl-ver-link" data-target-ver="v0.6.712">
+                <span class="cl-ver-name">v0.6.712</span>
+                <span class="cl-ver-mini-date">11.16</span>
               </a>
               <a href="#ver-v0-6-711" class="cl-ver-link" data-target-ver="v0.6.711">
                 <span class="cl-ver-name">v0.6.711</span>
@@ -168,13 +172,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher-0.6.712-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.713/SLauncher-0.6.713-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.712 다운로드</span>
+                <span id="btn-download-label">v0.6.713 다운로드</span>
               </a>
             </div>
           </div>
@@ -190,12 +194,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.712 (Latest) -->
-            <article id="ver-v0-6-712" class="patch-card patch-card-latest" data-patch-ver="v0.6.712">
+            <!-- v0.6.713 (Latest) -->
+            <article id="ver-v0-6-713" class="patch-card patch-card-latest" data-patch-ver="v0.6.713">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.713</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
+              </div>
+              <p class="patch-summary" data-i18n="p713Summary">리마스터 HD/SD 커스텀 GRP 실시간 적용 복구, 키패드 0 모니터 간소화 및 윈도우 키 오버레이 유지 패치</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p713Item1">스타크래프트: 리마스터(1.23.10) HD·SD AnimSprite 컨테이너에 커스텀 .anim 스킨 텍스처와 프레임 좌표를 직접 바인딩하여 인게임에서 커스텀 GRP 스킨이 적용되지 않던 문제를 해결했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p713Item2">인게임 키패드 0 플레이어 모니터의 상단 헤더를 한 줄(『방: 제목 · 맵이름』)로 압축하고 불필요한 중복 배틀태그·종족·EPM 표기를 정리했으며, 맵 슬롯 데이터로 인해 허위 관전자(OBS) 줄이 표시되던 현상을 제거했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p713Item3">플레이 중 윈도우 키(시작 메뉴·검색·작업 표시줄)를 눌렀을 때 상단 메인 오버레이·디지털 시계·플레이어 모니터가 화면에서 사라지지 않고 그대로 유지되도록 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.712 -->
+            <article id="ver-v0-6-712" class="patch-card" data-patch-ver="v0.6.712">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.712</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
               </div>
