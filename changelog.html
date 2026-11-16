@@ -26,6 +26,7 @@
         <a href="./index.html" class="nav-text-link" data-i18n="navHome">홈</a>
         <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
         <a href="./changelog.html" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navChangelog">패치 내역</a>
+        <a href="./grp-guide.html" class="nav-text-link nav-grp-pill" data-i18n="navGrpGuide">GRP 적용법</a>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button type="button" class="lang-btn active" data-lang="ko">KO</button>
@@ -59,7 +60,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.711</span>
+              <span id="hero-version">v0.6.712</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -70,11 +71,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.711</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.712</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">10</strong>
+              <strong id="cl-total-count" class="cl-stat-val">11</strong>
             </div>
           </div>
         </div>
@@ -120,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-711" class="cl-ver-link active" data-target-ver="v0.6.711">
-                <span class="cl-ver-name">v0.6.711</span>
+              <a href="#ver-v0-6-712" class="cl-ver-link active" data-target-ver="v0.6.712">
+                <span class="cl-ver-name">v0.6.712</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-711" class="cl-ver-link" data-target-ver="v0.6.711">
+                <span class="cl-ver-name">v0.6.711</span>
+                <span class="cl-ver-mini-date">11.16</span>
               </a>
               <a href="#ver-v0-6-710" class="cl-ver-link" data-target-ver="v0.6.710">
                 <span class="cl-ver-name">v0.6.710</span>
@@ -163,13 +168,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.711/SLauncher-0.6.711-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.712/SLauncher-0.6.712-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.711 다운로드</span>
+                <span id="btn-download-label">v0.6.712 다운로드</span>
               </a>
             </div>
           </div>
@@ -185,12 +190,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.711 (Latest) -->
-            <article id="ver-v0-6-711" class="patch-card patch-card-latest" data-patch-ver="v0.6.711">
+            <!-- v0.6.712 (Latest) -->
+            <article id="ver-v0-6-712" class="patch-card patch-card-latest" data-patch-ver="v0.6.712">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.712</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
+              </div>
+              <p class="patch-summary" data-i18n="p712Summary">런처·스타 실행 초기 친구 삭제 오감지 완벽 차단 및 공식 GRP 적용법 가이드 오픈</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p712Item1">S런처 및 스타크래프트 실행 직후 Battle.net 친구 목록 모델이 메모리에 완전히 로드되기 전 빈 목록이나 대량 변동이 일시 관측될 때 친구 삭제(친삭) 알림이 오감지되던 문제를 원천 차단했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p712Item2">프렌즈 데몬 재연결 시 이전 세션의 메모리 알림 시퀀스를 자동 동기화하여 중복 토스트가 재출력되지 않도록 보강하고, 공식 홈페이지 상단에 『GRP 적용법』 전용 가이드를 추가했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.711 -->
+            <article id="ver-v0-6-711" class="patch-card" data-patch-ver="v0.6.711">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.711</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
               </div>
@@ -426,6 +452,10 @@
           <span aria-hidden="true">←</span>
           <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
         </a>
+        <a href="./grp-guide.html" class="outline-pill">
+          <span data-i18n="navGrpGuide">GRP 적용법</span>
+          <span aria-hidden="true">→</span>
+        </a>
         <a id="footer-issues-link" href="https://github.com/MOVINGSTART/SLauncher/issues" target="_blank" rel="noopener" class="outline-pill">
           <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
           <span aria-hidden="true">→</span>
@@ -438,6 +468,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.711"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
