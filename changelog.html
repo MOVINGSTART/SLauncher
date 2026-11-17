@@ -121,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-715" class="cl-ver-link active" data-target-ver="v0.6.715">
-                <span class="cl-ver-name">v0.6.715</span>
+              <a href="#ver-v0-6-716" class="cl-ver-link active" data-target-ver="v0.6.716">
+                <span class="cl-ver-name">v0.6.716</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-715" class="cl-ver-link" data-target-ver="v0.6.715">
+                <span class="cl-ver-name">v0.6.715</span>
+                <span class="cl-ver-mini-date">11.17</span>
               </a>
               <a href="#ver-v0-6-714" class="cl-ver-link" data-target-ver="v0.6.714">
                 <span class="cl-ver-name">v0.6.714</span>
@@ -202,12 +206,41 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.715 (Latest) -->
-            <article id="ver-v0-6-715" class="patch-card patch-card-latest" data-patch-ver="v0.6.715">
+            <!-- v0.6.716 (Latest) -->
+            <article id="ver-v0-6-716" class="patch-card patch-card-latest" data-patch-ver="v0.6.716">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.716</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
+              </div>
+              <p class="patch-summary" data-i18n="p716Summary">방 필터링·새로고침 즉시 연동(32비트 자동 고정), Ctrl+L 슬롯·방제 승률%·배틀태그/블랙 강퇴 정상화, 인게임 종족/APM/EAPM·미니맵 핑·최근 플레이어 닉네임 일괄 패치</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p716Item1">Battle.net 설정(Battle.net.config)의 스타크래프트 32비트 실행 옵션(Run64Bit=false·Launch32Bit=true)을 자동 고정하고 SceneCefBrowser 브리지 연결 지연을 제거하여 방 필터링·자동 새로고침 등 런처 핵심 연동이 즉시 작동하도록 복구했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p716Item2">로비·대기 화면에서 Ctrl+L 플레이어/관전자 슬롯 리스트가 즉시 열리고 닫히지 않도록 수정했으며, 방 제목 승률 조건(예: 50%이상, 55%↓, 45~55%, ~50%, 60%~ 등) 자동 파싱 및 미충족 참가자 자동 강퇴 기능을 적용했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p716Item3">이전 게임의 netPlayerToGame 잔존 값으로 인해 로비 참가자의 배틀태그가 다른 슬롯 유저에게 뒤섞여 표기되던 문제를 차단하고, 정확한 슬롯별 배틀태그 매칭 기반으로 블랙리스트 자동 강퇴가 누락 없이 작동하도록 개선했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p716Item4">인게임 키패드 0 플레이어 모니터에 종족([Z]/[T]/[P])·실시간 APM·EAPM 표시를 복구하고 무입력 대기 상태에서 APM이 100 이상으로 부풀려지던 오류를 0으로 바로잡았으며, 내 건물에서 유닛이 생산될 때 미니맵에 허위 핑이 찍히던 현상과 최근 플레이어 명단 닉네임 누락을 모두 해결했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.715 -->
+            <article id="ver-v0-6-715" class="patch-card" data-patch-ver="v0.6.715">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.715</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
               </div>
@@ -319,7 +352,7 @@
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
-                  <span data-i18n="p712Item2">런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.</span>
+                  <span data-i18n="p711Item2">런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.</span>
                 </li>
               </ul>
             </article>
