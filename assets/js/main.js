@@ -72,6 +72,10 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p717Summary: "외부 사용자 PC 독립 실행·무교착 복구 전면 개편, 64비트 스타 실행 감지·32비트 자동 전환, 읽기 전용 경로(Program Files)·OneDrive·커스텀 드라이브 완벽 호환",
+      p717Item1: "외부 사용자 PC에서 중앙 서버 점검·오프라인이거나 『게임 실행 시 Battle.net 완전 종료』 설정으로 배틀넷 앱이 닫힌 상태에서도 인증 화면에 멈추지 않고 로컬 복구 서버(127.0.0.1:5080) 및 모든 런처·인게임 기능이 즉시 활성화되도록 전면 개편했습니다.",
+      p717Item2: "내장 폴백 부트스트랩에서 자동 강퇴(autoKick)·핑 알림(pingAnnounce)이 꺼지던 기본값 불일치와 신규 설치 시 자동 로그인 비활성화 문제를 바로잡아, 첫 실행부터 방제 승률%·블랙리스트 자동 강퇴가 누락 없이 동작합니다.",
+      p717Item3: "실행 중인 스타크래프트가 64비트(x86_64)인지 실시간 판별하여 안내하고 트레이에 상주 중인 Battle.net의 32비트 설정을 즉시 갱신하도록 강화했으며, Program Files (x86) 읽기 전용 폴더·OneDrive 문서 폴더·D:/E: 커스텀 설치 드라이브까지 모든 사용자 PC 환경을 완벽 지원합니다.",
       p716Summary: "방 필터링·새로고침 즉시 연동(32비트 자동 고정), Ctrl+L 슬롯·방제 승률%·배틀태그/블랙 강퇴 정상화, 인게임 종족/APM/EAPM·미니맵 핑·최근 플레이어 닉네임 일괄 패치",
       p716Item1: "Battle.net 설정(Battle.net.config)의 스타크래프트 32비트 실행 옵션(Run64Bit=false·Launch32Bit=true)을 자동 고정하고 SceneCefBrowser 브리지 연결 지연을 제거하여 방 필터링·자동 새로고침 등 런처 핵심 연동이 즉시 작동하도록 복구했습니다.",
       p716Item2: "로비·대기 화면에서 Ctrl+L 플레이어/관전자 슬롯 리스트가 즉시 열리고 닫히지 않도록 수정했으며, 방 제목 승률 조건(예: 50%이상, 55%↓, 45~55%, ~50%, 60%~ 등) 자동 파싱 및 미충족 참가자 자동 강퇴 기능을 적용했습니다.",
@@ -449,15 +453,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.716",
-    publishedAt: "2026-11-17T10:55:42Z",
-    setupName: "SLauncher-0.6.716-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.716/SLauncher-0.6.716-win-setup.exe",
-    setupBytes: 83762964,
-    setupSha256: "9678266a04bd13019375f6cd3ab5158c0e360c3a91010d16b6162c6123707b6a",
-    zipName: "SLauncher_v0.6.716.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.716/SLauncher_v0.6.716.zip",
-    zipBytes: 83183252,
+    tag: "v0.6.717",
+    publishedAt: "2026-11-17T13:22:40Z",
+    setupName: "SLauncher-0.6.717-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher-0.6.717-win-setup.exe",
+    setupBytes: 83773718,
+    setupSha256: "608328b239a0bf219c1eac6977fb72dccf75e6a68ec830b7ded2f1f63d49d8b9",
+    zipName: "SLauncher_v0.6.717.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher_v0.6.717.zip",
+    zipBytes: 83194006,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
