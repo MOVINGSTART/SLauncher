@@ -50,7 +50,7 @@
       <div class="container">
         <div class="cl-breadcrumb">
           <a href="./index.html" class="cl-back-link">
-            <span aria-hidden="true">&larr;</span>
+            <span aria-hidden="true">←</span>
             <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
           </a>
         </div>
@@ -59,8 +59,8 @@
           <div>
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
-              <span class="dot">&middot;</span>
-              <span id="hero-version">v0.6.714</span>
+              <span class="dot">·</span>
+              <span id="hero-version">v0.6.715</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -71,11 +71,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.714</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.715</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">13</strong>
+              <strong id="cl-total-count" class="cl-stat-val">14</strong>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
               data-i18n-placeholder="clSearchPlaceholder"
               autocomplete="off"
             />
-            <button type="button" id="cl-search-clear" class="cl-search-clear hidden" aria-label="검색어 지우기">&times;</button>
+            <button type="button" id="cl-search-clear" class="cl-search-clear hidden" aria-label="검색어 지우기">×</button>
           </div>
 
           <div class="cl-filter-row">
@@ -103,8 +103,8 @@
               <button type="button" class="cl-chip active" data-filter="all" data-i18n="clFilterAll">전체</button>
               <button type="button" class="cl-chip" data-filter="new" data-i18n="clFilterNew">신규</button>
               <button type="button" class="cl-chip" data-filter="improve" data-i18n="clFilterImprove">개선</button>
-              <button type="button" class="cl-chip" data-filter="fix" data-i18n="clFilterFix">수정 &middot; 핫픽스</button>
-              <button type="button" class="cl-chip" data-filter="security" data-i18n="clFilterSecurity">보안 &middot; 호환</button>
+              <button type="button" class="cl-chip" data-filter="fix" data-i18n="clFilterFix">수정 · 핫픽스</button>
+              <button type="button" class="cl-chip" data-filter="security" data-i18n="clFilterSecurity">보안 · 호환</button>
               <button type="button" class="cl-chip" data-filter="eud" data-i18n="clFilterEud">EUD</button>
             </div>
             <div id="cl-result-status" class="cl-result-status"></div>
@@ -121,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-714" class="cl-ver-link active" data-target-ver="v0.6.714">
-                <span class="cl-ver-name">v0.6.714</span>
+              <a href="#ver-v0-6-715" class="cl-ver-link active" data-target-ver="v0.6.715">
+                <span class="cl-ver-name">v0.6.715</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-714" class="cl-ver-link" data-target-ver="v0.6.714">
+                <span class="cl-ver-name">v0.6.714</span>
+                <span class="cl-ver-mini-date">11.17</span>
               </a>
               <a href="#ver-v0-6-713" class="cl-ver-link" data-target-ver="v0.6.713">
                 <span class="cl-ver-name">v0.6.713</span>
@@ -176,13 +180,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.714/SLauncher-0.6.714-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.715/SLauncher-0.6.715-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.714 다운로드</span>
+                <span id="btn-download-label">v0.6.715 다운로드</span>
               </a>
             </div>
           </div>
@@ -198,12 +202,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.714 (Latest) -->
-            <article id="ver-v0-6-714" class="patch-card patch-card-latest" data-patch-ver="v0.6.714">
+            <!-- v0.6.715 (Latest) -->
+            <article id="ver-v0-6-715" class="patch-card patch-card-latest" data-patch-ver="v0.6.715">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.715</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
+              </div>
+              <p class="patch-summary" data-i18n="p715Summary">멀티·로더 인게임 엔터(채팅 입력창) 강제 활성화 먹통 핫픽스 및 채팅 상태 보호 정밀화</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p715Item1">배틀넷·로더 멀티플레이 진입 시 매 프레임 닫혀 있는 채팅 상태값(ChatBoxMode=0)을 전체 채팅 열림(2)으로 덮어써 엔터키가 강제로 고정되고 단축키·유닛 조작·메뉴 입력이 먹통이 되던 치명적 버그를 즉시 해결했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p715Item2">인게임 채팅 모드 복구 가드가 실제 채팅 입력창(BinDlg)이 열려 있고 비정상 관전자 전용 모드(5)로 변조된 경우에만 정확히 1바이트 단위로 동작하도록 제한하여 평시 조작과 엔터·Esc 닫기가 100% 순정과 동일하게 작동합니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.714 -->
+            <article id="ver-v0-6-714" class="patch-card" data-patch-ver="v0.6.714">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.714</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-16">2026.11.16</time>
               </div>
@@ -294,7 +319,7 @@
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
-                  <span data-i18n="p711Item2">런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.</span>
+                  <span data-i18n="p712Item2">런처 창이 백그라운드로 숨겨지거나 컴팩트 도우미(Ctrl+H)와 함께 동작할 때 스타크래프트 창으로 포커스를 자연스럽게 인계하고 오버레이가 끊김 없이 유지되도록 개선했습니다.</span>
                 </li>
               </ul>
             </article>
@@ -515,16 +540,16 @@
     <div class="container footer-inner">
       <div class="footer-actions">
         <a href="./index.html" class="outline-pill">
-          <span aria-hidden="true">&larr;</span>
+          <span aria-hidden="true">←</span>
           <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
         </a>
         <a href="./grp-guide.html" class="outline-pill">
           <span data-i18n="navGrpGuide">GRP 적용법</span>
-          <span aria-hidden="true">&rarr;</span>
+          <span aria-hidden="true">→</span>
         </a>
         <a id="footer-issues-link" href="https://github.com/MOVINGSTART/SLauncher/issues" target="_blank" rel="noopener" class="outline-pill">
           <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
-          <span aria-hidden="true">&rarr;</span>
+          <span aria-hidden="true">→</span>
         </a>
       </div>
       <p class="footer-note" data-i18n="footerDisclaimer">
@@ -534,6 +559,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.714"></script>
+  <script src="./assets/js/main.js?v=0.6.715"></script>
 </body>
 </html>
