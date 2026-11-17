@@ -60,7 +60,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.716</span>
+              <span id="hero-version">v0.6.717</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -71,11 +71,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.716</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.717</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">15</strong>
+              <strong id="cl-total-count" class="cl-stat-val">16</strong>
             </div>
           </div>
         </div>
@@ -121,9 +121,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-716" class="cl-ver-link active" data-target-ver="v0.6.716">
-                <span class="cl-ver-name">v0.6.716</span>
+              <a href="#ver-v0-6-717" class="cl-ver-link active" data-target-ver="v0.6.717">
+                <span class="cl-ver-name">v0.6.717</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-716" class="cl-ver-link" data-target-ver="v0.6.716">
+                <span class="cl-ver-name">v0.6.716</span>
+                <span class="cl-ver-mini-date">11.17</span>
               </a>
               <a href="#ver-v0-6-715" class="cl-ver-link" data-target-ver="v0.6.715">
                 <span class="cl-ver-name">v0.6.715</span>
@@ -184,13 +188,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.716/SLauncher-0.6.716-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher-0.6.717-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.716 다운로드</span>
+                <span id="btn-download-label">v0.6.717 다운로드</span>
               </a>
             </div>
           </div>
@@ -206,12 +210,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.716 (Latest) -->
-            <article id="ver-v0-6-716" class="patch-card patch-card-latest" data-patch-ver="v0.6.716">
+            <!-- v0.6.717 (Latest) -->
+            <article id="ver-v0-6-717" class="patch-card patch-card-latest" data-patch-ver="v0.6.717">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.717</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
+              </div>
+              <p class="patch-summary" data-i18n="p717Summary">외부 사용자 PC 독립 실행·무교착 복구 전면 개편, 64비트 스타 실행 감지·32비트 자동 전환, 읽기 전용 경로(Program Files)·OneDrive·커스텀 드라이브 완벽 호환</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p717Item1">외부 사용자 PC에서 중앙 서버 점검·오프라인이거나 『게임 실행 시 Battle.net 완전 종료』 설정으로 배틀넷 앱이 닫힌 상태에서도 인증 화면에 멈추지 않고 로컬 복구 서버(127.0.0.1:5080) 및 모든 런처·인게임 기능이 즉시 활성화되도록 전면 개편했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p717Item2">내장 폴백 부트스트랩에서 자동 강퇴(autoKick)·핑 알림(pingAnnounce)이 꺼지던 기본값 불일치와 신규 설치 시 자동 로그인 비활성화 문제를 바로잡아, 첫 실행부터 방제 승률%·블랙리스트 자동 강퇴가 누락 없이 동작합니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagCompat">호환</span>
+                  <span data-i18n="p717Item3">실행 중인 스타크래프트가 64비트(x86_64)인지 실시간 판별하여 안내하고 트레이에 상주 중인 Battle.net의 32비트 설정을 즉시 갱신하도록 강화했으며, Program Files (x86) 읽기 전용 폴더·OneDrive 문서 폴더·D:/E: 커스텀 설치 드라이브까지 모든 사용자 PC 환경을 완벽 지원합니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.716 -->
+            <article id="ver-v0-6-716" class="patch-card" data-patch-ver="v0.6.716">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.716</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
               </div>
@@ -592,6 +621,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.716"></script>
+  <script src="./assets/js/main.js?v=0.6.717"></script>
 </body>
 </html>
