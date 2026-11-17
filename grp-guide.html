@@ -10,7 +10,7 @@
   <meta property="og:description" content="유즈맵 이름과 무관하게 항시 적용되는 SLauncher HD/SD 커스텀 GRP 스킨 완벽 가이드" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.718" />
 </head>
 <body id="top" class="grp-guide-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -27,6 +27,13 @@
         <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
         <a href="./changelog.html" class="nav-text-link" data-i18n="navChangelog">패치 내역</a>
         <a href="./grp-guide.html" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navGrpGuide">GRP 적용법</a>
+
+        <div id="nav-user-badge" class="nav-user-badge" role="status" aria-live="polite">
+          <span class="nav-live-dot" aria-hidden="true"></span>
+          <span id="nav-user-online">실시간 0명</span>
+          <span class="nav-user-sep" aria-hidden="true">·</span>
+          <span id="nav-user-total">사용자 0명</span>
+        </div>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button type="button" class="lang-btn active" data-lang="ko">KO</button>
@@ -60,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="grpPillLabel">Custom Skin &amp; Resource Guide</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.717</span>
+              <span id="hero-version">v0.6.718</span>
             </div>
             <h1 class="cl-title" data-i18n="grpGuideTitle">GRP 적용법</h1>
             <p class="cl-subtitle" data-i18n="grpGuideSub">
@@ -381,6 +388,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.717"></script>
+  <script src="./assets/js/main.js?v=0.6.718"></script>
 </body>
 </html>

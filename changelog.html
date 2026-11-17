@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.718" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -27,6 +27,13 @@
         <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
         <a href="./changelog.html" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navChangelog">패치 내역</a>
         <a href="./grp-guide.html" class="nav-text-link nav-grp-pill" data-i18n="navGrpGuide">GRP 적용법</a>
+
+        <div id="nav-user-badge" class="nav-user-badge" role="status" aria-live="polite">
+          <span class="nav-live-dot" aria-hidden="true"></span>
+          <span id="nav-user-online">실시간 0명</span>
+          <span class="nav-user-sep" aria-hidden="true">·</span>
+          <span id="nav-user-total">사용자 0명</span>
+        </div>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button type="button" class="lang-btn active" data-lang="ko">KO</button>
@@ -60,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.717</span>
+              <span id="hero-version">v0.6.718</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -71,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.717</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.718</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">16</strong>
+              <strong id="cl-total-count" class="cl-stat-val">17</strong>
             </div>
           </div>
         </div>
@@ -121,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-717" class="cl-ver-link active" data-target-ver="v0.6.717">
-                <span class="cl-ver-name">v0.6.717</span>
+              <a href="#ver-v0-6-718" class="cl-ver-link active" data-target-ver="v0.6.718">
+                <span class="cl-ver-name">v0.6.718</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-717" class="cl-ver-link" data-target-ver="v0.6.717">
+                <span class="cl-ver-name">v0.6.717</span>
+                <span class="cl-ver-mini-date">11.17</span>
               </a>
               <a href="#ver-v0-6-716" class="cl-ver-link" data-target-ver="v0.6.716">
                 <span class="cl-ver-name">v0.6.716</span>
@@ -188,13 +199,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher-0.6.717-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.718/SLauncher-0.6.718-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.717 다운로드</span>
+                <span id="btn-download-label">v0.6.718 다운로드</span>
               </a>
             </div>
           </div>
@@ -210,12 +221,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.717 (Latest) -->
-            <article id="ver-v0-6-717" class="patch-card patch-card-latest" data-patch-ver="v0.6.717">
+            <!-- v0.6.718 (Latest) -->
+            <article id="ver-v0-6-718" class="patch-card patch-card-latest" data-patch-ver="v0.6.718">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.718</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
+              </div>
+              <p class="patch-summary" data-i18n="p718Summary">웹 상단 실시간 접속·누적 사용자 현황 카운터 신설 및 런처 내부 중복 사용 인원 배지 일괄 정리</p>
+              <ul class="patch-list">
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p718Item1">공식 홈페이지 상단 『GRP 적용법』 우측에 기기 익명 해시 기반 실시간 실행 인원과 누적 사용자(설치·다운로드) 수를 즉시 반영하는 실시간 사용자 현황 배지를 추가했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p718Item2">S런처 로그인·도우미·대시보드·계정 화면에 분산되어 있던 기존 사용 인원 배지를 모두 제거하여 인터페이스를 깔끔하게 정돈하고 백그라운드 경량 Presence 동기화로 일원화했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.717 -->
+            <article id="ver-v0-6-717" class="patch-card" data-patch-ver="v0.6.717">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.717</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-17">2026.11.17</time>
               </div>
@@ -621,6 +653,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.717"></script>
+  <script src="./assets/js/main.js?v=0.6.718"></script>
 </body>
 </html>
