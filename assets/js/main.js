@@ -3,7 +3,7 @@
 
   /**
    * [설정 안내]
-   * GitHub Pages (\x60https://<아이디>.github.io/<저장소>\x60)에 올리면 저장소를 자동으로 감지합니다.
+   * GitHub Pages (https://<아이디>.github.io/<저장소>)에 올리면 저장소를 자동으로 감지합니다.
    * 커스텀 도메인을 쓰거나 특정 저장소를 고정하려면 아래 GITHUB_REPO에 "아이디/저장소명"을 입력하세요.
    * 예: var GITHUB_REPO = "myaccount/SLauncher";
    */
@@ -15,6 +15,9 @@
       navFeatures: "주요 기능",
       navChangelog: "패치 내역",
       navGrpGuide: "GRP 적용법",
+      navOnlineFmt: "실시간 {online}명",
+      navUsersFmt: "사용자 {users}명",
+      navUserTooltipFmt: "현재 SLauncher 실시간 접속 {online}명 · 누적 사용자 {users}명",
       navDownload: "다운로드",
       viewAllPatchesBtn: "전체 패치 내역 보기",
       panelGrpGuideBtn: "GRP 적용법 가이드 보기",
@@ -72,6 +75,9 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p718Summary: "웹 상단 실시간 접속·누적 사용자 현황 카운터 신설 및 런처 내부 중복 사용 인원 배지 일괄 정리",
+      p718Item1: "공식 홈페이지 상단 『GRP 적용법』 우측에 기기 익명 해시 기반 실시간 실행 인원과 누적 사용자(설치·다운로드) 수를 즉시 반영하는 실시간 사용자 현황 배지를 추가했습니다.",
+      p718Item2: "S런처 로그인·도우미·대시보드·계정 화면에 분산되어 있던 기존 사용 인원 배지를 모두 제거하여 인터페이스를 깔끔하게 정돈하고 백그라운드 경량 Presence 동기화로 일원화했습니다.",
       p717Summary: "외부 사용자 PC 독립 실행·무교착 복구 전면 개편, 64비트 스타 실행 감지·32비트 자동 전환, 읽기 전용 경로(Program Files)·OneDrive·커스텀 드라이브 완벽 호환",
       p717Item1: "외부 사용자 PC에서 중앙 서버 점검·오프라인이거나 『게임 실행 시 Battle.net 완전 종료』 설정으로 배틀넷 앱이 닫힌 상태에서도 인증 화면에 멈추지 않고 로컬 복구 서버(127.0.0.1:5080) 및 모든 런처·인게임 기능이 즉시 활성화되도록 전면 개편했습니다.",
       p717Item2: "내장 폴백 부트스트랩에서 자동 강퇴(autoKick)·핑 알림(pingAnnounce)이 꺼지던 기본값 불일치와 신규 설치 시 자동 로그인 비활성화 문제를 바로잡아, 첫 실행부터 방제 승률%·블랙리스트 자동 강퇴가 누락 없이 동작합니다.",
@@ -234,6 +240,9 @@
       navFeatures: "Features",
       navChangelog: "Patch Notes",
       navGrpGuide: "GRP Guide",
+      navOnlineFmt: "{online} Online",
+      navUsersFmt: "{users} Users",
+      navUserTooltipFmt: "{online} active SLauncher users online now · {users} cumulative users",
       navDownload: "Download",
       viewAllPatchesBtn: "View full patch notes",
       panelGrpGuideBtn: "Read GRP Skin Guide",
@@ -291,6 +300,9 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p718Summary: "Live Online & Cumulative User Counter in Top Navbar and Removal of Redundant In-App User Badges",
+      p718Item1: "Added a real-time user counter pill right next to 'GRP Guide' in the official website header, tracking both active running SLauncher instances (anonymized device hash with automatic LWT cleanup) and cumulative users.",
+      p718Item2: "Removed all redundant in-app online-count badges across the login gate, compact helper, top bar, dashboard, and account pages for a cleaner UI backed by a lightweight native background presence sync.",
       p717Summary: "External User PC Zero-Deadlock Standalone Recovery, Live 64-Bit StarCraft Detection & Auto 32-Bit Switch, Read-Only Program Files / OneDrive / Custom Drive Compatibility",
       p717Item1: "Overhauled external-PC startup so that even when the central server is offline or Battle.net exits automatically after game launch, SLauncher seamlessly activates its local recovery runtime (127.0.0.1:5080) and unlocks all lobby and in-game features without deadlocking at the login screen.",
       p717Item2: "Enabled auto-login by default on fresh installs and aligned fallback bootstrap defaults (autoKick=true, pingAnnounce=true, fastDrop=false) so room-title win-rate % and Blacklist AutoKick work out-of-the-box on every PC.",
@@ -457,18 +469,48 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.717",
-    publishedAt: "2026-11-17T13:22:40Z",
-    setupName: "SLauncher-0.6.717-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher-0.6.717-win-setup.exe",
-    setupBytes: 83773718,
-    setupSha256: "608328b239a0bf219c1eac6977fb72dccf75e6a68ec830b7ded2f1f63d49d8b9",
-    zipName: "SLauncher_v0.6.717.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.717/SLauncher_v0.6.717.zip",
-    zipBytes: 83194006,
+    tag: "v0.6.718",
+    publishedAt: "2026-11-17T15:04:19Z",
+    setupName: "SLauncher-0.6.718-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.718/SLauncher-0.6.718-win-setup.exe",
+    setupBytes: 83775448,
+    setupSha256: "113347448b270bdbeba043fcdf8f2a20151b3e7184b87028e216cf203fb22d04",
+    zipName: "SLauncher_v0.6.718.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.718/SLauncher_v0.6.718.zip",
+    zipBytes: 83195736,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
+
+  var userStats = {
+    liveDevices: {},
+    knownUsers: {},
+    ghDownloads: 0,
+    maxBrokerTs: 0
+  };
+  try {
+    var cachedDl = Number(localStorage.getItem("slauncher_gh_dl_floor") || 0);
+    if (cachedDl > 0) userStats.ghDownloads = Math.floor(cachedDl);
+  } catch (_) {}
+
+  function renderUserBadge() {
+    var badge = document.getElementById("nav-user-badge");
+    var onlineEl = document.getElementById("nav-user-online");
+    var totalEl = document.getElementById("nav-user-total");
+    if (!badge || !onlineEl || !totalEl) return;
+
+    var dict = I18N[currentLang] || I18N.ko;
+    var onlineCount = Object.keys(userStats.liveDevices).length;
+    var uniqueDevices = Object.keys(userStats.knownUsers).length;
+    var totalUsers = Math.max(uniqueDevices, userStats.ghDownloads, onlineCount);
+
+    onlineEl.textContent = (dict.navOnlineFmt || "{online}").replace("{online}", String(onlineCount));
+    totalEl.textContent = (dict.navUsersFmt || "{users}").replace("{users}", String(totalUsers));
+    badge.title = (dict.navUserTooltipFmt || "")
+      .replace("{online}", String(onlineCount))
+      .replace("{users}", String(totalUsers));
+    badge.classList.toggle("is-live", onlineCount > 0);
+  }
 
   function detectGitHubRepo() {
     if (GITHUB_REPO && GITHUB_REPO.indexOf("/") > 0) return GITHUB_REPO.trim();
@@ -729,6 +771,7 @@
     }
 
     renderReleaseUI();
+    renderUserBadge();
     updateChangelogFilter();
   }
 
@@ -950,6 +993,238 @@
     }
   }
 
+  function mqttEncodeVarLen(len) {
+    var out = [];
+    do {
+      var b = len % 128;
+      len = Math.floor(len / 128);
+      if (len > 0) b |= 0x80;
+      out.push(b);
+    } while (len > 0);
+    return out;
+  }
+
+  function mqttUtf8Bytes(str) {
+    var raw = new TextEncoder().encode(str);
+    var out = [(raw.length >> 8) & 0xff, raw.length & 0xff];
+    for (var i = 0; i < raw.length; i++) out.push(raw[i]);
+    return out;
+  }
+
+  function mqttBuildConnect(clientId) {
+    var vh = [0x00, 0x04, 0x4d, 0x51, 0x54, 0x54, 0x04, 0x02, 0x00, 0x2d];
+    var pl = mqttUtf8Bytes(clientId);
+    var rem = mqttEncodeVarLen(vh.length + pl.length);
+    return new Uint8Array([0x10].concat(rem, vh, pl));
+  }
+
+  function mqttBuildSubscribe(topics) {
+    var body = [0x00, 0x01];
+    for (var i = 0; i < topics.length; i++) {
+      body = body.concat(mqttUtf8Bytes(topics[i]), [0x00]);
+    }
+    var rem = mqttEncodeVarLen(body.length);
+    return new Uint8Array([0x82].concat(rem, body));
+  }
+
+  function handlePresencePublish(topic, payloadText) {
+    var livePrefix = "slauncher/v1/live/";
+    var userPrefix = "slauncher/v1/users/";
+    if (topic.indexOf(userPrefix) === 0) {
+      var uid = topic.slice(userPrefix.length);
+      if (/^[0-9a-f]{16}$/.test(uid) && payloadText.length > 0) {
+        userStats.knownUsers[uid] = true;
+        renderUserBadge();
+      }
+      return;
+    }
+    if (topic.indexOf(livePrefix) === 0) {
+      var lid = topic.slice(livePrefix.length);
+      if (!/^[0-9a-f]{16}$/.test(lid)) return;
+      if (!payloadText) {
+        delete userStats.liveDevices[lid];
+        renderUserBadge();
+        return;
+      }
+      var ts = 0;
+      try {
+        var obj = JSON.parse(payloadText);
+        ts = Number(obj && obj.t) || 0;
+      } catch (_) {}
+      if (ts > 0) {
+        if (ts > userStats.maxBrokerTs) userStats.maxBrokerTs = ts;
+        var refNow = Math.max(Math.floor(Date.now() / 1000), userStats.maxBrokerTs);
+        if (refNow - ts <= 120) {
+          userStats.liveDevices[lid] = Date.now();
+          userStats.knownUsers[lid] = true;
+        } else {
+          delete userStats.liveDevices[lid];
+        }
+        renderUserBadge();
+      }
+    }
+  }
+
+  function connectPresenceBroker(wsUrl) {
+    if (typeof WebSocket === "undefined" || typeof TextDecoder === "undefined") return;
+    var decoder = new TextDecoder("utf-8");
+    var failures = 0;
+    var ws = null;
+    var pingTimer = null;
+    var retryTimer = null;
+
+    function cleanupTimers() {
+      if (pingTimer) { clearInterval(pingTimer); pingTimer = null; }
+      if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
+    }
+
+    function scheduleReconnect() {
+      if (retryTimer) return;
+      var delay = Math.min(20000, 3000 * Math.pow(1.6, Math.min(failures++, 5)));
+      retryTimer = setTimeout(function () {
+        retryTimer = null;
+        openSocket();
+      }, delay);
+    }
+
+    function openSocket() {
+      cleanupTimers();
+      var rxBuf = new Uint8Array(0);
+      try {
+        ws = new WebSocket(wsUrl, "mqtt");
+        ws.binaryType = "arraybuffer";
+      } catch (_) {
+        scheduleReconnect();
+        return;
+      }
+
+      ws.onopen = function () {
+        failures = 0;
+        var cid = "slw_" + Math.random().toString(16).slice(2, 12);
+        try { ws.send(mqttBuildConnect(cid)); } catch (_) {}
+        pingTimer = setInterval(function () {
+          if (ws && ws.readyState === WebSocket.OPEN) {
+            try { ws.send(new Uint8Array([0xc0, 0x00])); } catch (_) {}
+          }
+        }, 25000);
+      };
+
+      ws.onmessage = function (ev) {
+        if (!(ev.data instanceof ArrayBuffer)) return;
+        var chunk = new Uint8Array(ev.data);
+        var merged = new Uint8Array(rxBuf.length + chunk.length);
+        merged.set(rxBuf, 0);
+        merged.set(chunk, rxBuf.length);
+        rxBuf = merged;
+
+        var offset = 0;
+        while (offset + 2 <= rxBuf.length) {
+          var headerByte = rxBuf[offset];
+          var pType = headerByte >> 4;
+          var pos = offset + 1;
+          var remLen = 0;
+          var mult = 1;
+          var completeLen = false;
+          while (pos < rxBuf.length && pos <= offset + 4) {
+            var eb = rxBuf[pos++];
+            remLen += (eb & 0x7f) * mult;
+            mult *= 128;
+            if ((eb & 0x80) === 0) {
+              completeLen = true;
+              break;
+            }
+          }
+          if (!completeLen) break;
+          var pktEnd = pos + remLen;
+          if (pktEnd > rxBuf.length) break;
+
+          if (pType === 2 && remLen >= 2 && rxBuf[pos + 1] === 0) {
+            try {
+              ws.send(mqttBuildSubscribe(["slauncher/v1/live/+", "slauncher/v1/users/+"]));
+            } catch (_) {}
+          } else if (pType === 3 && remLen >= 2) {
+            var qos = (headerByte >> 1) & 0x03;
+            var tLen = (rxBuf[pos] << 8) | rxBuf[pos + 1];
+            var tStart = pos + 2;
+            var tEnd = tStart + tLen;
+            var plStart = tEnd + (qos > 0 ? 2 : 0);
+            if (plStart <= pktEnd) {
+              var topicStr = decoder.decode(rxBuf.subarray(tStart, tEnd));
+              var payloadStr = decoder.decode(rxBuf.subarray(plStart, pktEnd));
+              handlePresencePublish(topicStr, payloadStr);
+            }
+          }
+          offset = pktEnd;
+        }
+        if (offset > 0) {
+          rxBuf = rxBuf.slice(offset);
+        }
+      };
+
+      ws.onclose = function () {
+        cleanupTimers();
+        scheduleReconnect();
+      };
+
+      ws.onerror = function () {};
+    }
+
+    openSocket();
+  }
+
+  function loadGitHubUserTotal(slug) {
+    if (!slug) return;
+    fetch("https://api.github.com/repos/" + slug + "/releases?per_page=100", {
+      headers: { Accept: "application/vnd.github+json" }
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (list) {
+        if (!Array.isArray(list)) return;
+        var sum = 0;
+        for (var i = 0; i < list.length; i++) {
+          var assets = (list[i] && list[i].assets) || [];
+          for (var j = 0; j < assets.length; j++) {
+            var a = assets[j];
+            if (!a || !a.name) continue;
+            var nm = String(a.name);
+            if (/\.(exe|msi|zip)$/i.test(nm) && !/Native-/i.test(nm)) {
+              sum += Number(a.download_count) || 0;
+            }
+          }
+        }
+        if (sum > userStats.ghDownloads) {
+          userStats.ghDownloads = sum;
+          try { localStorage.setItem("slauncher_gh_dl_floor", String(sum)); } catch (_) {}
+          renderUserBadge();
+        }
+      })
+      .catch(function () {});
+  }
+
+  function startUserMetrics() {
+    renderUserBadge();
+    var slug = detectGitHubRepo();
+    loadGitHubUserTotal(slug);
+    setInterval(function () { loadGitHubUserTotal(slug); }, 120000);
+
+    connectPresenceBroker("wss://broker.hivemq.com:8884/mqtt");
+    connectPresenceBroker("wss://broker.emqx.io:8084/mqtt");
+
+    setInterval(function () {
+      var nowMs = Date.now();
+      var changed = false;
+      var ids = Object.keys(userStats.liveDevices);
+      for (var i = 0; i < ids.length; i++) {
+        if (nowMs - userStats.liveDevices[ids[i]] > 90000) {
+          delete userStats.liveDevices[ids[i]];
+          changed = true;
+        }
+      }
+      if (changed) renderUserBadge();
+    }, 15000);
+  }
+
   applyLanguage(currentLang);
   loadReleaseMetadata();
+  startUserMetrics();
 })();
