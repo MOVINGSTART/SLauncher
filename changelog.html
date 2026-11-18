@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.721" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.722" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.721</span>
+              <span id="hero-version">v0.6.722</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.721</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.722</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">20</strong>
+              <strong id="cl-total-count" class="cl-stat-val">21</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-721" class="cl-ver-link active" data-target-ver="v0.6.721">
-                <span class="cl-ver-name">v0.6.721</span>
+              <a href="#ver-v0-6-722" class="cl-ver-link active" data-target-ver="v0.6.722">
+                <span class="cl-ver-name">v0.6.722</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-721" class="cl-ver-link" data-target-ver="v0.6.721">
+                <span class="cl-ver-name">v0.6.721</span>
+                <span class="cl-ver-mini-date">11.18</span>
               </a>
               <a href="#ver-v0-6-720" class="cl-ver-link" data-target-ver="v0.6.720">
                 <span class="cl-ver-name">v0.6.720</span>
@@ -233,12 +237,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.721 (Latest) -->
-            <article id="ver-v0-6-721" class="patch-card patch-card-latest" data-patch-ver="v0.6.721">
+            <!-- v0.6.722 (Latest) -->
+            <article id="ver-v0-6-722" class="patch-card patch-card-latest" data-patch-ver="v0.6.722">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.722</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
+              </div>
+              <p class="patch-summary" data-i18n="p722Summary">윈도우 키 입력 및 타 창 전환 시에도 상단 오버레이·시계·정보 차트 상시 유지 패치</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p722Item1">윈도우 키를 누른 뒤 브라우저·메신저·탐색기·런처 등 다른 창으로 포커스를 전환하더라도 상단 오버레이·디지털 시계·키패드 0 정보 차트가 사라지지 않고 스타크래프트 화면 바로 위 층에 인게임 UI처럼 상시 유지되도록 Z-순서 고정 구조를 적용했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p722Item2">실시간 창 포커스 이벤트 감지를 통해 다른 창을 띄웠을 때는 해당 창 본문을 가리지 않으면서 보이는 스타크래프트 영역 위에 오버레이를 그대로 표시하고, 스타크래프트 자체 최소화 또는 바탕화면 보기(Win+D) 시에만 자연스럽게 숨겨집니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.721 -->
+            <article id="ver-v0-6-721" class="patch-card" data-patch-ver="v0.6.721">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.721</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
               </div>
@@ -657,7 +682,7 @@
               <ul class="patch-list">
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
-                  <span data-i18n="p703Item1">원본 맵 지문과 비교해 Comment("") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.</span>
+                  <span data-i18n="p703Item1">원본 맵 지문과 비교해 Comment('') 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.</span>
                 </li>
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
@@ -732,6 +757,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.721"></script>
+  <script src="./assets/js/main.js?v=0.6.722"></script>
 </body>
 </html>
