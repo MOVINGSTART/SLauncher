@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.720" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.721" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -32,7 +32,7 @@
           <span class="nav-live-dot" aria-hidden="true"></span>
           <span id="nav-user-online">실시간 0명</span>
           <span class="nav-user-sep" aria-hidden="true">·</span>
-          <span id="nav-user-total">사용자 14명</span>
+          <span id="nav-user-total">사용자 8명</span>
         </div>
 
         <div class="lang-switch" role="group" aria-label="Language switcher">
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.720</span>
+              <span id="hero-version">v0.6.721</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.720</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.721</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">19</strong>
+              <strong id="cl-total-count" class="cl-stat-val">20</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-720" class="cl-ver-link active" data-target-ver="v0.6.720">
-                <span class="cl-ver-name">v0.6.720</span>
+              <a href="#ver-v0-6-721" class="cl-ver-link active" data-target-ver="v0.6.721">
+                <span class="cl-ver-name">v0.6.721</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-720" class="cl-ver-link" data-target-ver="v0.6.720">
+                <span class="cl-ver-name">v0.6.720</span>
+                <span class="cl-ver-mini-date">11.18</span>
               </a>
               <a href="#ver-v0-6-719" class="cl-ver-link" data-target-ver="v0.6.719">
                 <span class="cl-ver-name">v0.6.719</span>
@@ -229,12 +233,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.720 (Latest) -->
-            <article id="ver-v0-6-720" class="patch-card patch-card-latest" data-patch-ver="v0.6.720">
+            <!-- v0.6.721 (Latest) -->
+            <article id="ver-v0-6-721" class="patch-card patch-card-latest" data-patch-ver="v0.6.721">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.721</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
+              </div>
+              <p class="patch-summary" data-i18n="p721Summary">윈도우 키 입력 시 상단 오버레이·시계·정보 차트 사라짐 근본 수정 및 강제 업데이트 해제·선택형 업데이트 알림 UI 도입</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p721Item1">창 모드(전체 화면) 환경에서 윈도우 키(시작 메뉴·검색·작업 표시줄·휴대폰 연결 동반 카드) 입력 시 런처 백그라운드 창이 최상단으로 승격되거나 포커스 전환 과정에서 상단 오버레이·디지털 시계·키패드 0 정보 차트가 함께 숨겨지던 근본 원인을 해결했습니다.</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p721Item2">기존 최신 버전 강제 차단 방식을 해제하고 전용 다크 테마 업데이트 알림 UI(『지금 업데이트』 / 『나중에 하기』)를 도입하여, 새 버전 출시 시 원하는 시점에 자유롭게 업데이트하거나 현재 버전으로 즉시 실행할 수 있습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.720 -->
+            <article id="ver-v0-6-720" class="patch-card" data-patch-ver="v0.6.720">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.720</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
               </div>
@@ -707,6 +732,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.720"></script>
+  <script src="./assets/js/main.js?v=0.6.721"></script>
 </body>
 </html>
