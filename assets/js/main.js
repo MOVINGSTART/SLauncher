@@ -490,15 +490,25 @@
     repoSlug: "MOVINGSTART/SLauncher"
   };
 
+  var KNOWN_USERS_BASELINE = 14;
+  var ABACUS_BASE = "https://abacus.jasoncameron.dev";
+  var ABACUS_NS = "movingstart-slauncher";
+  var ABACUS_KEY = "unique_users_v1";
+
   var userStats = {
     liveDevices: {},
     knownUsers: {},
-    ghDownloads: 0,
+    syncedDeviceKeys: {},
+    persistentUsers: KNOWN_USERS_BASELINE,
+    ghDownloads: KNOWN_USERS_BASELINE,
     maxBrokerTs: 0
   };
   try {
     var cachedDl = Number(localStorage.getItem("slauncher_gh_dl_floor") || 0);
-    if (cachedDl > 0) userStats.ghDownloads = Math.floor(cachedDl);
+    if (cachedDl > userStats.ghDownloads) {
+      userStats.ghDownloads = Math.floor(cachedDl);
+      userStats.persistentUsers = Math.max(userStats.persistentUsers, userStats.ghDownloads);
+    }
   } catch (_) {}
 
   function renderUserBadge() {
@@ -510,7 +520,13 @@
     var dict = I18N[currentLang] || I18N.ko;
     var onlineCount = Object.keys(userStats.liveDevices).length;
     var uniqueDevices = Object.keys(userStats.knownUsers).length;
-    var totalUsers = Math.max(uniqueDevices, userStats.ghDownloads, onlineCount);
+    var totalUsers = Math.max(
+      KNOWN_USERS_BASELINE,
+      userStats.persistentUsers,
+      uniqueDevices,
+      userStats.ghDownloads,
+      onlineCount
+    );
 
     onlineEl.textContent = (dict.navOnlineFmt || "{online}").replace("{online}", String(onlineCount));
     totalEl.textContent = (dict.navUsersFmt || "{users}").replace("{users}", String(totalUsers));
@@ -806,6 +822,10 @@
     if (m.portable_file) releaseState.zipName = m.portable_file;
     if (m.portable_url) releaseState.zipUrl = m.portable_url;
     if (m.portable_size) releaseState.zipBytes = Number(m.portable_size) || 0;
+    if (Number(m.known_users_floor) > userStats.ghDownloads) {
+      userStats.ghDownloads = Math.floor(Number(m.known_users_floor));
+      renderUserBadge();
+    }
     renderReleaseUI();
   }
 
@@ -1035,6 +1055,43 @@
     return new Uint8Array([0x82].concat(rem, body));
   }
 
+  function syncUniqueDeviceToPersistentCounter(uid) {
+    if (!uid || !/^[0-9a-f]{16}$/.test(uid)) return;
+    if (userStats.syncedDeviceKeys[uid]) return;
+    userStats.syncedDeviceKeys[uid] = true;
+    try {
+      if (localStorage.getItem("slauncher_dev_" + uid)) return;
+    } catch (_) {}
+
+    fetch(ABACUS_BASE + "/info/" + ABACUS_NS + "/dev_" + uid, { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (info) {
+        if (!info) return;
+        if (info.exists) {
+          try { localStorage.setItem("slauncher_dev_" + uid, "1"); } catch (_) {}
+          return;
+        }
+        return fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/dev_" + uid, { cache: "no-store" })
+          .then(function (r2) { return r2.ok ? r2.json() : null; })
+          .then(function (res) {
+            try { localStorage.setItem("slauncher_dev_" + uid, "1"); } catch (_) {}
+            if (res && Number(res.value) === 1) {
+              return fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/" + ABACUS_KEY, { cache: "no-store" })
+                .then(function (r3) { return r3.ok ? r3.json() : null; })
+                .then(function (tot) {
+                  var v = Number(tot && tot.value) || 0;
+                  if (v > userStats.persistentUsers) {
+                    userStats.persistentUsers = v;
+                    try { localStorage.setItem("slauncher_gh_dl_floor", String(v)); } catch (_) {}
+                    renderUserBadge();
+                  }
+                });
+            }
+          });
+      })
+      .catch(function () {});
+  }
+
   function handlePresencePublish(topic, payloadText) {
     var livePrefix = "slauncher/v1/live/";
     var userPrefix = "slauncher/v1/users/";
@@ -1042,6 +1099,7 @@
       var uid = topic.slice(userPrefix.length);
       if (/^[0-9a-f]{16}$/.test(uid) && payloadText.length > 0) {
         userStats.knownUsers[uid] = true;
+        syncUniqueDeviceToPersistentCounter(uid);
         renderUserBadge();
       }
       return;
@@ -1065,6 +1123,7 @@
         if (refNow - ts <= 120) {
           userStats.liveDevices[lid] = Date.now();
           userStats.knownUsers[lid] = true;
+          syncUniqueDeviceToPersistentCounter(lid);
         } else {
           delete userStats.liveDevices[lid];
         }
@@ -1209,14 +1268,62 @@
       .catch(function () {});
   }
 
+  function loadPersistentUserCounter() {
+    fetch(ABACUS_BASE + "/get/" + ABACUS_NS + "/" + ABACUS_KEY, { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        var val = Number(data && data.value) || 0;
+        if (val > userStats.persistentUsers) {
+          userStats.persistentUsers = val;
+          try { localStorage.setItem("slauncher_gh_dl_floor", String(val)); } catch (_) {}
+          renderUserBadge();
+        }
+      })
+      .catch(function () {});
+  }
+
+  function bindDownloadUserCounter() {
+    var ids = ["btn-download-setup", "btn-download-zip"];
+    for (var i = 0; i < ids.length; i++) {
+      var el = document.getElementById(ids[i]);
+      if (!el) continue;
+      el.addEventListener("click", function () {
+        try {
+          if (localStorage.getItem("slauncher_dl_counted_v1")) return;
+          localStorage.setItem("slauncher_dl_counted_v1", "1");
+        } catch (_) {
+          return;
+        }
+        fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/" + ABACUS_KEY, {
+          cache: "no-store",
+          keepalive: true
+        })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (data) {
+            var val = Number(data && data.value) || 0;
+            if (val > userStats.persistentUsers) {
+              userStats.persistentUsers = val;
+              try { localStorage.setItem("slauncher_gh_dl_floor", String(val)); } catch (_) {}
+              renderUserBadge();
+            }
+          })
+          .catch(function () {});
+      });
+    }
+  }
+
   function startUserMetrics() {
     renderUserBadge();
+    bindDownloadUserCounter();
+    loadPersistentUserCounter();
+    setInterval(loadPersistentUserCounter, 45000);
+
     var slug = detectGitHubRepo();
     loadGitHubUserTotal(slug);
     setInterval(function () { loadGitHubUserTotal(slug); }, 120000);
 
-    connectPresenceBroker("wss://broker.hivemq.com:8884/mqtt");
     connectPresenceBroker("wss://broker.emqx.io:8084/mqtt");
+    connectPresenceBroker("wss://test.mosquitto.org:8081/mqtt");
 
     setInterval(function () {
       var nowMs = Date.now();
