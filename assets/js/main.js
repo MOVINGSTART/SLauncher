@@ -75,6 +75,9 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p721Summary: "윈도우 키 입력 시 상단 오버레이·시계·정보 차트 사라짐 근본 수정 및 강제 업데이트 해제·선택형 업데이트 알림 UI 도입",
+      p721Item1: "창 모드(전체 화면) 환경에서 윈도우 키(시작 메뉴·검색·작업 표시줄·휴대폰 연결 동반 카드) 입력 시 런처 백그라운드 창이 최상단으로 승격되거나 포커스 전환 과정에서 상단 오버레이·디지털 시계·키패드 0 정보 차트가 함께 숨겨지던 근본 원인을 해결했습니다.",
+      p721Item2: "기존 최신 버전 강제 차단 방식을 해제하고 전용 다크 테마 업데이트 알림 UI(『지금 업데이트』 / 『나중에 하기』)를 도입하여, 새 버전 출시 시 원하는 시점에 자유롭게 업데이트하거나 현재 버전으로 즉시 실행할 수 있습니다.",
       p720Summary: "전용 클라우드 기반 실시간 접속·누적 사용자 정밀 집계 전환 및 런처 창 종료 후 스타크래프트 단독 플레이 실시간 연동 지원",
       p720Item1: "실시간 접속자 및 누적 사용자 집계를 SLauncher 전용 클라우드 서버 기반으로 전면 전환하여, 버전 업데이트나 재설치 시 중복 합산 없이 기기 기준 실제 누적 사용자 수와 현재 접속 인원을 오차 없이 즉시 반영합니다.",
       p720Item2: "스타크래프트를 실행한 뒤 S런처 창을 닫고 게임만 플레이하는 동안에도 실시간 접속 인원이 끊김 없이 유지되며, 게임과 런처를 모두 종료하면 수 초 내에 실시간 인원에서 즉시 차감되도록 연동했습니다.",
@@ -307,6 +310,9 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p721Summary: "Root-Cause Fix for Overlay, Clock & Player Monitor Disappearing on Windows Key and Introduction of Optional Update Prompt UI",
+      p721Item1: "Resolved the root Win32 Z-order promotion and Start Menu companion flyout handoff bugs in Borderless Windowed Fullscreen so the top HUD overlay, digital clock, and NumPad 0 player monitor remain 100% visible without flickering when pressing the Windows key.",
+      p721Item2: "Replaced mandatory version blocking with a sleek dark-themed Update Notification UI ('Update Now' / 'Later'), allowing users to update whenever convenient or continue launching their current version immediately.",
       p720Summary: "Dedicated Cloud Real-Time Online & Unique User Tracking and Seamless StarCraft-Only Session Continuity",
       p720Item1: "Migrated live online and cumulative user metrics to SLauncher's dedicated cloud presence service, eliminating duplicate counting across version updates or reinstalls while pushing instant real-time updates to the website.",
       p720Item2: "Maintains accurate live online status even when the SLauncher window is closed while StarCraft remains running, and immediately decrements the live count within seconds once both StarCraft and SLauncher exit.",
@@ -483,15 +489,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.720",
-    publishedAt: "2026-11-18T12:16:11Z",
-    setupName: "SLauncher-0.6.720-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.720/SLauncher-0.6.720-win-setup.exe",
-    setupBytes: 83798879,
-    setupSha256: "d0a69c2f1f0730ef2b2797d9775473fb13363831079958e2a52a9030173ec301",
-    zipName: "SLauncher_v0.6.720.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.720/SLauncher_v0.6.720.zip",
-    zipBytes: 83219167,
+    tag: "v0.6.721",
+    publishedAt: "2026-11-18T14:44:42Z",
+    setupName: "SLauncher-0.6.721-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.721/SLauncher-0.6.721-win-setup.exe",
+    setupBytes: 83793248,
+    setupSha256: "cab5a6ea842d65bd296724a21d52fa76098d699beb135addba8b546b40afb126",
+    zipName: "SLauncher_v0.6.721.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.721/SLauncher_v0.6.721.zip",
+    zipBytes: 83213536,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -501,7 +507,7 @@
 
   var userStats = {
     online: 0,
-    users: 14,
+    users: 8,
     loaded: false
   };
 
