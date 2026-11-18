@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.719b" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.720" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.719</span>
+              <span id="hero-version">v0.6.720</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.719</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.720</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">18</strong>
+              <strong id="cl-total-count" class="cl-stat-val">19</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-719" class="cl-ver-link active" data-target-ver="v0.6.719">
-                <span class="cl-ver-name">v0.6.719</span>
+              <a href="#ver-v0-6-720" class="cl-ver-link active" data-target-ver="v0.6.720">
+                <span class="cl-ver-name">v0.6.720</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-719" class="cl-ver-link" data-target-ver="v0.6.719">
+                <span class="cl-ver-name">v0.6.719</span>
+                <span class="cl-ver-mini-date">11.18</span>
               </a>
               <a href="#ver-v0-6-718" class="cl-ver-link" data-target-ver="v0.6.718">
                 <span class="cl-ver-name">v0.6.718</span>
@@ -225,16 +229,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.719 (Latest) -->
-            <article id="ver-v0-6-719" class="patch-card patch-card-latest" data-patch-ver="v0.6.719">
+            <!-- v0.6.720 (Latest) -->
+            <article id="ver-v0-6-720" class="patch-card patch-card-latest" data-patch-ver="v0.6.720">
               <div class="patch-head">
                 <div class="patch-ver-group">
-                  <span class="patch-ver">v0.6.719</span>
+                  <span class="patch-ver">v0.6.720</span>
                   <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
               </div>
-              <p class="patch-summary" data-i18n="p719Summary">비(非)AI·비(非)래더 전 영역 핵·어뷰징 방어 대폭 확장 — 12유닛 초과선택·타인랠리·오더버퍼·오토마인·멀티커맨드·안개건물선택 감지, 강퇴 유저 동일 출처 부계정 리콜, 지속 고의 렉/턴홀드·채팅 도배 실시간 무력화, OneDrive 미동기화 클라우드 맵 프리징 방지</p>
+              <p class="patch-summary" data-i18n="p720Summary">전용 클라우드 기반 실시간 접속·누적 사용자 정밀 집계 전환 및 런처 창 종료 후 스타크래프트 단독 플레이 실시간 연동 지원</p>
+              <ul class="patch-list">
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p720Item1">실시간 접속자 및 누적 사용자 집계를 SLauncher 전용 클라우드 서버 기반으로 전면 전환하여, 버전 업데이트나 재설치 시 중복 합산 없이 기기 기준 실제 누적 사용자 수와 현재 접속 인원을 오차 없이 즉시 반영합니다.</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p720Item2">스타크래프트를 실행한 뒤 S런처 창을 닫고 게임만 플레이하는 동안에도 실시간 접속 인원이 끊김 없이 유지되며, 게임과 런처를 모두 종료하면 수 초 내에 실시간 인원에서 즉시 차감되도록 연동했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.719 -->
+            <article id="ver-v0-6-719" class="patch-card" data-patch-ver="v0.6.719">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.719</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
+              </div>
+              <p class="patch-summary" data-i18n="p719Summary">비(非)AI·비(非)래더 전 영역 핵·어뷰징 방어 대폭 확장 — 12유닛 초과선택·타인랠리·명령주입·오토마인·멀티커맨드·안개건물선택 감지, 강퇴 유저 부계정 재입장 알림, 지속 고의 렉·채팅 도배 실시간 무력화, OneDrive 미동기화 맵 멈춤 방지</p>
               <ul class="patch-list">
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
@@ -682,6 +707,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.719b"></script>
+  <script src="./assets/js/main.js?v=0.6.720"></script>
 </body>
 </html>
