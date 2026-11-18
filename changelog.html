@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.718" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.719" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.718</span>
+              <span id="hero-version">v0.6.719</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.718</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.719</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">17</strong>
+              <strong id="cl-total-count" class="cl-stat-val">18</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-718" class="cl-ver-link active" data-target-ver="v0.6.718">
-                <span class="cl-ver-name">v0.6.718</span>
+              <a href="#ver-v0-6-719" class="cl-ver-link active" data-target-ver="v0.6.719">
+                <span class="cl-ver-name">v0.6.719</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-718" class="cl-ver-link" data-target-ver="v0.6.718">
+                <span class="cl-ver-name">v0.6.718</span>
+                <span class="cl-ver-mini-date">11.18</span>
               </a>
               <a href="#ver-v0-6-717" class="cl-ver-link" data-target-ver="v0.6.717">
                 <span class="cl-ver-name">v0.6.717</span>
@@ -199,13 +203,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.718/SLauncher-0.6.718-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.719/SLauncher-0.6.719-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.718 다운로드</span>
+                <span id="btn-download-label">v0.6.719 다운로드</span>
               </a>
             </div>
           </div>
@@ -221,12 +225,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.718 (Latest) -->
-            <article id="ver-v0-6-718" class="patch-card patch-card-latest" data-patch-ver="v0.6.718">
+            <!-- v0.6.719 (Latest) -->
+            <article id="ver-v0-6-719" class="patch-card patch-card-latest" data-patch-ver="v0.6.719">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.719</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
+              </div>
+              <p class="patch-summary" data-i18n="p719Summary">비(非)AI·비(非)래더 전 영역 핵·어뷰징 방어 대폭 확장 — 12유닛 초과선택·타인랠리·오더버퍼·오토마인·멀티커맨드·안개건물선택 감지, 강퇴 유저 동일 출처 부계정 리콜, 지속 고의 렉/턴홀드·채팅 도배 실시간 무력화, OneDrive 미동기화 클라우드 맵 프리징 방지</p>
+              <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p719Item1">인게임 확정·행위 기반 핵 감지 엔진을 대폭 확장하여 12유닛 초과 선택핵(Oversel), 타인 건물 랠리포인트 변경핵(Rally, 팀밀리·동맹 공유제어 자동 제외), 엔진 내부 전용 오더버퍼 명령주입핵(OrderBuffer) 및 비정상 명령패킷을 실시간 포착·무력화하고, 미탐색 검은 안개 속 적 건물을 반복 선택하는 맵핵(FogSelect)과 외부 주입 공개 맵핵·자동핵 모듈까지 정밀 식별합니다.</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p719Item2">일꾼 자동 분배 채취(오토마인, 단일 턴 3쌍·초단기 5회 이상) 및 무(無)부대지정 단일 턴 건물 생산+전투 재선택(멀티커맨드·오토큐, 10회 이상) 패턴을 감시 전용(오탐 강퇴 없음)으로 HUD에 즉시 표기하며, 방에서 내보낸 유저가 30분 내 동일 직접 접속 출처(공유 릴레이·사설망·PC방 다중슬롯 제외)에서 다른 닉네임·부계정으로 재입장하면 즉시 알려주는 출처 리콜(Origin Recall) 알림을 추가했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p719Item3">단절 플래그 반복(Flap)뿐 아니라 한 피어만 단독으로 10초 이상 지속 턴홀드·고의 렉을 유지하는 경우까지 감지해 디스 타이머 보호를 즉시 가동하며, 인게임 연속 채팅 도배(0x5C) 패킷을 락스텝 디싱크나 키보드 간섭 없이 패킷 계층에서 Keep-Alive로 즉시 무력화(12초 자동 묵음)합니다. 또한 OneDrive 미동기화(온라인 전용) 클라우드 맵(.scx/.scm) 열기 시 발생하던 30~120초 프리징을 원천 차단해 즉시 정상 재다운로드로 전환합니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.718 -->
+            <article id="ver-v0-6-718" class="patch-card" data-patch-ver="v0.6.718">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.718</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-18">2026.11.18</time>
               </div>
@@ -653,6 +682,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.718"></script>
+  <script src="./assets/js/main.js?v=0.6.719"></script>
 </body>
 </html>
