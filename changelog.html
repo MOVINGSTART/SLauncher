@@ -238,15 +238,15 @@
               <ul class="patch-list">
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
-                  <span data-i18n="p719Item1">인게임 확정·행위 기반 핵 감지 엔진을 대폭 확장하여 12유닛 초과 선택핵(Oversel), 타인 건물 랠리포인트 변경핵(Rally, 팀밀리·동맹 공유제어 자동 제외), 엔진 내부 전용 오더버퍼 명령주입핵(OrderBuffer) 및 비정상 명령패킷을 실시간 포착·무력화하고, 미탐색 검은 안개 속 적 건물을 반복 선택하는 맵핵(FogSelect)과 외부 주입 공개 맵핵·자동핵 모듈까지 정밀 식별합니다.</span>
+                  <span data-i18n="p719Item1">인게임 핵 감지·방어 엔진을 대폭 확장하여 12유닛 초과 선택핵, 타인 건물 랠리포인트 변경핵(팀밀리·동맹 공유제어 자동 제외), 비정상 명령 주입핵을 실시간 포착·무력화하고, 미탐색 검은 안개 속 적 건물을 반복 선택하는 맵핵과 외부 주입 핵 모듈까지 정밀 식별합니다.</span>
                 </li>
                 <li data-cat="new">
                   <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
-                  <span data-i18n="p719Item2">일꾼 자동 분배 채취(오토마인, 단일 턴 3쌍·초단기 5회 이상) 및 무(無)부대지정 단일 턴 건물 생산+전투 재선택(멀티커맨드·오토큐, 10회 이상) 패턴을 감시 전용(오탐 강퇴 없음)으로 HUD에 즉시 표기하며, 방에서 내보낸 유저가 30분 내 동일 직접 접속 출처(공유 릴레이·사설망·PC방 다중슬롯 제외)에서 다른 닉네임·부계정으로 재입장하면 즉시 알려주는 출처 리콜(Origin Recall) 알림을 추가했습니다.</span>
+                  <span data-i18n="p719Item2">일꾼 자동 분배 채취(오토마인) 및 무부대지정 단일 턴 건물 생산·전투 재선택(멀티커맨드·오토큐) 의심 패턴을 오탐 강퇴 없이 화면에 즉시 안내하며, 방에서 내보낸 유저가 30분 내 동일 접속 환경(공용 중계·다중 접속 환경 자동 제외)에서 부계정·다른 닉네임으로 재입장하면 즉시 알려주는 부계정 재입장 알림을 추가했습니다.</span>
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
-                  <span data-i18n="p719Item3">단절 플래그 반복(Flap)뿐 아니라 한 피어만 단독으로 10초 이상 지속 턴홀드·고의 렉을 유지하는 경우까지 감지해 디스 타이머 보호를 즉시 가동하며, 인게임 연속 채팅 도배(0x5C) 패킷을 락스텝 디싱크나 키보드 간섭 없이 패킷 계층에서 Keep-Alive로 즉시 무력화(12초 자동 묵음)합니다. 또한 OneDrive 미동기화(온라인 전용) 클라우드 맵(.scx/.scm) 열기 시 발생하던 30~120초 프리징을 원천 차단해 즉시 정상 재다운로드로 전환합니다.</span>
+                  <span data-i18n="p719Item3">단절 반복뿐 아니라 한 명만 단독으로 지속되는 고의 렉·턴 멈춤 현상까지 감지해 디스 타이머 보호를 즉시 가동하며, 인게임 연속 채팅 도배를 키보드 간섭이나 게임 끊김 없이 실시간 자동 묵음 처리합니다. 또한 OneDrive 온라인 전용 미동기화 맵 파일을 열 때 발생하던 멈춤 현상을 방지해 즉시 정상 재다운로드로 전환합니다.</span>
                 </li>
               </ul>
             </article>
@@ -284,7 +284,7 @@
               <ul class="patch-list">
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
-                  <span data-i18n="p717Item1">외부 사용자 PC에서 중앙 서버 점검·오프라인이거나 『게임 실행 시 Battle.net 완전 종료』 설정으로 배틀넷 앱이 닫힌 상태에서도 인증 화면에 멈추지 않고 로컬 복구 서버(127.0.0.1:5080) 및 모든 런처·인게임 기능이 즉시 활성화되도록 전면 개편했습니다.</span>
+                  <span data-i18n="p717Item1">외부 사용자 PC에서 중앙 서버 점검·오프라인이거나 『게임 실행 시 Battle.net 완전 종료』 설정으로 배틀넷 앱이 닫힌 상태에서도 인증 화면에 멈추지 않고 로컬 복구 서버 및 모든 런처·인게임 기능이 즉시 활성화되도록 전면 개편했습니다.</span>
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
@@ -363,11 +363,11 @@
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
-                  <span data-i18n="p714Item2">다인방 호스트 중계 스트림(resendFlag=0x04), 피어 지연 측정 응답(cmd=0x0C/0x0B), Battle.net 공유 SNP 릴레이 경로 전환 시 발생하던 패킷 가드 오차단·공유 릴레이 격리를 전면 제거하여 모든 공방·로더 방에서 끊김 없이 게임이 시작되도록 정상화했습니다.</span>
+                  <span data-i18n="p714Item2">다인방 호스트 중계 스트림, 피어 지연 측정 응답, Battle.net 공유 SNP 릴레이 경로 전환 시 발생하던 패킷 가드 오차단·공유 릴레이 격리를 전면 제거하여 모든 공방·로더 방에서 끊김 없이 게임이 시작되도록 정상화했습니다.</span>
                 </li>
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
-                  <span data-i18n="p714Item3">배틀태그 은닉(0x3A 해시 변조) 또는 강퇴(0x4E) 이후 공유 SNP 릴레이·외부 프로그램으로 주입되는 원시 UDP 채팅(0x00·0x4C·0x4D·0x5C) 및 강제 종료 패킷(0x39, 필드 순서 변조 포함)만 정밀 식별해 무고한 릴레이 참가자 피해 없이 차단합니다.</span>
+                  <span data-i18n="p714Item3">배틀태그 은닉 또는 강퇴 이후 공유 SNP 릴레이·외부 프로그램으로 주입되는 원시 UDP 채팅 및 강제 종료 패킷만 정밀 식별해 무고한 릴레이 참가자 피해 없이 차단합니다.</span>
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
@@ -388,7 +388,7 @@
               <ul class="patch-list">
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
-                  <span data-i18n="p713Item4">방 강퇴 이후에도 외부 UDP 패킷으로 방 안 유저의 스타를 강제 종료(0x39·0xCC 트랩)하거나 인게임 채팅 권한을 박탈(위조 플레이어 정보 cmd=6·수신 모드 변조)하고 혼자만 드랍·디스 상태로 분리(위조 드랍 통지 cmd=0x0C/9/0x0B)하던 악성 패킷 및 배틀태그 은닉·외부 프로그램 채팅 주입을 다중 계층(강퇴 엔드포인트 격리·프로토콜 검증·VEH 복구)으로 완벽 차단했습니다.</span>
+                  <span data-i18n="p713Item4">방 강퇴 이후에도 외부 UDP 패킷으로 방 안 유저의 스타를 강제 종료하거나 인게임 채팅 권한을 박탈하고 혼자만 드랍·디스 상태로 분리하던 악성 패킷 및 배틀태그 은닉·외부 프로그램 채팅 주입을 다중 계층(강퇴 엔드포인트 격리·프로토콜 검증·VEH 복구)으로 완벽 차단했습니다.</span>
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
@@ -459,7 +459,7 @@
               <ul class="patch-list">
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagHotfix">핫픽스</span>
-                  <span data-i18n="p710Item1">스타크래프트 실행 및 대기 화면 감지 시 순환 호출(0xc00000fd)로 런처가 종료되어 적용되지 않던 스택 오버플로우 버그를 즉시 수정했습니다.</span>
+                  <span data-i18n="p710Item1">스타크래프트 실행 및 대기 화면 감지 시 순환 호출로 런처가 종료되어 적용되지 않던 스택 오버플로우 버그를 즉시 수정했습니다.</span>
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
@@ -543,7 +543,7 @@
               <ul class="patch-list">
                 <li data-cat="fix">
                   <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
-                  <span data-i18n="p706Item1">공방 입장 시 리마스터 P2P 핸드셰이크(0x3A) 및 Storm 지연 측정 핑(cmd=11) 패킷이 오차단되어 본인만 빨핑으로 표시되던 문제를 해결했습니다.</span>
+                  <span data-i18n="p706Item1">공방 입장 시 리마스터 P2P 핸드셰이크 및 Storm 지연 측정 핑 패킷이 오차단되어 본인만 빨핑으로 표시되던 문제를 해결했습니다.</span>
                 </li>
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
