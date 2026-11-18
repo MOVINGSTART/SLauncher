@@ -75,6 +75,9 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p720Summary: "전용 클라우드 기반 실시간 접속·누적 사용자 정밀 집계 전환 및 런처 창 종료 후 스타크래프트 단독 플레이 실시간 연동 지원",
+      p720Item1: "실시간 접속자 및 누적 사용자 집계를 SLauncher 전용 클라우드 서버 기반으로 전면 전환하여, 버전 업데이트나 재설치 시 중복 합산 없이 기기 기준 실제 누적 사용자 수와 현재 접속 인원을 오차 없이 즉시 반영합니다.",
+      p720Item2: "스타크래프트를 실행한 뒤 S런처 창을 닫고 게임만 플레이하는 동안에도 실시간 접속 인원이 끊김 없이 유지되며, 게임과 런처를 모두 종료하면 수 초 내에 실시간 인원에서 즉시 차감되도록 연동했습니다.",
       p719Summary: "비(非)AI·비(非)래더 전 영역 핵·어뷰징 방어 대폭 확장 — 12유닛 초과선택·타인랠리·명령주입·오토마인·멀티커맨드·안개건물선택 감지, 강퇴 유저 부계정 재입장 알림, 지속 고의 렉·채팅 도배 실시간 무력화, OneDrive 미동기화 맵 멈춤 방지",
       p719Item1: "인게임 핵 감지·방어 엔진을 대폭 확장하여 12유닛 초과 선택핵, 타인 건물 랠리포인트 변경핵(팀밀리·동맹 공유제어 자동 제외), 비정상 명령 주입핵을 실시간 포착·무력화하고, 미탐색 검은 안개 속 적 건물을 반복 선택하는 맵핵과 외부 주입 핵 모듈까지 정밀 식별합니다.",
       p719Item2: "일꾼 자동 분배 채취(오토마인) 및 무부대지정 단일 턴 건물 생산·전투 재선택(멀티커맨드·오토큐) 의심 패턴을 오탐 강퇴 없이 화면에 즉시 안내하며, 방에서 내보낸 유저가 30분 내 동일 접속 환경(공용 중계·다중 접속 환경 자동 제외)에서 부계정·다른 닉네임으로 재입장하면 즉시 알려주는 부계정 재입장 알림을 추가했습니다.",
@@ -304,6 +307,9 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p720Summary: "Dedicated Cloud Real-Time Online & Unique User Tracking and Seamless StarCraft-Only Session Continuity",
+      p720Item1: "Migrated live online and cumulative user metrics to SLauncher's dedicated cloud presence service, eliminating duplicate counting across version updates or reinstalls while pushing instant real-time updates to the website.",
+      p720Item2: "Maintains accurate live online status even when the SLauncher window is closed while StarCraft remains running, and immediately decrements the live count within seconds once both StarCraft and SLauncher exit.",
       p719Summary: "Comprehensive Non-AI / Non-Ladder Anti-Cheat & Defense Expansion — Over-Selection, Foreign Rally, Command Injection, Auto-Gather, Multi-Command & Unexplored Building Detection, Kicked Alt Re-Entry Alert, Sustained Lag-Hold & Chat-Flood Protection, and OneDrive Cloud-Map Freeze Guard",
       p719Item1: "Expanded the live in-game anti-cheat engine to detect and neutralize Over-Selection (>12 units), Foreign-Building Rally Point modification (excluding allied/Team Melee shared control), forged internal command injections, repeated Unexplored Black-Mask Enemy Building selections, and injected external cheat modules.",
       p719Item2: "Added audit-only HUD alerts (zero false-positive kicks) for instant multi-worker mineral splits (Auto-Gather) and zero-hotkey single-turn macro + combat reselect bursts (Multi-Command/Auto-Queue), plus Kicked Alt Re-Entry alerts when a recently kicked player rejoins within 30 minutes under another account from the same direct connection.",
@@ -477,39 +483,37 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.719",
-    publishedAt: "2026-11-18T00:35:14Z",
-    setupName: "SLauncher-0.6.719-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.719/SLauncher-0.6.719-win-setup.exe",
-    setupBytes: 83791856,
-    setupSha256: "c8df37439add663819ce51783dc1cf57cd8d22027b728db115a770e327054d98",
-    zipName: "SLauncher_v0.6.719.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.719/SLauncher_v0.6.719.zip",
-    zipBytes: 83212144,
+    tag: "v0.6.720",
+    publishedAt: "2026-11-18T12:16:11Z",
+    setupName: "SLauncher-0.6.720-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.720/SLauncher-0.6.720-win-setup.exe",
+    setupBytes: 83798879,
+    setupSha256: "d0a69c2f1f0730ef2b2797d9775473fb13363831079958e2a52a9030173ec301",
+    zipName: "SLauncher_v0.6.720.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.720/SLauncher_v0.6.720.zip",
+    zipBytes: 83219167,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
 
-  var KNOWN_USERS_BASELINE = 14;
-  var ABACUS_BASE = "https://abacus.jasoncameron.dev";
-  var ABACUS_NS = "movingstart-slauncher";
-  var ABACUS_KEY = "unique_users_v1";
+  var PRESENCE_HTTP_URL = "https://presence.slauncher.kr/v1/stats";
+  var PRESENCE_WS_URL = "wss://presence.slauncher.kr/v1/ws";
 
   var userStats = {
-    liveDevices: {},
-    knownUsers: {},
-    syncedDeviceKeys: {},
-    persistentUsers: KNOWN_USERS_BASELINE,
-    ghDownloads: KNOWN_USERS_BASELINE,
-    maxBrokerTs: 0
+    online: 0,
+    users: 14,
+    loaded: false
   };
-  try {
-    var cachedDl = Number(localStorage.getItem("slauncher_gh_dl_floor") || 0);
-    if (cachedDl > userStats.ghDownloads) {
-      userStats.ghDownloads = Math.floor(cachedDl);
-      userStats.persistentUsers = Math.max(userStats.persistentUsers, userStats.ghDownloads);
-    }
-  } catch (_) {}
+
+  function applyPresenceSnapshot(data) {
+    if (!data || !data.ok) return;
+    var onl = Number(data.online);
+    var usr = Number(data.users);
+    if (isFinite(onl) && onl >= 0) userStats.online = Math.floor(onl);
+    if (isFinite(usr) && usr >= 0) userStats.users = Math.max(Math.floor(usr), userStats.online);
+    userStats.loaded = true;
+    renderUserBadge();
+  }
 
   function renderUserBadge() {
     var badge = document.getElementById("nav-user-badge");
@@ -518,15 +522,8 @@
     if (!badge || !onlineEl || !totalEl) return;
 
     var dict = I18N[currentLang] || I18N.ko;
-    var onlineCount = Object.keys(userStats.liveDevices).length;
-    var uniqueDevices = Object.keys(userStats.knownUsers).length;
-    var totalUsers = Math.max(
-      KNOWN_USERS_BASELINE,
-      userStats.persistentUsers,
-      uniqueDevices,
-      userStats.ghDownloads,
-      onlineCount
-    );
+    var onlineCount = userStats.online;
+    var totalUsers = Math.max(userStats.users, onlineCount);
 
     onlineEl.textContent = (dict.navOnlineFmt || "{online}").replace("{online}", String(onlineCount));
     totalEl.textContent = (dict.navUsersFmt || "{users}").replace("{users}", String(totalUsers));
@@ -822,10 +819,6 @@
     if (m.portable_file) releaseState.zipName = m.portable_file;
     if (m.portable_url) releaseState.zipUrl = m.portable_url;
     if (m.portable_size) releaseState.zipBytes = Number(m.portable_size) || 0;
-    if (Number(m.known_users_floor) > userStats.ghDownloads) {
-      userStats.ghDownloads = Math.floor(Number(m.known_users_floor));
-      renderUserBadge();
-    }
     renderReleaseUI();
   }
 
@@ -1021,145 +1014,38 @@
     }
   }
 
-  function mqttEncodeVarLen(len) {
-    var out = [];
-    do {
-      var b = len % 128;
-      len = Math.floor(len / 128);
-      if (len > 0) b |= 0x80;
-      out.push(b);
-    } while (len > 0);
-    return out;
-  }
-
-  function mqttUtf8Bytes(str) {
-    var raw = new TextEncoder().encode(str);
-    var out = [(raw.length >> 8) & 0xff, raw.length & 0xff];
-    for (var i = 0; i < raw.length; i++) out.push(raw[i]);
-    return out;
-  }
-
-  function mqttBuildConnect(clientId) {
-    var vh = [0x00, 0x04, 0x4d, 0x51, 0x54, 0x54, 0x04, 0x02, 0x00, 0x2d];
-    var pl = mqttUtf8Bytes(clientId);
-    var rem = mqttEncodeVarLen(vh.length + pl.length);
-    return new Uint8Array([0x10].concat(rem, vh, pl));
-  }
-
-  function mqttBuildSubscribe(topics) {
-    var body = [0x00, 0x01];
-    for (var i = 0; i < topics.length; i++) {
-      body = body.concat(mqttUtf8Bytes(topics[i]), [0x00]);
-    }
-    var rem = mqttEncodeVarLen(body.length);
-    return new Uint8Array([0x82].concat(rem, body));
-  }
-
-  function syncUniqueDeviceToPersistentCounter(uid) {
-    if (!uid || !/^[0-9a-f]{16}$/.test(uid)) return;
-    if (userStats.syncedDeviceKeys[uid]) return;
-    userStats.syncedDeviceKeys[uid] = true;
-    try {
-      if (localStorage.getItem("slauncher_dev_" + uid)) return;
-    } catch (_) {}
-
-    fetch(ABACUS_BASE + "/info/" + ABACUS_NS + "/dev_" + uid, { cache: "no-store" })
+  function fetchPresenceStatsOnce() {
+    fetch(PRESENCE_HTTP_URL, { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (info) {
-        if (!info) return;
-        if (info.exists) {
-          try { localStorage.setItem("slauncher_dev_" + uid, "1"); } catch (_) {}
-          return;
-        }
-        return fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/dev_" + uid, { cache: "no-store" })
-          .then(function (r2) { return r2.ok ? r2.json() : null; })
-          .then(function (res) {
-            try { localStorage.setItem("slauncher_dev_" + uid, "1"); } catch (_) {}
-            if (res && Number(res.value) === 1) {
-              return fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/" + ABACUS_KEY, { cache: "no-store" })
-                .then(function (r3) { return r3.ok ? r3.json() : null; })
-                .then(function (tot) {
-                  var v = Number(tot && tot.value) || 0;
-                  if (v > userStats.persistentUsers) {
-                    userStats.persistentUsers = v;
-                    try { localStorage.setItem("slauncher_gh_dl_floor", String(v)); } catch (_) {}
-                    renderUserBadge();
-                  }
-                });
-            }
-          });
-      })
+      .then(function (data) { if (data) applyPresenceSnapshot(data); })
       .catch(function () {});
   }
 
-  function handlePresencePublish(topic, payloadText) {
-    var livePrefix = "slauncher/v1/live/";
-    var userPrefix = "slauncher/v1/users/";
-    if (topic.indexOf(userPrefix) === 0) {
-      var uid = topic.slice(userPrefix.length);
-      if (/^[0-9a-f]{16}$/.test(uid) && payloadText.length > 0) {
-        userStats.knownUsers[uid] = true;
-        syncUniqueDeviceToPersistentCounter(uid);
-        renderUserBadge();
-      }
-      return;
-    }
-    if (topic.indexOf(livePrefix) === 0) {
-      var lid = topic.slice(livePrefix.length);
-      if (!/^[0-9a-f]{16}$/.test(lid)) return;
-      if (!payloadText) {
-        delete userStats.liveDevices[lid];
-        renderUserBadge();
-        return;
-      }
-      var ts = 0;
-      try {
-        var obj = JSON.parse(payloadText);
-        ts = Number(obj && obj.t) || 0;
-      } catch (_) {}
-      if (ts > 0) {
-        if (ts > userStats.maxBrokerTs) userStats.maxBrokerTs = ts;
-        var refNow = Math.max(Math.floor(Date.now() / 1000), userStats.maxBrokerTs);
-        if (refNow - ts <= 120) {
-          userStats.liveDevices[lid] = Date.now();
-          userStats.knownUsers[lid] = true;
-          syncUniqueDeviceToPersistentCounter(lid);
-        } else {
-          delete userStats.liveDevices[lid];
-        }
-        renderUserBadge();
-      }
-    }
-  }
-
-  function connectPresenceBroker(wsUrl) {
-    if (typeof WebSocket === "undefined" || typeof TextDecoder === "undefined") return;
-    var decoder = new TextDecoder("utf-8");
-    var failures = 0;
+  function connectPresenceLiveSocket() {
+    if (typeof WebSocket === "undefined") return;
     var ws = null;
     var pingTimer = null;
     var retryTimer = null;
+    var failures = 0;
 
-    function cleanupTimers() {
+    function clearTimers() {
       if (pingTimer) { clearInterval(pingTimer); pingTimer = null; }
       if (retryTimer) { clearTimeout(retryTimer); retryTimer = null; }
     }
 
     function scheduleReconnect() {
       if (retryTimer) return;
-      var delay = Math.min(20000, 3000 * Math.pow(1.6, Math.min(failures++, 5)));
+      var delay = Math.min(20000, 2500 * Math.pow(1.5, Math.min(failures++, 5)));
       retryTimer = setTimeout(function () {
         retryTimer = null;
-        openSocket();
+        openWs();
       }, delay);
     }
 
-    function openSocket() {
-      cleanupTimers();
-      var rxBuf = new Uint8Array(0);
+    function openWs() {
+      clearTimers();
       try {
-        ws = new WebSocket(wsUrl, "mqtt");
-        ws.binaryType = "arraybuffer";
+        ws = new WebSocket(PRESENCE_WS_URL);
       } catch (_) {
         scheduleReconnect();
         return;
@@ -1167,176 +1053,46 @@
 
       ws.onopen = function () {
         failures = 0;
-        var cid = "slw_" + Math.random().toString(16).slice(2, 12);
-        try { ws.send(mqttBuildConnect(cid)); } catch (_) {}
         pingTimer = setInterval(function () {
           if (ws && ws.readyState === WebSocket.OPEN) {
-            try { ws.send(new Uint8Array([0xc0, 0x00])); } catch (_) {}
+            try { ws.send("ping"); } catch (_) {}
           }
         }, 25000);
       };
 
       ws.onmessage = function (ev) {
-        if (!(ev.data instanceof ArrayBuffer)) return;
-        var chunk = new Uint8Array(ev.data);
-        var merged = new Uint8Array(rxBuf.length + chunk.length);
-        merged.set(rxBuf, 0);
-        merged.set(chunk, rxBuf.length);
-        rxBuf = merged;
-
-        var offset = 0;
-        while (offset + 2 <= rxBuf.length) {
-          var headerByte = rxBuf[offset];
-          var pType = headerByte >> 4;
-          var pos = offset + 1;
-          var remLen = 0;
-          var mult = 1;
-          var completeLen = false;
-          while (pos < rxBuf.length && pos <= offset + 4) {
-            var eb = rxBuf[pos++];
-            remLen += (eb & 0x7f) * mult;
-            mult *= 128;
-            if ((eb & 0x80) === 0) {
-              completeLen = true;
-              break;
-            }
-          }
-          if (!completeLen) break;
-          var pktEnd = pos + remLen;
-          if (pktEnd > rxBuf.length) break;
-
-          if (pType === 2 && remLen >= 2 && rxBuf[pos + 1] === 0) {
-            try {
-              ws.send(mqttBuildSubscribe(["slauncher/v1/live/+", "slauncher/v1/users/+"]));
-            } catch (_) {}
-          } else if (pType === 3 && remLen >= 2) {
-            var qos = (headerByte >> 1) & 0x03;
-            var tLen = (rxBuf[pos] << 8) | rxBuf[pos + 1];
-            var tStart = pos + 2;
-            var tEnd = tStart + tLen;
-            var plStart = tEnd + (qos > 0 ? 2 : 0);
-            if (plStart <= pktEnd) {
-              var topicStr = decoder.decode(rxBuf.subarray(tStart, tEnd));
-              var payloadStr = decoder.decode(rxBuf.subarray(plStart, pktEnd));
-              handlePresencePublish(topicStr, payloadStr);
-            }
-          }
-          offset = pktEnd;
-        }
-        if (offset > 0) {
-          rxBuf = rxBuf.slice(offset);
-        }
+        if (!ev || typeof ev.data !== "string" || ev.data === "pong") return;
+        try {
+          var data = JSON.parse(ev.data);
+          applyPresenceSnapshot(data);
+        } catch (_) {}
       };
 
       ws.onclose = function () {
-        cleanupTimers();
+        clearTimers();
         scheduleReconnect();
       };
 
       ws.onerror = function () {};
     }
 
-    openSocket();
-  }
+    openWs();
 
-  function loadGitHubUserTotal(slug) {
-    if (!slug) return;
-    fetch("https://api.github.com/repos/" + slug + "/releases?per_page=100", {
-      headers: { Accept: "application/vnd.github+json" }
-    })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (list) {
-        if (!Array.isArray(list)) return;
-        var sum = 0;
-        for (var i = 0; i < list.length; i++) {
-          var assets = (list[i] && list[i].assets) || [];
-          for (var j = 0; j < assets.length; j++) {
-            var a = assets[j];
-            if (!a || !a.name) continue;
-            var nm = String(a.name);
-            if (/\.(exe|msi|zip)$/i.test(nm) && !/Native-/i.test(nm)) {
-              sum += Number(a.download_count) || 0;
-            }
-          }
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) {
+        fetchPresenceStatsOnce();
+        if (ws && ws.readyState === WebSocket.OPEN) {
+          try { ws.send("stats"); } catch (_) {}
         }
-        if (sum > userStats.ghDownloads) {
-          userStats.ghDownloads = sum;
-          try { localStorage.setItem("slauncher_gh_dl_floor", String(sum)); } catch (_) {}
-          renderUserBadge();
-        }
-      })
-      .catch(function () {});
-  }
-
-  function loadPersistentUserCounter() {
-    fetch(ABACUS_BASE + "/get/" + ABACUS_NS + "/" + ABACUS_KEY, { cache: "no-store" })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (data) {
-        var val = Number(data && data.value) || 0;
-        if (val > userStats.persistentUsers) {
-          userStats.persistentUsers = val;
-          try { localStorage.setItem("slauncher_gh_dl_floor", String(val)); } catch (_) {}
-          renderUserBadge();
-        }
-      })
-      .catch(function () {});
-  }
-
-  function bindDownloadUserCounter() {
-    var ids = ["btn-download-setup", "btn-download-zip"];
-    for (var i = 0; i < ids.length; i++) {
-      var el = document.getElementById(ids[i]);
-      if (!el) continue;
-      el.addEventListener("click", function () {
-        try {
-          if (localStorage.getItem("slauncher_dl_counted_v1")) return;
-          localStorage.setItem("slauncher_dl_counted_v1", "1");
-        } catch (_) {
-          return;
-        }
-        fetch(ABACUS_BASE + "/hit/" + ABACUS_NS + "/" + ABACUS_KEY, {
-          cache: "no-store",
-          keepalive: true
-        })
-          .then(function (r) { return r.ok ? r.json() : null; })
-          .then(function (data) {
-            var val = Number(data && data.value) || 0;
-            if (val > userStats.persistentUsers) {
-              userStats.persistentUsers = val;
-              try { localStorage.setItem("slauncher_gh_dl_floor", String(val)); } catch (_) {}
-              renderUserBadge();
-            }
-          })
-          .catch(function () {});
-      });
-    }
+      }
+    });
   }
 
   function startUserMetrics() {
     renderUserBadge();
-    bindDownloadUserCounter();
-    loadPersistentUserCounter();
-    setInterval(loadPersistentUserCounter, 45000);
-
-    var slug = detectGitHubRepo();
-    loadGitHubUserTotal(slug);
-    setInterval(function () { loadGitHubUserTotal(slug); }, 120000);
-
-    connectPresenceBroker("wss://broker.emqx.io:8084/mqtt");
-    connectPresenceBroker("wss://test.mosquitto.org:8081/mqtt");
-
-    setInterval(function () {
-      var nowMs = Date.now();
-      var changed = false;
-      var ids = Object.keys(userStats.liveDevices);
-      for (var i = 0; i < ids.length; i++) {
-        if (nowMs - userStats.liveDevices[ids[i]] > 90000) {
-          delete userStats.liveDevices[ids[i]];
-          changed = true;
-        }
-      }
-      if (changed) renderUserBadge();
-    }, 15000);
+    fetchPresenceStatsOnce();
+    connectPresenceLiveSocket();
+    setInterval(fetchPresenceStatsOnce, 30000);
   }
 
   applyLanguage(currentLang);
