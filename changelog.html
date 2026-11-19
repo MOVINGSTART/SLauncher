@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.725" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.726" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.725</span>
+              <span id="hero-version">v0.6.726</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.725</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.726</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">24</strong>
+              <strong id="cl-total-count" class="cl-stat-val">25</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-725" class="cl-ver-link active" data-target-ver="v0.6.725">
-                <span class="cl-ver-name">v0.6.725</span>
+              <a href="#ver-v0-6-726" class="cl-ver-link active" data-target-ver="v0.6.726">
+                <span class="cl-ver-name">v0.6.726</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-725" class="cl-ver-link" data-target-ver="v0.6.725">
+                <span class="cl-ver-name">v0.6.725</span>
+                <span class="cl-ver-mini-date">11.19</span>
               </a>
               <a href="#ver-v0-6-724" class="cl-ver-link" data-target-ver="v0.6.724">
                 <span class="cl-ver-name">v0.6.724</span>
@@ -227,13 +231,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.725/SLauncher-0.6.725-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.726/SLauncher-0.6.726-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.725 다운로드</span>
+                <span id="btn-download-label">v0.6.726 다운로드</span>
               </a>
             </div>
           </div>
@@ -249,12 +253,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.725 (Latest) -->
-            <article id="ver-v0-6-725" class="patch-card patch-card-latest" data-patch-ver="v0.6.725">
+            <!-- v0.6.726 (Latest) -->
+            <article id="ver-v0-6-726" class="patch-card patch-card-latest" data-patch-ver="v0.6.726">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.726</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
+              </div>
+              <p class="patch-summary" data-i18n="p726Summary">GRP 미적용 일반 맵 기본 유닛 자동 복원, 비방장 [방장] 오표기 수정 및 플레이어 감지 UI 배틀태그 표시 정상화</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p726Item1">내장 GRP가 포함된 맵이거나 GRP 설정에서 직접 지정한 맵을 열었을 때만 커스텀 유닛 스킨이 작동하도록 개선하고, 일반 밀리·유즈맵 진입 시에는 교체된 유닛 그래픽을 즉시 순정 스타크래프트 기본 유닛으로 자동 복원합니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p726Item2">스타크래프트 내부 로컬 플레이어 슬롯 상태값이 방장으로 오인되어 게스트 입장 시에도 키패드 0 정보 차트·슬롯 매니저(Ctrl+L)·대기실 표시에 『[방장]』 배지가 붙던 현상을 수정하고, 실제 방 생성 및 공식 방장 승계 시에만 방장 표시가 나타나도록 바로잡았습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p726Item3">대기실 네트워크 식별자와 배틀태그 패킷을 즉시 연동하고 다중 캐릭터(게임 닉네임과 배틀태그가 다른 계정) 갱신 시 배틀태그가 초기화되던 문제를 해결하여, 플레이어 감지 UI와 인게임 오버레이 모두 닉네임과 배틀태그가 누락 없이 함께 표시됩니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.725 -->
+            <article id="ver-v0-6-725" class="patch-card" data-patch-ver="v0.6.725">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.725</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
               </div>
@@ -844,6 +873,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.725"></script>
+  <script src="./assets/js/main.js?v=0.6.726"></script>
 </body>
 </html>
