@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.723" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.724" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.723</span>
+              <span id="hero-version">v0.6.724</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.723</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.724</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">22</strong>
+              <strong id="cl-total-count" class="cl-stat-val">23</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-723" class="cl-ver-link active" data-target-ver="v0.6.723">
-                <span class="cl-ver-name">v0.6.723</span>
+              <a href="#ver-v0-6-724" class="cl-ver-link active" data-target-ver="v0.6.724">
+                <span class="cl-ver-name">v0.6.724</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-723" class="cl-ver-link" data-target-ver="v0.6.723">
+                <span class="cl-ver-name">v0.6.723</span>
+                <span class="cl-ver-mini-date">11.19</span>
               </a>
               <a href="#ver-v0-6-722" class="cl-ver-link" data-target-ver="v0.6.722">
                 <span class="cl-ver-name">v0.6.722</span>
@@ -219,13 +223,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.723/SLauncher-0.6.723-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.724/SLauncher-0.6.724-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.723 다운로드</span>
+                <span id="btn-download-label">v0.6.724 다운로드</span>
               </a>
             </div>
           </div>
@@ -241,12 +245,41 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.723 (Latest) -->
-            <article id="ver-v0-6-723" class="patch-card patch-card-latest" data-patch-ver="v0.6.723">
+            <!-- v0.6.724 (Latest) -->
+            <article id="ver-v0-6-724" class="patch-card patch-card-latest" data-patch-ver="v0.6.724">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.724</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
+              </div>
+              <p class="patch-summary" data-i18n="p724Summary">실시간 닉네임 위장·변조([닉변조]) 정밀 감지 및 전적·배틀태그 병기, 저그 자원핵 오탐·경고음 해결, 경기 후 도우미(Ctrl+H) 빈 창 버그 및 큰 UI·도우미 누적 렉 완벽 최적화</p>
+              <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p724Item1">대기실 서버 인증 프로필 불일치, 인게임 도중 닉네임 강제 변경, 초고속 슬롯 닉네임 교체, 색상·제어·투명 공백 문자 위장 및 패킷 신원 변조를 실시간 감지하여 일반 유저(프로필명≠배틀태그·자리 이동) 오탐 없이 실제 닉네임 변조 행위만 정밀 식별합니다.</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p724Item2">닉변조 감지 즉시 상단 SDetector 배너와 대기실·인게임 로컬 채팅창(『[S런처] ⚠ [닉변조]』)으로 알리고, 키패드 0 정보 차트·슬롯 매니저(Ctrl+L)·컴팩트 도우미(Ctrl+H)·런처 플레이어 목록 전체에 『[닉변조]』 배지와 실제 프로필·배틀태그 및 원래 승패 전적을 함께 표시합니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p724Item3">인게임 중 상대 저그가 다수의 오버로드를 동시에 부화하거나 빠른무한·건물 취소 등으로 자원·인구수가 급변할 때 자원핵(미네랄핵·가스핵·인구수핵)으로 오감지되어 경고음과 패널 알림이 반복 출력되던 문제를 근본 해결했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p724Item4">경기 종료 후 컴팩트 도우미(Ctrl+H) 단축키 입력 시 창 테두리만 뜨고 내부 기능 텍스트가 보이지 않던 화면 복구 누락 버그를 해결하고, 큰 설정 화면(큰 UI) 진입 및 도우미 열기·닫기·설정 변경을 반복할 때 백그라운드 렌더링과 로그·테이블 갱신이 누적되어 발생하던 렉 현상을 전면 최적화했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.723 -->
+            <article id="ver-v0-6-723" class="patch-card" data-patch-ver="v0.6.723">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.723</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
               </div>
@@ -711,7 +744,7 @@
               <ul class="patch-list">
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
-                  <span data-i18n="p703Item1">원본 맵 지문과 비교해 Comment('') 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.</span>
+                  <span data-i18n="p703Item1">원본 맵 지문과 비교해 Comment("") 삭제·비움, 트리거 순서·위치 변경, 편법 1배속 수정 흔적을 즉시 잡아내어 스타 화면 상단 토스트(방 입장 시 1회)로 경고합니다.</span>
                 </li>
                 <li data-cat="security">
                   <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
@@ -786,6 +819,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.723"></script>
+  <script src="./assets/js/main.js?v=0.6.724"></script>
 </body>
 </html>
