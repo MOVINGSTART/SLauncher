@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.724" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.725" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.724</span>
+              <span id="hero-version">v0.6.725</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.724</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.725</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">23</strong>
+              <strong id="cl-total-count" class="cl-stat-val">24</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-724" class="cl-ver-link active" data-target-ver="v0.6.724">
-                <span class="cl-ver-name">v0.6.724</span>
+              <a href="#ver-v0-6-725" class="cl-ver-link active" data-target-ver="v0.6.725">
+                <span class="cl-ver-name">v0.6.725</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-724" class="cl-ver-link" data-target-ver="v0.6.724">
+                <span class="cl-ver-name">v0.6.724</span>
+                <span class="cl-ver-mini-date">11.19</span>
               </a>
               <a href="#ver-v0-6-723" class="cl-ver-link" data-target-ver="v0.6.723">
                 <span class="cl-ver-name">v0.6.723</span>
@@ -223,13 +227,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.724/SLauncher-0.6.724-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.725/SLauncher-0.6.725-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.724 다운로드</span>
+                <span id="btn-download-label">v0.6.725 다운로드</span>
               </a>
             </div>
           </div>
@@ -245,12 +249,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.724 (Latest) -->
-            <article id="ver-v0-6-724" class="patch-card patch-card-latest" data-patch-ver="v0.6.724">
+            <!-- v0.6.725 (Latest) -->
+            <article id="ver-v0-6-725" class="patch-card patch-card-latest" data-patch-ver="v0.6.725">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.725</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
+              </div>
+              <p class="patch-summary" data-i18n="p725Summary">대기실 자리 이동 회피(슬롯 도주) 추적형 자동·수동 강퇴 도입 및 방장 승계 즉시 자동 강퇴 연동 패치</p>
+              <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p725Item1">블랙리스트·고유 식별자 차단·방제 승률 조건·#S 인증 대상자 및 방장이 직접 강퇴를 누른 대상이 플레이어(P1~P8)와 관전자(Obs1~Obs4) 슬롯 사이를 빠르게 옮겨 다니며 강퇴를 회피하더라도, 배틀태그·식별자 기반으로 이동한 슬롯 끝까지 실시간 추적하여 방 추방 및 강퇴를 즉시 집행합니다. (일반 유저의 자유로운 자리 변경에는 일절 간섭하지 않습니다.)</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p725Item2">대기실에 게스트로 입장해 있다가 기존 방장이 퇴장하여 본인에게 방장 권한이 승계되는 즉시 방장 상태를 자동 동기화하고, 방 안에 머물고 있는 모든 플레이어·관전자 슬롯에 대해 자동 강퇴 정책을 지연 없이 일괄 적용합니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.724 -->
+            <article id="ver-v0-6-724" class="patch-card" data-patch-ver="v0.6.724">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.724</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-19">2026.11.19</time>
               </div>
@@ -819,6 +844,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.724"></script>
+  <script src="./assets/js/main.js?v=0.6.725"></script>
 </body>
 </html>
