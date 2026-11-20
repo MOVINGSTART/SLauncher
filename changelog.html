@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.727" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.728" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.727</span>
+              <span id="hero-version">v0.6.728</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.727</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.728</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">26</strong>
+              <strong id="cl-total-count" class="cl-stat-val">27</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-727" class="cl-ver-link active" data-target-ver="v0.6.727">
-                <span class="cl-ver-name">v0.6.727</span>
+              <a href="#ver-v0-6-728" class="cl-ver-link active" data-target-ver="v0.6.728">
+                <span class="cl-ver-name">v0.6.728</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-727" class="cl-ver-link" data-target-ver="v0.6.727">
+                <span class="cl-ver-name">v0.6.727</span>
+                <span class="cl-ver-mini-date">11.20</span>
               </a>
               <a href="#ver-v0-6-726" class="cl-ver-link" data-target-ver="v0.6.726">
                 <span class="cl-ver-name">v0.6.726</span>
@@ -235,13 +239,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.727/SLauncher-0.6.727-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.728/SLauncher-0.6.728-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.727 다운로드</span>
+                <span id="btn-download-label">v0.6.728 다운로드</span>
               </a>
             </div>
           </div>
@@ -257,12 +261,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.727 (Latest) -->
-            <article id="ver-v0-6-727" class="patch-card patch-card-latest" data-patch-ver="v0.6.727">
+            <!-- v0.6.728 (Latest) -->
+            <article id="ver-v0-6-728" class="patch-card patch-card-latest" data-patch-ver="v0.6.728">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.728</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-21">2026.11.21</time>
+              </div>
+              <p class="patch-summary" data-i18n="p728Summary">상대방 친구 삭제 감지 시 본인 식별 해시 오탐으로 런처·오버레이·시계가 동반 종료되던 핫픽스 및 본인 계정 검증 격리 강화</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p728Item1">방 입장 초기 틱이나 슬롯·관전자 이동 순간 대기실 슬롯에서 타 유저의 배틀태그 해시가 본인 식별 캐시에 섞여 저장되어, 이후 해당 상대방이 나를 친구 삭제해 사용 제한 명단에 등록될 때 피해자인 내 런처까지 자동 종료되며 상단 오버레이와 시계가 사라지던 문제를 근본 수정했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p728Item2">기존 오염 가능성이 있던 구버전 본인 해시 캐시를 실행 즉시 자동 정리 및 V2 저장소로 분리하고, 인게임 방 슬롯 대신 로컬 Battle.net 로그인 계정·프렌즈 브리지 본인 계정·OAuth 인증 정보만 본인 식별에 사용하도록 격리했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.727 -->
+            <article id="ver-v0-6-727" class="patch-card" data-patch-ver="v0.6.727">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.727</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-20">2026.11.20</time>
               </div>
@@ -902,6 +927,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.727"></script>
+  <script src="./assets/js/main.js?v=0.6.728"></script>
 </body>
 </html>
