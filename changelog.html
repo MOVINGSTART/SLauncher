@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.730" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.731" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.730</span>
+              <span id="hero-version">v0.6.731</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.730</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.731</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">29</strong>
+              <strong id="cl-total-count" class="cl-stat-val">30</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-730" class="cl-ver-link active" data-target-ver="v0.6.730">
-                <span class="cl-ver-name">v0.6.730</span>
+              <a href="#ver-v0-6-731" class="cl-ver-link active" data-target-ver="v0.6.731">
+                <span class="cl-ver-name">v0.6.731</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-730" class="cl-ver-link" data-target-ver="v0.6.730">
+                <span class="cl-ver-name">v0.6.730</span>
+                <span class="cl-ver-mini-date">11.21</span>
               </a>
               <a href="#ver-v0-6-729" class="cl-ver-link" data-target-ver="v0.6.729">
                 <span class="cl-ver-name">v0.6.729</span>
@@ -247,13 +251,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.730/SLauncher-0.6.730-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.731/SLauncher-0.6.731-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.730 다운로드</span>
+                <span id="btn-download-label">v0.6.731 다운로드</span>
               </a>
             </div>
           </div>
@@ -269,12 +273,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.730 (Latest) -->
-            <article id="ver-v0-6-730" class="patch-card patch-card-latest" data-patch-ver="v0.6.730">
+            <!-- v0.6.731 (Latest) -->
+            <article id="ver-v0-6-731" class="patch-card patch-card-latest" data-patch-ver="v0.6.731">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.731</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
+              </div>
+              <p class="patch-summary" data-i18n="p731Summary">최고관리자 PC 1대에서만 표시되도록 수정 및 구버전 사용 제한 적용</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p731Item1">최고관리자 표시가 지정된 PC 1대에서만 뜨도록 수정했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p731Item2">구버전 실행을 제한하고 최신 버전 필수 업데이트가 적용되도록 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.730 -->
+            <article id="ver-v0-6-730" class="patch-card" data-patch-ver="v0.6.730">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.730</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-21">2026.11.21</time>
               </div>
@@ -989,6 +1014,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.730"></script>
+  <script src="./assets/js/main.js?v=0.6.731"></script>
 </body>
 </html>
