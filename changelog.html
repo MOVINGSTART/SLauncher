@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.729" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.730" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.729</span>
+              <span id="hero-version">v0.6.730</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.729</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.730</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">28</strong>
+              <strong id="cl-total-count" class="cl-stat-val">29</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-729" class="cl-ver-link active" data-target-ver="v0.6.729">
-                <span class="cl-ver-name">v0.6.729</span>
+              <a href="#ver-v0-6-730" class="cl-ver-link active" data-target-ver="v0.6.730">
+                <span class="cl-ver-name">v0.6.730</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-729" class="cl-ver-link" data-target-ver="v0.6.729">
+                <span class="cl-ver-name">v0.6.729</span>
+                <span class="cl-ver-mini-date">11.21</span>
               </a>
               <a href="#ver-v0-6-728" class="cl-ver-link" data-target-ver="v0.6.728">
                 <span class="cl-ver-name">v0.6.728</span>
@@ -243,13 +247,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.729/SLauncher-0.6.729-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.730/SLauncher-0.6.730-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.729 다운로드</span>
+                <span id="btn-download-label">v0.6.730 다운로드</span>
               </a>
             </div>
           </div>
@@ -265,12 +269,45 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.729 (Latest) -->
-            <article id="ver-v0-6-729" class="patch-card patch-card-latest" data-patch-ver="v0.6.729">
+            <!-- v0.6.730 (Latest) -->
+            <article id="ver-v0-6-730" class="patch-card patch-card-latest" data-patch-ver="v0.6.730">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.730</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-21">2026.11.21</time>
+              </div>
+              <p class="patch-summary" data-i18n="p730Summary">플레이어 감지 UI 배틀태그 누락 완벽 복구, 방 입장 핵 감지기 안내 채팅 추가, 공개 대기실 오표기 해결 및 자기 시그니처 오탐 종료·공백 닉네임 오탐 알림 수정</p>
+              <ul class="patch-list">
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p730Item5">배틀넷 사용자 지정 게임 대기실 입장 시 『[S런처] 핵 감지기가 작동 중입니다. movingstart.github.io/SLauncher』 안내 채팅이 방당 1회 자동 송출되도록 추가했으며, 설정에서 방 입장·게임 시작 안내 문구를 통합 ON/OFF 할 수 있습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p730Item4">스타크래프트 비동기·WSARecvFrom UDP 수신 경로와 관전자 슬롯(Obs1~Obs4) 패킷, 로컬 Aurora 프로필 연동 및 다중 캐릭터 슬롯 매칭을 전면 복구하여, 『플레이어 감지 UI』에서 모든 플레이어와 관전자의 배틀태그가 입장 즉시 빠짐없이 표시되도록 수정했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p730Item1">공개 방 목록 최상단(1순위) 방의 노출 순위값(visibility=1)이 비공개 속성으로 잘못 해석되거나 이전 동일 방제의 비밀번호 캐시가 재적용되어, 정상 공개 방이 프렌즈 패널에서 『비공개 대기실: ...』로 표시되던 문제를 완벽히 수정했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p730Item2">런처·설치·보조 프로세스 실행 또는 즉시 종료 시 내장 안티치트 시그니처 문자열이 자기 바이너리와 매칭되며 『open-failed』 보안 차단으로 런처가 자동 종료되던 현상을 근본 해결했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-imp" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p730Item3">방 입장 직후 슬롯 초기화 구간의 임시 공백 바이트가 『공백 닉네임 변조 / (공백위장)』로 오탐되던 현상과 일반 띄어쓰기 닉네임 유저 입장 시 대기실에 자동 출력되던 안내 문구를 모두 정리했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.729 -->
+            <article id="ver-v0-6-729" class="patch-card" data-patch-ver="v0.6.729">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.729</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-21">2026.11.21</time>
               </div>
@@ -952,6 +989,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.729"></script>
+  <script src="./assets/js/main.js?v=0.6.730"></script>
 </body>
 </html>
