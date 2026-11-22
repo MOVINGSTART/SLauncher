@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.732" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.733" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.732</span>
+              <span id="hero-version">v0.6.733</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.732</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.733</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">31</strong>
+              <strong id="cl-total-count" class="cl-stat-val">32</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-732" class="cl-ver-link active" data-target-ver="v0.6.732">
-                <span class="cl-ver-name">v0.6.732</span>
+              <a href="#ver-v0-6-733" class="cl-ver-link active" data-target-ver="v0.6.733">
+                <span class="cl-ver-name">v0.6.733</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-732" class="cl-ver-link" data-target-ver="v0.6.732">
+                <span class="cl-ver-name">v0.6.732</span>
+                <span class="cl-ver-mini-date">11.22</span>
               </a>
               <a href="#ver-v0-6-731" class="cl-ver-link" data-target-ver="v0.6.731">
                 <span class="cl-ver-name">v0.6.731</span>
@@ -255,13 +259,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.732/SLauncher-0.6.732-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.733/SLauncher-0.6.733-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.732 다운로드</span>
+                <span id="btn-download-label">v0.6.733 다운로드</span>
               </a>
             </div>
           </div>
@@ -277,12 +281,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.732 (Latest) -->
-            <article id="ver-v0-6-732" class="patch-card patch-card-latest" data-patch-ver="v0.6.732">
+            <!-- v0.6.733 (Latest) -->
+            <article id="ver-v0-6-733" class="patch-card patch-card-latest" data-patch-ver="v0.6.733">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.733</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
+              </div>
+              <p class="patch-summary" data-i18n="p733Summary">친구 사용자 지정 게임 참가 알림 중복 반복 출력 수정, 방 입장 렉 최적화 및 선택형 업데이트 전환</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p733Item1">비공개(암호) 대기실 및 사용자 지정 게임에 참가 중인 친구 1명의 『친구 ... 님이 사용자 지정 게임 ...에 참가했습니다.』 알림이 상태 갱신 주기마다 중복 반복 출력되던 현상을 수정하여, 실제로 방을 나갔다 다시 입장하기 전까지 방당 1회만 표시되도록 개선했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p733Item2">배틀넷 방 입장 시 중첩 실행되던 인게임 브리지 스크립트 재주입·초기 백그라운드 조회 및 타이머 부하를 제거하여 대기실 진입 구간의 끊김과 입장 렉을 대폭 해소했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p733Item3">업데이트 방식을 강제 차단에서 선택형 안내(『지금 업데이트』 / 『나중에 하기』)로 전환하여 원할 때 자유롭게 업데이트하거나 현재 버전으로 즉시 실행할 수 있도록 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.732 -->
+            <article id="ver-v0-6-732" class="patch-card" data-patch-ver="v0.6.732">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.732</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
               </div>
@@ -1039,6 +1068,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.732"></script>
+  <script src="./assets/js/main.js?v=0.6.733"></script>
 </body>
 </html>
