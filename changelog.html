@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.734" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.735" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.734</span>
+              <span id="hero-version">v0.6.735</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.734</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.735</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">33</strong>
+              <strong id="cl-total-count" class="cl-stat-val">34</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-734" class="cl-ver-link active" data-target-ver="v0.6.734">
-                <span class="cl-ver-name">v0.6.734</span>
+              <a href="#ver-v0-6-735" class="cl-ver-link active" data-target-ver="v0.6.735">
+                <span class="cl-ver-name">v0.6.735</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-734" class="cl-ver-link" data-target-ver="v0.6.734">
+                <span class="cl-ver-name">v0.6.734</span>
+                <span class="cl-ver-mini-date">11.22</span>
               </a>
               <a href="#ver-v0-6-733" class="cl-ver-link" data-target-ver="v0.6.733">
                 <span class="cl-ver-name">v0.6.733</span>
@@ -263,13 +267,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.734/SLauncher-0.6.734-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.735/SLauncher-0.6.735-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.734 다운로드</span>
+                <span id="btn-download-label">v0.6.735 다운로드</span>
               </a>
             </div>
           </div>
@@ -285,12 +289,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.734 (Latest) -->
-            <article id="ver-v0-6-734" class="patch-card patch-card-latest" data-patch-ver="v0.6.734">
+            <!-- v0.6.735 (Latest) -->
+            <article id="ver-v0-6-735" class="patch-card patch-card-latest" data-patch-ver="v0.6.735">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.735</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-23">2026.11.23</time>
+              </div>
+              <p class="patch-summary" data-i18n="p735Summary">외부 유료 런처(HLauncherPay 등) 강제 드랍 공격 전 구간 실시간 원천 차단, 블랙리스트 메모장(TXT) 과적재로 인한 도우미(Ctrl+H) 먹통 완벽 해결 및 누적 메모장 파일 자동 삭제</p>
+              <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-security" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p735Item1">직접 UDP·배틀넷 중계(SNP)·TURN 릴레이 채널 및 즉시 완료 비동기 소켓 수신 경로 전 구간에서 외부 유료 런처(HLauncherPay 등)가 전송하는 위조 강제 드랍·타 슬롯 이탈 유도 패킷을 대기실·로딩·브리핑·인게임 초반부터 끝까지 실시간 무력화합니다. (방장·게스트·관전자 발신 전부 방어, 상단 『강제 드랍 공격 실시간 차단』 알림 표시, 대기실 비방장 공격자 즉시 자동 강퇴·재입장 원천 차단 및 정상 초록 핑·자진 퇴장·실제 타임아웃 드랍 오탐 0% 보장)</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p735Item2">블랙리스트 『TXT 가져오기』 클릭 후 일반 메모장 파일을 잘못 선택했을 때 수백·수천 줄이 무검증 등록되며 컴팩트 도우미(Ctrl+H) 창이 멈추던 현상을 근본 해결했습니다. TXT 파일 사전 형식·용량 검증과 추가 전 확인 안내창, 원클릭 『메모장·로컬 초기화』 버튼(큰 UI 및 Ctrl+H 도우미 내장)을 추가하고 대량 목록 동기화를 비동기 일괄 처리로 최적화하여 도우미(Ctrl+H)가 항상 즉시 반응합니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p735Item3">업데이트 실행 시 기존에 비정상 누적된 외부 메모장 블랙리스트 파일·중복 데이터와 런타임 폴더에 쌓여 있던 임시 텍스트 로그 파일들을 자동으로 일괄 정리·삭제하도록 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.734 -->
+            <article id="ver-v0-6-734" class="patch-card" data-patch-ver="v0.6.734">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.734</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
               </div>
@@ -1097,6 +1126,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.734"></script>
+  <script src="./assets/js/main.js?v=0.6.735"></script>
 </body>
 </html>
