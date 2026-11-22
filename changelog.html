@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.731" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.732" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.731</span>
+              <span id="hero-version">v0.6.732</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.731</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.732</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">30</strong>
+              <strong id="cl-total-count" class="cl-stat-val">31</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-731" class="cl-ver-link active" data-target-ver="v0.6.731">
-                <span class="cl-ver-name">v0.6.731</span>
+              <a href="#ver-v0-6-732" class="cl-ver-link active" data-target-ver="v0.6.732">
+                <span class="cl-ver-name">v0.6.732</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-731" class="cl-ver-link" data-target-ver="v0.6.731">
+                <span class="cl-ver-name">v0.6.731</span>
+                <span class="cl-ver-mini-date">11.22</span>
               </a>
               <a href="#ver-v0-6-730" class="cl-ver-link" data-target-ver="v0.6.730">
                 <span class="cl-ver-name">v0.6.730</span>
@@ -251,13 +255,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.731/SLauncher-0.6.731-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.732/SLauncher-0.6.732-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.731 다운로드</span>
+                <span id="btn-download-label">v0.6.732 다운로드</span>
               </a>
             </div>
           </div>
@@ -273,12 +277,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.731 (Latest) -->
-            <article id="ver-v0-6-731" class="patch-card patch-card-latest" data-patch-ver="v0.6.731">
+            <!-- v0.6.732 (Latest) -->
+            <article id="ver-v0-6-732" class="patch-card patch-card-latest" data-patch-ver="v0.6.732">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.732</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
+              </div>
+              <p class="patch-summary" data-i18n="p732Summary">타인 건물 우클릭 랠리핵·AliveHack·컴샛 스캔핵 정밀 감지, 스풋·방폭 공격자 재입장 원천 차단(문지기 방어) 및 리플레이 악성 명령 자동 제거·재생 복구 추가</p>
+              <ul class="patch-list">
+                <li data-cat="security">
+                  <span class="patch-tag tag-security" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p732Item1">타인 건물 선택 상태에서 우클릭으로 랠리포인트를 우회 변경하는 패킷, 비소유·타인 건물 기준 컴샛 스캔 시전 및 부대지정 없는 단일 턴 오토컴샛·생존 회피 매크로(AliveHack)를 정밀 감지·차단 등록합니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-security" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p732Item2">룸붐·프로토콜 익스플로잇·슬롯 하이재킹·배틀태그 변조 스풋 및 강퇴 조치가 확정된 공격자 출처가 포트나 닉네임을 바꿔 같은 방에 재입장(cmd 7)하려는 시도를 방 진입 단계에서 즉시 원천 차단합니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-security" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p732Item3">리플레이 저장·로드 및 경기 종료 후 리플레이 파일 점검을 통해 되감기 무한루프(0x5D)·배속 테러(0x56)·강종 크래쉬(0x39/0x08)·초과 선택 오버플로우·변조 채팅 폭탄만 안전하게 제거하여, 턴 지연 싱크 손상 없이 끝까지 정상 재생되도록 자동 복구합니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.731 -->
+            <article id="ver-v0-6-731" class="patch-card" data-patch-ver="v0.6.731">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.731</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-22">2026.11.22</time>
               </div>
@@ -1010,6 +1039,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.731"></script>
+  <script src="./assets/js/main.js?v=0.6.732"></script>
 </body>
 </html>
