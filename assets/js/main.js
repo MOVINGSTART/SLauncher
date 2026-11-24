@@ -15,12 +15,14 @@
       navFeatures: "주요 기능",
       navChangelog: "패치 내역",
       navGrpGuide: "GRP 적용법",
+      navChatHistory: "채팅 기록",
       navOnlineFmt: "실시간 {online}명",
       navUsersFmt: "사용자 {users}명",
       navUserTooltipFmt: "현재 SLauncher 실시간 접속 {online}명 · 누적 사용자 {users}명",
       navDownload: "다운로드",
       viewAllPatchesBtn: "전체 패치 내역 보기",
       panelGrpGuideBtn: "GRP 적용법 가이드 보기",
+      panelChatHistoryBtn: "날짜별 채팅 기록 보기",
       clBackHome: "메인 페이지로 돌아가기",
       clPillLabel: "Release History",
       clStatLatest: "현재 최신 버전",
@@ -75,6 +77,48 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
+      p737Summary: "인게임·대기실 실시간 채팅 기록 누락(0바이트) 완벽 수정, 본인 참여 방 전용 날짜별 채팅 기록 UI(공식 사이트·런처 내장) 추가 및 빈 로그 파일 자동 정리",
+      p737Item1: "최신 스타크래프트 리마스터 빌드에서 채팅 기록 파일이 방 제목 없이 0바이트 빈 텍스트 파일로 생성되던 문제를 근본 해결하여, 본인이 직접 참여한 멀티플레이 인게임 및 대기실 채팅이 정확한 방 제목·시각·경과 초와 함께 비동기 실시간 저장됩니다. (리플레이 재생·외부 공개 채널 제외, 빈 로그 자동 정리)",
+      p737Item2: "공식 사이트 상단 『GRP 적용법』 우측 및 런처 내부 작업창·도우미(Ctrl+H)에 『채팅 기록』 전용 UI를 추가했습니다. 외부 서버 공유 없이 내 PC 로컬 연동만으로 본인이 직접 참여한 방·게임 목록을 날짜·시간별로 탐색하고 참여자별 필터링, 키워드 검색, TXT 복사·저장을 바로 사용할 수 있습니다.",
+      p737Item3: "기존 K런처 채팅 기록 폴더에 남아 있던 정상 대화 기록을 자동으로 통합 불러오고, 비어 있던 0바이트 로그 파일과 빈 날짜 폴더를 자동 정리하여 날짜별 목록이 깔끔하게 유지됩니다.",
+      chPillLabel: "Local Participated Chat Archive",
+      chTitle: "날짜별 채팅 기록",
+      chSubtitle: "타인의 채팅은 수집·노출되지 않으며, 오직 내 PC에서 본인이 직접 참여한 방·게임의 채팅 기록만 날짜와 시간순으로 확인합니다.",
+      chStatDates: "기록된 날짜",
+      chStatSessions: "내 참여 방·게임",
+      chStatLines: "누적 대화 줄",
+      chConnChecking: "내 PC SLauncher 연결 확인 중…",
+      chConnLive: "내 PC SLauncher 로컬 연결됨",
+      chConnLocalFiles: "로컬 폴더 파일 불러옴",
+      chConnOffline: "SLauncher 미실행 (런처를 켜거나 『폴더 직접 불러오기』를 눌러주세요)",
+      chPrivacyNote: "외부 서버 미전송 · 본인 참여 방 전용 (리플레이·공개 채널 제외)",
+      chBtnRefresh: "새로고침",
+      chBtnOpenFolder: "채팅기록 폴더 열기",
+      chBtnImportLocal: "폴더 직접 불러오기",
+      chColDates: "날짜별 목록",
+      chColRooms: "참여한 방 목록",
+      chAllDates: "전체 날짜",
+      chLoadingDates: "날짜 목록을 불러오는 중입니다…",
+      chRoomSearchPh: "방제 또는 참여자 닉네임 검색…",
+      chScopeAll: "내 참여 전체",
+      chScopeSpoke: "내가 채팅 친 방만",
+      chSelectDateHint: "좌측에서 날짜를 선택하면 본인이 참여한 방 목록이 표시됩니다.",
+      chViewerEmptyTitle: "방을 선택해 주세요",
+      chMsgSearchPh: "대화 내용 · 닉네임 검색…",
+      chBtnCopyTxt: "전체 복사",
+      chBtnDownloadTxt: "TXT 저장",
+      chBtnDelete: "삭제",
+      chPlaceholderTitle: "내 참여 게임·대기실 채팅 기록 뷰어",
+      chPlaceholderDesc: "SLauncher가 실행 중이면 내 PC에 저장된 채팅 기록이 날짜별로 자동 연결됩니다. 좌측에서 날짜와 방을 클릭해 대화를 확인하세요.",
+      chEmptyNoLogs: "아직 기록된 참여 방 채팅이 없습니다. 게임을 플레이하고 채팅하면 날짜별로 자동 저장됩니다.",
+      chEmptyFiltered: "검색 또는 필터 조건과 일치하는 방 기록이 없습니다.",
+      chKindInGame: "인게임",
+      chKindLobby: "대기실",
+      chPartAll: "전체 참여자",
+      chSelfBadge: "나",
+      chCopiedToast: "채팅 기록 전체 텍스트를 클립보드에 복사했습니다.",
+      chDeletedToast: "선택한 채팅 기록 파일을 삭제했습니다.",
+      chDeleteConfirm: "이 방의 채팅 기록 파일을 삭제하시겠습니까?",
       p736Summary: "비공개 대기실 원클릭 따라가기([->]) 전면 활성화, 인게임 상단 방제(『방: ...』) 오표기·연속 게임 잔류 해결, 친구 목록 위치·채널명 정확도 개선 및 Windows 보안 오탐 해결",
       p736Item1: "방제가 공개된 비공개 대기실뿐만 아니라 배틀넷 정책상 방제가 가려진 『비공개 대기실』 상태의 친구에게도 초록색 따라가기([->]) 아이콘과 우클릭 『대기실 참가』 메뉴가 항상 활성화되며, 동일 채널·방 목록·FriendInfo 메모리 연동을 통해 비공개 방제·비밀번호 전파 및 게임 시작 시 『비공개 플레이 중』 전환이 즉시 반영됩니다.",
       p736Item4: "방 목록에서 다른 공방을 클릭한 뒤 방을 직접 생성하거나 세이브 게임으로 시작했을 때 인게임 상단 오버레이(『방: ...』)에 이전 클릭 방제가 표시되던 현상을 근본 해결하고, 실제 인게임 진행 구간에서 스타크래프트 엔진 방제 메모리와 실시간 동기화 및 경기 종료 즉시 이전 방제·생성 캐시를 초기화하도록 수정했습니다.",
@@ -308,12 +352,14 @@
       navFeatures: "Features",
       navChangelog: "Patch Notes",
       navGrpGuide: "GRP Guide",
+      navChatHistory: "Chat Logs",
       navOnlineFmt: "{online} Online",
       navUsersFmt: "{users} Users",
       navUserTooltipFmt: "{online} active SLauncher users online now · {users} cumulative users",
       navDownload: "Download",
       viewAllPatchesBtn: "View full patch notes",
       panelGrpGuideBtn: "Read GRP Skin Guide",
+      panelChatHistoryBtn: "Browse Chat Logs by Date",
       clBackHome: "Back to main page",
       clPillLabel: "Release History",
       clStatLatest: "Latest Version",
@@ -368,6 +414,48 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
+      p737Summary: "Fixed 0-Byte Chat Log Recording Bug, Added Local Participated Date-by-Date Chat History UI (Website & Launcher) & Automatic Empty Log Cleanup",
+      p737Item1: "Resolved an issue on current StarCraft: Remastered builds where chat log files were created as 0-byte empty text files without room titles — real-time multiplayer in-game and joined-lobby chats you personally participate in are now recorded asynchronously with exact room titles, timestamps, and elapsed seconds (excluding replays and public channels).",
+      p737Item2: "Added a dedicated 'Chat Logs' viewer right next to 'GRP Guide' on the official website as well as inside SLauncher's workbench and Ctrl+H Helper, letting you browse only your own locally participated rooms by date/time, filter by participant, search keywords, and copy or export TXT with zero cloud sharing.",
+      p737Item3: "Automatically imports existing non-empty KLauncher chat logs while sweeping away 0-byte empty text files and empty date folders.",
+      chPillLabel: "Local Participated Chat Archive",
+      chTitle: "Chat Logs by Date",
+      chSubtitle: "Other users' chats are never collected or shared — browse only the lobbies and matches you personally joined on your own PC, organized by date and time.",
+      chStatDates: "Recorded Dates",
+      chStatSessions: "My Rooms & Matches",
+      chStatLines: "Total Chat Lines",
+      chConnChecking: "Checking local SLauncher connection…",
+      chConnLive: "Connected to local SLauncher",
+      chConnLocalFiles: "Loaded from local folder",
+      chConnOffline: "SLauncher not running (launch SLauncher or click 'Import Folder')",
+      chPrivacyNote: "100% local PC only · Your participated rooms only (replays & public channels excluded)",
+      chBtnRefresh: "Refresh",
+      chBtnOpenFolder: "Open Chat Folder",
+      chBtnImportLocal: "Import Folder",
+      chColDates: "Dates",
+      chColRooms: "Participated Rooms",
+      chAllDates: "All Dates",
+      chLoadingDates: "Loading date list…",
+      chRoomSearchPh: "Search room title or player…",
+      chScopeAll: "All Participated",
+      chScopeSpoke: "Where I Spoke",
+      chSelectDateHint: "Select a date on the left to view your participated rooms.",
+      chViewerEmptyTitle: "Select a room session",
+      chMsgSearchPh: "Search messages or player…",
+      chBtnCopyTxt: "Copy All",
+      chBtnDownloadTxt: "Save TXT",
+      chBtnDelete: "Delete",
+      chPlaceholderTitle: "Participated Match & Lobby Chat Viewer",
+      chPlaceholderDesc: "When SLauncher is running on your PC, your local chat history connects automatically by date. Pick a date and room on the left to read.",
+      chEmptyNoLogs: "No participated room chat logs recorded yet. Chats from games you play will appear here automatically by date.",
+      chEmptyFiltered: "No room sessions match your current search or filter.",
+      chKindInGame: "In-Game",
+      chKindLobby: "Lobby",
+      chPartAll: "All Players",
+      chSelfBadge: "ME",
+      chCopiedToast: "Copied full chat log text to clipboard.",
+      chDeletedToast: "Deleted selected chat log file.",
+      chDeleteConfirm: "Delete this room's chat log file?",
       p736Summary: "Full One-Click Follow ([->]) for Private Lobbies, In-Game Top HUD Room-Title ('Room: ...') & Multi-Match Reset Fix, Friends List Accuracy Fix & Windows Security False-Positive Resolution",
       p736Item1: "Enables the green one-click Follow ([->]) icon and right-click 'Join Lobby' menu for friends in any 'Private Lobby' (even when Battle.net hides the title), propagating shared private room titles/passwords and transitioning immediately to 'In Private Game' once a match starts via channel, game-list, and live FriendInfo memory sync.",
       p736Item4: "Resolved an issue where clicking another public room in GameSearch before creating a room or starting a saved game caused the prior clicked room title to appear in the in-game top HUD ('Room: ...'), synchronizing directly with StarCraft's live in-game room-title memory during active matches and clearing post-match room/create caches immediately upon game exit.",
@@ -605,15 +693,15 @@
   } catch (_) {}
 
   var releaseState = {
-    tag: "v0.6.736",
-    publishedAt: "2026-11-24T13:09:27Z",
-    setupName: "SLauncher-0.6.736-win-setup.exe",
-    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe",
-    setupBytes: 84094392,
-    setupSha256: "c7bb941c976ec04fda2011171f96f0bc0a43cdea6f850784b8f2d6d409d830cd",
-    zipName: "SLauncher_v0.6.736.zip",
-    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher_v0.6.736.zip",
-    zipBytes: 83512632,
+    tag: "v0.6.737",
+    publishedAt: "2026-11-24T16:04:16Z",
+    setupName: "SLauncher-0.6.737-win-setup.exe",
+    setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.737/SLauncher-0.6.737-win-setup.exe",
+    setupBytes: 84148140,
+    setupSha256: "4b893f5c6a73f7a97316e7a2c8d9afb4d32a34718e90ac9149040d5e9176a73a",
+    zipName: "SLauncher_v0.6.737.zip",
+    zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.737/SLauncher_v0.6.737.zip",
+    zipBytes: 83566380,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
@@ -916,6 +1004,7 @@
     renderReleaseUI();
     renderUserBadge();
     updateChangelogFilter();
+    if (typeof refreshChatHistoryI18n === "function") refreshChatHistoryI18n();
   }
 
   function showToast(msg) {
@@ -1217,7 +1306,746 @@
     setInterval(fetchPresenceStatsOnce, 30000);
   }
 
+  // ==========================================================================
+  // Dedicated Date-by-Date Participated Chat History Viewer (chat-history.html)
+  // Connects ONLY to local SLauncher (127.0.0.1:53891) or user-selected local
+  // folder; never uploads or exposes any chat logs externally.
+  // ==========================================================================
+  var LOCAL_CHAT_API_BASE = "http://127.0.0.1:53891";
+  var refreshChatHistoryI18n = null;
+
+  function initChatHistoryPage() {
+    var chApp = document.getElementById("chat-history-app");
+    if (!chApp) return;
+
+    var state = {
+      mode: "checking", // "live" | "local" | "offline" | "checking"
+      dates: [],
+      totalDates: 0,
+      totalSessions: 0,
+      totalLines: 0,
+      selfBattleTag: "",
+      selfToon: "",
+      selectedDate: "",
+      selectedSessionKey: "",
+      roomSearch: "",
+      scope: "all", // "all" | "spoke"
+      msgSearch: "",
+      selectedParticipant: "",
+      loadedSession: null,
+      localFileMap: {}
+    };
+
+    var SENDER_PALETTE = [
+      "#7dd3fc", "#c4b5fd", "#fda4af", "#fcd34d",
+      "#86efac", "#f9a8d4", "#93c5fd", "#fdba74",
+      "#67e8f9", "#d8b4fe", "#bef264", "#fca5a5"
+    ];
+
+    function dict() {
+      return I18N[currentLang] || I18N.ko;
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function highlightMatch(text, query) {
+      var raw = String(text || "");
+      if (!query) return escapeHtml(raw);
+      var lowRaw = raw.toLowerCase();
+      var lowQ = query.toLowerCase();
+      var idx = lowRaw.indexOf(lowQ);
+      if (idx < 0) return escapeHtml(raw);
+      var out = "";
+      var pos = 0;
+      while (idx >= 0) {
+        out += escapeHtml(raw.slice(pos, idx));
+        out += "<mark>" + escapeHtml(raw.slice(idx, idx + query.length)) + "</mark>";
+        pos = idx + query.length;
+        idx = lowRaw.indexOf(lowQ, pos);
+      }
+      out += escapeHtml(raw.slice(pos));
+      return out;
+    }
+
+    function colorForSender(name, isSelf) {
+      if (isSelf) return "#34d399";
+      var s = String(name || "");
+      var hash = 0;
+      for (var i = 0; i < s.length; i++) {
+        hash = ((hash * 31) + s.charCodeAt(i)) >>> 0;
+      }
+      return SENDER_PALETTE[hash % SENDER_PALETTE.length];
+    }
+
+    function formatDayOfWeek(dateStr) {
+      var parts = String(dateStr || "").split("-");
+      if (parts.length !== 3) return "";
+      var dt = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+      if (isNaN(dt.getTime())) return "";
+      var koDays = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+      var enDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      return currentLang === "en" ? enDays[dt.getDay()] : koDays[dt.getDay()];
+    }
+
+    function parseFilenameMetaClient(fileName) {
+      var stem = String(fileName || "").replace(/\.txt$/i, "");
+      var m = stem.match(/^(\d{2})시\s*(\d{2})분\s*(\d{2})초\s*(.*)$/);
+      var timeLabel = "";
+      var roomPart = stem;
+      var sessionKind = "ingame";
+      if (m) {
+        timeLabel = m[1] + ":" + m[2] + ":" + m[3];
+        roomPart = String(m[4] || "").trim();
+      }
+      if (/\(대기실\)$/.test(roomPart)) {
+        sessionKind = "lobby";
+        roomPart = roomPart.replace(/\s*\(대기실\)$/, "").trim();
+      }
+      return {
+        timeLabel: timeLabel,
+        roomTitle: roomPart || (currentLang === "en" ? "Untitled Room" : "이름 없는 방"),
+        sessionKind: sessionKind
+      };
+    }
+
+    function parseChatTextClient(rawText) {
+      var lines = String(rawText || "").split(/\r?\n/);
+      var messages = [];
+      var participants = [];
+      var seen = {};
+      for (var i = 0; i < lines.length; i++) {
+        var ln = lines[i].trim();
+        if (!ln) continue;
+        var dateTime = "";
+        var timeOnly = "";
+        var elapsed = "";
+        var sender = "";
+        var content = ln;
+        if (ln.charAt(0) === "[") {
+          var closeBr = ln.indexOf("]");
+          if (closeBr >= 19) {
+            var meta = ln.slice(1, closeBr);
+            var pIdx = meta.indexOf("(");
+            if (pIdx >= 0) {
+              dateTime = meta.slice(0, pIdx).trim();
+              var pEnd = meta.indexOf(")", pIdx + 1);
+              if (pEnd > pIdx) elapsed = meta.slice(pIdx + 1, pEnd).trim();
+            } else {
+              dateTime = meta.trim();
+            }
+            timeOnly = dateTime.length >= 19 ? dateTime.slice(11, 19) : dateTime;
+            var rest = ln.slice(closeBr + 1);
+            var sep = rest.indexOf(" : ");
+            if (sep >= 0) {
+              sender = rest.slice(0, sep).trim();
+              content = rest.slice(sep + 3);
+            }
+          }
+        }
+        if (sender) {
+          var coreS = sender.replace(/\s*\([^)]*\)$/, "").replace(/^\[[^\]]*\]\s*/, "").trim();
+          var lowS = coreS.toLowerCase();
+          if (lowS && !seen[lowS]) {
+            seen[lowS] = true;
+            participants.push(coreS);
+          }
+        }
+        messages.push({
+          dateTime: dateTime,
+          time: timeOnly,
+          elapsed: elapsed,
+          sender: sender,
+          content: content,
+          isSelf: false
+        });
+      }
+      return { messages: messages, participants: participants };
+    }
+
+    function updateConnectionBanner() {
+      var d = dict();
+      var badge = document.getElementById("ch-conn-badge");
+      var txt = document.getElementById("ch-conn-text");
+      var selfChip = document.getElementById("ch-self-identity");
+      if (badge && txt) {
+        badge.classList.remove("is-connecting", "is-connected", "is-local-files", "is-offline");
+        if (state.mode === "live") {
+          badge.classList.add("is-connected");
+          txt.textContent = d.chConnLive;
+        } else if (state.mode === "local") {
+          badge.classList.add("is-local-files");
+          txt.textContent = d.chConnLocalFiles;
+        } else if (state.mode === "offline") {
+          badge.classList.add("is-offline");
+          txt.textContent = d.chConnOffline;
+        } else {
+          badge.classList.add("is-connecting");
+          txt.textContent = d.chConnChecking;
+        }
+      }
+      if (selfChip) {
+        var idParts = [];
+        if (state.selfToon) idParts.push(state.selfToon);
+        if (state.selfBattleTag) idParts.push(state.selfBattleTag);
+        if (idParts.length > 0) {
+          selfChip.textContent = idParts.join(" · ");
+          selfChip.classList.remove("hidden");
+        } else {
+          selfChip.classList.add("hidden");
+        }
+      }
+
+      var elDates = document.getElementById("ch-stat-dates");
+      var elSess = document.getElementById("ch-stat-sessions");
+      var elLines = document.getElementById("ch-stat-lines");
+      if (elDates) elDates.textContent = String(state.totalDates || 0);
+      if (elSess) elSess.textContent = String(state.totalSessions || 0);
+      if (elLines) elLines.textContent = String(state.totalLines || 0);
+    }
+
+    function renderDatesList() {
+      var d = dict();
+      var box = document.getElementById("ch-date-list");
+      var badge = document.getElementById("ch-dates-badge");
+      if (!box) return;
+      if (badge) {
+        badge.textContent = currentLang === "en"
+          ? (state.dates.length + "d")
+          : (state.dates.length + "일");
+      }
+
+      if (!state.dates.length) {
+        box.innerHTML = '<div class="ch-empty-hint">' + escapeHtml(d.chEmptyNoLogs) + "</div>";
+        return;
+      }
+
+      var html = "";
+      var allActive = state.selectedDate === "__ALL__";
+      html += '<button type="button" class="ch-date-btn' + (allActive ? " active" : "") + '" data-date="__ALL__">' +
+        '<span class="ch-date-main"><span>' + escapeHtml(d.chAllDates) + '</span></span>' +
+        '<span class="ch-date-cnt">' + state.totalSessions + "</span></button>";
+
+      for (var i = 0; i < state.dates.length; i++) {
+        var grp = state.dates[i];
+        var isAct = state.selectedDate === grp.date;
+        var dow = formatDayOfWeek(grp.date);
+        html += '<button type="button" class="ch-date-btn' + (isAct ? " active" : "") + '" data-date="' + escapeHtml(grp.date) + '">' +
+          '<span class="ch-date-main"><span>' + escapeHtml(grp.date) + '</span>' +
+          (dow ? '<span class="ch-date-dow">' + escapeHtml(dow) + "</span>" : "") +
+          '</span><span class="ch-date-cnt">' + grp.sessions.length + "</span></button>";
+      }
+      box.innerHTML = html;
+
+      var btns = box.querySelectorAll(".ch-date-btn");
+      for (var b = 0; b < btns.length; b++) {
+        btns[b].addEventListener("click", function () {
+          state.selectedDate = this.getAttribute("data-date") || "";
+          renderDatesList();
+          renderSessionsList(true);
+        });
+      }
+    }
+
+    function getFilteredSessions() {
+      var list = [];
+      var q = String(state.roomSearch || "").trim().toLowerCase();
+      for (var di = 0; di < state.dates.length; di++) {
+        var g = state.dates[di];
+        if (state.selectedDate && state.selectedDate !== "__ALL__" && g.date !== state.selectedDate) continue;
+        for (var si = 0; si < g.sessions.length; si++) {
+          var s = g.sessions[si];
+          if (state.scope === "spoke" && !s.selfSpoke) continue;
+          if (q) {
+            var hay = (s.roomTitle + " " + (s.participants || []).join(" ") + " " + (s.preview || "") + " " + g.date).toLowerCase();
+            if (hay.indexOf(q) < 0) continue;
+          }
+          list.push({ date: g.date, session: s, key: g.date + "/" + s.file });
+        }
+      }
+      return list;
+    }
+
+    function renderSessionsList(autoSelectFirst) {
+      var d = dict();
+      var box = document.getElementById("ch-session-list");
+      var badge = document.getElementById("ch-sessions-badge");
+      var titleLbl = document.getElementById("ch-selected-date-label");
+      if (!box) return;
+
+      if (titleLbl) {
+        if (!state.selectedDate || state.selectedDate === "__ALL__") {
+          titleLbl.textContent = d.chColRooms;
+        } else {
+          titleLbl.textContent = state.selectedDate;
+        }
+      }
+
+      var items = getFilteredSessions();
+      if (badge) {
+        badge.textContent = currentLang === "en" ? String(items.length) : (items.length + "개");
+      }
+
+      if (!items.length) {
+        box.innerHTML = '<div class="ch-empty-hint">' + escapeHtml(state.dates.length ? d.chEmptyFiltered : d.chEmptyNoLogs) + "</div>";
+        return;
+      }
+
+      var hasSelected = false;
+      for (var k = 0; k < items.length; k++) {
+        if (items[k].key === state.selectedSessionKey) {
+          hasSelected = true;
+          break;
+        }
+      }
+
+      var html = "";
+      for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        var s = it.session;
+        var isAct = it.key === state.selectedSessionKey;
+        var isLob = s.sessionKind === "lobby";
+        var kindText = isLob ? d.chKindLobby : d.chKindInGame;
+        var timeDisp = (state.selectedDate === "__ALL__" ? (it.date + " ") : "") + (s.timeLabel || "");
+        var lineLbl = currentLang === "en" ? (s.lineCount + " lines") : (s.lineCount + "줄");
+        var partText = (s.participants && s.participants.length)
+          ? s.participants.slice(0, 5).join(", ") + (s.participants.length > 5 ? " +" + (s.participants.length - 5) : "")
+          : (s.preview || "");
+
+        html += '<button type="button" class="ch-session-card' + (isAct ? " active" : "") + '" data-date="' + escapeHtml(it.date) + '" data-file="' + escapeHtml(s.file) + '" data-key="' + escapeHtml(it.key) + '">' +
+          '<div class="ch-session-top">' +
+          '<span class="ch-session-time">' + escapeHtml(timeDisp) + "</span>" +
+          '<span class="ch-kind-badge' + (isLob ? " is-lobby" : "") + '">' + escapeHtml(kindText) + "</span>" +
+          '<span class="ch-session-lines">' + escapeHtml(lineLbl) + "</span>" +
+          "</div>" +
+          '<div class="ch-session-room">' + highlightMatch(s.roomTitle, state.roomSearch) + "</div>" +
+          (partText ? '<div class="ch-session-sub">' + highlightMatch(partText, state.roomSearch) + "</div>" : "") +
+          "</button>";
+      }
+      box.innerHTML = html;
+
+      var cards = box.querySelectorAll(".ch-session-card");
+      for (var c = 0; c < cards.length; c++) {
+        cards[c].addEventListener("click", function () {
+          var dt = this.getAttribute("data-date") || "";
+          var fl = this.getAttribute("data-file") || "";
+          openSessionDetail(dt, fl);
+        });
+      }
+
+      if (autoSelectFirst && !hasSelected && items.length > 0) {
+        openSessionDetail(items[0].date, items[0].session.file);
+      }
+    }
+
+    function renderViewer() {
+      var d = dict();
+      var kindEl = document.getElementById("ch-view-kind-badge");
+      var dtEl = document.getElementById("ch-view-datetime");
+      var titleEl = document.getElementById("ch-view-room-title");
+      var partBar = document.getElementById("ch-participants-bar");
+      var msgBox = document.getElementById("ch-messages-box");
+      var btnCopy = document.getElementById("ch-btn-copy-txt");
+      var btnDl = document.getElementById("ch-btn-download-txt");
+      var btnDel = document.getElementById("ch-btn-delete-file");
+      if (!msgBox) return;
+
+      var sess = state.loadedSession;
+      if (!sess) {
+        if (kindEl) kindEl.classList.add("hidden");
+        if (dtEl) dtEl.textContent = "—";
+        if (titleEl) titleEl.textContent = d.chViewerEmptyTitle;
+        if (partBar) partBar.classList.add("hidden");
+        if (btnCopy) btnCopy.disabled = true;
+        if (btnDl) btnDl.disabled = true;
+        if (btnDel) btnDel.disabled = true;
+        msgBox.innerHTML =
+          '<div class="ch-viewer-placeholder">' +
+          '<div class="ch-placeholder-icon" aria-hidden="true">💬</div>' +
+          "<strong>" + escapeHtml(d.chPlaceholderTitle) + "</strong>" +
+          "<p>" + escapeHtml(d.chPlaceholderDesc) + "</p></div>";
+        return;
+      }
+
+      var isLob = sess.sessionKind === "lobby";
+      if (kindEl) {
+        kindEl.textContent = isLob ? d.chKindLobby : d.chKindInGame;
+        kindEl.classList.toggle("is-lobby", isLob);
+        kindEl.classList.remove("hidden");
+      }
+      if (dtEl) {
+        dtEl.textContent = sess.date + (sess.timeLabel ? (" · " + sess.timeLabel) : "");
+      }
+      if (titleEl) {
+        titleEl.textContent = sess.roomTitle || sess.file;
+      }
+      if (btnCopy) btnCopy.disabled = false;
+      if (btnDl) btnDl.disabled = false;
+      if (btnDel) btnDel.disabled = state.mode !== "live";
+
+      // Render participant filter bar
+      var parts = sess.participants || [];
+      if (partBar) {
+        if (parts.length > 0) {
+          var pHtml = '<button type="button" class="ch-part-chip' + (!state.selectedParticipant ? " active" : "") + '" data-part="">' +
+            escapeHtml(d.chPartAll) + " (" + parts.length + ")</button>";
+          for (var pi = 0; pi < parts.length; pi++) {
+            var pName = parts[pi];
+            var pAct = state.selectedParticipant === pName;
+            pHtml += '<button type="button" class="ch-part-chip' + (pAct ? " active" : "") + '" data-part="' + escapeHtml(pName) + '">' +
+              escapeHtml(pName) + "</button>";
+          }
+          partBar.innerHTML = pHtml;
+          partBar.classList.remove("hidden");
+          var pBtns = partBar.querySelectorAll(".ch-part-chip");
+          for (var pb = 0; pb < pBtns.length; pb++) {
+            pBtns[pb].addEventListener("click", function () {
+              state.selectedParticipant = this.getAttribute("data-part") || "";
+              renderViewer();
+            });
+          }
+        } else {
+          partBar.classList.add("hidden");
+        }
+      }
+
+      var q = String(state.msgSearch || "").trim();
+      var qLow = q.toLowerCase();
+      var partFilterLow = String(state.selectedParticipant || "").toLowerCase();
+      var msgs = sess.messages || [];
+      var rowsHtml = "";
+      var shownCount = 0;
+
+      for (var mi = 0; mi < msgs.length; mi++) {
+        var m = msgs[mi];
+        var coreSender = String(m.sender || "").replace(/\s*\([^)]*\)$/, "").replace(/^\[[^\]]*\]\s*/, "").trim();
+        if (partFilterLow && coreSender.toLowerCase() !== partFilterLow) continue;
+        if (qLow) {
+          var mHay = (String(m.sender || "") + " " + String(m.content || "") + " " + String(m.time || "")).toLowerCase();
+          if (mHay.indexOf(qLow) < 0) continue;
+        }
+        shownCount++;
+        var sCol = colorForSender(coreSender, !!m.isSelf);
+        var elapTxt = m.elapsed ? (" (" + m.elapsed + (/^\+\s*\d+$/.test(m.elapsed) && currentLang === "ko" ? "초" : "") + ")") : "";
+        rowsHtml += '<div class="ch-msg-row' + (m.isSelf ? " is-self" : "") + '">' +
+          '<span class="ch-msg-time">' + escapeHtml(m.time || "") +
+          (elapTxt ? '<span class="ch-msg-elapsed">' + escapeHtml(elapTxt) + "</span>" : "") +
+          "</span>" +
+          '<span class="ch-msg-sender" style="color:' + sCol + '" title="' + escapeHtml(m.sender || "") + '">' +
+          highlightMatch(m.sender || "—", q) +
+          (m.isSelf ? '<span class="ch-msg-self-tag">' + escapeHtml(d.chSelfBadge) + "</span>" : "") +
+          "</span>" +
+          '<span class="ch-msg-body">' + highlightMatch(m.content || "", q) + "</span>" +
+          "</div>";
+      }
+
+      if (!shownCount) {
+        msgBox.innerHTML = '<div class="ch-empty-hint">' + escapeHtml(d.chEmptyFiltered) + "</div>";
+      } else {
+        msgBox.innerHTML = rowsHtml;
+      }
+    }
+
+    function openSessionDetail(dateStr, fileStr) {
+      var key = dateStr + "/" + fileStr;
+      state.selectedSessionKey = key;
+      state.selectedParticipant = "";
+      renderSessionsList(false);
+
+      if (state.mode === "local" && state.localFileMap[key]) {
+        state.loadedSession = state.localFileMap[key];
+        renderViewer();
+        return;
+      }
+
+      var url = LOCAL_CHAT_API_BASE + "/api/chat/file?date=" + encodeURIComponent(dateStr) + "&file=" + encodeURIComponent(fileStr);
+      fetch(url, { cache: "no-store", targetAddressSpace: "local" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !data.ok) return;
+          state.loadedSession = data;
+          renderViewer();
+        })
+        .catch(function () {});
+    }
+
+    function loadFromLocalLauncher(preserveSelection) {
+      state.mode = "checking";
+      updateConnectionBanner();
+
+      fetch(LOCAL_CHAT_API_BASE + "/api/chat/directories", { cache: "no-store", targetAddressSpace: "local" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !data.ok) {
+            state.mode = "offline";
+            updateConnectionBanner();
+            renderDatesList();
+            renderSessionsList(false);
+            renderViewer();
+            return;
+          }
+          state.mode = "live";
+          state.dates = Array.isArray(data.dates) ? data.dates : [];
+          state.totalDates = Number(data.totalDates) || state.dates.length;
+          state.totalSessions = Number(data.totalSessions) || 0;
+          state.totalLines = Number(data.totalLines) || 0;
+          state.selfBattleTag = String(data.selfBattleTag || "");
+          state.selfToon = String(data.selfToon || "");
+          state.localFileMap = {};
+
+          if (!preserveSelection || !state.selectedDate) {
+            state.selectedDate = state.dates.length > 0 ? state.dates[0].date : "";
+          }
+          updateConnectionBanner();
+          renderDatesList();
+          renderSessionsList(true);
+          if (!state.dates.length) {
+            state.loadedSession = null;
+            renderViewer();
+          }
+        })
+        .catch(function () {
+          if (state.mode !== "local") {
+            state.mode = "offline";
+            updateConnectionBanner();
+            renderDatesList();
+            renderSessionsList(false);
+            renderViewer();
+          }
+        });
+    }
+
+    function importLocalFolderFiles(fileList) {
+      if (!fileList || !fileList.length) return;
+      var txtFiles = [];
+      for (var i = 0; i < fileList.length; i++) {
+        var f = fileList[i];
+        if (f && /\.txt$/i.test(f.name) && f.size > 0) {
+          txtFiles.push(f);
+        }
+      }
+      if (!txtFiles.length) return;
+
+      var grouped = {};
+      var localMap = {};
+      var pending = txtFiles.length;
+      var totalLines = 0;
+
+      txtFiles.forEach(function (fileObj) {
+        var rel = String(fileObj.webkitRelativePath || fileObj.name).replace(/\\/g, "/");
+        var segs = rel.split("/");
+        var dateFolder = "";
+        for (var s = segs.length - 2; s >= 0; s--) {
+          if (/^\d{4}-\d{2}-\d{2}$/.test(segs[s])) {
+            dateFolder = segs[s];
+            break;
+          }
+        }
+        if (!dateFolder) {
+          var dObj = new Date(fileObj.lastModified || Date.now());
+          var mm = String(dObj.getMonth() + 1).padStart(2, "0");
+          var dd = String(dObj.getDate()).padStart(2, "0");
+          dateFolder = dObj.getFullYear() + "-" + mm + "-" + dd;
+        }
+
+        var reader = new FileReader();
+        reader.onload = function () {
+          var text = String(reader.result || "");
+          var parsed = parseChatTextClient(text);
+          var meta = parseFilenameMetaClient(fileObj.name);
+          if (parsed.messages.length > 0) {
+            if (!grouped[dateFolder]) grouped[dateFolder] = [];
+            var sEntry = {
+              file: fileObj.name,
+              timeLabel: meta.timeLabel,
+              roomTitle: meta.roomTitle,
+              sessionKind: meta.sessionKind,
+              size: fileObj.size,
+              lineCount: parsed.messages.length,
+              selfParticipated: true,
+              selfSpoke: true,
+              preview: parsed.messages[0].sender
+                ? (parsed.messages[0].sender + ": " + parsed.messages[0].content)
+                : parsed.messages[0].content,
+              participants: parsed.participants
+            };
+            grouped[dateFolder].push(sEntry);
+            localMap[dateFolder + "/" + fileObj.name] = {
+              ok: true,
+              date: dateFolder,
+              file: fileObj.name,
+              timeLabel: meta.timeLabel,
+              roomTitle: meta.roomTitle,
+              sessionKind: meta.sessionKind,
+              lineCount: parsed.messages.length,
+              participants: parsed.participants,
+              messages: parsed.messages,
+              rawText: text
+            };
+            totalLines += parsed.messages.length;
+          }
+          pending--;
+          if (pending === 0) {
+            var dateKeys = Object.keys(grouped).sort().reverse();
+            var datesArr = [];
+            var totalSess = 0;
+            for (var dk = 0; dk < dateKeys.length; dk++) {
+              var dKey = dateKeys[dk];
+              var arr = grouped[dKey];
+              arr.sort(function (a, b) { return a.file < b.file ? 1 : (a.file > b.file ? -1 : 0); });
+              totalSess += arr.length;
+              datesArr.push({ date: dKey, sessionCount: arr.length, sessions: arr });
+            }
+            state.mode = "local";
+            state.dates = datesArr;
+            state.totalDates = datesArr.length;
+            state.totalSessions = totalSess;
+            state.totalLines = totalLines;
+            state.localFileMap = localMap;
+            state.selectedDate = datesArr.length > 0 ? datesArr[0].date : "";
+            state.selectedSessionKey = "";
+            state.loadedSession = null;
+            updateConnectionBanner();
+            renderDatesList();
+            renderSessionsList(true);
+          }
+        };
+        reader.onerror = function () {
+          pending--;
+        };
+        reader.readAsText(fileObj, "utf-8");
+      });
+    }
+
+    // Bind UI controls
+    var btnRefresh = document.getElementById("ch-btn-refresh");
+    if (btnRefresh) {
+      btnRefresh.addEventListener("click", function () {
+        loadFromLocalLauncher(true);
+      });
+    }
+
+    var btnOpenFolder = document.getElementById("ch-btn-open-folder");
+    if (btnOpenFolder) {
+      btnOpenFolder.addEventListener("click", function () {
+        var targetDate = (state.selectedDate && state.selectedDate !== "__ALL__") ? state.selectedDate : "";
+        fetch(LOCAL_CHAT_API_BASE + "/api/chat/open-folder", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ date: targetDate }),
+          targetAddressSpace: "local"
+        }).catch(function () {});
+      });
+    }
+
+    var folderInput = document.getElementById("ch-folder-picker");
+    if (folderInput) {
+      folderInput.addEventListener("change", function () {
+        importLocalFolderFiles(this.files);
+      });
+    }
+
+    var roomSearch = document.getElementById("ch-room-search");
+    if (roomSearch) {
+      roomSearch.addEventListener("input", function () {
+        state.roomSearch = this.value || "";
+        renderSessionsList(false);
+      });
+    }
+
+    var scopeBtns = chApp.querySelectorAll("[data-ch-scope]");
+    for (var sb = 0; sb < scopeBtns.length; sb++) {
+      scopeBtns[sb].addEventListener("click", function () {
+        state.scope = this.getAttribute("data-ch-scope") || "all";
+        for (var j = 0; j < scopeBtns.length; j++) {
+          scopeBtns[j].classList.toggle("active", scopeBtns[j].getAttribute("data-ch-scope") === state.scope);
+        }
+        renderSessionsList(true);
+      });
+    }
+
+    var msgSearch = document.getElementById("ch-msg-search");
+    if (msgSearch) {
+      msgSearch.addEventListener("input", function () {
+        state.msgSearch = this.value || "";
+        renderViewer();
+      });
+    }
+
+    var btnCopy = document.getElementById("ch-btn-copy-txt");
+    if (btnCopy) {
+      btnCopy.addEventListener("click", function () {
+        if (!state.loadedSession || !state.loadedSession.rawText) return;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(state.loadedSession.rawText).then(function () {
+            showToast(dict().chCopiedToast);
+          });
+        }
+      });
+    }
+
+    var btnDl = document.getElementById("ch-btn-download-txt");
+    if (btnDl) {
+      btnDl.addEventListener("click", function () {
+        if (!state.loadedSession || !state.loadedSession.rawText) return;
+        var blob = new Blob([state.loadedSession.rawText], { type: "text/plain;charset=utf-8" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = (state.loadedSession.date || "chat") + "_" + (state.loadedSession.file || "chat.txt");
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+      });
+    }
+
+    var btnDel = document.getElementById("ch-btn-delete-file");
+    if (btnDel) {
+      btnDel.addEventListener("click", function () {
+        if (!state.loadedSession || state.mode !== "live") return;
+        if (!window.confirm(dict().chDeleteConfirm)) return;
+        fetch(LOCAL_CHAT_API_BASE + "/api/chat/delete-file", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ date: state.loadedSession.date, file: state.loadedSession.file }),
+          targetAddressSpace: "local"
+        })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (res) {
+            if (res && res.ok) {
+              showToast(dict().chDeletedToast);
+              state.selectedSessionKey = "";
+              state.loadedSession = null;
+              loadFromLocalLauncher(true);
+            }
+          })
+          .catch(function () {});
+      });
+    }
+
+    refreshChatHistoryI18n = function () {
+      updateConnectionBanner();
+      renderDatesList();
+      renderSessionsList(false);
+      renderViewer();
+    };
+
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && state.mode !== "local") {
+        loadFromLocalLauncher(true);
+      }
+    });
+
+    loadFromLocalLauncher(false);
+  }
+
   applyLanguage(currentLang);
+  initChatHistoryPage();
   loadReleaseMetadata();
   startUserMetrics();
 })();
