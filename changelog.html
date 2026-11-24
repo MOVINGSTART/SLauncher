@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.736" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.737" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -25,8 +25,9 @@
       <div class="header-actions">
         <a href="./index.html" class="nav-text-link" data-i18n="navHome">홈</a>
         <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
-        <a href="./changelog.html" class="nav-text-link nav-link-active" aria-current="page" data-i18n="navChangelog">패치 내역</a>
+        <a href="./changelog.html" class="nav-text-link nav-changelog-pill nav-link-active" aria-current="page" data-i18n="navChangelog">패치 내역</a>
         <a href="./grp-guide.html" class="nav-text-link nav-grp-pill" data-i18n="navGrpGuide">GRP 적용법</a>
+        <a href="./chat-history.html" class="nav-text-link nav-chat-pill" data-i18n="navChatHistory">채팅 기록</a>
 
         <div id="nav-user-badge" class="nav-user-badge" role="status" aria-live="polite">
           <span class="nav-live-dot" aria-hidden="true"></span>
@@ -67,7 +68,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.736</span>
+              <span id="hero-version">v0.6.737</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +79,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.736</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.737</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">35</strong>
+              <strong id="cl-total-count" class="cl-stat-val">36</strong>
             </div>
           </div>
         </div>
@@ -128,9 +129,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-736" class="cl-ver-link active" data-target-ver="v0.6.736">
-                <span class="cl-ver-name">v0.6.736</span>
+              <a href="#ver-v0-6-737" class="cl-ver-link active" data-target-ver="v0.6.737">
+                <span class="cl-ver-name">v0.6.737</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-736" class="cl-ver-link" data-target-ver="v0.6.736">
+                <span class="cl-ver-name">v0.6.736</span>
+                <span class="cl-ver-mini-date">11.24</span>
               </a>
               <a href="#ver-v0-6-735" class="cl-ver-link" data-target-ver="v0.6.735">
                 <span class="cl-ver-name">v0.6.735</span>
@@ -271,13 +276,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.737/SLauncher-0.6.737-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.736 다운로드</span>
+                <span id="btn-download-label">v0.6.737 다운로드</span>
               </a>
             </div>
           </div>
@@ -293,12 +298,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.736 (Latest) -->
-            <article id="ver-v0-6-736" class="patch-card patch-card-latest" data-patch-ver="v0.6.736">
+            <!-- v0.6.737 (Latest) -->
+            <article id="ver-v0-6-737" class="patch-card patch-card-latest" data-patch-ver="v0.6.737">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.737</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-25">2026.11.25</time>
+              </div>
+              <p class="patch-summary" data-i18n="p737Summary">인게임·대기실 실시간 채팅 기록 누락(0바이트) 완벽 수정, 본인 참여 방 전용 날짜별 채팅 기록 UI(공식 사이트·런처 내장) 추가 및 빈 로그 파일 자동 정리</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p737Item1">최신 스타크래프트 리마스터 빌드에서 채팅 기록 파일이 방 제목 없이 0바이트 빈 텍스트 파일로 생성되던 문제를 근본 해결하여, 본인이 직접 참여한 멀티플레이 인게임 및 대기실 채팅이 정확한 방 제목·시각·경과 초와 함께 비동기 실시간 저장됩니다. (리플레이 재생·외부 공개 채널 제외, 빈 로그 자동 정리)</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p737Item2">공식 사이트 상단 『GRP 적용법』 우측 및 런처 내부 작업창·도우미(Ctrl+H)에 『채팅 기록』 전용 UI를 추가했습니다. 외부 서버 공유 없이 내 PC 로컬 연동만으로 본인이 직접 참여한 방·게임 목록을 날짜·시간별로 탐색하고 참여자별 필터링, 키워드 검색, TXT 복사·저장을 바로 사용할 수 있습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p737Item3">기존 K런처 채팅 기록 폴더에 남아 있던 정상 대화 기록을 자동으로 통합 불러오고, 비어 있던 0바이트 로그 파일과 빈 날짜 폴더를 자동 정리하여 날짜별 목록이 깔끔하게 유지됩니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.736 -->
+            <article id="ver-v0-6-736" class="patch-card" data-patch-ver="v0.6.736">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.736</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-24">2026.11.24</time>
               </div>
@@ -1147,6 +1177,10 @@
           <span data-i18n="navGrpGuide">GRP 적용법</span>
           <span aria-hidden="true">→</span>
         </a>
+        <a href="./chat-history.html" class="outline-pill">
+          <span data-i18n="navChatHistory">채팅 기록</span>
+          <span aria-hidden="true">→</span>
+        </a>
         <a id="footer-issues-link" href="https://github.com/MOVINGSTART/SLauncher/issues" target="_blank" rel="noopener" class="outline-pill">
           <span data-i18n="footerFeedback">기능 제안 · 버그 제보</span>
           <span aria-hidden="true">→</span>
@@ -1159,6 +1193,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.736"></script>
+  <script src="./assets/js/main.js?v=0.6.737"></script>
 </body>
 </html>
