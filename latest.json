@@ -3,27 +3,27 @@
   "minimumVersion": "0.0.0",
   "force": false,
   "tag_name": "v0.6.736",
-  "pub_date": "2026-11-24T10:58:41Z",
+  "pub_date": "2026-11-24T13:09:27Z",
   "notes": "",
   "downloadUrl": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher_v0.6.736.zip",
-  "sha256": "37401da0668e526fb2db5506bc249d88c0a7058dc00fe7f7bf7a346de1f7a31c",
+  "sha256": "72633a5581d3579ea9ebc9925b52aa944c413c86eb600f529fd18dc3e72089c5",
   "setup_file": "SLauncher-0.6.736-win-setup.exe",
-  "setup_size": 84090383,
-  "setup_sha256": "2bd6b6eb76007f48237d864c665c89842bebad32a886d70406f69f9998676de6",
+  "setup_size": 84094392,
+  "setup_sha256": "c7bb941c976ec04fda2011171f96f0bc0a43cdea6f850784b8f2d6d409d830cd",
   "setup_url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe",
   "portable_file": "SLauncher_v0.6.736.zip",
-  "portable_size": 83508623,
-  "portable_sha256": "37401da0668e526fb2db5506bc249d88c0a7058dc00fe7f7bf7a346de1f7a31c",
+  "portable_size": 83512632,
+  "portable_sha256": "72633a5581d3579ea9ebc9925b52aa944c413c86eb600f529fd18dc3e72089c5",
   "portable_url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher_v0.6.736.zip",
   "platforms": {
     "windows-x86_64": {
       "url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher_v0.6.736.zip",
-      "sha256": "37401da0668e526fb2db5506bc249d88c0a7058dc00fe7f7bf7a346de1f7a31c",
+      "sha256": "72633a5581d3579ea9ebc9925b52aa944c413c86eb600f529fd18dc3e72089c5",
       "installer": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe"
     },
     "windows-x86": {
       "url": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher_v0.6.736.zip",
-      "sha256": "37401da0668e526fb2db5506bc249d88c0a7058dc00fe7f7bf7a346de1f7a31c",
+      "sha256": "72633a5581d3579ea9ebc9925b52aa944c413c86eb600f529fd18dc3e72089c5",
       "installer": "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe"
     }
   }
