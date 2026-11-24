@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.735" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.736" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -67,7 +67,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.735</span>
+              <span id="hero-version">v0.6.736</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -78,11 +78,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.735</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.736</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">34</strong>
+              <strong id="cl-total-count" class="cl-stat-val">35</strong>
             </div>
           </div>
         </div>
@@ -128,9 +128,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-735" class="cl-ver-link active" data-target-ver="v0.6.735">
-                <span class="cl-ver-name">v0.6.735</span>
+              <a href="#ver-v0-6-736" class="cl-ver-link active" data-target-ver="v0.6.736">
+                <span class="cl-ver-name">v0.6.736</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-735" class="cl-ver-link" data-target-ver="v0.6.735">
+                <span class="cl-ver-name">v0.6.735</span>
+                <span class="cl-ver-mini-date">11.23</span>
               </a>
               <a href="#ver-v0-6-734" class="cl-ver-link" data-target-ver="v0.6.734">
                 <span class="cl-ver-name">v0.6.734</span>
@@ -267,13 +271,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.735/SLauncher-0.6.735-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.736/SLauncher-0.6.736-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.735 다운로드</span>
+                <span id="btn-download-label">v0.6.736 다운로드</span>
               </a>
             </div>
           </div>
@@ -289,12 +293,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.735 (Latest) -->
-            <article id="ver-v0-6-735" class="patch-card patch-card-latest" data-patch-ver="v0.6.735">
+            <!-- v0.6.736 (Latest) -->
+            <article id="ver-v0-6-736" class="patch-card patch-card-latest" data-patch-ver="v0.6.736">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.736</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-24">2026.11.24</time>
+              </div>
+              <p class="patch-summary" data-i18n="p736Summary">비공개 대기실 원클릭 따라가기([->]) 전면 활성화, 친구 목록 실시간 위치·방제·채널명 정확도 개선(32비트 CEF 호환 복구) 및 Windows 보안 오탐 완벽 해결</p>
+              <ul class="patch-list">
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p736Item1">방제가 공개된 비공개 대기실뿐만 아니라 배틀넷 정책상 방제가 가려진 『비공개 대기실』 상태의 친구에게도 초록색 따라가기([->]) 아이콘과 우클릭 『대기실 참가』 메뉴가 항상 활성화되며, 동일 채널·방 목록·FriendInfo 메모리 연동을 통해 비공개 방제·비밀번호 전파 및 게임 시작 시 『비공개 플레이 중』 전환이 즉시 반영됩니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-fix" data-i18n="tagFix">수정</span>
+                  <span data-i18n="p736Item2">32비트 스타크래프트 CEF 브라우저 매니저 구조체 오프셋 변경(0xA8)으로 인해 친구 패널 브리지 주입이 누락되던 문제를 복구하고, 오프라인 표시(BSAp) 접속자 승격·채널 참여자 및 리더보드 API 기반 부캐릭터 자동 탐색을 강화해 실제 접속 중인 친구가 『메뉴』에만 머물거나 인게임 도중 채널 입장 알림이 오출력되던 현상을 해결했습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-security" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p736Item3">설치 파일(Setup.exe) 및 자동 업데이터의 임시 PowerShell 스크립트 실행을 전면 제거하고 순수 C++ 네이티브 ZIP 압축 해제·COM 바로가기 생성으로 전환했으며, 단일 설치 파일 오버레이 결합 후 PE 헤더 체크섬 정밀 재계산 및 전 실행 파일 표준 UAC 매니페스트 내장을 적용해 Windows 보안(Defender) 오탐 차단을 해결했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.735 -->
+            <article id="ver-v0-6-735" class="patch-card" data-patch-ver="v0.6.735">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.735</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-23">2026.11.23</time>
               </div>
@@ -1126,6 +1155,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.735"></script>
+  <script src="./assets/js/main.js?v=0.6.736"></script>
 </body>
 </html>
