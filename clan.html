@@ -10,7 +10,7 @@
   <meta property="og:description" content="1.16.1 피쉬서버 Op 채널 감성의 클랜 UI 레이아웃 미리보기입니다." />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-4" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-5" />
 </head>
 <body id="top" class="clan-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -176,6 +176,44 @@
         </div>
 
         <div class="bnet116-window" aria-label="1.16.1 Battle.net Clan Channel UI Preview">
+          <!-- Reusable 1.16.1 icons.bni-style SVG definitions: Op Gavel (망치) & Voice Horn (보이스 나팔) -->
+          <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+            <defs>
+              <linearGradient id="bniGoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fef08a" />
+                <stop offset="55%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#b45309" />
+              </linearGradient>
+              <symbol id="bni-gavel" viewBox="0 0 28 16">
+                <!-- Sound block -->
+                <rect x="2.5" y="12.2" width="10.5" height="2.3" rx="0.6" fill="#b45309" stroke="#fde047" stroke-width="0.5" />
+                <!-- Handle -->
+                <path d="M11 7.6 L24.2 13.2" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" />
+                <path d="M11 7.6 L24.2 13.2" stroke="#fef08a" stroke-width="0.7" stroke-linecap="round" opacity="0.75" />
+                <!-- Angled Gavel Head -->
+                <g transform="rotate(-28 10.2 6.4)">
+                  <rect x="5.2" y="3.5" width="10" height="5.6" rx="1.1" fill="url(#bniGoldGrad)" stroke="#fef9c3" stroke-width="0.55" />
+                  <rect x="4.3" y="3.1" width="1.8" height="6.4" rx="0.6" fill="#fde047" />
+                  <rect x="14.3" y="3.1" width="1.8" height="6.4" rx="0.6" fill="#fde047" />
+                </g>
+              </symbol>
+              <symbol id="bni-horn" viewBox="0 0 28 16">
+                <!-- Classic 1.16.1 Voice (보이스) Brass Horn / Bugle / Megaphone (나팔) -->
+                <!-- Mouthpiece -->
+                <rect x="2.2" y="6.6" width="2.4" height="2.8" rx="0.7" fill="#fde047" />
+                <!-- Lower handle / loop -->
+                <path d="M7.2 9.2 L8.6 13.2 L11.4 13.2 L10.5 9.6" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linejoin="round" />
+                <!-- Flaring brass horn bell -->
+                <path d="M4.4 6.9 L8.2 6.6 C11.8 6.3 14.8 4.4 18.2 2.1 L18.2 13.9 C14.8 11.6 11.8 9.7 8.2 9.4 L4.4 9.1 Z" fill="url(#bniGoldGrad)" stroke="#fef9c3" stroke-width="0.55" stroke-linejoin="round" />
+                <!-- Horn bell rim -->
+                <ellipse cx="18.2" cy="8" rx="1.35" ry="5.8" fill="#78350f" stroke="#fde047" stroke-width="0.7" />
+                <!-- Sound waves -->
+                <path d="M21.4 5.1 A4.2 4.2 0 0 1 21.4 10.9" fill="none" stroke="#fef08a" stroke-width="1.35" stroke-linecap="round" />
+                <path d="M24.1 3.1 A6.8 6.8 0 0 1 24.1 12.9" fill="none" stroke="#86efac" stroke-width="1.25" stroke-linecap="round" />
+              </symbol>
+            </defs>
+          </svg>
+
           <div class="bnet116-topbar">
             <div class="bnet116-topbar-left">
               <span class="bnet116-led" aria-hidden="true"></span>
@@ -233,7 +271,7 @@
                 </div>
                 <div class="bnet116-line">
                   <span class="c-white">&lt;SL]Shaman&gt;</span>
-                  <span class="c-text" data-i18n="clanChatMsg2">우측에 망치(Op) 아이콘이랑 초록 핑 안테나 보니까 피쉬서버 생각나네요.</span>
+                  <span class="c-text" data-i18n="clanChatMsg2">우측에 망치(Op)랑 나팔 모양 보이스(VOp) 아이콘 보니까 피쉬서버 생각나네요.</span>
                 </div>
                 <div class="bnet116-line">
                   <span class="c-white">&lt;SL]Marine&gt;</span>
@@ -256,52 +294,68 @@
               </div>
             </div>
 
-            <!-- Right 1.16.1 Channel Player List (Op Hammer + Brood War Badge + Green Lag Bars) -->
+            <!-- Right 1.16.1 Channel Player List (Op Gavel + Voice Horn + Green Lag Bars) -->
             <aside class="bnet116-right-roster" aria-label="채널 접속자 목록 예시">
               <div class="bnet116-roster-head">
                 <span data-i18n="clanRosterTitle">채널 인원 (8)</span>
-                <span class="bnet116-roster-tag">Op</span>
+                <span class="bnet116-roster-tag">Op · VOp</span>
               </div>
 
               <ul class="bnet116-user-list">
                 <li class="bnet116-user-row is-op">
-                  <span class="bnet116-badge badge-gavel" title="Channel Operator (Op)">🔨</span>
+                  <span class="bnet116-badge badge-gavel" title="Channel Operator (Op · 망치)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                  </span>
                   <span class="bnet116-userid">Op.ClanBot</span>
                   <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-op">
-                  <span class="bnet116-badge badge-gavel" title="Clan Master (Op)">🔨</span>
+                  <span class="bnet116-badge badge-gavel" title="Clan Master (Op · 망치)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Master</span>
                   <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
-                <li class="bnet116-user-row is-vop">
-                  <span class="bnet116-badge badge-vop" title="Voice Operator (VOp)">★</span>
+                <li class="bnet116-user-row is-op">
+                  <span class="bnet116-badge badge-gavel" title="Clan Operator (Op · 망치)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Shaman</span>
                   <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
-                <li class="bnet116-user-row">
-                  <span class="bnet116-badge badge-scx">SCX</span>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Marine</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
-                <li class="bnet116-user-row">
-                  <span class="bnet116-badge badge-scx">SCX</span>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Bisu</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
-                <li class="bnet116-user-row">
-                  <span class="bnet116-badge badge-scx">SCX</span>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Ghost</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
-                <li class="bnet116-user-row">
-                  <span class="bnet116-badge badge-scx">SCX</span>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  </span>
                   <span class="bnet116-userid">SL]Hydra</span>
                   <span class="bnet116-lag lag-3" aria-label="3 bar ping"><i></i><i></i><i></i></span>
                 </li>
-                <li class="bnet116-user-row">
-                  <span class="bnet116-badge badge-scx">SCX</span>
-                  <span class="bnet116-userid">Guest_116</span>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  </span>
+                  <span class="bnet116-userid">SL]Zealot</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
               </ul>
@@ -439,10 +493,18 @@
             <p class="clan-box-sub" data-i18n="clanSpecSub">과거 피쉬서버 Op 채널에서 쓰이던 직관적인 권한 체계와 슬래시 명령어 레이아웃입니다.</p>
 
             <div class="clan-rank-strip">
-              <span class="clan-rank-pill rank-master">🔨 Master (클랜장)</span>
-              <span class="clan-rank-pill rank-op">🔨 Op (관리자)</span>
-              <span class="clan-rank-pill rank-vop">★ VOp (부관리자)</span>
-              <span class="clan-rank-pill rank-mem">SCX Member (클랜원)</span>
+              <span class="clan-rank-pill rank-master">
+                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                <span data-i18n="clanRankMaster">Master · 클랜장 (Op 망치)</span>
+              </span>
+              <span class="clan-rank-pill rank-op">
+                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                <span data-i18n="clanRankOp">Op · 관리자 (망치)</span>
+              </span>
+              <span class="clan-rank-pill rank-voice">
+                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                <span data-i18n="clanRankVoice">VOp · 보이스 클랜원 (나팔)</span>
+              </span>
             </div>
 
             <ul class="clan-cmd-list">
@@ -459,8 +521,8 @@
                 <span data-i18n="clanCmdMsgDesc">접속 중인 클랜원 전체에게 클랜 공지·내전 호출 전송</span>
               </li>
               <li>
-                <code>/clan give [ID] op</code>
-                <span data-i18n="clanCmdGiveDesc">클랜원 등급 변경 (op / vop / none) 및 채널 관리 권한 부여</span>
+                <code>/clan give [ID] vop</code>
+                <span data-i18n="clanCmdGiveDesc">클랜원 보이스(나팔 · vop) 및 오퍼레이터(망치 · op) 권한 부여</span>
               </li>
             </ul>
           </div>
@@ -496,6 +558,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738-4"></script>
+  <script src="./assets/js/main.js?v=0.6.738-5"></script>
 </body>
 </html>
