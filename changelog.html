@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-2" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -26,8 +26,63 @@
         <a href="./index.html" class="nav-text-link" data-i18n="navHome">홈</a>
         <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
         <a href="./changelog.html" class="nav-text-link nav-changelog-pill nav-link-active" aria-current="page" data-i18n="navChangelog">패치 내역</a>
-        <a href="./grp-guide.html" class="nav-text-link nav-grp-pill" data-i18n="navGrpGuide">GRP 적용법</a>
-        <a href="./chat-history.html" class="nav-text-link nav-chat-pill" data-i18n="navChatHistory">채팅 기록</a>
+
+        <div class="nav-tools-dropdown" id="nav-tools-dropdown">
+          <button
+            type="button"
+            class="nav-tools-trigger"
+            id="nav-tools-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="nav-tools-menu"
+          >
+            <span class="nav-tools-diamond" aria-hidden="true"></span>
+            <span class="nav-tools-label" data-i18n="navToolsMenu">GRP · 채팅 기록</span>
+            <span class="nav-tools-cap" aria-hidden="true">
+              <svg class="nav-tools-tri" viewBox="0 0 10 6" width="9" height="6">
+                <path d="M1 1l4 4 4-4" fill="currentColor" />
+              </svg>
+            </span>
+          </button>
+
+          <div class="nav-tools-panel" id="nav-tools-menu" role="menu" hidden>
+            <div class="nav-tools-group">
+              <a href="./grp-guide.html" class="nav-tools-head nav-tools-head-grp" role="menuitem">
+                <span class="nav-tools-head-left">
+                  <span class="nav-tools-dot dot-grp" aria-hidden="true"></span>
+                  <span data-i18n="navGrpGuide">GRP 적용법</span>
+                </span>
+                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+              </a>
+              <div class="nav-tools-sublist">
+                <a href="./grp-guide.html#step-overview" class="nav-tools-item" role="menuitem" data-i18n="grpNav1">01. 작동 원리 · 지원 형식</a>
+                <a href="./grp-guide.html#step-builder" class="nav-tools-item" role="menuitem" data-i18n="grpNav2">02. 999 Image ID 적용</a>
+                <a href="./grp-guide.html#step-folders" class="nav-tools-item" role="menuitem" data-i18n="grpNav3">03. 스킨 팩 폴더 적용</a>
+                <a href="./grp-guide.html#step-preview" class="nav-tools-item" role="menuitem" data-i18n="grpNav4">04. HD/SD 미리보기 · 삭제</a>
+                <a href="./grp-guide.html#step-ingame" class="nav-tools-item" role="menuitem" data-i18n="grpNav5">05. 인게임 확인 · 순정 복구</a>
+                <a href="./grp-guide.html#step-advanced" class="nav-tools-item" role="menuitem" data-i18n="grpNav6">06. 맵 내장 · 타일 · 보안</a>
+                <a href="./grp-guide.html#step-faq" class="nav-tools-item" role="menuitem" data-i18n="grpNav7">07. 문제 해결 (FAQ)</a>
+              </div>
+            </div>
+
+            <div class="nav-tools-divider" role="separator"></div>
+
+            <div class="nav-tools-group">
+              <a href="./chat-history.html" class="nav-tools-head nav-tools-head-chat" role="menuitem">
+                <span class="nav-tools-head-left">
+                  <span class="nav-tools-dot dot-chat" aria-hidden="true"></span>
+                  <span data-i18n="navChatHistory">채팅 기록</span>
+                </span>
+                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+              </a>
+              <div class="nav-tools-sublist">
+                <a href="./chat-history.html#ch-connect" class="nav-tools-item" role="menuitem" data-i18n="navChatSecConnect">로컬 연결 · 폴더 불러오기</a>
+                <a href="./chat-history.html#ch-rooms" class="nav-tools-item" role="menuitem" data-i18n="navChatSecRooms">날짜 · 참여 방 목록 탐색</a>
+                <a href="./chat-history.html#ch-viewer" class="nav-tools-item" role="menuitem" data-i18n="navChatSecViewer">대화 뷰어 · 검색 및 TXT 저장</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div id="nav-user-badge" class="nav-user-badge" role="status" aria-live="polite">
           <span class="nav-live-dot" aria-hidden="true"></span>
@@ -1222,6 +1277,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738"></script>
+  <script src="./assets/js/main.js?v=0.6.738-2"></script>
 </body>
 </html>
