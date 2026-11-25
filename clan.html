@@ -10,7 +10,7 @@
   <meta property="og:description" content="1.16.1 피쉬서버 Op 채널 감성의 클랜 UI 레이아웃 미리보기입니다." />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-5" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-6" />
 </head>
 <body id="top" class="clan-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -176,40 +176,63 @@
         </div>
 
         <div class="bnet116-window" aria-label="1.16.1 Battle.net Clan Channel UI Preview">
-          <!-- Reusable 1.16.1 icons.bni-style SVG definitions: Op Gavel (망치) & Voice Horn (보이스 나팔) -->
+          <!-- Authentic 1.16.1 Fish Server icons.bni SVG definitions:
+               1) Clan Master: Blue BLIZZ emblem (#bni-blizz)
+               2) Sub-master & Op: Green "b.net" badge (#bni-bnet)
+               3) Voice (VOp): Silver/white megaphone horn with dark red-brown bell (#bni-voice) -->
           <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
             <defs>
-              <linearGradient id="bniGoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#fef08a" />
-                <stop offset="55%" stop-color="#f59e0b" />
-                <stop offset="100%" stop-color="#b45309" />
+              <linearGradient id="bniSilverCone" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="45%" stop-color="#dbe4ee" />
+                <stop offset="80%" stop-color="#94a3b8" />
+                <stop offset="100%" stop-color="#475569" />
               </linearGradient>
-              <symbol id="bni-gavel" viewBox="0 0 28 16">
-                <!-- Sound block -->
-                <rect x="2.5" y="12.2" width="10.5" height="2.3" rx="0.6" fill="#b45309" stroke="#fde047" stroke-width="0.5" />
-                <!-- Handle -->
-                <path d="M11 7.6 L24.2 13.2" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" />
-                <path d="M11 7.6 L24.2 13.2" stroke="#fef08a" stroke-width="0.7" stroke-linecap="round" opacity="0.75" />
-                <!-- Angled Gavel Head -->
-                <g transform="rotate(-28 10.2 6.4)">
-                  <rect x="5.2" y="3.5" width="10" height="5.6" rx="1.1" fill="url(#bniGoldGrad)" stroke="#fef9c3" stroke-width="0.55" />
-                  <rect x="4.3" y="3.1" width="1.8" height="6.4" rx="0.6" fill="#fde047" />
-                  <rect x="14.3" y="3.1" width="1.8" height="6.4" rx="0.6" fill="#fde047" />
-                </g>
+              <radialGradient id="bniBellDark" cx="45%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="#2a0808" />
+                <stop offset="65%" stop-color="#5c1919" />
+                <stop offset="100%" stop-color="#8b2c2c" />
+              </radialGradient>
+              <radialGradient id="bniBlizzGlow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.75" />
+                <stop offset="55%" stop-color="#1d4ed8" stop-opacity="0.45" />
+                <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+              </radialGradient>
+              <filter id="bniGreenGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="0.65" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <!-- 1. Clan Master: Classic Blue Blizzard (BLIZZ) Icon -->
+              <symbol id="bni-blizz" viewBox="0 0 28 14">
+                <rect x="0.5" y="0.5" width="27" height="13" rx="1" fill="#030816" stroke="#1e3a8a" stroke-width="0.8" />
+                <ellipse cx="14" cy="7" rx="12" ry="5.5" fill="url(#bniBlizzGlow)" />
+                <path d="M3 3.5 L9 6 M25 3 L19 5.8 M4 11 L10 8.5 M24 11.2 L18.5 8.5 M14 1.5 L14 4" stroke="#38bdf8" stroke-width="0.7" opacity="0.65" />
+                <text x="14" y="9.8" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="8.2" font-style="italic" font-weight="900" letter-spacing="0.3" fill="#e0f2fe" stroke="#0284c7" stroke-width="0.35">BLIZZ</text>
               </symbol>
-              <symbol id="bni-horn" viewBox="0 0 28 16">
-                <!-- Classic 1.16.1 Voice (보이스) Brass Horn / Bugle / Megaphone (나팔) -->
-                <!-- Mouthpiece -->
-                <rect x="2.2" y="6.6" width="2.4" height="2.8" rx="0.7" fill="#fde047" />
-                <!-- Lower handle / loop -->
-                <path d="M7.2 9.2 L8.6 13.2 L11.4 13.2 L10.5 9.6" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linejoin="round" />
-                <!-- Flaring brass horn bell -->
-                <path d="M4.4 6.9 L8.2 6.6 C11.8 6.3 14.8 4.4 18.2 2.1 L18.2 13.9 C14.8 11.6 11.8 9.7 8.2 9.4 L4.4 9.1 Z" fill="url(#bniGoldGrad)" stroke="#fef9c3" stroke-width="0.55" stroke-linejoin="round" />
-                <!-- Horn bell rim -->
-                <ellipse cx="18.2" cy="8" rx="1.35" ry="5.8" fill="#78350f" stroke="#fde047" stroke-width="0.7" />
-                <!-- Sound waves -->
-                <path d="M21.4 5.1 A4.2 4.2 0 0 1 21.4 10.9" fill="none" stroke="#fef08a" stroke-width="1.35" stroke-linecap="round" />
-                <path d="M24.1 3.1 A6.8 6.8 0 0 1 24.1 12.9" fill="none" stroke="#86efac" stroke-width="1.25" stroke-linecap="round" />
+
+              <!-- 2. Sub-master & Op: Classic Green "b.net" Icon -->
+              <symbol id="bni-bnet" viewBox="0 0 28 14">
+                <rect x="0.5" y="0.5" width="27" height="13" rx="1" fill="#020402" stroke="#2c241b" stroke-width="0.8" />
+                <text x="14" y="10.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="9.6" font-weight="700" letter-spacing="-0.2" fill="#4ade80" filter="url(#bniGreenGlow)">b.net</text>
+              </symbol>
+
+              <!-- 3. Voice (VOp): Classic Silver/White Horizontal Megaphone / Horn (나팔) -->
+              <symbol id="bni-voice" viewBox="0 0 28 14">
+                <rect x="0.5" y="0.5" width="27" height="13" rx="1" fill="#030504" stroke="#262b28" stroke-width="0.8" />
+                <!-- Left bronze-gray mouthpiece -->
+                <rect x="2.0" y="4.9" width="3.4" height="4.2" rx="0.7" fill="#a67353" stroke="#5c3d28" stroke-width="0.45" />
+                <!-- Flaring metallic silver-white megaphone cone -->
+                <path d="M5.1 5.4 L21.6 1.5 L21.6 12.5 L5.1 8.8 Z" fill="url(#bniSilverCone)" stroke="#cbd5e1" stroke-width="0.4" stroke-linejoin="round" />
+                <!-- Classic dark center contour detail on the silver cone -->
+                <ellipse cx="13.2" cy="7.3" rx="3.1" ry="1.8" transform="rotate(-10 13.2 7.3)" fill="#1e293b" opacity="0.78" />
+                <ellipse cx="12.5" cy="7.2" rx="1.3" ry="0.8" fill="#cbd5e1" opacity="0.85" />
+                <!-- Right dark reddish-brown flared bell opening -->
+                <ellipse cx="22.1" cy="7" rx="2.9" ry="5.5" fill="url(#bniBellDark)" stroke="#e2e8f0" stroke-width="0.65" />
+                <ellipse cx="21.7" cy="7" rx="1.4" ry="3.4" fill="#1f0505" opacity="0.8" />
               </symbol>
             </defs>
           </svg>
@@ -271,7 +294,7 @@
                 </div>
                 <div class="bnet116-line">
                   <span class="c-white">&lt;SL]Shaman&gt;</span>
-                  <span class="c-text" data-i18n="clanChatMsg2">우측에 망치(Op)랑 나팔 모양 보이스(VOp) 아이콘 보니까 피쉬서버 생각나네요.</span>
+                  <span class="c-text" data-i18n="clanChatMsg2">클랜장 블리자드(BLIZZ), 부마·옵 초록 b.net, 보이스 은색 나팔 아이콘 그대로네요!</span>
                 </div>
                 <div class="bnet116-line">
                   <span class="c-white">&lt;SL]Marine&gt;</span>
@@ -294,66 +317,66 @@
               </div>
             </div>
 
-            <!-- Right 1.16.1 Channel Player List (Op Gavel + Voice Horn + Green Lag Bars) -->
+            <!-- Right 1.16.1 Channel Player List (Clan Master BLIZZ + Sub/Op b.net + Voice Silver Horn) -->
             <aside class="bnet116-right-roster" aria-label="채널 접속자 목록 예시">
               <div class="bnet116-roster-head">
-                <span data-i18n="clanRosterTitle">채널 인원 (8)</span>
-                <span class="bnet116-roster-tag">Op · VOp</span>
+                <span data-i18n="clanRosterTitle">Op SLauncher- (8)</span>
+                <span class="bnet116-roster-tag">1.16.1</span>
               </div>
 
               <ul class="bnet116-user-list">
-                <li class="bnet116-user-row is-op">
-                  <span class="bnet116-badge badge-gavel" title="Channel Operator (Op · 망치)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
-                  </span>
-                  <span class="bnet116-userid">Op.ClanBot</span>
-                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
-                </li>
-                <li class="bnet116-user-row is-op">
-                  <span class="bnet116-badge badge-gavel" title="Clan Master (Op · 망치)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                <li class="bnet116-user-row is-master">
+                  <span class="bnet116-badge" title="클랜장 (Clan Master · BLIZZ)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Master</span>
                   <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-op">
-                  <span class="bnet116-badge badge-gavel" title="Clan Operator (Op · 망치)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
+                  <span class="bnet116-badge" title="부마스터 (Sub-Master · b.net)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-bnet" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Shaman</span>
                   <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
-                <li class="bnet116-user-row is-voice">
-                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                <li class="bnet116-user-row is-op">
+                  <span class="bnet116-badge" title="클랜 옵 (Operator · b.net)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-bnet" /></svg>
                   </span>
-                  <span class="bnet116-userid">SL]Marine</span>
-                  <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
+                  <span class="bnet116-userid">Op.ClanBot</span>
+                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-voice">
-                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  <span class="bnet116-badge" title="보이스 (Voice · 은색 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
+                  </span>
+                  <span class="bnet116-userid">SL]Marine</span>
+                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
+                </li>
+                <li class="bnet116-user-row is-voice">
+                  <span class="bnet116-badge" title="보이스 (Voice · 은색 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Bisu</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-voice">
-                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  <span class="bnet116-badge" title="보이스 (Voice · 은색 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Ghost</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-voice">
-                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  <span class="bnet116-badge" title="보이스 (Voice · 은색 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Hydra</span>
                   <span class="bnet116-lag lag-3" aria-label="3 bar ping"><i></i><i></i><i></i></span>
                 </li>
                 <li class="bnet116-user-row is-voice">
-                  <span class="bnet116-badge badge-horn" title="Clan Voice (VOp · 보이스 나팔)">
-                    <svg class="bni-svg" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
+                  <span class="bnet116-badge" title="보이스 (Voice · 은색 나팔)">
+                    <svg class="bni-svg" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
                   </span>
                   <span class="bnet116-userid">SL]Zealot</span>
                   <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
@@ -494,16 +517,16 @@
 
             <div class="clan-rank-strip">
               <span class="clan-rank-pill rank-master">
-                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
-                <span data-i18n="clanRankMaster">Master · 클랜장 (Op 망치)</span>
+                <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                <span data-i18n="clanRankMaster">클랜장 (BLIZZ)</span>
               </span>
               <span class="clan-rank-pill rank-op">
-                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-gavel" /></svg>
-                <span data-i18n="clanRankOp">Op · 관리자 (망치)</span>
+                <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-bnet" /></svg>
+                <span data-i18n="clanRankOp">부마스터 · 옵 (b.net)</span>
               </span>
               <span class="clan-rank-pill rank-voice">
-                <svg class="bni-svg-inline" viewBox="0 0 28 16" aria-hidden="true"><use href="#bni-horn" /></svg>
-                <span data-i18n="clanRankVoice">VOp · 보이스 클랜원 (나팔)</span>
+                <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-voice" /></svg>
+                <span data-i18n="clanRankVoice">보이스 클랜원 (나팔)</span>
               </span>
             </div>
 
@@ -558,6 +581,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738-5"></script>
+  <script src="./assets/js/main.js?v=0.6.738-6"></script>
 </body>
 </html>
