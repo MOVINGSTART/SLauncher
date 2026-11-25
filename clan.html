@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>공개 예정(클랜) — SLauncher</title>
+  <meta name="description" content="스타크래프트 1.16.1 피쉬서버 Op 클랜 채널 감성을 복원한 SLauncher 클랜 시스템 기본 UI 미리보기 (공개 예정)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SLauncher 클랜 시스템 (공개 예정)" />
+  <meta property="og:description" content="1.16.1 피쉬서버 Op 채널 감성의 클랜 UI 레이아웃 미리보기입니다." />
+  <meta property="og:image" content="./assets/img/logo.png" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-4" />
+</head>
+<body id="top" class="clan-page">
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand">
+        <img src="./assets/img/logo.png" alt="SLauncher" class="brand-logo" width="32" height="32" />
+        <span class="brand-name">SLauncher</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="./index.html" class="nav-text-link" data-i18n="navHome">홈</a>
+        <a href="./index.html#features" class="nav-text-link" data-i18n="navFeatures">주요 기능</a>
+        <a href="./changelog.html" class="nav-text-link nav-changelog-pill" data-i18n="navChangelog">패치 내역</a>
+
+        <div class="nav-tools-dropdown" id="nav-tools-dropdown">
+          <button
+            type="button"
+            class="nav-tools-trigger is-page-active"
+            id="nav-tools-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="nav-tools-menu"
+          >
+            <span class="nav-tools-diamond" aria-hidden="true"></span>
+            <span class="nav-tools-label" data-i18n="navToolsMenu">GRP · 채팅 기록</span>
+            <span class="nav-tools-cap" aria-hidden="true">
+              <svg class="nav-tools-tri" viewBox="0 0 10 6" width="9" height="6">
+                <path d="M1 1l4 4 4-4" fill="currentColor" />
+              </svg>
+            </span>
+          </button>
+
+          <div class="nav-tools-panel" id="nav-tools-menu" role="menu" hidden>
+            <div class="nav-tools-group">
+              <a href="./grp-guide.html" class="nav-tools-head nav-tools-head-grp" role="menuitem">
+                <span class="nav-tools-head-left">
+                  <span class="nav-tools-dot dot-grp" aria-hidden="true"></span>
+                  <span data-i18n="navGrpGuide">GRP 적용법</span>
+                </span>
+                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+              </a>
+              <div class="nav-tools-sublist">
+                <a href="./grp-guide.html#step-overview" class="nav-tools-item" role="menuitem" data-i18n="grpNav1">01. 작동 원리 · 지원 형식</a>
+                <a href="./grp-guide.html#step-builder" class="nav-tools-item" role="menuitem" data-i18n="grpNav2">02. 999 Image ID 적용</a>
+                <a href="./grp-guide.html#step-folders" class="nav-tools-item" role="menuitem" data-i18n="grpNav3">03. 스킨 팩 폴더 적용</a>
+                <a href="./grp-guide.html#step-preview" class="nav-tools-item" role="menuitem" data-i18n="grpNav4">04. HD/SD 미리보기 · 삭제</a>
+                <a href="./grp-guide.html#step-ingame" class="nav-tools-item" role="menuitem" data-i18n="grpNav5">05. 인게임 확인 · 순정 복구</a>
+                <a href="./grp-guide.html#step-advanced" class="nav-tools-item" role="menuitem" data-i18n="grpNav6">06. 맵 내장 · 타일 · 보안</a>
+                <a href="./grp-guide.html#step-faq" class="nav-tools-item" role="menuitem" data-i18n="grpNav7">07. 문제 해결 (FAQ)</a>
+              </div>
+            </div>
+
+            <div class="nav-tools-divider" role="separator"></div>
+
+            <div class="nav-tools-group">
+              <a href="./chat-history.html" class="nav-tools-head nav-tools-head-chat" role="menuitem">
+                <span class="nav-tools-head-left">
+                  <span class="nav-tools-dot dot-chat" aria-hidden="true"></span>
+                  <span data-i18n="navChatHistory">채팅 기록</span>
+                </span>
+                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+              </a>
+              <div class="nav-tools-sublist">
+                <a href="./chat-history.html#ch-connect" class="nav-tools-item" role="menuitem" data-i18n="navChatSecConnect">로컬 연결 · 폴더 불러오기</a>
+                <a href="./chat-history.html#ch-rooms" class="nav-tools-item" role="menuitem" data-i18n="navChatSecRooms">날짜 · 참여 방 목록 탐색</a>
+                <a href="./chat-history.html#ch-viewer" class="nav-tools-item" role="menuitem" data-i18n="navChatSecViewer">대화 뷰어 · 검색 및 TXT 저장</a>
+              </div>
+            </div>
+
+            <div class="nav-tools-divider" role="separator"></div>
+
+            <div class="nav-tools-group">
+              <a href="#top" class="nav-tools-head nav-tools-head-clan is-current" aria-current="page" role="menuitem">
+                <span class="nav-tools-head-left">
+                  <span class="nav-tools-dot dot-clan" aria-hidden="true"></span>
+                  <span data-i18n="navClanSoon">공개 예정(클랜)</span>
+                </span>
+                <span class="nav-tools-go" data-i18n="navCurrentBadge">현재 페이지</span>
+              </a>
+              <div class="nav-tools-sublist">
+                <a href="#clan-channel" class="nav-tools-item" role="menuitem" data-i18n="navClanSecChannel">1.16.1 Op 클랜 채널 화면</a>
+                <a href="#clan-directory" class="nav-tools-item" role="menuitem" data-i18n="navClanSecList">클랜 목록 · 검색 기본 틀</a>
+                <a href="#clan-create" class="nav-tools-item" role="menuitem" data-i18n="navClanSecCreate">클랜 개설 · 명령어 기본 틀</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="nav-user-badge" class="nav-user-badge" role="status" aria-live="polite">
+          <span class="nav-live-dot" aria-hidden="true"></span>
+          <span id="nav-user-online">실시간 0명</span>
+          <span class="nav-user-sep" aria-hidden="true">·</span>
+          <span id="nav-user-total">사용자 8명</span>
+        </div>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="ko">KO</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <a id="nav-github-link" href="https://github.com/MOVINGSTART/SLauncher" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub Repository" title="GitHub Repository">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.1 3.3 9.42 7.88 10.95.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.38-3.88-1.38-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.66 18.35.5 12 .5Z"/>
+          </svg>
+        </a>
+
+        <a href="./index.html#download" class="btn btn-sm btn-light" data-i18n="navDownload">다운로드</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cl-hero clan-hero">
+      <div class="container">
+        <div class="cl-breadcrumb">
+          <a href="./index.html" class="cl-back-link">
+            <span aria-hidden="true">←</span>
+            <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
+          </a>
+        </div>
+
+        <div class="cl-hero-row">
+          <div>
+            <div class="hero-pill clan-pill">
+              <span data-i18n="clanPillLabel">1.16.1 Fish Server Style · Coming Soon</span>
+            </div>
+            <h1 class="cl-page-title" data-i18n="clanPageTitle">공개 예정 (클랜 시스템)</h1>
+            <p class="cl-page-sub" data-i18n="clanPageSub">
+              스타크래프트 1.16.1 피쉬서버(Fish Server) 시절의 『Op 클랜 채널』 감성을 복원한 기본 UI 틀입니다. 현재는 화면 레이아웃만 먼저 공개되며 실제 기능은 추후 업데이트에서 연결됩니다.
+            </p>
+          </div>
+
+          <div class="cl-stat-cards">
+            <div class="cl-stat-box">
+              <span class="cl-stat-label" data-i18n="clanStatThemeLabel">UI 콘셉트</span>
+              <strong class="cl-stat-val clan-stat-green">1.16.1 Op</strong>
+            </div>
+            <div class="cl-stat-box">
+              <span class="cl-stat-label" data-i18n="clanStatStateLabel">현재 상태</span>
+              <strong class="cl-stat-val clan-stat-amber" data-i18n="clanStatStateVal">공개 예정</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="clan-soon-banner" role="note">
+          <span class="clan-soon-tag" data-i18n="clanSoonTag">UI 미리보기</span>
+          <span data-i18n="clanSoonDesc">모든 버튼·입력창은 1.16.1 피쉬서버 스타일 기본 화면 구성을 보여주기 위한 비활성 프리뷰 상태이며, 서버 연동 및 클랜 기능은 아직 동작하지 않습니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Classic 1.16.1 Battle.net Fish Server Op Clan Channel UI -->
+    <section id="clan-channel" class="clan-section">
+      <div class="container">
+        <div class="clan-sec-head">
+          <div>
+            <span class="clan-sec-kicker">01 · CLASSIC CHANNEL UI</span>
+            <h2 class="clan-sec-title" data-i18n="clanS1Title">1.16.1 피쉬서버 『Op 클랜 채널』 기본 화면</h2>
+          </div>
+          <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
+        </div>
+
+        <div class="bnet116-window" aria-label="1.16.1 Battle.net Clan Channel UI Preview">
+          <div class="bnet116-topbar">
+            <div class="bnet116-topbar-left">
+              <span class="bnet116-led" aria-hidden="true"></span>
+              <span class="bnet116-top-title" data-i18n="clanWinTitle">Battle.net — Fish Server Style Op Channel (1.16.1 UI)</span>
+            </div>
+            <span class="bnet116-top-meta" data-i18n="clanWinMeta">PREVIEW ONLY · 비활성 샘플</span>
+          </div>
+
+          <div class="bnet116-grid">
+            <!-- Left 1.16.1 Bevel Action Buttons -->
+            <aside class="bnet116-left-rail" aria-label="1.16.1 채널 좌측 메뉴 (비활성)">
+              <button type="button" class="bnet116-btn" disabled>
+                <span class="bnet116-hotkey">C</span>
+                <span data-i18n="clanBtnCreate">클랜 생성</span>
+              </button>
+              <button type="button" class="bnet116-btn" disabled>
+                <span class="bnet116-hotkey">J</span>
+                <span data-i18n="clanBtnJoin">클랜 가입</span>
+              </button>
+              <button type="button" class="bnet116-btn" disabled>
+                <span class="bnet116-hotkey">L</span>
+                <span data-i18n="clanBtnList">클랜 목록</span>
+              </button>
+              <button type="button" class="bnet116-btn" disabled>
+                <span class="bnet116-hotkey">H</span>
+                <span data-i18n="clanBtnChannel">채널 이동</span>
+              </button>
+              <button type="button" class="bnet116-btn" disabled>
+                <span class="bnet116-hotkey">M</span>
+                <span data-i18n="clanBtnMatch">클랜 내전</span>
+              </button>
+              <div class="bnet116-rail-spacer"></div>
+              <button type="button" class="bnet116-btn bnet116-btn-red" disabled>
+                <span class="bnet116-hotkey">Q</span>
+                <span data-i18n="clanBtnQuit">나가기</span>
+              </button>
+            </aside>
+
+            <!-- Center 1.16.1 Op Channel Console -->
+            <div class="bnet116-center">
+              <div class="bnet116-chan-header">
+                <span class="bnet116-chan-name">Op SLauncher-</span>
+                <span class="bnet116-chan-sub" data-i18n="clanChanTopic">클랜 전용 채널 예시 · Fish Server 1.16.1 감성</span>
+              </div>
+
+              <div class="bnet116-chat-screen">
+                <div class="bnet116-line c-yellow" data-i18n="clanChatSys1">--- Op SLauncher- 채널에 입장했습니다. (1.16.1 UI 미리보기) ---</div>
+                <div class="bnet116-line">
+                  <span class="c-cyan">&lt;Op.ClanBot&gt;</span>
+                  <span class="c-gold" data-i18n="clanChatMotd">[클랜 공지] SLauncher 클랜 시스템 기본 UI 프리뷰입니다. (기능 공개 예정)</span>
+                </div>
+                <div class="bnet116-line">
+                  <span class="c-white">&lt;SL]Master&gt;</span>
+                  <span class="c-text" data-i18n="clanChatMsg1">예전 1.16.1 피쉬서버 Op 클랜 채널 화면 구성 그대로 먼저 틀을 잡았습니다.</span>
+                </div>
+                <div class="bnet116-line">
+                  <span class="c-white">&lt;SL]Shaman&gt;</span>
+                  <span class="c-text" data-i18n="clanChatMsg2">우측에 망치(Op) 아이콘이랑 초록 핑 안테나 보니까 피쉬서버 생각나네요.</span>
+                </div>
+                <div class="bnet116-line">
+                  <span class="c-white">&lt;SL]Marine&gt;</span>
+                  <span class="c-text" data-i18n="clanChatMsg3">/c l 클랜원 목록, /c m 전체 공지 같은 기본 명령어도 추후 연동 예정입니다.</span>
+                </div>
+                <div class="bnet116-line c-green" data-i18n="clanChatWhisper">&lt;From: SL]Bisu&gt; 내전 헌터 4:4 자리 남으면 불러주세요! (예시 대화)</div>
+                <div class="bnet116-line c-muted" data-i18n="clanChatSys2">[안내] 현재 화면은 정적 UI 프리뷰이며 채팅 전송·명령어 기능은 비활성 상태입니다.</div>
+              </div>
+
+              <div class="bnet116-input-bar">
+                <input
+                  type="text"
+                  class="bnet116-input"
+                  disabled
+                  data-i18n-placeholder="clanInputPh"
+                  placeholder="채팅 및 /clan 명령어 입력창 (공개 예정 — 기능 비활성)"
+                />
+                <button type="button" class="bnet116-send-btn" disabled data-i18n="clanBtnSend">보내기</button>
+                <button type="button" class="bnet116-send-btn" disabled data-i18n="clanBtnWhisper">귓속말</button>
+              </div>
+            </div>
+
+            <!-- Right 1.16.1 Channel Player List (Op Hammer + Brood War Badge + Green Lag Bars) -->
+            <aside class="bnet116-right-roster" aria-label="채널 접속자 목록 예시">
+              <div class="bnet116-roster-head">
+                <span data-i18n="clanRosterTitle">채널 인원 (8)</span>
+                <span class="bnet116-roster-tag">Op</span>
+              </div>
+
+              <ul class="bnet116-user-list">
+                <li class="bnet116-user-row is-op">
+                  <span class="bnet116-badge badge-gavel" title="Channel Operator (Op)">🔨</span>
+                  <span class="bnet116-userid">Op.ClanBot</span>
+                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
+                </li>
+                <li class="bnet116-user-row is-op">
+                  <span class="bnet116-badge badge-gavel" title="Clan Master (Op)">🔨</span>
+                  <span class="bnet116-userid">SL]Master</span>
+                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
+                </li>
+                <li class="bnet116-user-row is-vop">
+                  <span class="bnet116-badge badge-vop" title="Voice Operator (VOp)">★</span>
+                  <span class="bnet116-userid">SL]Shaman</span>
+                  <span class="bnet116-lag lag-1" aria-label="1 bar ping"><i></i></span>
+                </li>
+                <li class="bnet116-user-row">
+                  <span class="bnet116-badge badge-scx">SCX</span>
+                  <span class="bnet116-userid">SL]Marine</span>
+                  <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
+                </li>
+                <li class="bnet116-user-row">
+                  <span class="bnet116-badge badge-scx">SCX</span>
+                  <span class="bnet116-userid">SL]Bisu</span>
+                  <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
+                </li>
+                <li class="bnet116-user-row">
+                  <span class="bnet116-badge badge-scx">SCX</span>
+                  <span class="bnet116-userid">SL]Ghost</span>
+                  <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
+                </li>
+                <li class="bnet116-user-row">
+                  <span class="bnet116-badge badge-scx">SCX</span>
+                  <span class="bnet116-userid">SL]Hydra</span>
+                  <span class="bnet116-lag lag-3" aria-label="3 bar ping"><i></i><i></i><i></i></span>
+                </li>
+                <li class="bnet116-user-row">
+                  <span class="bnet116-badge badge-scx">SCX</span>
+                  <span class="bnet116-userid">Guest_116</span>
+                  <span class="bnet116-lag lag-2" aria-label="2 bar ping"><i></i><i></i></span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Clan Directory / Search UI Shell -->
+    <section id="clan-directory" class="clan-section">
+      <div class="container">
+        <div class="clan-sec-head">
+          <div>
+            <span class="clan-sec-kicker">02 · CLAN DIRECTORY SHELL</span>
+            <h2 class="clan-sec-title" data-i18n="clanS2Title">클랜 목록 · 검색 기본 틀 (공개 예정)</h2>
+          </div>
+          <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
+        </div>
+
+        <div class="clan-card-frame">
+          <div class="clan-dir-toolbar">
+            <input
+              type="text"
+              class="clan-mock-input"
+              disabled
+              data-i18n-placeholder="clanSearchPh"
+              placeholder="클랜명 · 태그(예: SL]) · Op 채널명 검색 (공개 예정)"
+            />
+            <div class="clan-filter-group">
+              <button type="button" class="clan-chip active" disabled data-i18n="clanFilterAll">전체</button>
+              <button type="button" class="clan-chip" disabled data-i18n="clanFilterOpen">모집 중</button>
+              <button type="button" class="clan-chip" disabled data-i18n="clanFilterOp">Op 채널 활성</button>
+            </div>
+          </div>
+
+          <div class="clan-table-wrap">
+            <table class="clan-table">
+              <thead>
+                <tr>
+                  <th data-i18n="clanColTag">태그</th>
+                  <th data-i18n="clanColName">클랜명 · Op 채널</th>
+                  <th data-i18n="clanColMaster">클랜 마스터</th>
+                  <th data-i18n="clanColMembers">인원</th>
+                  <th data-i18n="clanColStatus">상태</th>
+                  <th data-i18n="clanColAction">가입 신청</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="clan-tag-pill">SL]</span></td>
+                  <td>
+                    <strong class="clan-row-name">SLauncher Official</strong>
+                    <span class="clan-row-chan">Op SLauncher-</span>
+                  </td>
+                  <td class="clan-mono">SL]Master</td>
+                  <td class="clan-mono">24 / 50</td>
+                  <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
+                  <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
+                </tr>
+                <tr>
+                  <td><span class="clan-tag-pill">Fish]</span></td>
+                  <td>
+                    <strong class="clan-row-name">Fish Classic 116</strong>
+                    <span class="clan-row-chan">Op Fish116-</span>
+                  </td>
+                  <td class="clan-mono">Fish]Leader</td>
+                  <td class="clan-mono">18 / 50</td>
+                  <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
+                  <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
+                </tr>
+                <tr>
+                  <td><span class="clan-tag-pill">Kor]</span></td>
+                  <td>
+                    <strong class="clan-row-name">Korea Hunters</strong>
+                    <span class="clan-row-chan">Op KorHunter-</span>
+                  </td>
+                  <td class="clan-mono">Kor]Templar</td>
+                  <td class="clan-mono">12 / 50</td>
+                  <td><span class="clan-status-pill is-closed" data-i18n="clanSampleClosed">예시 항목</span></td>
+                  <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Clan Creation Form & 1.16.1 /clan Command Spec Shell -->
+    <section id="clan-create" class="clan-section clan-section-last">
+      <div class="container">
+        <div class="clan-sec-head">
+          <div>
+            <span class="clan-sec-kicker">03 · CREATE &amp; /CLAN SPEC</span>
+            <h2 class="clan-sec-title" data-i18n="clanS3Title">클랜 개설 · 등급 및 명령어 기본 틀</h2>
+          </div>
+          <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
+        </div>
+
+        <div class="clan-two-col">
+          <!-- Left: Disabled Clan Creation Form Shell -->
+          <div class="clan-card-frame">
+            <h3 class="clan-box-title" data-i18n="clanFormTitle">신규 클랜 개설 양식 (미리보기)</h3>
+            <p class="clan-box-sub" data-i18n="clanFormSub">추후 업데이트 시 클랜 태그와 전용 Op 채널을 등록할 수 있는 기본 입력 틀입니다.</p>
+
+            <div class="clan-form-stack">
+              <label class="clan-field">
+                <span data-i18n="clanFieldName">클랜 이름</span>
+                <input type="text" class="clan-mock-input" disabled value="SLauncher Clan (예시)" />
+              </label>
+              <div class="clan-field-row">
+                <label class="clan-field">
+                  <span data-i18n="clanFieldTag">클랜 태그</span>
+                  <input type="text" class="clan-mock-input" disabled value="SL]" />
+                </label>
+                <label class="clan-field">
+                  <span data-i18n="clanFieldChan">기본 Op 채널</span>
+                  <input type="text" class="clan-mock-input" disabled value="Op SLauncher-" />
+                </label>
+              </div>
+              <label class="clan-field">
+                <span data-i18n="clanFieldIntro">클랜 소개 · 공지 (MOTD)</span>
+                <input type="text" class="clan-mock-input" disabled value="매너 내전 · 팀플 환영합니다! (공개 예정)" />
+              </label>
+              <button type="button" class="btn btn-primary clan-submit-btn" disabled data-i18n="clanSubmitSoonBtn">
+                클랜 개설하기 (공개 예정)
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Classic 1.16.1 Fish Server Rank & /clan Command Reference -->
+          <div class="clan-card-frame">
+            <h3 class="clan-box-title" data-i18n="clanSpecTitle">1.16.1 피쉬서버 등급 · 명령어 구성 (예정)</h3>
+            <p class="clan-box-sub" data-i18n="clanSpecSub">과거 피쉬서버 Op 채널에서 쓰이던 직관적인 권한 체계와 슬래시 명령어 레이아웃입니다.</p>
+
+            <div class="clan-rank-strip">
+              <span class="clan-rank-pill rank-master">🔨 Master (클랜장)</span>
+              <span class="clan-rank-pill rank-op">🔨 Op (관리자)</span>
+              <span class="clan-rank-pill rank-vop">★ VOp (부관리자)</span>
+              <span class="clan-rank-pill rank-mem">SCX Member (클랜원)</span>
+            </div>
+
+            <ul class="clan-cmd-list">
+              <li>
+                <code>/clan list</code>
+                <span data-i18n="clanCmdListDesc">클랜원 전체 명단 및 현재 온라인·접속 방 상태 확인</span>
+              </li>
+              <li>
+                <code>/clan set</code>
+                <span data-i18n="clanCmdSetDesc">소속 클랜의 Op 채널을 기본 입장 채널로 지정</span>
+              </li>
+              <li>
+                <code>/clan msg [내용]</code>
+                <span data-i18n="clanCmdMsgDesc">접속 중인 클랜원 전체에게 클랜 공지·내전 호출 전송</span>
+              </li>
+              <li>
+                <code>/clan give [ID] op</code>
+                <span data-i18n="clanCmdGiveDesc">클랜원 등급 변경 (op / vop / none) 및 채널 관리 권한 부여</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-actions">
+        <a href="./index.html" class="outline-pill">
+          <span aria-hidden="true">←</span>
+          <span data-i18n="clBackHome">메인 페이지로 돌아가기</span>
+        </a>
+        <a href="./changelog.html" class="outline-pill">
+          <span data-i18n="navChangelog">패치 내역</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="./grp-guide.html" class="outline-pill">
+          <span data-i18n="navGrpGuide">GRP 적용법</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="./chat-history.html" class="outline-pill">
+          <span data-i18n="navChatHistory">채팅 기록</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <p class="footer-note" data-i18n="footerDisclaimer">
+        SLauncher는 StarCraft: Remastered 사용자 편의를 위한 서드파티 런처이며, Blizzard Entertainment와 제휴 관계가 아닙니다.
+      </p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./assets/js/main.js?v=0.6.738-4"></script>
+</body>
+</html>
