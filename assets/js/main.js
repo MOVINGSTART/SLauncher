@@ -77,7 +77,8 @@
       tagSecurity: "보안",
       tagCompat: "호환",
       tagEud: "EUD",
-      p738Summary: "멀티 런처 환경에서 오버레이 시계·상단 HUD·인게임 핵 감지기 안내 문구 미표시 완벽 수정 및 해상도 전환 재정렬 개선",
+      p738Summary: "채널 친구 목록·배틀넷 목록 1:1 실시간 일치 동기화, 멀티 런처 환경 오버레이 시계·HUD·인게임 안내 문구 복구 및 해상도 전환 재정렬 개선",
+      p738Item3: "배틀넷에서 『오프라인 표시』 상태이거나 접속 종료·앱 대기 전환된 친구가 인게임 채널 친구 목록(온라인 수·프로그램 그룹)에 잔류하거나 채널 퇴장 알림이 반복 출력되던 현상을 해결하여, 스타크래프트 채널 친구 목록과 공식 Battle.net 친구 목록이 실시간 1:1로 정확히 일치하도록 수정했습니다.",
       p738Item1: "바탕화면에 외부 멀티 런처(scr-multi-launcher 등)가 열려 있거나 StarCraft_SL.exe 파일이 남아 있는 환경에서 일반 스타크래프트 리마스터(StarCraft.exe) 실행 시 타 런처 프로세스로 오판해 연결이 건너뛰어지던 현상을 해결하고, 솔로 커스텀 방·싱글플레이 진입 시에도 『[s런처] 핵 감지기 사용중 입니다.』 인게임 안내 문구와 상단 HUD·오버레이 시계가 즉시 정상 출력되도록 수정했습니다.",
       p738Item2: "오버레이 디지털 시계(YYYY/MM/DD HH:MM:SS)에 외곽 그림자 렌더링과 즉시 리페인트를 적용해 밝은 배경에서도 선명하게 보이도록 개선했으며, 창 모드와 전체 화면(창 모드) 전환·해상도 변경 시 시계 우측 여백과 화면 좌표를 실시간 추적하여 정확한 위치에 유지되도록 보강했습니다.",
       p737Summary: "인게임·대기실 실시간 채팅 기록 누락(0바이트) 완벽 수정, 본인 참여 방 전용 날짜별 채팅 기록 UI(공식 사이트·런처 내장) 추가 및 빈 로그 파일 자동 정리",
@@ -417,7 +418,8 @@
       tagSecurity: "Security",
       tagCompat: "Compat",
       tagEud: "EUD",
-      p738Summary: "Fixed Overlay Digital Clock & HUD Not Appearing Alongside Multi-Launcher Tools, Plus Dynamic Resolution Re-Anchoring & Readability Polish",
+      p738Summary: "1:1 Channel & Battle.net Friend List Parity Sync, Plus Overlay Clock, HUD & In-Game Notice Fix Alongside Multi-Launcher Tools",
+      p738Item3: "Fixed friends set to Appear Offline or transitioning offline/back to the Battle.net app lingering in the in-game channel friend list or repeating channel-leave notices — the StarCraft channel friend list and online count now stay strictly 1:1 synchronized with the official Battle.net friend list.",
       p738Item1: "Resolved an issue where having an external multi-launcher utility (such as scr-multi-launcher) open or a leftover StarCraft_SL.exe binary on disk caused SLauncher to skip attaching to standard StarCraft: Remastered (StarCraft.exe), preventing the digital clock and HUD overlays from appearing.",
       p738Item2: "Added crisp drop-shadow rendering and immediate first-frame repaint to the YYYY/MM/DD HH:MM:SS overlay clock, and added real-time client geometry tracking so right-anchored clock positions stay accurately aligned across windowed/fullscreen resolution transitions.",
       p737Summary: "Fixed 0-Byte Chat Log Recording Bug, Added Local Participated Date-by-Date Chat History UI (Website & Launcher) & Automatic Empty Log Cleanup",
@@ -700,14 +702,14 @@
 
   var releaseState = {
     tag: "v0.6.738",
-    publishedAt: "2026-11-25T05:34:58Z",
+    publishedAt: "2026-11-25T09:14:16Z",
     setupName: "SLauncher-0.6.738-win-setup.exe",
     setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.738/SLauncher-0.6.738-win-setup.exe",
-    setupBytes: 84153071,
-    setupSha256: "08dc158d5cfece2e84af692a207b3dc61579b0ab7b10808c5d2d829b47b053bb",
+    setupBytes: 84153203,
+    setupSha256: "6281bf25904c2b59aece374fadad994503323de8bff5fbec7524ff3f2ccf46d2",
     zipName: "SLauncher_v0.6.738.zip",
     zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.738/SLauncher_v0.6.738.zip",
-    zipBytes: 83571311,
+    zipBytes: 83571443,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
