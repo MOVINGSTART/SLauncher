@@ -14,8 +14,14 @@
       navHome: "홈",
       navFeatures: "주요 기능",
       navChangelog: "패치 내역",
+      navToolsMenu: "GRP · 채팅 기록",
       navGrpGuide: "GRP 적용법",
       navChatHistory: "채팅 기록",
+      navJumpOpen: "열기 →",
+      navCurrentBadge: "현재 페이지",
+      navChatSecConnect: "로컬 연결 · 폴더 불러오기",
+      navChatSecRooms: "날짜 · 참여 방 목록 탐색",
+      navChatSecViewer: "대화 뷰어 · 검색 및 TXT 저장",
       navOnlineFmt: "실시간 {online}명",
       navUsersFmt: "사용자 {users}명",
       navUserTooltipFmt: "현재 SLauncher 실시간 접속 {online}명 · 누적 사용자 {users}명",
@@ -355,8 +361,14 @@
       navHome: "Home",
       navFeatures: "Features",
       navChangelog: "Patch Notes",
+      navToolsMenu: "GRP · Chat Logs",
       navGrpGuide: "GRP Guide",
       navChatHistory: "Chat Logs",
+      navJumpOpen: "Open →",
+      navCurrentBadge: "Current",
+      navChatSecConnect: "Local Link · Folder Import",
+      navChatSecRooms: "Browse Dates & Joined Rooms",
+      navChatSecViewer: "Conversation Viewer · TXT Export",
       navOnlineFmt: "{online} Online",
       navUsersFmt: "{users} Users",
       navUserTooltipFmt: "{online} active SLauncher users online now · {users} cumulative users",
@@ -2051,6 +2063,59 @@
 
     loadFromLocalLauncher(false);
   }
+
+  // Bind SLauncher Helper-style expandable "GRP · Chat Logs" header dropdown
+  (function initNavToolsDropdown() {
+    var wrap = document.getElementById("nav-tools-dropdown");
+    var btn = document.getElementById("nav-tools-trigger");
+    var panel = document.getElementById("nav-tools-menu");
+    if (!wrap || !btn || !panel) return;
+
+    function setExpanded(open) {
+      var next = !!open;
+      wrap.classList.toggle("is-open", next);
+      btn.setAttribute("aria-expanded", next ? "true" : "false");
+      if (next) {
+        panel.removeAttribute("hidden");
+      } else {
+        panel.setAttribute("hidden", "");
+      }
+    }
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      setExpanded(panel.hasAttribute("hidden"));
+    });
+
+    panel.addEventListener("click", function (e) {
+      var link = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+      if (!link) return;
+      var href = link.getAttribute("href") || "";
+      setExpanded(false);
+      if (href.indexOf("#") === 0 && href.length > 1) {
+        var targetEl = document.getElementById(href.slice(1));
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          try { history.replaceState(null, "", href); } catch (_) {}
+        }
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!panel.hasAttribute("hidden") && !wrap.contains(e.target)) {
+        setExpanded(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !panel.hasAttribute("hidden")) {
+        setExpanded(false);
+        btn.focus();
+      }
+    });
+  })();
 
   applyLanguage(currentLang);
   initChatHistoryPage();
