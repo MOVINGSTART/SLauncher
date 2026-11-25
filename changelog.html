@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.737" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -68,7 +68,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.737</span>
+              <span id="hero-version">v0.6.738</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -79,11 +79,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.737</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.738</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">36</strong>
+              <strong id="cl-total-count" class="cl-stat-val">37</strong>
             </div>
           </div>
         </div>
@@ -129,9 +129,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-737" class="cl-ver-link active" data-target-ver="v0.6.737">
-                <span class="cl-ver-name">v0.6.737</span>
+              <a href="#ver-v0-6-738" class="cl-ver-link active" data-target-ver="v0.6.738">
+                <span class="cl-ver-name">v0.6.738</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-737" class="cl-ver-link" data-target-ver="v0.6.737">
+                <span class="cl-ver-name">v0.6.737</span>
+                <span class="cl-ver-mini-date">11.25</span>
               </a>
               <a href="#ver-v0-6-736" class="cl-ver-link" data-target-ver="v0.6.736">
                 <span class="cl-ver-name">v0.6.736</span>
@@ -276,13 +280,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.737/SLauncher-0.6.737-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.738/SLauncher-0.6.738-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.737 다운로드</span>
+                <span id="btn-download-label">v0.6.738 다운로드</span>
               </a>
             </div>
           </div>
@@ -298,12 +302,33 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.737 (Latest) -->
-            <article id="ver-v0-6-737" class="patch-card patch-card-latest" data-patch-ver="v0.6.737">
+            <!-- v0.6.738 (Latest) -->
+            <article id="ver-v0-6-738" class="patch-card patch-card-latest" data-patch-ver="v0.6.738">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.738</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-25">2026.11.25</time>
+              </div>
+              <p class="patch-summary" data-i18n="p738Summary">멀티 런처 환경에서 오버레이 시계·상단 HUD·인게임 핵 감지기 안내 문구 미표시 완벽 수정 및 해상도 전환 재정렬 개선</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p738Item1">바탕화면에 외부 멀티 런처(scr-multi-launcher 등)가 열려 있거나 StarCraft_SL.exe 파일이 남아 있는 환경에서 일반 스타크래프트 리마스터(StarCraft.exe) 실행 시 타 런처 프로세스로 오판해 연결이 건너뛰어지던 현상을 해결하고, 솔로 커스텀 방·싱글플레이 진입 시에도 『[s런처] 핵 감지기 사용중 입니다.』 인게임 안내 문구와 상단 HUD·오버레이 시계가 즉시 정상 출력되도록 수정했습니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p738Item2">오버레이 디지털 시계(YYYY/MM/DD HH:MM:SS)에 외곽 그림자 렌더링과 즉시 리페인트를 적용해 밝은 배경에서도 선명하게 보이도록 개선했으며, 창 모드와 전체 화면(창 모드) 전환·해상도 변경 시 시계 우측 여백과 화면 좌표를 실시간 추적하여 정확한 위치에 유지되도록 보강했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.737 -->
+            <article id="ver-v0-6-737" class="patch-card" data-patch-ver="v0.6.737">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.737</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-25">2026.11.25</time>
               </div>
@@ -1193,6 +1218,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.737"></script>
+  <script src="./assets/js/main.js?v=0.6.738"></script>
 </body>
 </html>
