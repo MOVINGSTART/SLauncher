@@ -4030,3 +4030,20 @@ body {
   min-width: 52px;
   text-align: right;
 }
+
+
+.fs-quick-cards-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.clan-status-pill.is-bot-on {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+@media (max-width: 900px) {
+  .fs-quick-cards-3 {
+    grid-template-columns: 1fr;
+  }
+}
