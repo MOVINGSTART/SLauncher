@@ -30,7 +30,7 @@
       csHeaderTitle: "SLauncher 채널 서비스 관리 시스템",
       csHeaderSub: "서버 클랜 및 Op 채널 서비스 봇을 관리할 수 있는 페이지 입니다",
       csAuthGuestBadge: "배틀넷 미로그인",
-      csAuthUserFmt: "Battle.net · {user} (UI 프리뷰)",
+      csAuthUserFmt: "Battle.net · {user} (앱 연동됨)",
       csTabMain: "메인",
       csTabLogin: "배틀넷 로그인",
       csTabLogout: "로그아웃",
@@ -57,19 +57,49 @@
       csMainLockDesc: "배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 채널, 채널 검색, 클랜 목록 탭을 열 수 있습니다.",
       csGotoLoginBtn: "배틀넷 로그인하기",
       csMainWelcomeSuffix: "님 환영합니다!",
-      csMainAuthedLine2: "채널 서비스 관리 시스템에 성공적으로 로그인 되었습니다. (UI 미리보기 모드)",
+      csMainAuthedLine2: "실제 Battle.net 데스크톱 앱 계정으로 채널 서비스 관리 시스템에 로그인 되었습니다. 상단 탭 또는 아래 바로가기를 선택하세요.",
       csQuickMyTitle: "나의 채널 바로가기 →",
       csQuickMyDesc: "내 Op 클랜 채널 정보 · 클랜장(BLIZZARD) / 부마·옵(b.net) / 보이스(나팔) 목록 UI 확인",
       csQuickSearchTitle: "채널 검색 바로가기 →",
       csQuickSearchDesc: "등록된 Op 클랜 채널 검색 및 클랜별 마스터·인원 현황 테이블 UI 확인",
-      csLoginHeading: "배틀넷 로그인",
-      csLoginSub: "배틀넷(Battle.net) 로그인을 해야만 『나의 채널』 · 『채널 검색』 · 『클랜 목록』을 열 수 있습니다.",
+      csLoginHeading: "Battle.net 데스크톱 앱 연동 로그인",
+      csLoginSub: "임의 입력이 아닌 내 PC에 실행 중인 실제 Blizzard Battle.net 데스크톱 앱의 로그인 계정을 인식하여 연동합니다.",
       csLoginLabelTag: "배틀태그 (계정)",
       csLoginTagPh: "배틀태그 입력 (예: START#3124)",
       csLoginLabelMethod: "인증 방식",
       csLoginMethodVal: "Blizzard Battle.net 공식 계정 연동 (공개 예정 — 현재 UI 프리뷰)",
-      csDoBnetLoginBtn: "배틀넷 로그인 (UI 미리보기)",
-      csLoginHint: "※ 실제 서버 인증 연동 전 단계이며, 위에 임의의 배틀태그를 입력하고 로그인 버튼을 누르면 잠겨 있는 『나의 채널 / 채널 검색 / 클랜 목록』 UI를 확인하실 수 있습니다.",
+      csDoBnetLoginBtn: "Battle.net 앱으로 로그인",
+      csLoginHint: "※ 임의 배틀태그 입력은 지원하지 않으며, 내 PC에서 실행 중인 SLauncher 로컬 브리지(127.0.0.1:53891)를 통해 실제 로그인된 Battle.net 데스크톱 앱 계정만 인증됩니다.",
+      csDiagBridgeLabel: "SLauncher 로컬 브리지",
+      csDiagBridgeChecking: "연결 확인 중…",
+      csDiagBridgeOk: "연결됨 (127.0.0.1:53891)",
+      csDiagBridgeOff: "미실행 (SLauncher 실행 필요)",
+      csDiagBnetLabel: "Battle.net 데스크톱 앱",
+      csDiagBnetWaiting: "브리지 연결 대기",
+      csDiagBnetClosed: "미실행 (앱 실행 필요)",
+      csDiagBnetNeedLogin: "실행 중 · 로그인 필요",
+      csDiagBnetReadyFmt: "로그인됨 · {user}",
+      csDetectedAcctLabel: "감지된 실제 Battle.net 계정",
+      csDetectedMetaOnlineFmt: "Account #{id} · BGS 온라인",
+      csDetectedMetaLocalFmt: "Account #{id} · 앱 실행 중",
+      csLoginLiveInit: "Battle.net 데스크톱 앱에 로그인한 상태에서 SLauncher를 실행한 뒤 아래 [Battle.net 앱으로 로그인] 버튼을 눌러 주세요.",
+      csLoginLiveBridgeOff: "내 PC에서 SLauncher가 실행 중이지 않습니다. SLauncher와 Battle.net 앱을 실행한 뒤 [Battle.net 앱으로 로그인]을 눌러 주세요.",
+      csLoginLiveBnetClosed: "SLauncher 브리지는 연결되었으나 Battle.net 데스크톱 앱이 꺼져 있습니다. [Battle.net 앱 열기] 또는 로그인 버튼을 눌러 앱을 실행해 주세요.",
+      csLoginLiveBnetLoggedOut: "Battle.net 데스크톱 앱이 켜져 있으나 아직 계정에 로그인되지 않았습니다. Battle.net 앱에서 로그인한 뒤 다시 눌러 주세요.",
+      csLoginLiveReadyFmt: "실행 중인 Battle.net 앱 계정({user})이 확인되었습니다. 아래 [Battle.net 앱으로 로그인] 버튼을 누르면 잠긴 메뉴가 열립니다.",
+      csLoginLiveWaitingBridge: "SLauncher 및 Battle.net 데스크톱 앱 연결을 실시간 대기 중입니다… PC에서 SLauncher와 Battle.net 앱을 켜고 로그인하면 자동으로 완료됩니다.",
+      csLoginLiveWaitingApp: "Battle.net 데스크톱 앱 로그인 대기 중입니다… 앱 화면에서 본인 계정으로 로그인하면 자동으로 연동됩니다.",
+      csWaitingBnetBtn: "Battle.net 앱 연결 대기 중… (클릭 시 대기 취소)",
+      csOpenBnetAppBtn: "Battle.net 앱 열기",
+      csRefreshBnetBtn: "연결 상태 새로고침",
+      csDownloadLauncherBtn: "SLauncher 다운로드",
+      csLoginSuccessToastFmt: "Battle.net 데스크톱 앱({user}) 연동 로그인이 완료되었습니다.",
+      csWaitBridgeToast: "PC에서 SLauncher와 Battle.net 앱을 실행해 주세요. 연결 시 자동 로그인됩니다.",
+      csWaitBnetToast: "Battle.net 앱을 열었습니다. 앱에서 로그인하면 자동 연동됩니다.",
+      csWaitCancelToast: "Battle.net 앱 연결 대기를 취소했습니다.",
+      csWaitTimeoutToast: "Battle.net 앱 로그인 대기 시간이 만료되었습니다. 앱 로그인 후 다시 눌러 주세요.",
+      csAutoLogoutToast: "Battle.net 데스크톱 앱 연결이 종료되어 자동 로그아웃 되었습니다.",
+      csStatusRefreshedToast: "로컬 Battle.net 앱 연동 상태를 갱신했습니다.",
       csMyHeading: "나의 채널 관리",
       csMySub: "내 클랜 전용 Op 채널 개설 정보와 채널 권한(BLIZZARD · b.net · 보이스 나팔)을 관리하는 기본 UI 틀입니다.",
       csMyInfoTitle: "Op 클랜 채널 기본 설정",
@@ -92,7 +122,7 @@
       csSampleTopic1: "SLauncher 공식 클랜 채널 예시",
       csSampleTopic2: "1.16.1 피쉬서버 감성 매너 내전 클랜",
       csSampleTopic3: "헌터 · 빨무 팀플 유저 환영",
-      csFooterRight: "배틀넷 로그인 연동 및 실제 채널 봇 기능 공개 예정",
+      csFooterRight: "Battle.net 데스크톱 앱 실연동 적용 · 채널 봇 서버 기능 공개 예정",
       csClanListTitle: "등록된 클랜 이름 목록",
       csClanListSub: "배틀넷 로그인 사용자에게 공개되는 전체 클랜 이름 및 전용 Op 채널 목록 예시입니다.",
       csClanListCount: "예시 5개 클랜",
@@ -114,7 +144,7 @@
       clanStatStateLabel: "현재 상태",
       clanStatStateVal: "공개 예정",
       clanSoonTag: "UI 미리보기",
-      clanSoonDesc: "『나의 채널』 및 『채널 검색』 탭은 배틀넷 로그인 후에 열리며, 현재는 화면 구성 확인용 UI 프리뷰만 동작하고 실제 클랜 개설·저장 서버 기능은 비활성 상태입니다.",
+      clanSoonDesc: "『나의 채널』 · 『채널 검색』 · 『클랜 목록』 탭은 PC에 실행 중인 실제 Battle.net 데스크톱 앱(SLauncher 로컬 연동) 로그인 시에만 열리며, 클랜 개설·저장 서버 기능은 추후 공개 예정입니다.",
       clanS1Title: "1.16.1 피쉬서버 인게임 『Op 클랜 채널』 기본 화면",
       clanPreviewOnlyBadge: "기능 미활성 · UI 틀",
       clanWinTitle: "Battle.net — Fish Server Style Op Channel (1.16.1 UI)",
@@ -523,7 +553,7 @@
       csHeaderTitle: "SLauncher Channel Service Management System",
       csHeaderSub: "Manage your clan and dedicated Op channel service bot on this page",
       csAuthGuestBadge: "Battle.net Not Signed In",
-      csAuthUserFmt: "Battle.net · {user} (UI Preview)",
+      csAuthUserFmt: "Battle.net · {user} (App Linked)",
       csTabMain: "Main",
       csTabLogin: "Battle.net Sign In",
       csTabLogout: "Sign Out",
@@ -550,19 +580,49 @@
       csMainLockDesc: "Sign in with your Battle.net account first to unlock My Channel, Channel Search, and Clan List.",
       csGotoLoginBtn: "Sign in with Battle.net",
       csMainWelcomeSuffix: ", welcome!",
-      csMainAuthedLine2: "Successfully signed in to the Channel Service Management System. (UI Preview Mode)",
+      csMainAuthedLine2: "Signed in with your live Battle.net Desktop App account. Choose a tab above or use the shortcuts below.",
       csQuickMyTitle: "Open My Channel →",
       csQuickMyDesc: "Preview your Op clan channel settings and BLIZZARD / b.net / Voice horn member list UI",
       csQuickSearchTitle: "Open Channel Search →",
       csQuickSearchDesc: "Preview the registered Op clan channel directory and master/member status table UI",
-      csLoginHeading: "System Sign In (Battle.net)",
-      csLoginSub: "Battle.net sign-in is required to open 'My Channel', 'Channel Search', and 'Clan List'.",
+      csLoginHeading: "Battle.net Desktop App Sign-In",
+      csLoginSub: "Links directly to the real Blizzard Battle.net Desktop App account running on your PC — arbitrary manual input is disabled.",
       csLoginLabelTag: "BattleTag (Account)",
       csLoginTagPh: "e.g. START#3124",
       csLoginLabelMethod: "Auth Method",
       csLoginMethodVal: "Official Blizzard Battle.net OAuth Link (Coming Soon — UI Preview)",
-      csDoBnetLoginBtn: "Sign in with Battle.net (Unlock UI Preview)",
-      csLoginHint: "* Live OAuth server authentication is not yet active; clicking this button previews the unlocked 'My Channel' and 'Channel Search' UI.",
+      csDoBnetLoginBtn: "Sign in with Battle.net App",
+      csLoginHint: "* Arbitrary BattleTag text input is disabled. Only a real signed-in Battle.net Desktop App session verified via the local SLauncher bridge (127.0.0.1:53891) is accepted.",
+      csDiagBridgeLabel: "SLauncher Local Bridge",
+      csDiagBridgeChecking: "Checking…",
+      csDiagBridgeOk: "Connected (127.0.0.1:53891)",
+      csDiagBridgeOff: "Not Running (Launch SLauncher)",
+      csDiagBnetLabel: "Battle.net Desktop App",
+      csDiagBnetWaiting: "Waiting for Bridge",
+      csDiagBnetClosed: "Closed (Launch App)",
+      csDiagBnetNeedLogin: "Running · Sign-In Needed",
+      csDiagBnetReadyFmt: "Signed In · {user}",
+      csDetectedAcctLabel: "Detected Live Battle.net Account",
+      csDetectedMetaOnlineFmt: "Account #{id} · BGS Online",
+      csDetectedMetaLocalFmt: "Account #{id} · App Running",
+      csLoginLiveInit: "Sign in to the Battle.net Desktop App and run SLauncher on your PC, then click [Sign in with Battle.net App] below.",
+      csLoginLiveBridgeOff: "SLauncher is not currently running on this PC. Launch SLauncher and the Battle.net App, then click [Sign in with Battle.net App].",
+      csLoginLiveBnetClosed: "Connected to SLauncher, but the Battle.net Desktop App is closed. Click [Open Battle.net App] or the sign-in button to launch it.",
+      csLoginLiveBnetLoggedOut: "Battle.net Desktop App is open, but no account is signed in yet. Sign in inside the Battle.net App and try again.",
+      csLoginLiveReadyFmt: "Live Battle.net App account ({user}) detected. Click [Sign in with Battle.net App] below to unlock all menus.",
+      csLoginLiveWaitingBridge: "Waiting for local SLauncher & Battle.net Desktop App… Launch SLauncher and sign in to Battle.net on your PC to connect automatically.",
+      csLoginLiveWaitingApp: "Waiting for Battle.net Desktop App sign-in… Sign in inside the Battle.net App to complete linking automatically.",
+      csWaitingBnetBtn: "Waiting for Battle.net App… (Click to Cancel)",
+      csOpenBnetAppBtn: "Open Battle.net App",
+      csRefreshBnetBtn: "Refresh Status",
+      csDownloadLauncherBtn: "Download SLauncher",
+      csLoginSuccessToastFmt: "Linked with Battle.net Desktop App ({user}).",
+      csWaitBridgeToast: "Please run SLauncher and Battle.net App on your PC. Sign-in will complete automatically.",
+      csWaitBnetToast: "Opening Battle.net App. Sign in there to link automatically.",
+      csWaitCancelToast: "Cancelled waiting for Battle.net App.",
+      csWaitTimeoutToast: "Timed out waiting for Battle.net App sign-in. Please try again after signing in.",
+      csAutoLogoutToast: "Signed out automatically because the Battle.net Desktop App session ended.",
+      csStatusRefreshedToast: "Refreshed local Battle.net App connection status.",
       csMyHeading: "My Channel Management",
       csMySub: "Basic UI shell for configuring your dedicated Op clan channel and assigning BLIZZARD / b.net / Voice horn roles.",
       csMyInfoTitle: "Op Clan Channel Settings",
@@ -585,7 +645,7 @@
       csSampleTopic1: "SLauncher official sample clan channel",
       csSampleTopic2: "Classic 1.16.1 Fish Server in-house clan",
       csSampleTopic3: "Hunters & Big Game Hunters teamplay clan",
-      csFooterRight: "Battle.net OAuth & live channel bot integration coming soon",
+      csFooterRight: "Live Battle.net Desktop App link active · Channel bot server coming soon",
       csClanListTitle: "Registered Clan Name List",
       csClanListSub: "Sample directory of registered clan names and dedicated Op channels visible after Battle.net sign-in.",
       csClanListCount: "5 Sample Clans",
@@ -607,7 +667,7 @@
       clanStatStateLabel: "Current Status",
       clanStatStateVal: "Coming Soon",
       clanSoonTag: "UI Preview",
-      clanSoonDesc: "All buttons and inputs on this page are disabled preview shells showcasing the classic 1.16.1 Fish Server clan layout — live server and clan actions are not yet active.",
+      clanSoonDesc: "'My Channel', 'Channel Search', and 'Clan List' unlock only after signing in via your live Battle.net Desktop App (through local SLauncher), while clan creation/server actions remain coming soon.",
       clanS1Title: "Classic 1.16.1 Fish Server 'Op Clan Channel' Layout",
       clanPreviewOnlyBadge: "Inactive · UI Shell",
       clanWinTitle: "Battle.net — Fish Server Style Op Channel (1.16.1 UI)",
@@ -2418,7 +2478,7 @@
 
   var refreshClanSystemI18n = null;
 
-  // Fish Server Style Clan System UI Preview (메인 / 나의 채널 / 채널 검색 + Battle.net Login Gate)
+  // Fish Server Style Clan System UI + Real Local Battle.net Desktop App Link (127.0.0.1:53891/bnet-self)
   function initClanSystemPreview() {
     var root = document.getElementById("fs-clan-sys-app");
     if (!root) return;
@@ -2426,8 +2486,20 @@
     var state = {
       authed: false,
       userTag: "",
+      userToon: "",
+      accountId: 0,
+      bgsConnected: false,
       activeTab: "main",
-      pendingTab: ""
+      pendingTab: "",
+      bridgeState: "checking", // "checking" | "online" | "offline"
+      probeBnetRunning: false,
+      probeLoggedIn: false,
+      probeBattleTag: "",
+      probeAccountId: 0,
+      probeBgsConnected: false,
+      waitingLogin: false,
+      waitingMode: "", // "bridge" | "bnet"
+      waitingStartedAt: 0
     };
 
     var tabMain = document.getElementById("cs-tab-main");
@@ -2450,13 +2522,28 @@
     var mainAuthed = document.getElementById("cs-main-authed");
     var welcomeUser = document.getElementById("cs-welcome-user");
     var masterDisplay = document.getElementById("cs-my-master-display");
+    var masterRowName = document.getElementById("cs-my-master-row-name");
     var authPill = document.getElementById("cs-auth-status-pill");
     var authText = document.getElementById("cs-auth-status-text");
     var gateAlert = document.getElementById("cs-gate-alert");
-    var btagInput = document.getElementById("cs-btag-input");
     var gotoLoginBtn = document.getElementById("cs-goto-login-btn");
     var doLoginBtn = document.getElementById("cs-do-bnet-login");
+    var doLoginLabel = document.getElementById("cs-do-bnet-login-label");
+    var openBnetBtn = document.getElementById("cs-open-bnet-app");
+    var refreshBnetBtn = document.getElementById("cs-refresh-bnet-status");
     var openClanSysBtn = document.getElementById("bnet116-open-clansys");
+
+    var diagBridgeDot = document.getElementById("cs-diag-bridge-dot");
+    var diagBridgePill = document.getElementById("cs-diag-bridge-pill");
+    var diagBnetDot = document.getElementById("cs-diag-bnet-dot");
+    var diagBnetPill = document.getElementById("cs-diag-bnet-pill");
+    var detectedBox = document.getElementById("cs-detected-acct-box");
+    var detectedBtag = document.getElementById("cs-detected-btag");
+    var detectedMeta = document.getElementById("cs-detected-meta");
+    var liveMsg = document.getElementById("cs-login-live-msg");
+
+    var waitTimer = null;
+    var probeInFlight = false;
 
     function isProtectedTab(t) {
       return t === "my-channel" || t === "search" || t === "clan-list";
@@ -2464,6 +2551,113 @@
 
     function dict() {
       return I18N[currentLang] || I18N.ko;
+    }
+
+    function launchBattleNetProtocol() {
+      try {
+        var a = document.createElement("a");
+        a.href = "battlenet://";
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+          if (a.parentNode) a.parentNode.removeChild(a);
+        }, 300);
+      } catch (_) {}
+    }
+
+    function stopWaitingLogin() {
+      state.waitingLogin = false;
+      state.waitingMode = "";
+      state.waitingStartedAt = 0;
+      if (waitTimer) {
+        clearInterval(waitTimer);
+        waitTimer = null;
+      }
+    }
+
+    function renderDiagnostics() {
+      var d = dict();
+
+      if (diagBridgeDot && diagBridgePill) {
+        if (state.bridgeState === "online") {
+          diagBridgeDot.setAttribute("data-st", "ok");
+          diagBridgePill.setAttribute("data-st", "ok");
+          diagBridgePill.textContent = d.csDiagBridgeOk;
+        } else if (state.bridgeState === "offline") {
+          diagBridgeDot.setAttribute("data-st", "err");
+          diagBridgePill.setAttribute("data-st", "err");
+          diagBridgePill.textContent = d.csDiagBridgeOff;
+        } else {
+          diagBridgeDot.setAttribute("data-st", "checking");
+          diagBridgePill.setAttribute("data-st", "checking");
+          diagBridgePill.textContent = d.csDiagBridgeChecking;
+        }
+      }
+
+      if (diagBnetDot && diagBnetPill) {
+        if (state.bridgeState !== "online") {
+          diagBnetDot.setAttribute("data-st", "checking");
+          diagBnetPill.setAttribute("data-st", "checking");
+          diagBnetPill.textContent = d.csDiagBnetWaiting;
+        } else if (state.probeLoggedIn && state.probeBattleTag) {
+          diagBnetDot.setAttribute("data-st", "ok");
+          diagBnetPill.setAttribute("data-st", "ok");
+          diagBnetPill.textContent = (d.csDiagBnetReadyFmt || "{user}").replace("{user}", state.probeBattleTag);
+        } else if (state.probeBnetRunning) {
+          diagBnetDot.setAttribute("data-st", "warn");
+          diagBnetPill.setAttribute("data-st", "warn");
+          diagBnetPill.textContent = d.csDiagBnetNeedLogin;
+        } else {
+          diagBnetDot.setAttribute("data-st", "err");
+          diagBnetPill.setAttribute("data-st", "err");
+          diagBnetPill.textContent = d.csDiagBnetClosed;
+        }
+      }
+
+      if (detectedBox && detectedBtag && detectedMeta) {
+        if (state.bridgeState === "online" && state.probeLoggedIn && state.probeBattleTag) {
+          detectedBox.classList.remove("hidden");
+          detectedBtag.textContent = state.probeBattleTag;
+          var metaTpl = state.probeBgsConnected ? d.csDetectedMetaOnlineFmt : d.csDetectedMetaLocalFmt;
+          detectedMeta.textContent = String(metaTpl || "").replace("{id}", String(state.probeAccountId || 0));
+        } else {
+          detectedBox.classList.add("hidden");
+          detectedBtag.textContent = "—";
+          detectedMeta.textContent = "";
+        }
+      }
+
+      if (doLoginBtn && doLoginLabel) {
+        doLoginBtn.classList.toggle("is-waiting", state.waitingLogin);
+        doLoginLabel.textContent = state.waitingLogin ? d.csWaitingBnetBtn : d.csDoBnetLoginBtn;
+      }
+
+      if (liveMsg) {
+        if (state.waitingLogin) {
+          liveMsg.setAttribute("data-tone", "wait");
+          liveMsg.textContent = state.waitingMode === "bridge"
+            ? d.csLoginLiveWaitingBridge
+            : d.csLoginLiveWaitingApp;
+        } else if (state.bridgeState === "offline") {
+          liveMsg.setAttribute("data-tone", "warn");
+          liveMsg.textContent = d.csLoginLiveBridgeOff;
+        } else if (state.bridgeState === "online") {
+          if (state.probeLoggedIn && state.probeBattleTag) {
+            liveMsg.setAttribute("data-tone", "ready");
+            liveMsg.textContent = (d.csLoginLiveReadyFmt || "{user}").replace("{user}", state.probeBattleTag);
+          } else if (state.probeBnetRunning) {
+            liveMsg.setAttribute("data-tone", "warn");
+            liveMsg.textContent = d.csLoginLiveBnetLoggedOut;
+          } else {
+            liveMsg.setAttribute("data-tone", "warn");
+            liveMsg.textContent = d.csLoginLiveBnetClosed;
+          }
+        } else {
+          liveMsg.setAttribute("data-tone", "info");
+          liveMsg.textContent = d.csLoginLiveInit;
+        }
+      }
     }
 
     function renderClanSystem() {
@@ -2512,8 +2706,179 @@
 
       if (mainGuest) mainGuest.classList.toggle("hidden", state.authed);
       if (mainAuthed) mainAuthed.classList.toggle("hidden", !state.authed);
-      if (welcomeUser) welcomeUser.textContent = state.userTag;
-      if (masterDisplay) masterDisplay.value = state.authed ? (state.userTag + " (SL]Master)") : "";
+      if (welcomeUser) {
+        welcomeUser.textContent = state.userToon
+          ? (state.userToon + " (" + state.userTag + ")")
+          : state.userTag;
+      }
+      if (masterDisplay) {
+        if (state.authed) {
+          var acctPart = state.accountId ? (" · Account #" + state.accountId) : "";
+          var toonPart = state.userToon ? (" · " + state.userToon) : "";
+          masterDisplay.value = state.userTag + toonPart + acctPart;
+        } else {
+          masterDisplay.value = "";
+        }
+      }
+      if (masterRowName) {
+        masterRowName.textContent = state.authed
+          ? (state.userToon || state.userTag)
+          : "SL]Master";
+      }
+
+      renderDiagnostics();
+    }
+
+    function enrichSelfToonOptional(expectedTag) {
+      fetch(LOCAL_CHAT_API_BASE + "/api/chat/directories", {
+        cache: "no-store",
+        targetAddressSpace: "local"
+      })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !data.ok || !state.authed || state.userTag !== expectedTag) return;
+          var tn = String(data.selfToon || "").trim();
+          if (tn && tn !== state.userToon) {
+            state.userToon = tn;
+            renderClanSystem();
+          }
+        })
+        .catch(function () {});
+    }
+
+    function completeRealBattleNetLogin() {
+      stopWaitingLogin();
+      state.userTag = state.probeBattleTag;
+      state.accountId = state.probeAccountId;
+      state.bgsConnected = state.probeBgsConnected;
+      state.userToon = "";
+      state.authed = true;
+      if (gateAlert) gateAlert.classList.add("hidden");
+      var next = state.pendingTab || "main";
+      state.pendingTab = "";
+      state.activeTab = next;
+      renderClanSystem();
+      showToast((dict().csLoginSuccessToastFmt || "{user}").replace("{user}", state.userTag));
+      enrichSelfToonOptional(state.userTag);
+    }
+
+    function probeLocalBattleNetApp(cb) {
+      if (probeInFlight) {
+        if (cb) cb(false);
+        return;
+      }
+      probeInFlight = true;
+
+      var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+      var timer = ctrl ? setTimeout(function () {
+        try { ctrl.abort(); } catch (_) {}
+      }, 2400) : null;
+
+      var opts = { cache: "no-store", targetAddressSpace: "local" };
+      if (ctrl) opts.signal = ctrl.signal;
+
+      fetch(LOCAL_CHAT_API_BASE + "/bnet-self", opts)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (timer) clearTimeout(timer);
+          probeInFlight = false;
+
+          if (!data || !data.ok) {
+            state.bridgeState = "offline";
+            state.probeBnetRunning = false;
+            state.probeLoggedIn = false;
+            state.probeBattleTag = "";
+            state.probeAccountId = 0;
+            state.probeBgsConnected = false;
+            renderDiagnostics();
+            if (cb) cb(false);
+            return;
+          }
+
+          var bnetRun = !!data.bnetRunning;
+          var acctId = Number(data.accountId) || 0;
+          var btag = String(data.battleTag || "").trim();
+          var bgsOk = !!data.bgsConnected;
+          var realLoggedIn = !!(data.loggedIn && bnetRun && acctId > 0 && btag && btag.indexOf("#") > 0);
+
+          state.bridgeState = "online";
+          state.probeBnetRunning = bnetRun;
+          state.probeLoggedIn = realLoggedIn;
+          state.probeBattleTag = realLoggedIn ? btag : "";
+          state.probeAccountId = realLoggedIn ? acctId : 0;
+          state.probeBgsConnected = realLoggedIn && bgsOk;
+
+          // Keep active session strictly synchronized with real Battle.net Desktop App
+          if (state.authed) {
+            if (!realLoggedIn) {
+              state.authed = false;
+              state.userTag = "";
+              state.userToon = "";
+              state.accountId = 0;
+              state.bgsConnected = false;
+              state.pendingTab = "";
+              if (isProtectedTab(state.activeTab)) {
+                state.activeTab = "login";
+              }
+              renderClanSystem();
+              showToast(dict().csAutoLogoutToast);
+              if (cb) cb(false);
+              return;
+            } else if (state.userTag !== btag) {
+              state.userTag = btag;
+              state.accountId = acctId;
+              state.userToon = "";
+              renderClanSystem();
+              enrichSelfToonOptional(btag);
+            }
+          }
+
+          renderDiagnostics();
+          if (cb) cb(realLoggedIn);
+        })
+        .catch(function () {
+          if (timer) clearTimeout(timer);
+          probeInFlight = false;
+          state.bridgeState = "offline";
+          state.probeBnetRunning = false;
+          state.probeLoggedIn = false;
+          state.probeBattleTag = "";
+          state.probeAccountId = 0;
+          state.probeBgsConnected = false;
+          renderDiagnostics();
+          if (cb) cb(false);
+        });
+    }
+
+    function startWaitingForBattleNet(mode) {
+      stopWaitingLogin();
+      state.waitingLogin = true;
+      state.waitingMode = mode;
+      state.waitingStartedAt = Date.now();
+      renderDiagnostics();
+
+      waitTimer = setInterval(function () {
+        if (!state.waitingLogin) {
+          stopWaitingLogin();
+          return;
+        }
+        if (Date.now() - state.waitingStartedAt >= 180000) {
+          stopWaitingLogin();
+          renderDiagnostics();
+          showToast(dict().csWaitTimeoutToast);
+          return;
+        }
+        probeLocalBattleNetApp(function (ready) {
+          if (!state.waitingLogin) return;
+          if (ready) {
+            completeRealBattleNetLogin();
+          } else if (state.bridgeState === "online" && state.waitingMode === "bridge") {
+            state.waitingMode = "bnet";
+            launchBattleNetProtocol();
+            renderDiagnostics();
+          }
+        });
+      }, 1400);
     }
 
     function selectTab(target) {
@@ -2522,13 +2887,17 @@
         state.activeTab = "login";
         if (gateAlert) gateAlert.classList.remove("hidden");
         renderClanSystem();
+        probeLocalBattleNetApp();
         showToast(dict().csGateToast);
-        if (btagInput) btagInput.focus();
+        if (doLoginBtn) doLoginBtn.focus();
         return;
       }
       if (gateAlert) gateAlert.classList.add("hidden");
       state.activeTab = target;
       renderClanSystem();
+      if (target === "login") {
+        probeLocalBattleNetApp();
+      }
     }
 
     var tabBtns = root.querySelectorAll("[data-cs-tab]");
@@ -2551,44 +2920,63 @@
       gotoLoginBtn.addEventListener("click", function () {
         state.pendingTab = "";
         selectTab("login");
-        if (btagInput) btagInput.focus();
+        if (doLoginBtn) doLoginBtn.focus();
       });
     }
 
     if (doLoginBtn) {
       doLoginBtn.addEventListener("click", function () {
-        var raw = btagInput ? String(btagInput.value || "").trim() : "";
-        if (!raw) {
-          showToast(dict().csEnterTagToast);
-          if (btagInput) btagInput.focus();
+        if (state.waitingLogin) {
+          stopWaitingLogin();
+          renderDiagnostics();
+          showToast(dict().csWaitCancelToast);
           return;
         }
-        state.userTag = raw;
-        state.authed = true;
-        if (gateAlert) gateAlert.classList.add("hidden");
-        var next = state.pendingTab || "main";
-        state.pendingTab = "";
-        state.activeTab = next;
-        renderClanSystem();
+
+        probeLocalBattleNetApp(function (ready) {
+          if (ready) {
+            completeRealBattleNetLogin();
+            return;
+          }
+          if (state.bridgeState === "online") {
+            launchBattleNetProtocol();
+            startWaitingForBattleNet("bnet");
+            showToast(dict().csWaitBnetToast);
+          } else {
+            startWaitingForBattleNet("bridge");
+            showToast(dict().csWaitBridgeToast);
+          }
+        });
       });
     }
 
-    if (btagInput) {
-      btagInput.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" && doLoginBtn) {
-          e.preventDefault();
-          doLoginBtn.click();
-        }
+    if (openBnetBtn) {
+      openBnetBtn.addEventListener("click", function () {
+        launchBattleNetProtocol();
+        setTimeout(function () {
+          probeLocalBattleNetApp();
+        }, 1200);
+      });
+    }
+
+    if (refreshBnetBtn) {
+      refreshBnetBtn.addEventListener("click", function () {
+        probeLocalBattleNetApp(function () {
+          showToast(dict().csStatusRefreshedToast);
+        });
       });
     }
 
     if (btnLogout) {
       btnLogout.addEventListener("click", function () {
+        stopWaitingLogin();
         state.authed = false;
         state.userTag = "";
+        state.userToon = "";
+        state.accountId = 0;
+        state.bgsConnected = false;
         state.pendingTab = "";
         state.activeTab = "main";
-        if (btagInput) btagInput.value = "";
         if (gateAlert) gateAlert.classList.add("hidden");
         renderClanSystem();
         showToast(dict().csLogoutToast);
@@ -2605,8 +2993,28 @@
       });
     }
 
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden && (state.activeTab === "login" || state.authed || state.waitingLogin)) {
+        probeLocalBattleNetApp(function (ready) {
+          if (ready && state.waitingLogin) {
+            completeRealBattleNetLogin();
+          }
+        });
+      }
+    });
+
+    // Periodic live check when on login tab or while authenticated
+    setInterval(function () {
+      if (document.hidden || state.waitingLogin) return;
+      if (state.activeTab === "login" || state.authed) {
+        probeLocalBattleNetApp();
+      }
+    }, 5000);
+
     refreshClanSystemI18n = renderClanSystem;
     renderClanSystem();
+    // Pre-check local bridge status silently without auto-authenticating
+    probeLocalBattleNetApp();
   }
 
   applyLanguage(currentLang);
