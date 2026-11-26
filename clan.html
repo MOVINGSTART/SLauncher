@@ -10,7 +10,7 @@
   <meta property="og:description" content="피쉬서버 클랜 시스템(메인·나의 채널·채널 검색) 및 1.16.1 Op 채널 UI 레이아웃 미리보기입니다." />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-9" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-10" />
 </head>
 <body id="top" class="clan-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -211,7 +211,7 @@
             </div>
           </div>
 
-          <!-- Classic Fish Server Charcoal Nav Bar with Sky-Blue Active Tab -->
+          <!-- 5-Tab Bar: 메인 / 배틀넷 로그인(로그아웃) / 🔒나의 채널 / 🔒채널 검색 / 🔒클랜 목록 + 홈페이지로 돌아가기 -->
           <nav class="fs-sys-navbar" aria-label="클랜 시스템 메뉴">
             <button type="button" class="fs-nav-tab is-active" data-cs-tab="main" id="cs-tab-main">
               <span data-i18n="csTabMain">메인</span>
@@ -230,18 +230,22 @@
               <span class="fs-lock-ico" id="cs-lock-search" aria-hidden="true">🔒</span>
               <span data-i18n="csTabSearch">채널 검색</span>
             </button>
+            <button type="button" class="fs-nav-tab is-locked" data-cs-tab="clan-list" id="cs-tab-clan-list" aria-disabled="true">
+              <span class="fs-lock-ico" id="cs-lock-clan-list" aria-hidden="true">🔒</span>
+              <span data-i18n="csTabClanList">클랜 목록</span>
+            </button>
             <a href="./index.html" class="fs-nav-tab fs-nav-home-link" data-i18n="csTabBackHome">홈페이지로 돌아가기</a>
           </nav>
 
           <!-- Dynamic Body Area -->
           <div class="fs-sys-body">
-            <!-- Gate Warning Banner (shown when clicking 나의 채널 / 채널 검색 before Battle.net login) -->
+            <!-- Gate Warning Banner (shown when clicking 나의 채널 / 채널 검색 / 클랜 목록 before Battle.net login) -->
             <div class="fs-gate-alert hidden" id="cs-gate-alert" role="alert">
               <span class="fs-gate-badge" data-i18n="csGateBadge">접근 제한</span>
-              <span id="cs-gate-msg" data-i18n="csGateRequiredMsg">배틀넷(Battle.net) 로그인을 완료해야 『나의 채널』 및 『채널 검색』 메뉴를 사용할 수 있습니다.</span>
+              <span id="cs-gate-msg" data-i18n="csGateRequiredMsg">배틀넷(Battle.net) 로그인을 완료해야 『나의 채널』 · 『채널 검색』 · 『클랜 목록』 메뉴를 사용할 수 있습니다.</span>
             </div>
 
-            <!-- Panel 1: 메인 (Main — Logged-out vs Logged-in just like 10:07 vs 10:22) -->
+            <!-- Panel 1: 메인 (Main) -->
             <div class="fs-panel" id="cs-panel-main">
               <div id="cs-main-guest">
                 <p class="fs-main-line" data-i18n="csMainGuestLine1">환영합니다. 이 웹 사이트는 SLauncher 클랜 및 채널 서비스 봇을 관리할 수 있는 페이지 입니다.</p>
@@ -249,8 +253,8 @@
 
                 <div class="fs-main-callout">
                   <div class="fs-main-callout-text">
-                    <strong data-i18n="csMainLockTitle">🔒 『나의 채널』 · 『채널 검색』 이용 안내</strong>
-                    <p data-i18n="csMainLockDesc">배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 클랜 채널 관리 및 전체 채널 검색 탭을 열 수 있습니다.</p>
+                    <strong data-i18n="csMainLockTitle">🔒 『나의 채널』 · 『채널 검색』 · 『클랜 목록』 이용 안내</strong>
+                    <p data-i18n="csMainLockDesc">배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 채널, 채널 검색, 클랜 목록 탭을 열 수 있습니다.</p>
                   </div>
                   <button type="button" class="fs-bnet-btn" id="cs-goto-login-btn">
                     <span class="fs-bnet-mark" aria-hidden="true">B</span>
@@ -260,154 +264,76 @@
               </div>
 
               <div id="cs-main-authed" class="hidden">
-                <p class="fs-main-welcome"><strong id="cs-welcome-user">START#3124</strong><span data-i18n="csMainWelcomeSuffix">님 환영합니다!</span></p>
-                <p class="fs-main-line" data-i18n="csMainAuthedLine2">채널 서비스 관리 시스템에 성공적으로 로그인 되었습니다. (UI 미리보기 모드)</p>
+                <p class="fs-main-welcome"><strong id="cs-welcome-user"></strong><span data-i18n="csMainWelcomeSuffix">님 환영합니다!</span></p>
+                <p class="fs-main-line" data-i18n="csMainAuthedLine2">채널 서비스 관리 시스템에 성공적으로 로그인 되었습니다. 상단 탭 또는 아래 바로가기를 선택하세요.</p>
 
-                <div class="fs-quick-cards">
+                <div class="fs-quick-cards fs-quick-cards-3">
                   <button type="button" class="fs-quick-card" data-cs-jump="my-channel">
                     <span class="fs-quick-kicker">MY CHANNEL</span>
-                    <strong data-i18n="csQuickMyTitle">나의 채널 바로가기 →</strong>
-                    <span data-i18n="csQuickMyDesc">내 Op 클랜 채널 정보 · 클랜장(BLIZZARD) / 부마·옵(b.net) / 보이스(나팔) 목록 UI 확인</span>
+                    <strong data-i18n="csQuickMyTitle">나의 채널 →</strong>
+                    <span data-i18n="csQuickMyDesc">내 Op 클랜 채널 설정 및 BLIZZARD · b.net · 나팔 권한 관리 틀</span>
                   </button>
                   <button type="button" class="fs-quick-card" data-cs-jump="search">
                     <span class="fs-quick-kicker">CHANNEL SEARCH</span>
-                    <strong data-i18n="csQuickSearchTitle">채널 검색 바로가기 →</strong>
-                    <span data-i18n="csQuickSearchDesc">등록된 Op 클랜 채널 검색 및 클랜별 마스터·인원 현황 테이블 UI 확인</span>
+                    <strong data-i18n="csQuickSearchTitle">채널 검색 →</strong>
+                    <span data-i18n="csQuickSearchDesc">Op 채널명·봇 상태·현재 접속 인원으로 채널 조회 UI 확인</span>
                   </button>
-                </div>
-
-                <!-- Logged-in Clan Name List (shown immediately upon Battle.net login) -->
-                <div class="fs-clan-list-box" id="cs-clan-name-list-box">
-                  <div class="fs-clan-list-head">
-                    <div>
-                      <h5 class="fs-clan-list-title" data-i18n="csClanListTitle">등록된 클랜 이름 목록</h5>
-                      <p class="fs-clan-list-sub" data-i18n="csClanListSub">배틀넷 로그인 사용자에게 공개되는 전체 클랜 이름 및 전용 Op 채널 목록 예시입니다.</p>
-                    </div>
-                    <span class="fs-clan-count-pill" data-i18n="csClanListCount">예시 5개 클랜</span>
-                  </div>
-
-                  <ul class="fs-clan-name-grid">
-                    <li class="fs-clan-name-item">
-                      <div class="fs-clan-name-main">
-                        <span class="clan-tag-pill">SL]</span>
-                        <strong class="fs-clan-title-text" data-i18n="csClanName1">SLauncher 공식 클랜</strong>
-                        <span class="fs-clan-op-code">Op SLauncher-</span>
-                      </div>
-                      <div class="fs-clan-name-meta">
-                        <span class="fs-master-cell">
-                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                          SL]Master
-                        </span>
-                        <span class="fs-clan-mem-cnt">24 / 50</span>
-                      </div>
-                    </li>
-                    <li class="fs-clan-name-item">
-                      <div class="fs-clan-name-main">
-                        <span class="clan-tag-pill">Fish]</span>
-                        <strong class="fs-clan-title-text" data-i18n="csClanName2">피쉬 클래식 116</strong>
-                        <span class="fs-clan-op-code">Op Fish116-</span>
-                      </div>
-                      <div class="fs-clan-name-meta">
-                        <span class="fs-master-cell">
-                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                          Fish]Leader
-                        </span>
-                        <span class="fs-clan-mem-cnt">18 / 50</span>
-                      </div>
-                    </li>
-                    <li class="fs-clan-name-item">
-                      <div class="fs-clan-name-main">
-                        <span class="clan-tag-pill">[NeOx]</span>
-                        <strong class="fs-clan-title-text" data-i18n="csClanName3">네옥스 클랜 (NeOx)</strong>
-                        <span class="fs-clan-op-code">Op NeOx-</span>
-                      </div>
-                      <div class="fs-clan-name-meta">
-                        <span class="fs-master-cell">
-                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                          [NeOx]What9
-                        </span>
-                        <span class="fs-clan-mem-cnt">31 / 50</span>
-                      </div>
-                    </li>
-                    <li class="fs-clan-name-item">
-                      <div class="fs-clan-name-main">
-                        <span class="clan-tag-pill">[Gg]</span>
-                        <strong class="fs-clan-title-text" data-i18n="csClanName4">GG 팀리그 클랜</strong>
-                        <span class="fs-clan-op-code">Op Ggclan-</span>
-                      </div>
-                      <div class="fs-clan-name-meta">
-                        <span class="fs-master-cell">
-                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                          [Gg]BYS
-                        </span>
-                        <span class="fs-clan-mem-cnt">19 / 50</span>
-                      </div>
-                    </li>
-                    <li class="fs-clan-name-item">
-                      <div class="fs-clan-name-main">
-                        <span class="clan-tag-pill">Kor]</span>
-                        <strong class="fs-clan-title-text" data-i18n="csClanName5">코리아 헌터즈</strong>
-                        <span class="fs-clan-op-code">Op KorHunter-</span>
-                      </div>
-                      <div class="fs-clan-name-meta">
-                        <span class="fs-master-cell">
-                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                          Kor]Templar
-                        </span>
-                        <span class="fs-clan-mem-cnt">12 / 50</span>
-                      </div>
-                    </li>
-                  </ul>
+                  <button type="button" class="fs-quick-card" data-cs-jump="clan-list">
+                    <span class="fs-quick-kicker">CLAN LIST</span>
+                    <strong data-i18n="csQuickListTitle">클랜 목록 →</strong>
+                    <span data-i18n="csQuickListDesc">전체 등록 클랜 이름 · 클랜 태그 · 클랜장 현황 목록 UI 확인</span>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Panel 2: 배틀넷 로그인 (System Login — 10:12 style adapted for Battle.net Login) -->
+            <!-- Panel 2: 배틀넷 로그인 (System Login — starts completely empty & unauthenticated) -->
             <div class="fs-panel hidden" id="cs-panel-login">
-              <h4 class="fs-panel-heading" data-i18n="csLoginHeading">시스템 로그인 (Battle.net)</h4>
-              <p class="fs-panel-sub" data-i18n="csLoginSub">배틀넷(Battle.net) 계정으로 로그인해야 『나의 채널』과 『채널 검색』을 이용할 수 있습니다.</p>
+              <h4 class="fs-panel-heading" data-i18n="csLoginHeading">배틀넷 로그인</h4>
+              <p class="fs-panel-sub" data-i18n="csLoginSub">배틀넷(Battle.net) 로그인을 해야만 『나의 채널』 · 『채널 검색』 · 『클랜 목록』을 열 수 있습니다.</p>
 
               <div class="fs-login-box">
                 <div class="fs-form-row">
-                  <label for="cs-btag-input" data-i18n="csLoginLabelTag">배틀태그 (계정)</label>
+                  <label for="cs-btag-input" data-i18n="csLoginLabelTag">배틀태그 (BattleTag)</label>
                   <input
                     type="text"
                     id="cs-btag-input"
                     class="fs-input"
-                    value="START#3124"
+                    value=""
                     maxlength="28"
+                    autocomplete="off"
                     data-i18n-placeholder="csLoginTagPh"
-                    placeholder="예: START#3124"
+                    placeholder="배틀태그 입력 (예: START#3124)"
                   />
                 </div>
                 <div class="fs-form-row">
-                  <label data-i18n="csLoginLabelMethod">인증 방식</label>
+                  <label data-i18n="csLoginLabelMethod">연동 방식</label>
                   <input
                     type="text"
                     class="fs-input"
                     disabled
                     data-i18n-value="csLoginMethodVal"
-                    value="Blizzard Battle.net 공식 계정 연동 (공개 예정 — 현재 UI 프리뷰)"
+                    value="Blizzard Battle.net 계정 연동 (공개 예정 — 현재 UI 미리보기)"
                   />
                 </div>
 
                 <div class="fs-login-actions">
                   <button type="button" class="fs-bnet-btn fs-bnet-btn-wide" id="cs-do-bnet-login">
                     <span class="fs-bnet-mark" aria-hidden="true">B</span>
-                    <span data-i18n="csDoBnetLoginBtn">배틀넷 로그인 (UI 미리보기 열기)</span>
+                    <span data-i18n="csDoBnetLoginBtn">배틀넷 로그인 (UI 미리보기)</span>
                   </button>
                 </div>
                 <p class="fs-login-hint" data-i18n="csLoginHint">
-                  ※ 현재 실제 서버 인증 기능은 연결 전이며, 버튼을 누르면 로그인 완료 후 활성화되는 『나의 채널』 · 『채널 검색』 UI 화면을 미리 둘러보실 수 있습니다.
+                  ※ 실제 서버 인증 연동 전 단계이며, 위에 임의의 배틀태그를 입력하고 로그인 버튼을 누르면 잠겨 있는 『나의 채널 / 채널 검색 / 클랜 목록』 UI를 확인하실 수 있습니다.
                 </p>
               </div>
             </div>
 
-            <!-- Panel 3: 나의 채널 (My Channel — Unlocked ONLY when logged in; inner actions disabled UI shell) -->
+            <!-- Panel 3: 나의 채널 (My Channel — Locked until Battle.net login) -->
             <div class="fs-panel hidden" id="cs-panel-my-channel">
               <div class="fs-panel-top-row">
                 <div>
-                  <h4 class="fs-panel-heading" data-i18n="csMyHeading">나의 채널 관리</h4>
+                  <h4 class="fs-panel-heading" data-i18n="csMyHeading">나의 채널</h4>
                   <p class="fs-panel-sub" data-i18n="csMySub">내 클랜 전용 Op 채널 개설 정보와 채널 권한(BLIZZARD · b.net · 보이스 나팔)을 관리하는 기본 UI 틀입니다.</p>
                 </div>
                 <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
@@ -428,8 +354,8 @@
                       </label>
                     </div>
                     <label class="clan-field">
-                      <span data-i18n="csMyFieldMaster">클랜장 (배틀넷 연동 계정)</span>
-                      <input type="text" id="cs-my-master-display" class="clan-mock-input" disabled value="START#3124 (SL]Master)" />
+                      <span data-i18n="csMyFieldMaster">클랜장 (배틀넷 로그인 계정)</span>
+                      <input type="text" id="cs-my-master-display" class="clan-mock-input" disabled value="" />
                     </label>
                     <label class="clan-field">
                       <span data-i18n="csMyFieldMotd">채널 환영 공지 (MOTD)</span>
@@ -484,12 +410,12 @@
               </div>
             </div>
 
-            <!-- Panel 4: 채널 검색 (Channel Search — Unlocked ONLY when logged in; inner actions disabled UI shell) -->
+            <!-- Panel 4: 채널 검색 (Channel Search — Locked until Battle.net login) -->
             <div class="fs-panel hidden" id="cs-panel-search">
               <div class="fs-panel-top-row">
                 <div>
-                  <h4 class="fs-panel-heading" data-i18n="csSearchHeading">클랜 채널 검색</h4>
-                  <p class="fs-panel-sub" data-i18n="csSearchSub">등록된 Op 클랜 채널과 클랜장·인원 현황을 조회하는 기본 검색 UI 틀입니다.</p>
+                  <h4 class="fs-panel-heading" data-i18n="csSearchHeading">채널 검색</h4>
+                  <p class="fs-panel-sub" data-i18n="csSearchSub">채널명(Op) 또는 채널 마스터 아이디로 활성 채널과 봇 상태를 검색하는 기본 UI 틀입니다.</p>
                 </div>
                 <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
               </div>
@@ -500,13 +426,76 @@
                   class="clan-mock-input"
                   disabled
                   data-i18n-placeholder="clanSearchPh"
-                  placeholder="채널명(예: Op SLauncher-) · 클랜 태그(SL]) · 클랜장 검색 (공개 예정)"
+                  placeholder="검색할 Op 채널명 입력 (예: Op SLauncher-, Op Fish116-) — 공개 예정"
                 />
                 <div class="clan-filter-group">
-                  <button type="button" class="clan-chip active" disabled data-i18n="clanFilterAll">전체 채널</button>
-                  <button type="button" class="clan-chip" disabled data-i18n="clanFilterOpen">가입 모집 중</button>
-                  <button type="button" class="clan-chip" disabled data-i18n="csSearchBtnLabel">검색 (예정)</button>
+                  <button type="button" class="clan-chip active" disabled data-i18n="csFilterAllChan">전체 채널</button>
+                  <button type="button" class="clan-chip" disabled data-i18n="csFilterBotOn">채널 봇 온라인</button>
+                  <button type="button" class="clan-chip" disabled data-i18n="csSearchBtnLabel">채널 검색 (예정)</button>
                 </div>
+              </div>
+
+              <div class="clan-table-wrap">
+                <table class="clan-table">
+                  <thead>
+                    <tr>
+                      <th data-i18n="csColChan">Op 채널명</th>
+                      <th data-i18n="csColBotState">채널 봇 상태</th>
+                      <th data-i18n="clanColMaster">채널 마스터</th>
+                      <th data-i18n="csColOnlineNow">현재 채널 인원</th>
+                      <th data-i18n="csColTopic">채널 공지 (MOTD)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong class="clan-row-chan-lg">Op SLauncher-</strong></td>
+                      <td><span class="clan-status-pill is-bot-on" data-i18n="csBotOnline">Op 봇 대기 (예정)</span></td>
+                      <td class="clan-mono">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          SL]Master
+                        </span>
+                      </td>
+                      <td class="clan-mono">8명</td>
+                      <td class="fs-topic-cell" data-i18n="csSampleTopic1">[공지] SLauncher 공식 클랜 채널 예시</td>
+                    </tr>
+                    <tr>
+                      <td><strong class="clan-row-chan-lg">Op Fish116-</strong></td>
+                      <td><span class="clan-status-pill is-bot-on" data-i18n="csBotOnline">Op 봇 대기 (예정)</span></td>
+                      <td class="clan-mono">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          Fish]Leader
+                        </span>
+                      </td>
+                      <td class="clan-mono">5명</td>
+                      <td class="fs-topic-cell" data-i18n="csSampleTopic2">[공지] 1.16.1 피쉬서버 감성 매너 내전 채널</td>
+                    </tr>
+                    <tr>
+                      <td><strong class="clan-row-chan-lg">Op NeOx-</strong></td>
+                      <td><span class="clan-status-pill is-bot-on" data-i18n="csBotOnline">Op 봇 대기 (예정)</span></td>
+                      <td class="clan-mono">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          [NeOx]What9
+                        </span>
+                      </td>
+                      <td class="clan-mono">11명</td>
+                      <td class="fs-topic-cell" data-i18n="csSampleTopic4">[공지] 밀리 · 래더 교류 및 스폰 내전 채널</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Panel 5: 클랜 목록 (Clan List — Dedicated 5th tab, Locked until Battle.net login!) -->
+            <div class="fs-panel hidden" id="cs-panel-clan-list">
+              <div class="fs-panel-top-row">
+                <div>
+                  <h4 class="fs-panel-heading" data-i18n="csClanListHeading">클랜 목록</h4>
+                  <p class="fs-panel-sub" data-i18n="csClanListSub">배틀넷 로그인 사용자에게 공개되는 등록 클랜 이름 · 태그 · 클랜장 및 인원 목록 기본 틀입니다.</p>
+                </div>
+                <span class="clan-preview-chip" data-i18n="clanPreviewOnlyBadge">기능 미활성 · UI 틀</span>
               </div>
 
               <div class="clan-table-wrap">
@@ -515,82 +504,82 @@
                     <tr>
                       <th data-i18n="csColClanName">클랜 이름</th>
                       <th data-i18n="clanColTag">태그</th>
-                      <th data-i18n="csColChan">Op 채널명</th>
+                      <th data-i18n="csColChan">전용 Op 채널</th>
                       <th data-i18n="clanColMaster">클랜장</th>
-                      <th data-i18n="clanColMembers">등록 / 접속</th>
-                      <th data-i18n="csColTopic">채널 소개</th>
-                      <th data-i18n="clanColAction">동작</th>
+                      <th data-i18n="clanColMembers">클랜원 수</th>
+                      <th data-i18n="clanColStatus">모집 상태</th>
+                      <th data-i18n="clanColAction">가입 신청</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><strong class="clan-row-name" data-i18n="csClanName1">SLauncher 공식 클랜</strong></td>
                       <td><span class="clan-tag-pill">SL]</span></td>
-                      <td><strong class="clan-row-chan-lg">Op SLauncher-</strong></td>
+                      <td><span class="fs-clan-op-code">Op SLauncher-</span></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                           SL]Master
                         </span>
                       </td>
-                      <td class="clan-mono">24명 (8명)</td>
-                      <td class="fs-topic-cell" data-i18n="csSampleTopic1">SLauncher 공식 클랜 채널 예시</td>
+                      <td class="clan-mono">24 / 50</td>
+                      <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
                       <td><strong class="clan-row-name" data-i18n="csClanName2">피쉬 클래식 116</strong></td>
                       <td><span class="clan-tag-pill">Fish]</span></td>
-                      <td><strong class="clan-row-chan-lg">Op Fish116-</strong></td>
+                      <td><span class="fs-clan-op-code">Op Fish116-</span></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                           Fish]Leader
                         </span>
                       </td>
-                      <td class="clan-mono">18명 (5명)</td>
-                      <td class="fs-topic-cell" data-i18n="csSampleTopic2">1.16.1 피쉬서버 감성 매너 내전 클랜</td>
+                      <td class="clan-mono">18 / 50</td>
+                      <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
                       <td><strong class="clan-row-name" data-i18n="csClanName3">네옥스 클랜 (NeOx)</strong></td>
                       <td><span class="clan-tag-pill">[NeOx]</span></td>
-                      <td><strong class="clan-row-chan-lg">Op NeOx-</strong></td>
+                      <td><span class="fs-clan-op-code">Op NeOx-</span></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                           [NeOx]What9
                         </span>
                       </td>
-                      <td class="clan-mono">31명 (11명)</td>
-                      <td class="fs-topic-cell" data-i18n="csSampleTopic4">밀리 · 래더 교류 및 스폰 내전 클랜</td>
+                      <td class="clan-mono">31 / 50</td>
+                      <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
                       <td><strong class="clan-row-name" data-i18n="csClanName4">GG 팀리그 클랜</strong></td>
                       <td><span class="clan-tag-pill">[Gg]</span></td>
-                      <td><strong class="clan-row-chan-lg">Op Ggclan-</strong></td>
+                      <td><span class="fs-clan-op-code">Op Ggclan-</span></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                           [Gg]BYS
                         </span>
                       </td>
-                      <td class="clan-mono">19명 (7명)</td>
-                      <td class="fs-topic-cell" data-i18n="csSampleTopic5">피쉬시리즈 감성 팀리그 · 내전 클랜</td>
+                      <td class="clan-mono">19 / 50</td>
+                      <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
                       <td><strong class="clan-row-name" data-i18n="csClanName5">코리아 헌터즈</strong></td>
                       <td><span class="clan-tag-pill">Kor]</span></td>
-                      <td><strong class="clan-row-chan-lg">Op KorHunter-</strong></td>
+                      <td><span class="fs-clan-op-code">Op KorHunter-</span></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
                           Kor]Templar
                         </span>
                       </td>
-                      <td class="clan-mono">12명 (3명)</td>
-                      <td class="fs-topic-cell" data-i18n="csSampleTopic3">헌터 · 빨무 팀플 유저 환영</td>
+                      <td class="clan-mono">12 / 50</td>
+                      <td><span class="clan-status-pill is-soon" data-i18n="clanSampleSoon">공개 예정</span></td>
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                   </tbody>
@@ -797,6 +786,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738-9"></script>
+  <script src="./assets/js/main.js?v=0.6.738-10"></script>
 </body>
 </html>
