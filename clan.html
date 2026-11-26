@@ -10,7 +10,7 @@
   <meta property="og:description" content="피쉬서버 클랜 시스템(메인·나의 채널·채널 검색) 및 1.16.1 Op 채널 UI 레이아웃 미리보기입니다." />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-8" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-9" />
 </head>
 <body id="top" class="clan-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -94,57 +94,29 @@
           </button>
 
           <div class="nav-tools-panel" id="nav-tools-menu" role="menu" hidden>
-            <div class="nav-tools-group">
-              <a href="./grp-guide.html" class="nav-tools-head nav-tools-head-grp" role="menuitem">
-                <span class="nav-tools-head-left">
-                  <span class="nav-tools-dot dot-grp" aria-hidden="true"></span>
-                  <span data-i18n="navGrpGuide">GRP 적용법</span>
-                </span>
-                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
-              </a>
-              <div class="nav-tools-sublist">
-                <a href="./grp-guide.html#step-overview" class="nav-tools-item" role="menuitem" data-i18n="grpNav1">01. 작동 원리 · 지원 형식</a>
-                <a href="./grp-guide.html#step-builder" class="nav-tools-item" role="menuitem" data-i18n="grpNav2">02. 999 Image ID 적용</a>
-                <a href="./grp-guide.html#step-folders" class="nav-tools-item" role="menuitem" data-i18n="grpNav3">03. 스킨 팩 폴더 적용</a>
-                <a href="./grp-guide.html#step-preview" class="nav-tools-item" role="menuitem" data-i18n="grpNav4">04. HD/SD 미리보기 · 삭제</a>
-                <a href="./grp-guide.html#step-ingame" class="nav-tools-item" role="menuitem" data-i18n="grpNav5">05. 인게임 확인 · 순정 복구</a>
-                <a href="./grp-guide.html#step-advanced" class="nav-tools-item" role="menuitem" data-i18n="grpNav6">06. 맵 내장 · 타일 · 보안</a>
-                <a href="./grp-guide.html#step-faq" class="nav-tools-item" role="menuitem" data-i18n="grpNav7">07. 문제 해결 (FAQ)</a>
-              </div>
-            </div>
+            <a href="./grp-guide.html" class="nav-tools-head nav-tools-head-grp" role="menuitem">
+              <span class="nav-tools-head-left">
+                <span class="nav-tools-dot dot-grp" aria-hidden="true"></span>
+                <span data-i18n="navGrpGuide">GRP 적용법</span>
+              </span>
+              <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+            </a>
 
-            <div class="nav-tools-divider" role="separator"></div>
+            <a href="./chat-history.html" class="nav-tools-head nav-tools-head-chat" role="menuitem">
+              <span class="nav-tools-head-left">
+                <span class="nav-tools-dot dot-chat" aria-hidden="true"></span>
+                <span data-i18n="navChatHistory">채팅 기록</span>
+              </span>
+              <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
+            </a>
 
-            <div class="nav-tools-group">
-              <a href="./chat-history.html" class="nav-tools-head nav-tools-head-chat" role="menuitem">
-                <span class="nav-tools-head-left">
-                  <span class="nav-tools-dot dot-chat" aria-hidden="true"></span>
-                  <span data-i18n="navChatHistory">채팅 기록</span>
-                </span>
-                <span class="nav-tools-go" data-i18n="navJumpOpen">열기 →</span>
-              </a>
-              <div class="nav-tools-sublist">
-                <a href="./chat-history.html#ch-connect" class="nav-tools-item" role="menuitem" data-i18n="navChatSecConnect">로컬 연결 · 폴더 불러오기</a>
-                <a href="./chat-history.html#ch-rooms" class="nav-tools-item" role="menuitem" data-i18n="navChatSecRooms">날짜 · 참여 방 목록 탐색</a>
-                <a href="./chat-history.html#ch-viewer" class="nav-tools-item" role="menuitem" data-i18n="navChatSecViewer">대화 뷰어 · 검색 및 TXT 저장</a>
-              </div>
-            </div>
-
-            <div class="nav-tools-divider" role="separator"></div>
-
-            <div class="nav-tools-group">
-              <a href="#top" class="nav-tools-head nav-tools-head-clan is-current" aria-current="page" role="menuitem">
-                <span class="nav-tools-head-left">
-                  <span class="nav-tools-dot dot-clan" aria-hidden="true"></span>
-                  <span data-i18n="navClanSoon">공개 예정(클랜)</span>
-                </span>
-                <span class="nav-tools-go" data-i18n="navCurrentBadge">현재 페이지</span>
-              </a>
-              <div class="nav-tools-sublist">
-                <a href="#clan-system" class="nav-tools-item" role="menuitem" data-i18n="navClanSecSystem">클랜 시스템 (메인 · 나의 채널 · 채널 검색)</a>
-                <a href="#clan-channel" class="nav-tools-item" role="menuitem" data-i18n="navClanSecChannel">1.16.1 Op 클랜 채널 화면</a>
-              </div>
-            </div>
+            <a href="#top" class="nav-tools-head nav-tools-head-clan is-current" aria-current="page" role="menuitem">
+              <span class="nav-tools-head-left">
+                <span class="nav-tools-dot dot-clan" aria-hidden="true"></span>
+                <span data-i18n="navClanSoon">공개 예정(클랜)</span>
+              </span>
+              <span class="nav-tools-go" data-i18n="navCurrentBadge">현재 페이지</span>
+            </a>
           </div>
         </div>
 
@@ -303,6 +275,90 @@
                     <span data-i18n="csQuickSearchDesc">등록된 Op 클랜 채널 검색 및 클랜별 마스터·인원 현황 테이블 UI 확인</span>
                   </button>
                 </div>
+
+                <!-- Logged-in Clan Name List (shown immediately upon Battle.net login) -->
+                <div class="fs-clan-list-box" id="cs-clan-name-list-box">
+                  <div class="fs-clan-list-head">
+                    <div>
+                      <h5 class="fs-clan-list-title" data-i18n="csClanListTitle">등록된 클랜 이름 목록</h5>
+                      <p class="fs-clan-list-sub" data-i18n="csClanListSub">배틀넷 로그인 사용자에게 공개되는 전체 클랜 이름 및 전용 Op 채널 목록 예시입니다.</p>
+                    </div>
+                    <span class="fs-clan-count-pill" data-i18n="csClanListCount">예시 5개 클랜</span>
+                  </div>
+
+                  <ul class="fs-clan-name-grid">
+                    <li class="fs-clan-name-item">
+                      <div class="fs-clan-name-main">
+                        <span class="clan-tag-pill">SL]</span>
+                        <strong class="fs-clan-title-text" data-i18n="csClanName1">SLauncher 공식 클랜</strong>
+                        <span class="fs-clan-op-code">Op SLauncher-</span>
+                      </div>
+                      <div class="fs-clan-name-meta">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          SL]Master
+                        </span>
+                        <span class="fs-clan-mem-cnt">24 / 50</span>
+                      </div>
+                    </li>
+                    <li class="fs-clan-name-item">
+                      <div class="fs-clan-name-main">
+                        <span class="clan-tag-pill">Fish]</span>
+                        <strong class="fs-clan-title-text" data-i18n="csClanName2">피쉬 클래식 116</strong>
+                        <span class="fs-clan-op-code">Op Fish116-</span>
+                      </div>
+                      <div class="fs-clan-name-meta">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          Fish]Leader
+                        </span>
+                        <span class="fs-clan-mem-cnt">18 / 50</span>
+                      </div>
+                    </li>
+                    <li class="fs-clan-name-item">
+                      <div class="fs-clan-name-main">
+                        <span class="clan-tag-pill">[NeOx]</span>
+                        <strong class="fs-clan-title-text" data-i18n="csClanName3">네옥스 클랜 (NeOx)</strong>
+                        <span class="fs-clan-op-code">Op NeOx-</span>
+                      </div>
+                      <div class="fs-clan-name-meta">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          [NeOx]What9
+                        </span>
+                        <span class="fs-clan-mem-cnt">31 / 50</span>
+                      </div>
+                    </li>
+                    <li class="fs-clan-name-item">
+                      <div class="fs-clan-name-main">
+                        <span class="clan-tag-pill">[Gg]</span>
+                        <strong class="fs-clan-title-text" data-i18n="csClanName4">GG 팀리그 클랜</strong>
+                        <span class="fs-clan-op-code">Op Ggclan-</span>
+                      </div>
+                      <div class="fs-clan-name-meta">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          [Gg]BYS
+                        </span>
+                        <span class="fs-clan-mem-cnt">19 / 50</span>
+                      </div>
+                    </li>
+                    <li class="fs-clan-name-item">
+                      <div class="fs-clan-name-main">
+                        <span class="clan-tag-pill">Kor]</span>
+                        <strong class="fs-clan-title-text" data-i18n="csClanName5">코리아 헌터즈</strong>
+                        <span class="fs-clan-op-code">Op KorHunter-</span>
+                      </div>
+                      <div class="fs-clan-name-meta">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          Kor]Templar
+                        </span>
+                        <span class="fs-clan-mem-cnt">12 / 50</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -457,8 +513,9 @@
                 <table class="clan-table">
                   <thead>
                     <tr>
-                      <th data-i18n="csColChan">Op 채널명</th>
+                      <th data-i18n="csColClanName">클랜 이름</th>
                       <th data-i18n="clanColTag">태그</th>
+                      <th data-i18n="csColChan">Op 채널명</th>
                       <th data-i18n="clanColMaster">클랜장</th>
                       <th data-i18n="clanColMembers">등록 / 접속</th>
                       <th data-i18n="csColTopic">채널 소개</th>
@@ -467,8 +524,9 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><strong class="clan-row-chan-lg">Op SLauncher-</strong></td>
+                      <td><strong class="clan-row-name" data-i18n="csClanName1">SLauncher 공식 클랜</strong></td>
                       <td><span class="clan-tag-pill">SL]</span></td>
+                      <td><strong class="clan-row-chan-lg">Op SLauncher-</strong></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
@@ -480,8 +538,9 @@
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
-                      <td><strong class="clan-row-chan-lg">Op Fish116-</strong></td>
+                      <td><strong class="clan-row-name" data-i18n="csClanName2">피쉬 클래식 116</strong></td>
                       <td><span class="clan-tag-pill">Fish]</span></td>
+                      <td><strong class="clan-row-chan-lg">Op Fish116-</strong></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
@@ -493,8 +552,37 @@
                       <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
                     </tr>
                     <tr>
-                      <td><strong class="clan-row-chan-lg">Op KorHunter-</strong></td>
+                      <td><strong class="clan-row-name" data-i18n="csClanName3">네옥스 클랜 (NeOx)</strong></td>
+                      <td><span class="clan-tag-pill">[NeOx]</span></td>
+                      <td><strong class="clan-row-chan-lg">Op NeOx-</strong></td>
+                      <td class="clan-mono">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          [NeOx]What9
+                        </span>
+                      </td>
+                      <td class="clan-mono">31명 (11명)</td>
+                      <td class="fs-topic-cell" data-i18n="csSampleTopic4">밀리 · 래더 교류 및 스폰 내전 클랜</td>
+                      <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong class="clan-row-name" data-i18n="csClanName4">GG 팀리그 클랜</strong></td>
+                      <td><span class="clan-tag-pill">[Gg]</span></td>
+                      <td><strong class="clan-row-chan-lg">Op Ggclan-</strong></td>
+                      <td class="clan-mono">
+                        <span class="fs-master-cell">
+                          <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
+                          [Gg]BYS
+                        </span>
+                      </td>
+                      <td class="clan-mono">19명 (7명)</td>
+                      <td class="fs-topic-cell" data-i18n="csSampleTopic5">피쉬시리즈 감성 팀리그 · 내전 클랜</td>
+                      <td><button type="button" class="btn btn-ghost btn-sm" disabled data-i18n="clanApplyBtn">가입 신청 (예정)</button></td>
+                    </tr>
+                    <tr>
+                      <td><strong class="clan-row-name" data-i18n="csClanName5">코리아 헌터즈</strong></td>
                       <td><span class="clan-tag-pill">Kor]</span></td>
+                      <td><strong class="clan-row-chan-lg">Op KorHunter-</strong></td>
                       <td class="clan-mono">
                         <span class="fs-master-cell">
                           <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
@@ -709,6 +797,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738-8"></script>
+  <script src="./assets/js/main.js?v=0.6.738-9"></script>
 </body>
 </html>
