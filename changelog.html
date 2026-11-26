@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.740-1" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.741-1" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -111,7 +111,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.740</span>
+              <span id="hero-version">v0.6.741</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -122,11 +122,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.740</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.741</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">39</strong>
+              <strong id="cl-total-count" class="cl-stat-val">40</strong>
             </div>
           </div>
         </div>
@@ -172,9 +172,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-740" class="cl-ver-link active" data-target-ver="v0.6.740">
-                <span class="cl-ver-name">v0.6.740</span>
+              <a href="#ver-v0-6-741" class="cl-ver-link active" data-target-ver="v0.6.741">
+                <span class="cl-ver-name">v0.6.741</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-740" class="cl-ver-link" data-target-ver="v0.6.740">
+                <span class="cl-ver-name">v0.6.740</span>
+                <span class="cl-ver-mini-date">11.27</span>
               </a>
               <a href="#ver-v0-6-739" class="cl-ver-link" data-target-ver="v0.6.739">
                 <span class="cl-ver-name">v0.6.739</span>
@@ -331,13 +335,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.740/SLauncher-0.6.740-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.741/SLauncher-0.6.741-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.740 다운로드</span>
+                <span id="btn-download-label">v0.6.741 다운로드</span>
               </a>
             </div>
           </div>
@@ -353,12 +357,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.740 (Latest) -->
-            <article id="ver-v0-6-740" class="patch-card patch-card-latest" data-patch-ver="v0.6.740">
+            <!-- v0.6.741 (Latest) -->
+            <article id="ver-v0-6-741" class="patch-card patch-card-latest" data-patch-ver="v0.6.741">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.741</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-27">2026.11.27</time>
+              </div>
+              <p class="patch-summary" data-i18n="p741Summary">광고 귓말·사칭 광고 채팅 필터 정밀 분리 및 오탐 원천 차단, 영구 채팅 차단 관리 UI 추가, 런처 사용자 전용 방어 범위 및 세션 보안 강화</p>
+              <ul class="patch-list">
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p741Item1">채팅 필터를 『광고 귓말 숨기기(귓속말 전용)』와 『사칭 광고 채팅 숨기기(후원버전 사칭 + 핵·외부 공유 주소 복합 조건)』 두 개의 독립 설정으로 분리하고, 『카카오톡』 등 부분 문자열 중복 집계 오탐을 수정했습니다.</span>
+                </li>
+                <li data-cat="new">
+                  <span class="patch-tag tag-new" data-i18n="tagNew">신규</span>
+                  <span data-i18n="p741Item2">자동 차단된 광고·사칭 발신 계정을 디스크(chat-block.json)에 영구 저장하고 최초 차단 시 1회 안내 문구를 표시하며, 도우미(Ctrl+H) 『채팅 차단 관리』 패널 및 『/채팅차단목록』·『/채팅차단해제』 명령어로 언제든 확인·해제할 수 있습니다.</span>
+                </li>
+                <li data-cat="security">
+                  <span class="patch-tag tag-sec" data-i18n="tagSecurity">보안</span>
+                  <span data-i18n="p741Item3">멀티플레이 강제 드랍·슬롯 변조 방어가 본인 및 확인된 SLauncher 사용자 슬롯만 보호하도록 방어 범위를 정밀화하고, SLauncher 실행·인증 세션이 종료되면 인게임·패킷 보호 및 브리지 기능이 즉시 비활성화되도록 세션 게이트를 강화했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.740 -->
+            <article id="ver-v0-6-740" class="patch-card" data-patch-ver="v0.6.740">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.740</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-27">2026.11.27</time>
               </div>
@@ -1323,6 +1352,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.740-1"></script>
+  <script src="./assets/js/main.js?v=0.6.741-1"></script>
 </body>
 </html>
