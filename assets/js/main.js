@@ -36,16 +36,25 @@
       csTabLogout: "로그아웃",
       csTabMyChannel: "나의 채널",
       csTabSearch: "채널 검색",
+      csTabClanList: "클랜 목록",
+      csClanListHeading: "클랜 목록",
+      csQuickListTitle: "클랜 목록 →",
+      csQuickListDesc: "전체 등록 클랜 이름 · 클랜 태그 · 클랜장 현황 목록 UI 확인",
+      csFilterAllChan: "전체 채널",
+      csFilterBotOn: "채널 봇 온라인",
+      csColBotState: "채널 봇 상태",
+      csColOnlineNow: "현재 채널 인원",
+      csBotOnline: "Op 봇 대기 (예정)",
       csTabBackHome: "홈페이지로 돌아가기",
       csGateBadge: "접근 제한",
-      csGateRequiredMsg: "배틀넷(Battle.net) 로그인을 완료해야 『나의 채널』 및 『채널 검색』 메뉴를 사용할 수 있습니다.",
-      csGateToast: "배틀넷 로그인 후 『나의 채널』 및 『채널 검색』을 사용할 수 있습니다.",
-      csLogoutToast: "로그아웃 되었습니다. (나의 채널 · 채널 검색 잠금)",
+      csGateRequiredMsg: "배틀넷(Battle.net) 로그인을 완료해야 『나의 채널』 · 『채널 검색』 · 『클랜 목록』 메뉴를 사용할 수 있습니다.",
+      csGateToast: "배틀넷 로그인 후 『나의 채널』 · 『채널 검색』 · 『클랜 목록』을 사용할 수 있습니다.",
+      csLogoutToast: "로그아웃 되었습니다. (나의 채널 · 채널 검색 · 클랜 목록 잠금)",
       csEnterTagToast: "배틀태그(계정명)를 입력해 주세요.",
       csMainGuestLine1: "환영합니다. 이 웹 사이트는 SLauncher 클랜 및 채널 서비스 봇을 관리할 수 있는 페이지 입니다.",
       csMainGuestLine2: "본 페이지에서는 Op 클랜 채널에 관련된 모든 것을 관리하실 수 있습니다.",
-      csMainLockTitle: "🔒 『나의 채널』 · 『채널 검색』 이용 안내",
-      csMainLockDesc: "배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 클랜 채널 관리 및 전체 채널 검색 탭을 열 수 있습니다.",
+      csMainLockTitle: "🔒 『나의 채널』 · 『채널 검색』 · 『클랜 목록』 이용 안내",
+      csMainLockDesc: "배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 채널, 채널 검색, 클랜 목록 탭을 열 수 있습니다.",
       csGotoLoginBtn: "배틀넷 로그인하기",
       csMainWelcomeSuffix: "님 환영합니다!",
       csMainAuthedLine2: "채널 서비스 관리 시스템에 성공적으로 로그인 되었습니다. (UI 미리보기 모드)",
@@ -53,14 +62,14 @@
       csQuickMyDesc: "내 Op 클랜 채널 정보 · 클랜장(BLIZZARD) / 부마·옵(b.net) / 보이스(나팔) 목록 UI 확인",
       csQuickSearchTitle: "채널 검색 바로가기 →",
       csQuickSearchDesc: "등록된 Op 클랜 채널 검색 및 클랜별 마스터·인원 현황 테이블 UI 확인",
-      csLoginHeading: "시스템 로그인 (Battle.net)",
-      csLoginSub: "배틀넷(Battle.net) 계정으로 로그인해야 『나의 채널』과 『채널 검색』을 이용할 수 있습니다.",
+      csLoginHeading: "배틀넷 로그인",
+      csLoginSub: "배틀넷(Battle.net) 로그인을 해야만 『나의 채널』 · 『채널 검색』 · 『클랜 목록』을 열 수 있습니다.",
       csLoginLabelTag: "배틀태그 (계정)",
-      csLoginTagPh: "예: START#3124",
+      csLoginTagPh: "배틀태그 입력 (예: START#3124)",
       csLoginLabelMethod: "인증 방식",
       csLoginMethodVal: "Blizzard Battle.net 공식 계정 연동 (공개 예정 — 현재 UI 프리뷰)",
-      csDoBnetLoginBtn: "배틀넷 로그인 (UI 미리보기 열기)",
-      csLoginHint: "※ 현재 실제 서버 인증 기능은 연결 전이며, 버튼을 누르면 로그인 완료 후 활성화되는 『나의 채널』 · 『채널 검색』 UI 화면을 미리 둘러보실 수 있습니다.",
+      csDoBnetLoginBtn: "배틀넷 로그인 (UI 미리보기)",
+      csLoginHint: "※ 실제 서버 인증 연동 전 단계이며, 위에 임의의 배틀태그를 입력하고 로그인 버튼을 누르면 잠겨 있는 『나의 채널 / 채널 검색 / 클랜 목록』 UI를 확인하실 수 있습니다.",
       csMyHeading: "나의 채널 관리",
       csMySub: "내 클랜 전용 Op 채널 개설 정보와 채널 권한(BLIZZARD · b.net · 보이스 나팔)을 관리하는 기본 UI 틀입니다.",
       csMyInfoTitle: "Op 클랜 채널 기본 설정",
@@ -520,16 +529,25 @@
       csTabLogout: "Sign Out",
       csTabMyChannel: "My Channel",
       csTabSearch: "Channel Search",
+      csTabClanList: "Clan List",
+      csClanListHeading: "Clan List",
+      csQuickListTitle: "Clan List →",
+      csQuickListDesc: "Browse all registered clan names, tags, and Clan Masters",
+      csFilterAllChan: "All Channels",
+      csFilterBotOn: "Channel Bot Online",
+      csColBotState: "Bot Status",
+      csColOnlineNow: "Users in Channel",
+      csBotOnline: "Op Bot Standby (Soon)",
       csTabBackHome: "Return to Homepage",
       csGateBadge: "Login Required",
-      csGateRequiredMsg: "You must sign in with Battle.net before accessing 'My Channel' and 'Channel Search'.",
-      csGateToast: "Sign in with Battle.net first to use 'My Channel' and 'Channel Search'.",
-      csLogoutToast: "Signed out. ('My Channel' & 'Channel Search' locked)",
+      csGateRequiredMsg: "You must sign in with Battle.net before accessing 'My Channel', 'Channel Search', and 'Clan List'.",
+      csGateToast: "Sign in with Battle.net first to use 'My Channel', 'Channel Search', and 'Clan List'.",
+      csLogoutToast: "Signed out. ('My Channel', 'Channel Search' & 'Clan List' locked)",
       csEnterTagToast: "Please enter a BattleTag.",
       csMainGuestLine1: "Welcome. This page manages SLauncher's Clan & Op Channel Service Bot.",
       csMainGuestLine2: "Everything related to your Op clan channel can be configured here.",
-      csMainLockTitle: "🔒 'My Channel' & 'Channel Search' Access Notice",
-      csMainLockDesc: "Sign in with your Battle.net account first to unlock My Channel management and Channel Search.",
+      csMainLockTitle: "🔒 'My Channel', 'Channel Search' & 'Clan List' Access Notice",
+      csMainLockDesc: "Sign in with your Battle.net account first to unlock My Channel, Channel Search, and Clan List.",
       csGotoLoginBtn: "Sign in with Battle.net",
       csMainWelcomeSuffix: ", welcome!",
       csMainAuthedLine2: "Successfully signed in to the Channel Service Management System. (UI Preview Mode)",
@@ -538,7 +556,7 @@
       csQuickSearchTitle: "Open Channel Search →",
       csQuickSearchDesc: "Preview the registered Op clan channel directory and master/member status table UI",
       csLoginHeading: "System Sign In (Battle.net)",
-      csLoginSub: "Battle.net sign-in is required to access 'My Channel' and 'Channel Search'.",
+      csLoginSub: "Battle.net sign-in is required to open 'My Channel', 'Channel Search', and 'Clan List'.",
       csLoginLabelTag: "BattleTag (Account)",
       csLoginTagPh: "e.g. START#3124",
       csLoginLabelMethod: "Auth Method",
@@ -2407,7 +2425,7 @@
 
     var state = {
       authed: false,
-      userTag: "START#3124",
+      userTag: "",
       activeTab: "main",
       pendingTab: ""
     };
@@ -2417,13 +2435,16 @@
     var btnLogout = document.getElementById("cs-btn-logout");
     var tabMy = document.getElementById("cs-tab-my");
     var tabSearch = document.getElementById("cs-tab-search");
+    var tabClanList = document.getElementById("cs-tab-clan-list");
     var lockMy = document.getElementById("cs-lock-my");
     var lockSearch = document.getElementById("cs-lock-search");
+    var lockClanList = document.getElementById("cs-lock-clan-list");
 
     var panelMain = document.getElementById("cs-panel-main");
     var panelLogin = document.getElementById("cs-panel-login");
     var panelMy = document.getElementById("cs-panel-my-channel");
     var panelSearch = document.getElementById("cs-panel-search");
+    var panelClanList = document.getElementById("cs-panel-clan-list");
 
     var mainGuest = document.getElementById("cs-main-guest");
     var mainAuthed = document.getElementById("cs-main-authed");
@@ -2437,6 +2458,10 @@
     var doLoginBtn = document.getElementById("cs-do-bnet-login");
     var openClanSysBtn = document.getElementById("bnet116-open-clansys");
 
+    function isProtectedTab(t) {
+      return t === "my-channel" || t === "search" || t === "clan-list";
+    }
+
     function dict() {
       return I18N[currentLang] || I18N.ko;
     }
@@ -2444,7 +2469,6 @@
     function renderClanSystem() {
       var d = dict();
 
-      // Update top-right Battle.net auth badge
       if (authPill && authText) {
         authPill.setAttribute("data-state", state.authed ? "authed" : "guest");
         authText.textContent = state.authed
@@ -2452,56 +2476,55 @@
           : d.csAuthGuestBadge;
       }
 
-      // Toggle Login vs Logout tab & lock badges on 나의 채널 / 채널 검색
       if (tabLogin) tabLogin.classList.toggle("hidden", state.authed);
       if (btnLogout) btnLogout.classList.toggle("hidden", !state.authed);
 
-      if (tabMy) {
-        tabMy.classList.toggle("is-locked", !state.authed);
-        tabMy.setAttribute("aria-disabled", state.authed ? "false" : "true");
+      var lockedTabs = [
+        [tabMy, lockMy],
+        [tabSearch, lockSearch],
+        [tabClanList, lockClanList]
+      ];
+      for (var k = 0; k < lockedTabs.length; k++) {
+        var tb = lockedTabs[k][0];
+        var lk = lockedTabs[k][1];
+        if (tb) {
+          tb.classList.toggle("is-locked", !state.authed);
+          tb.setAttribute("aria-disabled", state.authed ? "false" : "true");
+        }
+        if (lk) lk.classList.toggle("hidden", state.authed);
       }
-      if (tabSearch) {
-        tabSearch.classList.toggle("is-locked", !state.authed);
-        tabSearch.setAttribute("aria-disabled", state.authed ? "false" : "true");
-      }
-      if (lockMy) lockMy.classList.toggle("hidden", state.authed);
-      if (lockSearch) lockSearch.classList.toggle("hidden", state.authed);
 
-      // Enforce Battle.net login gate: never allow my-channel or search while logged out
-      if (!state.authed && (state.activeTab === "my-channel" || state.activeTab === "search")) {
+      if (!state.authed && isProtectedTab(state.activeTab)) {
         state.activeTab = "login";
       }
 
-      // Highlight active tab
       if (tabMain) tabMain.classList.toggle("is-active", state.activeTab === "main");
       if (tabLogin) tabLogin.classList.toggle("is-active", state.activeTab === "login");
       if (tabMy) tabMy.classList.toggle("is-active", state.activeTab === "my-channel");
       if (tabSearch) tabSearch.classList.toggle("is-active", state.activeTab === "search");
+      if (tabClanList) tabClanList.classList.toggle("is-active", state.activeTab === "clan-list");
 
-      // Show active panel
       if (panelMain) panelMain.classList.toggle("hidden", state.activeTab !== "main");
       if (panelLogin) panelLogin.classList.toggle("hidden", state.activeTab !== "login");
       if (panelMy) panelMy.classList.toggle("hidden", state.activeTab !== "my-channel");
       if (panelSearch) panelSearch.classList.toggle("hidden", state.activeTab !== "search");
+      if (panelClanList) panelClanList.classList.toggle("hidden", state.activeTab !== "clan-list");
 
-      // Main panel sub-state (10:07 guest vs 10:22 logged-in)
       if (mainGuest) mainGuest.classList.toggle("hidden", state.authed);
       if (mainAuthed) mainAuthed.classList.toggle("hidden", !state.authed);
       if (welcomeUser) welcomeUser.textContent = state.userTag;
-      if (masterDisplay) masterDisplay.value = state.userTag + " (SL]Master)";
+      if (masterDisplay) masterDisplay.value = state.authed ? (state.userTag + " (SL]Master)") : "";
     }
 
     function selectTab(target) {
-      if (target === "my-channel" || target === "search") {
-        if (!state.authed) {
-          state.pendingTab = target;
-          state.activeTab = "login";
-          if (gateAlert) gateAlert.classList.remove("hidden");
-          renderClanSystem();
-          showToast(dict().csGateToast);
-          if (btagInput) btagInput.focus();
-          return;
-        }
+      if (isProtectedTab(target) && !state.authed) {
+        state.pendingTab = target;
+        state.activeTab = "login";
+        if (gateAlert) gateAlert.classList.remove("hidden");
+        renderClanSystem();
+        showToast(dict().csGateToast);
+        if (btagInput) btagInput.focus();
+        return;
       }
       if (gateAlert) gateAlert.classList.add("hidden");
       state.activeTab = target;
@@ -2562,8 +2585,10 @@
     if (btnLogout) {
       btnLogout.addEventListener("click", function () {
         state.authed = false;
+        state.userTag = "";
         state.pendingTab = "";
         state.activeTab = "main";
+        if (btagInput) btagInput.value = "";
         if (gateAlert) gateAlert.classList.add("hidden");
         renderClanSystem();
         showToast(dict().csLogoutToast);
