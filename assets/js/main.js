@@ -23,23 +23,84 @@
       navChatSecRooms: "날짜 · 참여 방 목록 탐색",
       navChatSecViewer: "대화 뷰어 · 검색 및 TXT 저장",
       navClanSoon: "공개 예정(클랜)",
+      navClanSecSystem: "클랜 시스템 (메인 · 나의 채널 · 채널 검색)",
+      clanBtnSystem: "클랜 시스템",
+      clanBtnFriends: "친구 목록",
+      csSecTitle: "클랜 시스템 — 채널 서비스 관리 시스템",
+      csHeaderTitle: "SLauncher 채널 서비스 관리 시스템",
+      csHeaderSub: "서버 클랜 및 Op 채널 서비스 봇을 관리할 수 있는 페이지 입니다",
+      csAuthGuestBadge: "배틀넷 미로그인",
+      csAuthUserFmt: "Battle.net · {user} (UI 프리뷰)",
+      csTabMain: "메인",
+      csTabLogin: "배틀넷 로그인",
+      csTabLogout: "로그아웃",
+      csTabMyChannel: "나의 채널",
+      csTabSearch: "채널 검색",
+      csTabBackHome: "홈페이지로 돌아가기",
+      csGateBadge: "접근 제한",
+      csGateRequiredMsg: "배틀넷(Battle.net) 로그인을 완료해야 『나의 채널』 및 『채널 검색』 메뉴를 사용할 수 있습니다.",
+      csGateToast: "배틀넷 로그인 후 『나의 채널』 및 『채널 검색』을 사용할 수 있습니다.",
+      csLogoutToast: "로그아웃 되었습니다. (나의 채널 · 채널 검색 잠금)",
+      csEnterTagToast: "배틀태그(계정명)를 입력해 주세요.",
+      csMainGuestLine1: "환영합니다. 이 웹 사이트는 SLauncher 클랜 및 채널 서비스 봇을 관리할 수 있는 페이지 입니다.",
+      csMainGuestLine2: "본 페이지에서는 Op 클랜 채널에 관련된 모든 것을 관리하실 수 있습니다.",
+      csMainLockTitle: "🔒 『나의 채널』 · 『채널 검색』 이용 안내",
+      csMainLockDesc: "배틀넷(Battle.net) 계정으로 로그인하신 뒤에만 나의 클랜 채널 관리 및 전체 채널 검색 탭을 열 수 있습니다.",
+      csGotoLoginBtn: "배틀넷 로그인하기",
+      csMainWelcomeSuffix: "님 환영합니다!",
+      csMainAuthedLine2: "채널 서비스 관리 시스템에 성공적으로 로그인 되었습니다. (UI 미리보기 모드)",
+      csQuickMyTitle: "나의 채널 바로가기 →",
+      csQuickMyDesc: "내 Op 클랜 채널 정보 · 클랜장(BLIZZARD) / 부마·옵(b.net) / 보이스(나팔) 목록 UI 확인",
+      csQuickSearchTitle: "채널 검색 바로가기 →",
+      csQuickSearchDesc: "등록된 Op 클랜 채널 검색 및 클랜별 마스터·인원 현황 테이블 UI 확인",
+      csLoginHeading: "시스템 로그인 (Battle.net)",
+      csLoginSub: "배틀넷(Battle.net) 계정으로 로그인해야 『나의 채널』과 『채널 검색』을 이용할 수 있습니다.",
+      csLoginLabelTag: "배틀태그 (계정)",
+      csLoginTagPh: "예: START#3124",
+      csLoginLabelMethod: "인증 방식",
+      csLoginMethodVal: "Blizzard Battle.net 공식 계정 연동 (공개 예정 — 현재 UI 프리뷰)",
+      csDoBnetLoginBtn: "배틀넷 로그인 (UI 미리보기 열기)",
+      csLoginHint: "※ 현재 실제 서버 인증 기능은 연결 전이며, 버튼을 누르면 로그인 완료 후 활성화되는 『나의 채널』 · 『채널 검색』 UI 화면을 미리 둘러보실 수 있습니다.",
+      csMyHeading: "나의 채널 관리",
+      csMySub: "내 클랜 전용 Op 채널 개설 정보와 채널 권한(BLIZZARD · b.net · 보이스 나팔)을 관리하는 기본 UI 틀입니다.",
+      csMyInfoTitle: "Op 클랜 채널 기본 설정",
+      csMyFieldChan: "채널명 (Op 고정)",
+      csMyFieldTag: "클랜 태그",
+      csMyFieldMaster: "클랜장 (배틀넷 연동 계정)",
+      csMyFieldMotd: "채널 환영 공지 (MOTD)",
+      csMySaveBtn: "채널 생성 / 설정 저장 (공개 예정)",
+      csMyBotBtn: "채널 봇 동기화 (예정)",
+      csMyRoleTitle: "채널 권한 등록 · 클랜원 목록 틀",
+      csMyMemberPh: "클랜원 배틀태그 또는 ID 입력 (공개 예정)",
+      csMyAddBnetBtn: "부마·옵(b.net) 부여",
+      csMyAddVoiceBtn: "보이스(나팔) 부여",
+      csRoleChannelBot: "채널 봇 · 옵 (b.net)",
+      csSearchHeading: "클랜 채널 검색",
+      csSearchSub: "등록된 Op 클랜 채널과 클랜장·인원 현황을 조회하는 기본 검색 UI 틀입니다.",
+      csSearchBtnLabel: "검색 (예정)",
+      csColChan: "Op 채널명",
+      csColTopic: "채널 소개",
+      csSampleTopic1: "SLauncher 공식 클랜 채널 예시",
+      csSampleTopic2: "1.16.1 피쉬서버 감성 매너 내전 클랜",
+      csSampleTopic3: "헌터 · 빨무 팀플 유저 환영",
+      csFooterRight: "배틀넷 로그인 연동 및 실제 채널 봇 기능 공개 예정",
       navClanSecChannel: "1.16.1 Op 클랜 채널 화면",
       navClanSecList: "클랜 목록 · 검색 기본 틀",
       navClanSecCreate: "클랜 개설 · 명령어 기본 틀",
       clanPillLabel: "1.16.1 Fish Server Style · Coming Soon",
       clanPageTitle: "공개 예정 (클랜 시스템)",
-      clanPageSub: "스타크래프트 1.16.1 피쉬서버(Fish Server) 시절의 『Op 클랜 채널』 감성을 복원한 기본 UI 틀입니다. 현재는 화면 레이아웃만 먼저 공개되며 실제 기능은 추후 업데이트에서 연결됩니다.",
+      clanPageSub: "피쉬서버(Fish Server) 시절의 『채널 서비스 관리 시스템(메인 / 나의 채널 / 채널 검색)』과 1.16.1 『Op 클랜 채널』 화면을 복원한 UI 미리보기입니다. 실제 서버 기능은 추후 업데이트에서 연결됩니다.",
       clanStatThemeLabel: "UI 콘셉트",
       clanStatStateLabel: "현재 상태",
       clanStatStateVal: "공개 예정",
       clanSoonTag: "UI 미리보기",
-      clanSoonDesc: "모든 버튼·입력창은 1.16.1 피쉬서버 스타일 기본 화면 구성을 보여주기 위한 비활성 프리뷰 상태이며, 서버 연동 및 클랜 기능은 아직 동작하지 않습니다.",
-      clanS1Title: "1.16.1 피쉬서버 『Op 클랜 채널』 기본 화면",
+      clanSoonDesc: "『나의 채널』 및 『채널 검색』 탭은 배틀넷 로그인 후에 열리며, 현재는 화면 구성 확인용 UI 프리뷰만 동작하고 실제 클랜 개설·저장 서버 기능은 비활성 상태입니다.",
+      clanS1Title: "1.16.1 피쉬서버 인게임 『Op 클랜 채널』 기본 화면",
       clanPreviewOnlyBadge: "기능 미활성 · UI 틀",
       clanWinTitle: "Battle.net — Fish Server Style Op Channel (1.16.1 UI)",
       clanWinMeta: "PREVIEW ONLY · 비활성 샘플",
-      clanBtnCreate: "클랜 생성",
-      clanBtnJoin: "클랜 가입",
+      clanBtnCreate: "방 만들기",
+      clanBtnJoin: "방 참가",
       clanBtnList: "클랜 목록",
       clanBtnChannel: "채널 이동",
       clanBtnMatch: "클랜 내전",
@@ -47,7 +108,7 @@
       clanChanTopic: "클랜 전용 채널 예시 · Fish Server 1.16.1 감성",
       clanChatSys1: "--- Op SLauncher- 채널에 입장했습니다. (1.16.1 UI 미리보기) ---",
       clanChatMotd: "[클랜 공지] SLauncher 클랜 시스템 기본 UI 프리뷰입니다. (기능 공개 예정)",
-      clanChatMsg1: "예전 1.16.1 피쉬서버 Op 클랜 채널 화면 구성 그대로 먼저 틀을 잡았습니다.",
+      clanChatMsg1: "상단 『클랜 시스템』에서 배틀넷 로그인 후 나의 채널 · 채널 검색 UI를 볼 수 있습니다.",
       clanChatMsg2: "클랜장 블리자드(BLIZZARD), 부마·옵 초록 b.net, 보이스 은색 나팔 아이콘 그대로네요!",
       clanChatMsg3: "/c l 클랜원 목록, /c m 전체 공지 같은 기본 명령어도 추후 연동 예정입니다.",
       clanChatWhisper: "<From: SL]Bisu> 내전 헌터 4:4 자리 남으면 불러주세요! (예시 대화)",
@@ -435,6 +496,67 @@
       navChatSecRooms: "Browse Dates & Joined Rooms",
       navChatSecViewer: "Conversation Viewer · TXT Export",
       navClanSoon: "Coming Soon (Clans)",
+      navClanSecSystem: "Clan System (Main · My Channel · Search)",
+      clanBtnSystem: "Clan System",
+      clanBtnFriends: "Friends",
+      csSecTitle: "Clan System — Channel Service Management",
+      csHeaderTitle: "SLauncher Channel Service Management System",
+      csHeaderSub: "Manage your clan and dedicated Op channel service bot on this page",
+      csAuthGuestBadge: "Battle.net Not Signed In",
+      csAuthUserFmt: "Battle.net · {user} (UI Preview)",
+      csTabMain: "Main",
+      csTabLogin: "Battle.net Sign In",
+      csTabLogout: "Sign Out",
+      csTabMyChannel: "My Channel",
+      csTabSearch: "Channel Search",
+      csTabBackHome: "Return to Homepage",
+      csGateBadge: "Login Required",
+      csGateRequiredMsg: "You must sign in with Battle.net before accessing 'My Channel' and 'Channel Search'.",
+      csGateToast: "Sign in with Battle.net first to use 'My Channel' and 'Channel Search'.",
+      csLogoutToast: "Signed out. ('My Channel' & 'Channel Search' locked)",
+      csEnterTagToast: "Please enter a BattleTag.",
+      csMainGuestLine1: "Welcome. This page manages SLauncher's Clan & Op Channel Service Bot.",
+      csMainGuestLine2: "Everything related to your Op clan channel can be configured here.",
+      csMainLockTitle: "🔒 'My Channel' & 'Channel Search' Access Notice",
+      csMainLockDesc: "Sign in with your Battle.net account first to unlock My Channel management and Channel Search.",
+      csGotoLoginBtn: "Sign in with Battle.net",
+      csMainWelcomeSuffix: ", welcome!",
+      csMainAuthedLine2: "Successfully signed in to the Channel Service Management System. (UI Preview Mode)",
+      csQuickMyTitle: "Open My Channel →",
+      csQuickMyDesc: "Preview your Op clan channel settings and BLIZZARD / b.net / Voice horn member list UI",
+      csQuickSearchTitle: "Open Channel Search →",
+      csQuickSearchDesc: "Preview the registered Op clan channel directory and master/member status table UI",
+      csLoginHeading: "System Sign In (Battle.net)",
+      csLoginSub: "Battle.net sign-in is required to access 'My Channel' and 'Channel Search'.",
+      csLoginLabelTag: "BattleTag (Account)",
+      csLoginTagPh: "e.g. START#3124",
+      csLoginLabelMethod: "Auth Method",
+      csLoginMethodVal: "Official Blizzard Battle.net OAuth Link (Coming Soon — UI Preview)",
+      csDoBnetLoginBtn: "Sign in with Battle.net (Unlock UI Preview)",
+      csLoginHint: "* Live OAuth server authentication is not yet active; clicking this button previews the unlocked 'My Channel' and 'Channel Search' UI.",
+      csMyHeading: "My Channel Management",
+      csMySub: "Basic UI shell for configuring your dedicated Op clan channel and assigning BLIZZARD / b.net / Voice horn roles.",
+      csMyInfoTitle: "Op Clan Channel Settings",
+      csMyFieldChan: "Channel Name (Op Prefix)",
+      csMyFieldTag: "Clan Tag",
+      csMyFieldMaster: "Clan Master (Linked Battle.net)",
+      csMyFieldMotd: "Channel Welcome Notice (MOTD)",
+      csMySaveBtn: "Create Channel / Save (Coming Soon)",
+      csMyBotBtn: "Sync Channel Bot (Soon)",
+      csMyRoleTitle: "Channel Role Assignment & Roster Shell",
+      csMyMemberPh: "Enter member BattleTag or ID (Coming Soon)",
+      csMyAddBnetBtn: "Grant Sub/Op (b.net)",
+      csMyAddVoiceBtn: "Grant Voice (Horn)",
+      csRoleChannelBot: "Channel Bot · Op (b.net)",
+      csSearchHeading: "Clan Channel Search",
+      csSearchSub: "Basic search UI shell to browse registered Op clan channels, masters, and member counts.",
+      csSearchBtnLabel: "Search (Soon)",
+      csColChan: "Op Channel",
+      csColTopic: "Description",
+      csSampleTopic1: "SLauncher official sample clan channel",
+      csSampleTopic2: "Classic 1.16.1 Fish Server in-house clan",
+      csSampleTopic3: "Hunters & Big Game Hunters teamplay clan",
+      csFooterRight: "Battle.net OAuth & live channel bot integration coming soon",
       navClanSecChannel: "1.16.1 Op Clan Channel UI",
       navClanSecList: "Clan Directory · Search Shell",
       navClanSecCreate: "Create Clan · /clan Spec Shell",
@@ -450,8 +572,8 @@
       clanPreviewOnlyBadge: "Inactive · UI Shell",
       clanWinTitle: "Battle.net — Fish Server Style Op Channel (1.16.1 UI)",
       clanWinMeta: "PREVIEW ONLY · Disabled Sample",
-      clanBtnCreate: "Create Clan",
-      clanBtnJoin: "Join Clan",
+      clanBtnCreate: "Create Game",
+      clanBtnJoin: "Join Game",
       clanBtnList: "Clan List",
       clanBtnChannel: "Channel",
       clanBtnMatch: "Clan Match",
@@ -1146,6 +1268,12 @@
       if (dict[pKey]) phNodes[p].setAttribute("placeholder", dict[pKey]);
     }
 
+    var valNodes = document.querySelectorAll("[data-i18n-value]");
+    for (var v = 0; v < valNodes.length; v++) {
+      var vKey = valNodes[v].getAttribute("data-i18n-value");
+      if (dict[vKey]) valNodes[v].value = dict[vKey];
+    }
+
     var langBtns = document.querySelectorAll(".lang-btn");
     for (var j = 0; j < langBtns.length; j++) {
       langBtns[j].classList.toggle("active", langBtns[j].getAttribute("data-lang") === currentLang);
@@ -1155,6 +1283,7 @@
     renderUserBadge();
     updateChangelogFilter();
     if (typeof refreshChatHistoryI18n === "function") refreshChatHistoryI18n();
+    if (typeof refreshClanSystemI18n === "function") refreshClanSystemI18n();
   }
 
   function showToast(msg) {
@@ -2247,7 +2376,194 @@
     });
   })();
 
+  var refreshClanSystemI18n = null;
+
+  // Fish Server Style Clan System UI Preview (메인 / 나의 채널 / 채널 검색 + Battle.net Login Gate)
+  function initClanSystemPreview() {
+    var root = document.getElementById("fs-clan-sys-app");
+    if (!root) return;
+
+    var state = {
+      authed: false,
+      userTag: "START#3124",
+      activeTab: "main",
+      pendingTab: ""
+    };
+
+    var tabMain = document.getElementById("cs-tab-main");
+    var tabLogin = document.getElementById("cs-tab-login");
+    var btnLogout = document.getElementById("cs-btn-logout");
+    var tabMy = document.getElementById("cs-tab-my");
+    var tabSearch = document.getElementById("cs-tab-search");
+    var lockMy = document.getElementById("cs-lock-my");
+    var lockSearch = document.getElementById("cs-lock-search");
+
+    var panelMain = document.getElementById("cs-panel-main");
+    var panelLogin = document.getElementById("cs-panel-login");
+    var panelMy = document.getElementById("cs-panel-my-channel");
+    var panelSearch = document.getElementById("cs-panel-search");
+
+    var mainGuest = document.getElementById("cs-main-guest");
+    var mainAuthed = document.getElementById("cs-main-authed");
+    var welcomeUser = document.getElementById("cs-welcome-user");
+    var masterDisplay = document.getElementById("cs-my-master-display");
+    var authPill = document.getElementById("cs-auth-status-pill");
+    var authText = document.getElementById("cs-auth-status-text");
+    var gateAlert = document.getElementById("cs-gate-alert");
+    var btagInput = document.getElementById("cs-btag-input");
+    var gotoLoginBtn = document.getElementById("cs-goto-login-btn");
+    var doLoginBtn = document.getElementById("cs-do-bnet-login");
+    var openClanSysBtn = document.getElementById("bnet116-open-clansys");
+
+    function dict() {
+      return I18N[currentLang] || I18N.ko;
+    }
+
+    function renderClanSystem() {
+      var d = dict();
+
+      // Update top-right Battle.net auth badge
+      if (authPill && authText) {
+        authPill.setAttribute("data-state", state.authed ? "authed" : "guest");
+        authText.textContent = state.authed
+          ? (d.csAuthUserFmt || "{user}").replace("{user}", state.userTag)
+          : d.csAuthGuestBadge;
+      }
+
+      // Toggle Login vs Logout tab & lock badges on 나의 채널 / 채널 검색
+      if (tabLogin) tabLogin.classList.toggle("hidden", state.authed);
+      if (btnLogout) btnLogout.classList.toggle("hidden", !state.authed);
+
+      if (tabMy) {
+        tabMy.classList.toggle("is-locked", !state.authed);
+        tabMy.setAttribute("aria-disabled", state.authed ? "false" : "true");
+      }
+      if (tabSearch) {
+        tabSearch.classList.toggle("is-locked", !state.authed);
+        tabSearch.setAttribute("aria-disabled", state.authed ? "false" : "true");
+      }
+      if (lockMy) lockMy.classList.toggle("hidden", state.authed);
+      if (lockSearch) lockSearch.classList.toggle("hidden", state.authed);
+
+      // Enforce Battle.net login gate: never allow my-channel or search while logged out
+      if (!state.authed && (state.activeTab === "my-channel" || state.activeTab === "search")) {
+        state.activeTab = "login";
+      }
+
+      // Highlight active tab
+      if (tabMain) tabMain.classList.toggle("is-active", state.activeTab === "main");
+      if (tabLogin) tabLogin.classList.toggle("is-active", state.activeTab === "login");
+      if (tabMy) tabMy.classList.toggle("is-active", state.activeTab === "my-channel");
+      if (tabSearch) tabSearch.classList.toggle("is-active", state.activeTab === "search");
+
+      // Show active panel
+      if (panelMain) panelMain.classList.toggle("hidden", state.activeTab !== "main");
+      if (panelLogin) panelLogin.classList.toggle("hidden", state.activeTab !== "login");
+      if (panelMy) panelMy.classList.toggle("hidden", state.activeTab !== "my-channel");
+      if (panelSearch) panelSearch.classList.toggle("hidden", state.activeTab !== "search");
+
+      // Main panel sub-state (10:07 guest vs 10:22 logged-in)
+      if (mainGuest) mainGuest.classList.toggle("hidden", state.authed);
+      if (mainAuthed) mainAuthed.classList.toggle("hidden", !state.authed);
+      if (welcomeUser) welcomeUser.textContent = state.userTag;
+      if (masterDisplay) masterDisplay.value = state.userTag + " (SL]Master)";
+    }
+
+    function selectTab(target) {
+      if (target === "my-channel" || target === "search") {
+        if (!state.authed) {
+          state.pendingTab = target;
+          state.activeTab = "login";
+          if (gateAlert) gateAlert.classList.remove("hidden");
+          renderClanSystem();
+          showToast(dict().csGateToast);
+          if (btagInput) btagInput.focus();
+          return;
+        }
+      }
+      if (gateAlert) gateAlert.classList.add("hidden");
+      state.activeTab = target;
+      renderClanSystem();
+    }
+
+    var tabBtns = root.querySelectorAll("[data-cs-tab]");
+    for (var i = 0; i < tabBtns.length; i++) {
+      tabBtns[i].addEventListener("click", function () {
+        var t = this.getAttribute("data-cs-tab") || "main";
+        selectTab(t);
+      });
+    }
+
+    var jumpBtns = root.querySelectorAll("[data-cs-jump]");
+    for (var j = 0; j < jumpBtns.length; j++) {
+      jumpBtns[j].addEventListener("click", function () {
+        var dest = this.getAttribute("data-cs-jump") || "main";
+        selectTab(dest);
+      });
+    }
+
+    if (gotoLoginBtn) {
+      gotoLoginBtn.addEventListener("click", function () {
+        state.pendingTab = "";
+        selectTab("login");
+        if (btagInput) btagInput.focus();
+      });
+    }
+
+    if (doLoginBtn) {
+      doLoginBtn.addEventListener("click", function () {
+        var raw = btagInput ? String(btagInput.value || "").trim() : "";
+        if (!raw) {
+          showToast(dict().csEnterTagToast);
+          if (btagInput) btagInput.focus();
+          return;
+        }
+        state.userTag = raw;
+        state.authed = true;
+        if (gateAlert) gateAlert.classList.add("hidden");
+        var next = state.pendingTab || "main";
+        state.pendingTab = "";
+        state.activeTab = next;
+        renderClanSystem();
+      });
+    }
+
+    if (btagInput) {
+      btagInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && doLoginBtn) {
+          e.preventDefault();
+          doLoginBtn.click();
+        }
+      });
+    }
+
+    if (btnLogout) {
+      btnLogout.addEventListener("click", function () {
+        state.authed = false;
+        state.pendingTab = "";
+        state.activeTab = "main";
+        if (gateAlert) gateAlert.classList.add("hidden");
+        renderClanSystem();
+        showToast(dict().csLogoutToast);
+      });
+    }
+
+    if (openClanSysBtn) {
+      openClanSysBtn.addEventListener("click", function (e) {
+        var sec = document.getElementById("clan-system");
+        if (sec) {
+          e.preventDefault();
+          sec.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+
+    refreshClanSystemI18n = renderClanSystem;
+    renderClanSystem();
+  }
+
   applyLanguage(currentLang);
+  initClanSystemPreview();
   initChatHistoryPage();
   loadReleaseMetadata();
   startUserMetrics();
