@@ -10,7 +10,7 @@
   <meta property="og:description" content="피쉬서버 클랜 시스템(메인·나의 채널·채널 검색) 및 1.16.1 Op 채널 UI 레이아웃 미리보기입니다." />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-10" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.738-11" />
 </head>
 <body id="top" class="clan-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -178,7 +178,7 @@
 
         <div class="clan-soon-banner" role="note">
           <span class="clan-soon-tag" data-i18n="clanSoonTag">UI 미리보기</span>
-          <span data-i18n="clanSoonDesc">『나의 채널』 및 『채널 검색』 탭은 배틀넷 로그인 후에 열리며, 현재는 화면 구성 확인용 UI 프리뷰만 동작하고 실제 클랜 개설·저장 서버 기능은 비활성 상태입니다.</span>
+          <span data-i18n="clanSoonDesc">『나의 채널』 · 『채널 검색』 · 『클랜 목록』 탭은 PC에 실행 중인 실제 Battle.net 데스크톱 앱(SLauncher 로컬 연동) 로그인 시에만 열리며, 클랜 개설·저장 서버 기능은 추후 공개 예정입니다.</span>
         </div>
       </div>
     </section>
@@ -287,44 +287,70 @@
               </div>
             </div>
 
-            <!-- Panel 2: 배틀넷 로그인 (System Login — starts completely empty & unauthenticated) -->
+            <!-- Panel 2: 배틀넷 로그인 (Real Local Battle.net Desktop App Integration via 127.0.0.1:53891/bnet-self) -->
             <div class="fs-panel hidden" id="cs-panel-login">
-              <h4 class="fs-panel-heading" data-i18n="csLoginHeading">배틀넷 로그인</h4>
-              <p class="fs-panel-sub" data-i18n="csLoginSub">배틀넷(Battle.net) 로그인을 해야만 『나의 채널』 · 『채널 검색』 · 『클랜 목록』을 열 수 있습니다.</p>
+              <h4 class="fs-panel-heading" data-i18n="csLoginHeading">Battle.net 데스크톱 앱 연동 로그인</h4>
+              <p class="fs-panel-sub" data-i18n="csLoginSub">임의 입력이 아닌 내 PC에 실행 중인 실제 Blizzard Battle.net 데스크톱 앱의 로그인 계정을 인식하여 연동합니다.</p>
 
-              <div class="fs-login-box">
-                <div class="fs-form-row">
-                  <label for="cs-btag-input" data-i18n="csLoginLabelTag">배틀태그 (BattleTag)</label>
-                  <input
-                    type="text"
-                    id="cs-btag-input"
-                    class="fs-input"
-                    value=""
-                    maxlength="28"
-                    autocomplete="off"
-                    data-i18n-placeholder="csLoginTagPh"
-                    placeholder="배틀태그 입력 (예: START#3124)"
-                  />
+              <div class="fs-login-box fs-login-box-real">
+                <div class="fs-bnet-diag-card" role="status" aria-live="polite">
+                  <div class="fs-bnet-diag-row">
+                    <span class="fs-bnet-diag-left">
+                      <span class="fs-diag-dot" id="cs-diag-bridge-dot" data-st="checking" aria-hidden="true"></span>
+                      <span data-i18n="csDiagBridgeLabel">SLauncher 로컬 브리지</span>
+                    </span>
+                    <span class="fs-diag-pill" id="cs-diag-bridge-pill" data-st="checking" data-i18n="csDiagBridgeChecking">연결 확인 중…</span>
+                  </div>
+
+                  <div class="fs-bnet-diag-row">
+                    <span class="fs-bnet-diag-left">
+                      <span class="fs-diag-dot" id="cs-diag-bnet-dot" data-st="checking" aria-hidden="true"></span>
+                      <span data-i18n="csDiagBnetLabel">Battle.net 데스크톱 앱</span>
+                    </span>
+                    <span class="fs-diag-pill" id="cs-diag-bnet-pill" data-st="checking" data-i18n="csDiagBnetWaiting">브리지 대기 중</span>
+                  </div>
                 </div>
-                <div class="fs-form-row">
-                  <label data-i18n="csLoginLabelMethod">연동 방식</label>
-                  <input
-                    type="text"
-                    class="fs-input"
-                    disabled
-                    data-i18n-value="csLoginMethodVal"
-                    value="Blizzard Battle.net 계정 연동 (공개 예정 — 현재 UI 미리보기)"
-                  />
+
+                <div class="fs-detected-acct hidden" id="cs-detected-acct-box">
+                  <div class="fs-detected-kicker" data-i18n="csDetectedAcctLabel">감지된 실제 Battle.net 계정</div>
+                  <div class="fs-detected-main">
+                    <strong id="cs-detected-btag">—</strong>
+                    <span id="cs-detected-meta" class="fs-detected-meta"></span>
+                  </div>
+                </div>
+
+                <div class="fs-login-live-msg" id="cs-login-live-msg" data-tone="info" data-i18n="csLoginLiveInit">
+                  Battle.net 데스크톱 앱에 로그인한 상태에서 SLauncher를 실행한 뒤 아래 [Battle.net 앱으로 로그인] 버튼을 눌러 주세요.
                 </div>
 
                 <div class="fs-login-actions">
                   <button type="button" class="fs-bnet-btn fs-bnet-btn-wide" id="cs-do-bnet-login">
-                    <span class="fs-bnet-mark" aria-hidden="true">B</span>
-                    <span data-i18n="csDoBnetLoginBtn">배틀넷 로그인 (UI 미리보기)</span>
+                    <span class="fs-bnet-emblem" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-30 12 12)" />
+                        <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(30 12 12)" />
+                        <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(90 12 12)" />
+                        <circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none" />
+                      </svg>
+                    </span>
+                    <span id="cs-do-bnet-login-label" data-i18n="csDoBnetLoginBtn">Battle.net 앱으로 로그인</span>
                   </button>
                 </div>
+
+                <div class="fs-login-sub-actions">
+                  <button type="button" class="btn btn-ghost btn-sm" id="cs-open-bnet-app">
+                    <span data-i18n="csOpenBnetAppBtn">Battle.net 앱 열기</span>
+                  </button>
+                  <button type="button" class="btn btn-ghost btn-sm" id="cs-refresh-bnet-status">
+                    <span data-i18n="csRefreshBnetBtn">연결 상태 새로고침</span>
+                  </button>
+                  <a href="./index.html#download" class="btn btn-ghost btn-sm" id="cs-dl-slauncher-link">
+                    <span data-i18n="csDownloadLauncherBtn">SLauncher 다운로드</span>
+                  </a>
+                </div>
+
                 <p class="fs-login-hint" data-i18n="csLoginHint">
-                  ※ 실제 서버 인증 연동 전 단계이며, 위에 임의의 배틀태그를 입력하고 로그인 버튼을 누르면 잠겨 있는 『나의 채널 / 채널 검색 / 클랜 목록』 UI를 확인하실 수 있습니다.
+                  ※ 임의 배틀태그 입력은 지원하지 않으며, 내 PC에서 실행 중인 SLauncher 로컬 브리지(127.0.0.1:53891)를 통해 실제 로그인된 Battle.net 데스크톱 앱 계정만 인증됩니다.
                 </p>
               </div>
             </div>
@@ -380,7 +406,7 @@
                     <li>
                       <span class="fs-mem-left">
                         <svg class="bni-svg-inline" viewBox="0 0 28 14" aria-hidden="true"><use href="#bni-blizz" /></svg>
-                        <strong>SL]Master</strong>
+                        <strong id="cs-my-master-row-name">SL]Master</strong>
                       </span>
                       <span class="fs-mem-role role-blizz" data-i18n="clanRankMaster">클랜장 (BLIZZARD)</span>
                     </li>
@@ -590,7 +616,7 @@
 
           <div class="fs-sys-footer">
             <span>SLauncher Clan &amp; Channel Service UI Preview · Inspired by Fish Server (1.16.1)</span>
-            <span data-i18n="csFooterRight">배틀넷 로그인 연동 및 실제 채널 봇 기능 공개 예정</span>
+            <span data-i18n="csFooterRight">Battle.net 데스크톱 앱 실연동 적용 · 채널 봇 서버 기능 공개 예정</span>
           </div>
         </div>
       </div>
@@ -786,6 +812,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.738-10"></script>
+  <script src="./assets/js/main.js?v=0.6.738-11"></script>
 </body>
 </html>
