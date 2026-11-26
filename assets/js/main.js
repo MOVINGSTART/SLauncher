@@ -83,7 +83,7 @@
       csDetectedMetaOnlineFmt: "Account #{id} · BGS 온라인",
       csDetectedMetaLocalFmt: "Account #{id} · 앱 실행 중",
       csLoginLiveInit: "Battle.net 데스크톱 앱에 로그인한 상태에서 SLauncher를 실행한 뒤 아래 [Battle.net 앱으로 로그인] 버튼을 눌러 주세요.",
-      csLoginLiveBridgeOff: "내 PC에서 SLauncher가 실행 중이지 않습니다. SLauncher와 Battle.net 앱을 실행한 뒤 [Battle.net 앱으로 로그인]을 눌러 주세요.",
+      csLoginLiveBridgeOff: "내 PC에서 SLauncher가 실행 중이지 않거나 브라우저의 로컬 네트워크 연결 권한이 허용되지 않았습니다. SLauncher 실행 후(브라우저 권한 창이 뜨면 [허용] 클릭) [Battle.net 앱으로 로그인]을 눌러 주세요.",
       csLoginLiveBnetClosed: "SLauncher 브리지는 연결되었으나 Battle.net 데스크톱 앱이 꺼져 있습니다. [Battle.net 앱 열기] 또는 로그인 버튼을 눌러 앱을 실행해 주세요.",
       csLoginLiveBnetLoggedOut: "Battle.net 데스크톱 앱이 켜져 있으나 아직 계정에 로그인되지 않았습니다. Battle.net 앱에서 로그인한 뒤 다시 눌러 주세요.",
       csLoginLiveReadyFmt: "실행 중인 Battle.net 앱 계정({user})이 확인되었습니다. 아래 [Battle.net 앱으로 로그인] 버튼을 누르면 잠긴 메뉴가 열립니다.",
@@ -606,7 +606,7 @@
       csDetectedMetaOnlineFmt: "Account #{id} · BGS Online",
       csDetectedMetaLocalFmt: "Account #{id} · App Running",
       csLoginLiveInit: "Sign in to the Battle.net Desktop App and run SLauncher on your PC, then click [Sign in with Battle.net App] below.",
-      csLoginLiveBridgeOff: "SLauncher is not currently running on this PC. Launch SLauncher and the Battle.net App, then click [Sign in with Battle.net App].",
+      csLoginLiveBridgeOff: "SLauncher is not running or browser Local Network Access is blocked. Run SLauncher (click [Allow] if prompted by your browser) and click [Sign in with Battle.net App].",
       csLoginLiveBnetClosed: "Connected to SLauncher, but the Battle.net Desktop App is closed. Click [Open Battle.net App] or the sign-in button to launch it.",
       csLoginLiveBnetLoggedOut: "Battle.net Desktop App is open, but no account is signed in yet. Sign in inside the Battle.net App and try again.",
       csLoginLiveReadyFmt: "Live Battle.net App account ({user}) detected. Click [Sign in with Battle.net App] below to unlock all menus.",
@@ -1691,6 +1691,42 @@
   // folder; never uploads or exposes any chat logs externally.
   // ==========================================================================
   var LOCAL_CHAT_API_BASE = "http://127.0.0.1:53891";
+
+  // Chromium 138~158+ classifies 127.0.0.1 as "loopback" (rejecting "local"),
+  // while older Chromium (<=136) used "local". Try "loopback" -> plain -> "local".
+  function fetchLocalBridge(pathOrUrl, baseOpts) {
+    var url = String(pathOrUrl || "").indexOf("http") === 0
+      ? pathOrUrl
+      : (LOCAL_CHAT_API_BASE + pathOrUrl);
+    var spaces = ["loopback", "", "local"];
+    var idx = 0;
+
+    function attempt() {
+      var space = spaces[idx++];
+      var opts = {};
+      if (baseOpts) {
+        for (var k in baseOpts) {
+          if (Object.prototype.hasOwnProperty.call(baseOpts, k)) {
+            opts[k] = baseOpts[k];
+          }
+        }
+      }
+      if (!opts.cache) opts.cache = "no-store";
+      if (space) {
+        opts.targetAddressSpace = space;
+      } else {
+        delete opts.targetAddressSpace;
+      }
+      return fetch(url, opts).catch(function (err) {
+        if (idx < spaces.length && !(opts.signal && opts.signal.aborted)) {
+          return attempt();
+        }
+        throw err;
+      });
+    }
+
+    return attempt();
+  }
   var refreshChatHistoryI18n = null;
 
   function initChatHistoryPage() {
@@ -2143,7 +2179,7 @@
       }
 
       var url = LOCAL_CHAT_API_BASE + "/api/chat/file?date=" + encodeURIComponent(dateStr) + "&file=" + encodeURIComponent(fileStr);
-      fetch(url, { cache: "no-store", targetAddressSpace: "local" })
+      fetchLocalBridge(url, { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (data) {
           if (!data || !data.ok) return;
@@ -2157,7 +2193,7 @@
       state.mode = "checking";
       updateConnectionBanner();
 
-      fetch(LOCAL_CHAT_API_BASE + "/api/chat/directories", { cache: "no-store", targetAddressSpace: "local" })
+      fetchLocalBridge("/api/chat/directories", { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (data) {
           if (!data || !data.ok) {
@@ -2313,11 +2349,10 @@
     if (btnOpenFolder) {
       btnOpenFolder.addEventListener("click", function () {
         var targetDate = (state.selectedDate && state.selectedDate !== "__ALL__") ? state.selectedDate : "";
-        fetch(LOCAL_CHAT_API_BASE + "/api/chat/open-folder", {
+        fetchLocalBridge("/api/chat/open-folder", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ date: targetDate }),
-          targetAddressSpace: "local"
+          body: JSON.stringify({ date: targetDate })
         }).catch(function () {});
       });
     }
@@ -2388,11 +2423,10 @@
       btnDel.addEventListener("click", function () {
         if (!state.loadedSession || state.mode !== "live") return;
         if (!window.confirm(dict().chDeleteConfirm)) return;
-        fetch(LOCAL_CHAT_API_BASE + "/api/chat/delete-file", {
+        fetchLocalBridge("/api/chat/delete-file", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ date: state.loadedSession.date, file: state.loadedSession.file }),
-          targetAddressSpace: "local"
+          body: JSON.stringify({ date: state.loadedSession.date, file: state.loadedSession.file })
         })
           .then(function (r) { return r.ok ? r.json() : null; })
           .then(function (res) {
@@ -2730,9 +2764,8 @@
     }
 
     function enrichSelfToonOptional(expectedTag) {
-      fetch(LOCAL_CHAT_API_BASE + "/api/chat/directories", {
-        cache: "no-store",
-        targetAddressSpace: "local"
+      fetchLocalBridge("/api/chat/directories", {
+        cache: "no-store"
       })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (data) {
@@ -2774,10 +2807,10 @@
         try { ctrl.abort(); } catch (_) {}
       }, 2400) : null;
 
-      var opts = { cache: "no-store", targetAddressSpace: "local" };
+      var opts = { cache: "no-store" };
       if (ctrl) opts.signal = ctrl.signal;
 
-      fetch(LOCAL_CHAT_API_BASE + "/bnet-self", opts)
+      fetchLocalBridge("/bnet-self", opts)
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (data) {
           if (timer) clearTimeout(timer);
