@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.739-1" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.739-2" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -362,15 +362,15 @@
               <ul class="patch-list">
                 <li data-cat="fix">
                   <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
-                  <span data-i18n="p739Item1">경기 종료 또는 자진 퇴장 시 자진 이탈 패킷(cmd=11)과 정상 드랍 정리 패킷(cmd=12)이 오차단되며 화면에 디스창이 뜨던 현상을 근본 해결하고, 실제 인게임 상태 RVA(0x00D7758D)와 피어 지연 플래그 판정을 바로잡아 강제 드랍 공격만 정밀 차단하도록 수정했습니다.</span>
+                  <span data-i18n="p739Item1">경기 종료 또는 자진 퇴장 시 정상 이탈·정리 패킷이 오차단되며 화면에 디스창이 뜨던 현상을 근본 해결하고, 실제 인게임 진행 상태와 피어 지연 판정을 바로잡아 비정상 강제 드랍 공격만 정밀 차단하도록 수정했습니다.</span>
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
-                  <span data-i18n="p739Item2">유즈맵·EUD 맵에서 슬롯 재배치 및 색상 제어코드 적용 시 인게임 닉네임이 인식되지 않거나 『[닉변조]』·『배틀태그 변조』로 오탐되던 현상, 공유 Battle.net TURN/SNP 릴레이 접속 시 스풋 오탐으로 정상 유저가 차단되던 현상 및 이력에 『컴퓨터』가 기록되던 오염을 모두 해결했습니다.</span>
+                  <span data-i18n="p739Item2">유즈맵·EUD 맵에서 슬롯 재배치 및 색상 코드 적용 시 인게임 닉네임이 인식되지 않거나 『[닉변조]』·『배틀태그 변조』로 오탐되던 현상, 공유 Battle.net 릴레이 접속 시 스푸핑 오탐으로 정상 유저가 차단되던 현상 및 이력에 『컴퓨터』가 기록되던 오염을 모두 해결했습니다.</span>
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
-                  <span data-i18n="p739Item3">배틀넷 방 입장 구간의 CEF 브리지 스크립트 중복 복사·재컴파일과 전체 메모리 AOB 스캔 지연을 제거해 입장 렉을 해소했으며, 인게임 『[S런처]』 시스템 알림에 타 유저 닉네임이 붙거나 채팅 기록 텍스트 파일에 섞여 저장되던 현상을 수정했습니다.</span>
+                  <span data-i18n="p739Item3">배틀넷 방 입장 구간의 브리지 스크립트 중복 처리와 전체 메모리 스캔 지연을 제거해 입장 렉을 해소했으며, 인게임 『[S런처]』 시스템 알림에 타 유저 닉네임이 붙거나 채팅 기록 파일에 섞여 저장되던 현상을 수정했습니다.</span>
                 </li>
               </ul>
             </article>
@@ -1294,6 +1294,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.739-1"></script>
+  <script src="./assets/js/main.js?v=0.6.739-2"></script>
 </body>
 </html>
