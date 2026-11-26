@@ -4047,3 +4047,172 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Real Local Battle.net Desktop App Integration Box (#cs-panel-login) */
+.fs-login-box-real {
+  max-width: 560px;
+  gap: 14px;
+}
+
+.fs-bnet-diag-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: rgba(7, 11, 19, 0.92);
+  border: 1px solid rgba(96, 165, 250, 0.24);
+}
+
+.fs-bnet-diag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.83rem;
+}
+
+.fs-bnet-diag-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.fs-diag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+}
+
+.fs-diag-dot[data-st="ok"] {
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.85);
+}
+
+.fs-diag-dot[data-st="warn"] {
+  background: #fbbf24;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.75);
+}
+
+.fs-diag-dot[data-st="err"] {
+  background: #f87171;
+  box-shadow: 0 0 8px rgba(248, 113, 113, 0.75);
+}
+
+.fs-diag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  background: rgba(100, 116, 139, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+}
+
+.fs-diag-pill[data-st="ok"] {
+  color: #dcfce7;
+  background: rgba(22, 163, 74, 0.2);
+  border-color: rgba(74, 222, 128, 0.45);
+}
+
+.fs-diag-pill[data-st="warn"] {
+  color: #fef3c7;
+  background: rgba(217, 119, 6, 0.2);
+  border-color: rgba(251, 191, 36, 0.45);
+}
+
+.fs-diag-pill[data-st="err"] {
+  color: #fee2e2;
+  background: rgba(220, 38, 38, 0.18);
+  border-color: rgba(248, 113, 113, 0.42);
+}
+
+.fs-detected-acct {
+  padding: 11px 14px;
+  border-radius: 9px;
+  background: rgba(2, 132, 199, 0.14);
+  border: 1px solid rgba(56, 189, 248, 0.42);
+}
+
+.fs-detected-kicker {
+  font-size: 0.73rem;
+  font-weight: 800;
+  color: #7dd3fc;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.fs-detected-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fs-detected-main strong {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.96rem;
+  color: #f8fafc;
+}
+
+.fs-detected-meta {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.76rem;
+  color: #bae6fd;
+}
+
+.fs-login-live-msg {
+  padding: 10px 13px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.fs-login-live-msg[data-tone="ready"] {
+  color: #dcfce7;
+  background: rgba(20, 83, 45, 0.34);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.fs-login-live-msg[data-tone="warn"] {
+  color: #fef3c7;
+  background: rgba(120, 53, 15, 0.34);
+  border-color: rgba(251, 191, 36, 0.42);
+}
+
+.fs-login-live-msg[data-tone="wait"] {
+  color: #e0f2fe;
+  background: rgba(12, 74, 110, 0.38);
+  border-color: rgba(56, 189, 248, 0.48);
+}
+
+.fs-bnet-emblem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0f2fe;
+  flex-shrink: 0;
+}
+
+.fs-bnet-btn.is-waiting {
+  background: linear-gradient(180deg, #0369a1 0%, #0c4a6e 100%);
+  border-color: rgba(56, 189, 248, 0.65);
+}
+
+.fs-login-sub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
