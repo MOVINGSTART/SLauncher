@@ -372,21 +372,21 @@
                   <span class="patch-ver">v0.6.743</span>
                   <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
-                <time class="patch-date" datetime="2026-11-27">2026.11.27</time>
+                <time class="patch-date" datetime="2026-11-28">2026.11.28</time>
               </div>
-              <p class="patch-summary" data-i18n="p743Summary">배틀넷 방 입장 시 응답 없음(무응답) 멈춤 현상 근본 해결, 지도 선택·리플레이(Download / Replays 등) 로컬 폴더 목록 미노출 핫픽스 및 대기실 로딩 병목 제거</p>
+              <p class="patch-summary" data-i18n="p743Summary">배틀넷 방 참가·대기실 진입 시 1·2차 맵 스캔 무응답(응답 없음) 멈춤 완벽 해결, Windows 호환성 레이어 우회 차단 및 지도 선택·리플레이(Download / Replays) 로컬 폴더 노출 복구</p>
               <ul class="patch-list">
                 <li data-cat="fix">
                   <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
-                  <span data-i18n="p743Item1">방 참가 직후 스타크래프트 실행 보호 영역 무결성 검사와 충돌해 창이 『응답 없음』 상태로 멈추던 문제를 원천 해결하고, 실행 코드 변조 없이 순수 시스템 파일 탐색 계층에서만 방 참가 맵 크기 필터가 동작하도록 재설계했습니다.</span>
+                  <span data-i18n="p743Item1">방 목록에서 『참가』를 누를 때의 1차 스캔뿐 아니라 실제 방 대기실 진입 직후 실행되는 2차 맵 일치 검증 스캔과 맵 크기 미수신(0바이트) 방 조건까지 모두 즉시 필터링하도록 수정하여, 대용량 맵 폴더 환경에서도 방 입장 직후 창이 『응답 없음』으로 멈추던 현상을 완전히 제거했습니다.</span>
                 </li>
                 <li data-cat="fix">
                   <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
-                  <span data-i18n="p743Item2">인게임 지도 선택·리플레이·세이브 화면에서 로컬 Maps 하위 폴더(Download, Replays, 기본 맵 폴더 등)가 누락되던 문제를 수정하여, 일반 탐색 시 모든 폴더와 파일을 100% 그대로 표시합니다.</span>
+                  <span data-i18n="p743Item2">실제 배틀넷 실행 시 Windows 호환성 레이어(AcLayers) 환경에서 시스템 파일 탐색 필터 연결이 우회되던 문제를 내보내기 테이블 직접 해석 방식으로 해결하고, 인게임 지도 선택·리플레이·세이브 화면에서 모든 로컬 하위 폴더(Download, Replays, Save, 기본 맵 폴더 등)가 100% 정상 표시되도록 복구했습니다.</span>
                 </li>
                 <li data-cat="improve">
                   <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
-                  <span data-i18n="p743Item3">대기실 진입 시 프렌즈 브리지 스크립트를 비동기 로드로 전환하고 미사용 프록시 유휴 소켓 회수 시간 및 맵 무결성 해시 검사 시점을 분리해, 방 입장 즉시 멈춤 없이 대기실 화면과 채팅이 열리도록 개선했습니다.</span>
+                  <span data-i18n="p743Item3">대기실 진입 시 프렌즈 브리지 스크립트 비동기 로드 전환, 미사용 프록시 유휴 소켓 회수 단축 및 입장 구간 동기 해시 검사 분리를 함께 적용해 방 입장 즉시 끊김 없이 대기실 화면과 채팅이 열리도록 최적화했습니다.</span>
                 </li>
               </ul>
             </article>
@@ -1410,6 +1410,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.743-1"></script>
+  <script src="./assets/js/main.js?v=0.6.743-2"></script>
 </body>
 </html>
