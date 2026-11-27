@@ -10,7 +10,7 @@
   <meta property="og:description" content="StarCraft: Remastered 통합 런처 SLauncher의 전체 버전별 업데이트 기록" />
   <meta property="og:image" content="./assets/img/logo.png" />
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.742-1" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=0.6.743-1" />
 </head>
 <body id="top" class="changelog-page">
   <div class="starfield" aria-hidden="true"></div>
@@ -111,7 +111,7 @@
             <div class="hero-pill cl-pill">
               <span data-i18n="clPillLabel">Release History</span>
               <span class="dot">·</span>
-              <span id="hero-version">v0.6.742</span>
+              <span id="hero-version">v0.6.743</span>
             </div>
             <h1 class="cl-title" data-i18n="patchTitle">패치 내역</h1>
             <p class="cl-subtitle" data-i18n="patchSub">
@@ -122,11 +122,11 @@
           <div class="cl-stat-cards">
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatLatest">현재 최신 버전</span>
-              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.742</strong>
+              <strong id="cl-latest-ver" class="cl-stat-val accent">v0.6.743</strong>
             </div>
             <div class="cl-stat-box">
               <span class="cl-stat-label" data-i18n="clStatTotal">누적 릴리스 기록</span>
-              <strong id="cl-total-count" class="cl-stat-val">41</strong>
+              <strong id="cl-total-count" class="cl-stat-val">42</strong>
             </div>
           </div>
         </div>
@@ -172,9 +172,13 @@
           <div class="cl-sidebar-box">
             <div class="cl-sidebar-title" data-i18n="clSidebarTitle">버전 바로가기</div>
             <nav id="cl-version-nav" class="cl-version-nav">
-              <a href="#ver-v0-6-742" class="cl-ver-link active" data-target-ver="v0.6.742">
-                <span class="cl-ver-name">v0.6.742</span>
+              <a href="#ver-v0-6-743" class="cl-ver-link active" data-target-ver="v0.6.743">
+                <span class="cl-ver-name">v0.6.743</span>
                 <span class="cl-ver-dot-latest">NEW</span>
+              </a>
+              <a href="#ver-v0-6-742" class="cl-ver-link" data-target-ver="v0.6.742">
+                <span class="cl-ver-name">v0.6.742</span>
+                <span class="cl-ver-mini-date">11.27</span>
               </a>
               <a href="#ver-v0-6-741" class="cl-ver-link" data-target-ver="v0.6.741">
                 <span class="cl-ver-name">v0.6.741</span>
@@ -339,13 +343,13 @@
             </nav>
 
             <div class="cl-sidebar-cta">
-              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.742/SLauncher-0.6.742-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
+              <a id="btn-download-setup" href="https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher-0.6.743-win-setup.exe" class="btn btn-primary btn-sm cl-dl-btn">
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                <span id="btn-download-label">v0.6.742 다운로드</span>
+                <span id="btn-download-label">v0.6.743 다운로드</span>
               </a>
             </div>
           </div>
@@ -361,12 +365,37 @@
           </div>
 
           <div class="patch-timeline cl-rail-timeline">
-            <!-- v0.6.742 (Latest) -->
-            <article id="ver-v0-6-742" class="patch-card patch-card-latest" data-patch-ver="v0.6.742">
+            <!-- v0.6.743 (Latest) -->
+            <article id="ver-v0-6-743" class="patch-card patch-card-latest" data-patch-ver="v0.6.743">
+              <div class="patch-head">
+                <div class="patch-ver-group">
+                  <span class="patch-ver">v0.6.743</span>
+                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
+                </div>
+                <time class="patch-date" datetime="2026-11-27">2026.11.27</time>
+              </div>
+              <p class="patch-summary" data-i18n="p743Summary">배틀넷 방 입장 시 응답 없음(무응답) 멈춤 현상 근본 해결, 지도 선택·리플레이(Download / Replays 등) 로컬 폴더 목록 미노출 핫픽스 및 대기실 로딩 병목 제거</p>
+              <ul class="patch-list">
+                <li data-cat="fix">
+                  <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p743Item1">방 참가 직후 스타크래프트 실행 보호 영역 무결성 검사와 충돌해 창이 『응답 없음』 상태로 멈추던 문제를 원천 해결하고, 실행 코드 변조 없이 순수 시스템 파일 탐색 계층에서만 방 참가 맵 크기 필터가 동작하도록 재설계했습니다.</span>
+                </li>
+                <li data-cat="fix">
+                  <span class="patch-tag tag-hotfix" data-i18n="tagHotfix">핫픽스</span>
+                  <span data-i18n="p743Item2">인게임 지도 선택·리플레이·세이브 화면에서 로컬 Maps 하위 폴더(Download, Replays, 기본 맵 폴더 등)가 누락되던 문제를 수정하여, 일반 탐색 시 모든 폴더와 파일을 100% 그대로 표시합니다.</span>
+                </li>
+                <li data-cat="improve">
+                  <span class="patch-tag tag-improve" data-i18n="tagImprove">개선</span>
+                  <span data-i18n="p743Item3">대기실 진입 시 프렌즈 브리지 스크립트를 비동기 로드로 전환하고 미사용 프록시 유휴 소켓 회수 시간 및 맵 무결성 해시 검사 시점을 분리해, 방 입장 즉시 멈춤 없이 대기실 화면과 채팅이 열리도록 개선했습니다.</span>
+                </li>
+              </ul>
+            </article>
+
+            <!-- v0.6.742 -->
+            <article id="ver-v0-6-742" class="patch-card" data-patch-ver="v0.6.742">
               <div class="patch-head">
                 <div class="patch-ver-group">
                   <span class="patch-ver">v0.6.742</span>
-                  <span class="patch-badge badge-latest" data-i18n="patchBadgeLatest">최신 업데이트</span>
                 </div>
                 <time class="patch-date" datetime="2026-11-27">2026.11.27</time>
               </div>
@@ -1381,6 +1410,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./assets/js/main.js?v=0.6.742-1"></script>
+  <script src="./assets/js/main.js?v=0.6.743-1"></script>
 </body>
 </html>
