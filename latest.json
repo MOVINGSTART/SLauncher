@@ -3,27 +3,27 @@
     "minimumVersion":  "0.0.0",
     "force":  false,
     "tag_name":  "v0.6.743",
-    "pub_date":  "2026-11-27T12:37:11Z",
+    "pub_date":  "2026-11-27T14:42:16Z",
     "notes":  "SLauncher v0.6.743 Official Release",
     "downloadUrl":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher_v0.6.743.zip",
-    "sha256":  "15576e4e3c2380f72c0c250389fbad4eda3760ed25c8736c8e12251b3b426823",
+    "sha256":  "4bb1bac252ce0d5853b0c094c2867126920b5335d5c2ac735cd706c6e8fd659f",
     "setup_file":  "SLauncher-0.6.743-win-setup.exe",
-    "setup_size":  84237817,
-    "setup_sha256":  "a5c0b23f22feb4ea626e9bf9bbe5723c4f7db5c02711822490d2c4b1185adeeb",
+    "setup_size":  84238454,
+    "setup_sha256":  "9c6f28e4e34acbcaf94e036dbcf84473c78d659b9f42730cfeeaf663a19dbf3b",
     "setup_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher-0.6.743-win-setup.exe",
     "portable_file":  "SLauncher_v0.6.743.zip",
-    "portable_size":  83656057,
-    "portable_sha256":  "15576e4e3c2380f72c0c250389fbad4eda3760ed25c8736c8e12251b3b426823",
+    "portable_size":  83656694,
+    "portable_sha256":  "4bb1bac252ce0d5853b0c094c2867126920b5335d5c2ac735cd706c6e8fd659f",
     "portable_url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher_v0.6.743.zip",
     "platforms":  {
                       "windows-x86_64":  {
                                              "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher_v0.6.743.zip",
-                                             "sha256":  "15576e4e3c2380f72c0c250389fbad4eda3760ed25c8736c8e12251b3b426823",
+                                             "sha256":  "4bb1bac252ce0d5853b0c094c2867126920b5335d5c2ac735cd706c6e8fd659f",
                                              "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher-0.6.743-win-setup.exe"
                                          },
                       "windows-x86":  {
                                           "url":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher_v0.6.743.zip",
-                                          "sha256":  "15576e4e3c2380f72c0c250389fbad4eda3760ed25c8736c8e12251b3b426823",
+                                          "sha256":  "4bb1bac252ce0d5853b0c094c2867126920b5335d5c2ac735cd706c6e8fd659f",
                                           "installer":  "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher-0.6.743-win-setup.exe"
                                       }
                   }
