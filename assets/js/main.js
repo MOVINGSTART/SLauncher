@@ -1106,14 +1106,14 @@
 
   var releaseState = {
     tag: "v0.6.743",
-    publishedAt: "2026-11-27T12:37:11Z",
+    publishedAt: "2026-11-27T14:42:16Z",
     setupName: "SLauncher-0.6.743-win-setup.exe",
     setupUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher-0.6.743-win-setup.exe",
-    setupBytes: 84237817,
-    setupSha256: "a5c0b23f22feb4ea626e9bf9bbe5723c4f7db5c02711822490d2c4b1185adeeb",
+    setupBytes: 84238454,
+    setupSha256: "9c6f28e4e34acbcaf94e036dbcf84473c78d659b9f42730cfeeaf663a19dbf3b",
     zipName: "SLauncher_v0.6.743.zip",
     zipUrl: "https://github.com/MOVINGSTART/SLauncher/releases/download/v0.6.743/SLauncher_v0.6.743.zip",
-    zipBytes: 83656057,
+    zipBytes: 83656694,
     latestBody: "",
     repoSlug: "MOVINGSTART/SLauncher"
   };
